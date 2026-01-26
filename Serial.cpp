@@ -4,11 +4,13 @@
  *
  * @author Hans de Ruiter
  *
- * @version 0.1 -- 28 October 2008
+ * Compatible with Unicode and no opencv correlation (deleted the stdafx.h)
  */
 
-#include "stdafx.h"
 #include <iostream>
+#include <Windows.h> //added
+#include <string> //added
+#include <cstring> //added
 
 using namespace std;
 
@@ -36,7 +38,9 @@ bool Serial::open(string commPortName, int bitRate)
 {
   commPortName = "\\\\.\\" + commPortName;
 
-	commHandle = CreateFile(commPortName.c_str(), GENERIC_READ|GENERIC_WRITE, 0,NULL, OPEN_EXISTING, 0, NULL);
+  std::wstring wport = s2ws(commPortName);
+  commHandle = CreateFileW(wport.c_str(), GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, 0, NULL);
+
 
 	if(commHandle == INVALID_HANDLE_VALUE) 
 	{
@@ -45,7 +49,7 @@ bool Serial::open(string commPortName, int bitRate)
   }
 	else 
 	{
-		// set timeouts
+		// set tSimeouts
 		COMMTIMEOUTS cto = { MAXDWORD, 0, 0, 0, 0};
 		DCB dcb;
 		if(!SetCommTimeouts(commHandle,&cto))
