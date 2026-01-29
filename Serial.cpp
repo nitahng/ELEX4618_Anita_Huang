@@ -79,9 +79,6 @@ bool Serial::open(string commPortName, int bitRate)
 		}
 	}
 
-	std::cout << "yay";
-
-
   return true;
 }
 

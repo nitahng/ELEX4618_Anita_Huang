@@ -1,7 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Tiva C TM4C123G Energia Communication System for ELEX4618 & ELEX4699
 // Prepared by Craig Hennessey
-// Last Edited: Sept 5, 2021
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 #include <Servo.h>
@@ -139,8 +138,17 @@ void loop()
 
       if ((ch == 'G' || ch == 'g') && (type == DIGITAL) ){
 
-          int push1_status = !digitalRead(channel); // channel selects whcih digital read so 0-40 = channel 41 or 42 is push
-          value = push1_status;
+        int push_status;
+        
+        if (channel == 41) {
+          push_status = !digitalRead(PUSH1); // channel selects whcih digital read so 0-40 = channel 41 or 42 is push
+        }
+        else if (channel == 42) {
+          push_status = !digitalRead(PUSH2); // channel selects whcih digital read so 0-40 = channel 41 or 42 is push
+        }
+
+        value = push_status;
+          
       }
 
       
