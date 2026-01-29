@@ -3,6 +3,7 @@
 #include "CControl.h"
 #include <iostream>
 #include "../Serial.h"
+#include <sstream> 
 
 CControl :: CControl(){
 
@@ -12,7 +13,17 @@ CControl::~CControl() {
 
 }
 
-void CControl::init_com(int comport){
+void CControl::init_com(int comport){ // comport is returned as an integer, wont fit into open() unless its in correct format
+
+	Serial serial; // open the serial class for its functions
+
+	std::string comport_number = std::to_string(comport);
+	std::ostringstream comportname;
+
+	comportname << "COM" << comport_number;
+
+	bool opened = serial.open(comportname.str());
+
 
 }
 

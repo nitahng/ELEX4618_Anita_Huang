@@ -29,6 +29,9 @@ int type;
 int channel;
 int value;
 
+unsigned long time_before = 0;
+unsigned long time_interval = 1000;
+
 #define BAUD_RATE 115200
 
 void setup()
@@ -48,7 +51,9 @@ void setup()
 
   // initialize LED on uC to ON (not on Boosterpack). Turn off RGB LED
   pinMode(RED_LED, OUTPUT);
+  pinMode(BLUE_LED, OUTPUT);
   digitalWrite(RED_LED, HIGH);
+  digitalWrite(BLUE_LED, LOW);
   pinMode(RGBLED_RED_PIN, OUTPUT);
   pinMode(RGBLED_GRN_PIN, OUTPUT);
   pinMode(RGBLED_BLU_PIN, OUTPUT);
@@ -67,10 +72,12 @@ void setup()
   myservo[1].attach(SERVO_PORT1);
   myservo[2].attach(SERVO_PORT2);
   myservo[3].attach(SERVO_PORT3);
+  
+delay(2000);  // wait 2 seconds for Serial Monitor
 
   Serial.print("\n////////////////////////////////////////////////////////////////////////////////////");
   Serial.print("\n// ELEX 4618 IO Communication for TM4C123G V3.0 Student");
-  Serial.print("\n// By: STUDENT NAME, DATE");
+  Serial.print("\n// By: Anita Huang, Januart 26th");
   Serial.print("\n// TM4C123G: Digital In/Out 1-40 on 4x 10 pin headers");
   Serial.print("\n// TM4C123G: Digital In 41 & 42 are PUSH1 and PUSH2 (TM4C123G)");
   Serial.print("\n// TM4C123G: Analog in A0 to A15 (0-15)");
@@ -81,16 +88,21 @@ void setup()
   Serial.print("\n// Protocol: DIRECTION (G/S) TYPE (0=D, 1=A, 2=S) CHANNEL VALUE");
   Serial.print("\n// Example: G 0 0, S 2 1 100");
   Serial.print("\n////////////////////////////////////////////////////////////////////////////////////\n");
+
+
 }
 
 void loop()
 {
-  /////////////////////////////////////////
-  // TODO: Flash LED ON/OFF
-  // Hint: If you use DELAY your program will run slowly.
-  // Hint: Use millis() to measure elapsed time and toggle LED
-  /////////////////////////////////////////
+  unsigned long time_interval = 200;
+  
+  if ((millis() - time_before)>= time_interval){
+      digitalWrite(RED_LED, !digitalRead(RED_LED));
+      time_before = millis();
+   }
 
+
+ 
   // While there is data in the serial port buffer, continue to process
   while (Serial.available() > 0)
   {
@@ -102,6 +114,7 @@ void loop()
     {      
       // Read the space delimited next value as an integer (TYPE from protocol)
       type = Serial.parseInt();
+
       // Read the space delimited next value as an integer (CHANNEL from protocol)
       channel = Serial.parseInt();
 
@@ -116,13 +129,50 @@ void loop()
       /////////////////////////////////////////
       // IF GET DO A DIGITAL READ and return the VALUE
       // IF SET DO A DIGITAL WRITE
+
+      if ((ch == 'G' || ch == 'g') && (type == DIGITAL) ){
+
+          int push1_status = !digitalRead(PUSH1); // channel selects whcih digital read so 0-40 = channel 41 or 42 is push
+          value = push1_status;
+      }
+
+      
+      else if ((ch == 'S' || ch == 's') && (type == DIGITAL) ){
+
+        digitalWrite(channel, value);
+        
+      }
       
       /////////////////////////////////////////
       // TODO: Get / Set Analog
       /////////////////////////////////////////
       // IF GET DO AN ANALOG READ and return the VALUE
       // IF SET DON'T DO ANYTHING (CONFLICT WITH SERVO)
+
+    if ((ch == 'G' || ch == 'g') && (type == ANALOG) ){
+
       
+        if(channel == 9){ // x axis channel
+          int joy_x = analogRead(2);
+          value = joy_x;
+        }
+
+              
+        if(channel == 15){ // y axis channel
+          int joy_y = analogRead(26);
+          value = joy_y;
+        }
+        
+      }
+
+      
+      else if ((ch == 'S' || ch == 's') && (type == ANALOG) ){
+
+        digitalWrite(channel, value);
+        
+      }
+
+
       /////////////////////////////////////////
       // TODO: Get / Set Servo
       /////////////////////////////////////////
