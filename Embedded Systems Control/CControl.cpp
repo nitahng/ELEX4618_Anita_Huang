@@ -15,23 +15,20 @@ CControl::~CControl() {
 
 void CControl::init_com(int comport){ // comport is returned as an integer, wont fit into open() unless its in correct format
 
-	Serial serial; // open the serial class for its functions
+	int baudrate = 115200;
+	std::string comport_number = "COM" + std::to_string(comport);
 
-	std::string comport_number = std::to_string(comport);
-	std::ostringstream comportname;
-
-	comportname << "COM" << comport_number;
-
-	bool opened = serial.open(comportname.str());
-
-
+	bool opened = _com.open(comport_number, baudrate);
 }
 
 bool CControl::get_data(int type, int channel, int& result){
 
 
+
+
 	return true;
 }
+
 
 bool CControl::set_data(int type, int channel, int val){
 

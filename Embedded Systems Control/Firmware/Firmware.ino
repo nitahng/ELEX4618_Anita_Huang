@@ -83,7 +83,7 @@ delay(2000);  // wait 2 seconds for Serial Monitor
   Serial.print("\n// TM4C123G: Analog in A0 to A15 (0-15)");
   Serial.print("\n// TM4C123G: Analog out not supported");
   Serial.print("\n// TM4C123G: Servo 19,4,5,6 header (0-3)");
-  Serial.print("\n// BoosterPack: Joystick (Analog 9,15), Accelerometer (Analog 11,13,14)");
+  Serial.print("\n// BoosterPack: Joystick (Analog 2,26), Accelerometer (Analog 11,13,14)");
   Serial.print("\n// BoosterPack: Buttons (Digital 32,33), LED (Digital 37,38,39)");
   Serial.print("\n// Protocol: DIRECTION (G/S) TYPE (0=D, 1=A, 2=S) CHANNEL VALUE");
   Serial.print("\n// Example: G 0 0, S 2 1 100");
@@ -124,6 +124,13 @@ void loop()
         value = Serial.parseInt();
       }
 
+
+
+
+
+
+
+
       /////////////////////////////////////////
       // TODO: Get / Set Digital
       /////////////////////////////////////////
@@ -132,45 +139,51 @@ void loop()
 
       if ((ch == 'G' || ch == 'g') && (type == DIGITAL) ){
 
-          int push1_status = !digitalRead(PUSH1); // channel selects whcih digital read so 0-40 = channel 41 or 42 is push
+          int push1_status = !digitalRead(channel); // channel selects whcih digital read so 0-40 = channel 41 or 42 is push
           value = push1_status;
       }
 
       
       else if ((ch == 'S' || ch == 's') && (type == DIGITAL) ){
 
-        digitalWrite(channel, value);
+        digitalWrite(channel, value); //I wanna set off an RGB LED 
         
       }
+
+
+
+
+
       
       /////////////////////////////////////////
-      // TODO: Get / Set Analog
+      // TODO: JOYSTICK Get / Set Analog
       /////////////////////////////////////////
       // IF GET DO AN ANALOG READ and return the VALUE
       // IF SET DON'T DO ANYTHING (CONFLICT WITH SERVO)
+      
+#define JOYSTICK_X 2
+#define JOYSTICK_Y 26
 
     if ((ch == 'G' || ch == 'g') && (type == ANALOG) ){
-
-      
-        if(channel == 9){ // x axis channel
-          int joy_x = analogRead(2);
-          value = joy_x;
-        }
-
-              
-        if(channel == 15){ // y axis channel
-          int joy_y = analogRead(26);
-          value = joy_y;
-        }
+     
+          int joy_xy = analogRead(channel); 
+          value = joy_xy;
         
       }
 
       
       else if ((ch == 'S' || ch == 's') && (type == ANALOG) ){
-
-        digitalWrite(channel, value);
         
       }
+
+
+
+
+
+
+
+
+      
 
 
       /////////////////////////////////////////
@@ -178,6 +191,21 @@ void loop()
       /////////////////////////////////////////
       // IF GET RETURN THE LAST SERVO VALUE SENT
       // IF SET SEND TO SERVO OBJECT
+
+
+    if ((ch == 'G' || ch == 'g') && (type == SERVO) ){
+      
+      int servoValue = analogRead(SERVO_PORT0); 
+        
+      }
+      
+      else if ((ch == 'S' || ch == 's') && (type == SERVO) ){
+
+        myservo[channel].write(value); // Set the servo posotion
+        
+      }
+
+      
 
       // Format and send response
       Serial.print ("A ");
