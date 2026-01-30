@@ -5,7 +5,9 @@
 
 typedef std::basic_string<TCHAR> tstring;
 
-/** Serial.h
+/** 
+ * @file ../Serial.h
+ * @brief Setup serial communication through functions in this class.
  *
  * A very simple serial port control class that does NOT require MFC/AFX.
  *
