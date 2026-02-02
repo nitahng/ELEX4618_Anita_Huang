@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7eccontrol_0',['~CControl',['../class_c_control.html#ab2ae420ef75b010c0c9078e597781105',1,'CControl']]]
+  ['digital_0',['DIGITAL',['../_c_control_8cpp.html#a1d1cfd8ffb84e947f82999c682b666a7a0da6c680b2b129d86740b118d1f8307a',1,'DIGITAL:&#160;CControl.cpp'],['../_embedded_01_systems_01_control_8cpp.html#a1d1cfd8ffb84e947f82999c682b666a7a0da6c680b2b129d86740b118d1f8307a',1,'DIGITAL:&#160;Embedded Systems Control.cpp']]],
+  ['digital_5floop_1',['digital_loop',['../_embedded_01_systems_01_control_8cpp.html#a3526fb38ddef3950dbadf81c6580a367',1,'Embedded Systems Control.cpp']]]
 ];

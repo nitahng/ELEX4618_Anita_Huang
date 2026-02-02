@@ -1,5 +1,10 @@
 
 
+
+
+
+
+/// Libraries ///
 #include <iostream>
 #include "CControl.h"
 #include "../Serial.h"
@@ -8,7 +13,7 @@
 #include <conio.h> // For _kbhit() and _getch()
 
 
-
+/// Functions ///
 void menu();
 
 //Pass the CControl class by reference to other functions
@@ -16,16 +21,19 @@ void servo_loop(CControl& comm);
 void analog_loop(CControl& comm);
 void digital_loop(CControl& comm);
 
+
+
+
 enum Type {
     DIGITAL = 0,
     ANALOG = 1,
     SERVO = 2
 };
 
-
 #define FULLSCALE 4096
 #define GREEN_LED 38
 #define PUSH_BUTTON_1 41
+#define PUSH_BUTTON_2 42
 #define SERVO_0 0
 #define HIGH 1
 #define LOW 0
@@ -33,6 +41,10 @@ enum Type {
 #define SERVOMIN 0
 #define JOYSTICK_X 2
 #define JOYSTICK_Y 26
+
+
+
+
 
 int main()
 {
@@ -71,9 +83,26 @@ int main()
 
                 else if (pick == "c" || pick == "C") {
 
+                    int button_test;
+                    bool check;
                     std::cout << "BUTTON TEST\n";
-                    comm.set_data(SERVO, SERVO_0, 0);
+                    int press = 0;
 
+                    while (true) {
+
+                        check = comm.get_button(comm);
+
+                        if (check == HIGH) {
+                            ++press;
+
+                            std::cout << "BUTTON TEST:" << press << "\n";
+
+                        }
+                        if (_kbhit()) {
+                            break;
+                        }
+                        
+                    }
                 }
 
 
@@ -94,6 +123,11 @@ int main()
     } while (1);
 
 }
+
+
+
+
+
 
 
 void menu() {

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_5fcom_0',['init_com',['../class_c_control.html#a3d1384d0e1ee2a4a478a798b46457468',1,'CControl']]]
+  ['digital_5floop_0',['digital_loop',['../_embedded_01_systems_01_control_8cpp.html#a3526fb38ddef3950dbadf81c6580a367',1,'Embedded Systems Control.cpp']]]
 ];

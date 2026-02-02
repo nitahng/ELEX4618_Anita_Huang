@@ -20,7 +20,12 @@
 class CControl
 {
 private:
-    /** Serial communication object */
+    /**
+    * @brief Serial communication object.
+    *
+    * Handles low-level communication with the TM4C123G board,
+    * including sending commands and receiving responses.
+    */
     Serial _com;
 
 public:
@@ -78,7 +83,7 @@ public:
      * @brief Reads digital input and debounces it
      */
 
-    void get_button();
+    bool get_button(CControl& comm);
 
 
 };
