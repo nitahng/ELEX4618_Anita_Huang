@@ -11,6 +11,7 @@ enum {DIGITAL = 0, ANALOG, SERVO};
 #define RGBLED_RED_PIN 39
 #define RGBLED_GRN_PIN 38
 #define RGBLED_BLU_PIN 37
+#define BIG1 
 
 // protocol CHANNEL integer indexes into array to select to the A? pin
 #define ANALOG_PINS 12
@@ -47,6 +48,9 @@ void setup()
   // initialize pushbuttons on uC to Input (not on Boosterpack)
   pinMode(PUSH1, INPUT_PULLUP);
   pinMode(PUSH2, INPUT_PULLUP);
+  pinMode(32, INPUT_PULLUP);
+  pinMode(33, INPUT_PULLUP);
+ 
 
   // initialize LED on uC to ON (not on Boosterpack). Turn off RGB LED
   pinMode(RED_LED, OUTPUT);
@@ -145,6 +149,12 @@ void loop()
         }
         else if (channel == 42) {
           push_status = !digitalRead(PUSH2); // channel selects whcih digital read so 0-40 = channel 41 or 42 is push
+        }
+        else if (channel == 33) {
+          push_status = !digitalRead(32); // channel selects whcih digital read so 0-40 = channel 41 or 42 is push
+        }
+        else if (channel == 32) {
+          push_status = !digitalRead(33); // channel selects whcih digital read so 0-40 = channel 41 or 42 is push
         }
 
         value = push_status;

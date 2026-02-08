@@ -1,0 +1,1763 @@
+\doxysection{cvui Namespace Reference}
+\hypertarget{namespacecvui}{}\label{namespacecvui}\index{cvui@{cvui}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespacecvui_1_1internal}{internal}}
+\item 
+namespace \doxymbox{\hyperlink{namespacecvui_1_1render}{render}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1cvui__label__t}{cvui\+\_\+label\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1cvui__mouse__btn__t}{cvui\+\_\+mouse\+\_\+btn\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1cvui__mouse__t}{cvui\+\_\+mouse\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1cvui__context__t}{cvui\+\_\+context\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{namespacecvui_ae723a98a9d41258961d970df271ed520}{init}} (const cv::\+\+String \&the\+Window\+Name, int the\+Delay\+Wait\+Key=-\/1, bool the\+Create\+Named\+Window=true)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a2a86136f1ed97ddc06ca06d0dce5c36a}{init}} (const cv::\+\+String the\+Window\+Names\+[$\,$]\+, size\+\_\+t the\+How\+Many\+Windows, int the\+Delay\+Wait\+Key=-\/1, bool the\+Create\+Named\+Windows=true)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29}{watch}} (const cv::\+\+String \&the\+Window\+Name, bool the\+Create\+Named\+Window=true)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{context}} (const cv::\+\+String \&the\+Window\+Name)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a9f97a42ad632c5caa55a2b6f9828a81c}{imshow}} (const cv::\+\+String \&the\+Window\+Name, cv::\+\+Input\+Array the\+Frame)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_ac5bab07fb83f288977f2ba0af384a849}{last\+Key\+Pressed}} ()
+\item 
+cv::\+\+Point \doxymbox{\hyperlink{namespacecvui_aec4f649283160d14cdccfc9a823ece6d}{mouse}} (const cv::\+\+String \&the\+Window\+Name="{}"{})
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a2a19278582c22e0f0ff1adb899ab8c92}{mouse}} (int the\+Query)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a5b29b96b528f5ec94dd0929379a0fdb2}{mouse}} (const cv::\+\+String \&the\+Window\+Name, int the\+Query)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a961c9491eb40211febd8db0a5bfa16d8}{mouse}} (int the\+Button, int the\+Query)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_ab48db1f6bbed2e2b61a035f6f10e1386}{mouse}} (const cv::\+\+String \&the\+Window\+Name, int the\+Button, int the\+Query)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{button}} (cv::\+\+Mat \&the\+Where, int theX, int theY, const cv::\+\+String \&the\+Label)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a1a2f388eeace02d04f3755f350e201ad}{button}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, int the\+Height, const cv::\+\+String \&the\+Label)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_afb2c9f81d966d68a24523294ac0b6f39}{button}} (cv::\+\+Mat \&the\+Where, int theX, int theY, cv::\+\+Mat \&the\+Idle, cv::\+\+Mat \&the\+Over, cv::\+\+Mat \&the\+Down)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a91bfea9b3bc194d0a2b5f9727815327d}{image}} (cv::\+\+Mat \&the\+Where, int theX, int theY, cv::\+\+Mat \&the\+Image)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a78b14a86060cac4b5778de99c8671a32}{checkbox}} (cv::\+\+Mat \&the\+Where, int theX, int theY, const cv::\+\+String \&the\+Label, bool \texorpdfstring{$\ast$}{*}the\+State, unsigned int the\+Color=0x\+CECECE)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text}} (cv::\+\+Mat \&the\+Where, int theX, int theY, const cv::\+\+String \&the\+Text, double the\+Font\+Scale=0.\+4, unsigned int the\+Color=0x\+CECECE)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf}} (cv::\+\+Mat \&the\+Where, int theX, int theY, double the\+Font\+Scale, unsigned int the\+Color, const char \texorpdfstring{$\ast$}{*}the\+Fmt,...)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a9fc9f1c2feed48be868b3905b3dbe084}{printf}} (cv::\+\+Mat \&the\+Where, int theX, int theY, const char \texorpdfstring{$\ast$}{*}the\+Fmt,...)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_ad8e0668674779283ebddc328b65b9820}{counter}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int \texorpdfstring{$\ast$}{*}the\+Value, int the\+Step=1, const char \texorpdfstring{$\ast$}{*}the\+Format="{}\%d"{})
+\item 
+double \doxymbox{\hyperlink{namespacecvui_a631bb12de6b93e76e6899d572849d953}{counter}} (cv::\+\+Mat \&the\+Where, int theX, int theY, double \texorpdfstring{$\ast$}{*}the\+Value, double the\+Step=0.\+5, const char \texorpdfstring{$\ast$}{*}the\+Format="{}\%.\+2f"{})
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_a72f3fdade2cece81f0ac2a25b9d75a80}{trackbar}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, T \texorpdfstring{$\ast$}{*}the\+Value, T the\+Min, T the\+Max, int the\+Segments=1, const char \texorpdfstring{$\ast$}{*}the\+Label\+Format="{}\%.\+1Lf"{}, unsigned int the\+Options=0, T the\+Discrete\+Step=1)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a6195ca6d72a3694ca68a75f1f3ec4431}{window}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, int the\+Height, const cv::\+\+String \&the\+Title)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a759e80d962fa4649f749ccfa03f89509}{rect}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, int the\+Height, unsigned int the\+Border\+Color, unsigned int the\+Filling\+Color=0xff000000)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_afa18f5ee84da019b801a52f8b475efe6}{sparkline}} (cv::\+\+Mat \&the\+Where, std::\+vector$<$ double $>$ \&the\+Values, int theX, int theY, int the\+Width, int the\+Height, unsigned int the\+Color=0x00\+FF00)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_a9f5d2a363c4064aee1bd6ef2c3f3bca3}{iarea}} (int theX, int theY, int the\+Width, int the\+Height)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width=-\/1, int the\+Height=-\/1, int the\+Padding=0)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row}} ()
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width=-\/1, int the\+Height=-\/1, int the\+Padding=0)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column}} ()
+\item 
+void \doxymbox{\hyperlink{namespacecvui_acf0182c98f3a3c7db8856267b0af93f5}{begin\+Row}} (int the\+Width=-\/1, int the\+Height=-\/1, int the\+Padding=0)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_acebca53fe176215cb35722d3fa47dd38}{begin\+Column}} (int the\+Width=-\/1, int the\+Height=-\/1, int the\+Padding=0)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a6d5b286e112bab4de72fe2730500861b}{space}} (int the\+Value=5)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_ad743c5572a5ceaaf7eca4fff842c32ae}{text}} (const cv::\+\+String \&the\+Text, double the\+Font\+Scale=0.\+4, unsigned int the\+Color=0x\+CECECE)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a4ff25fec2437f48c9df08625a83390ec}{button}} (int the\+Width, int the\+Height, const cv::\+\+String \&the\+Label)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a264240108760a6403f800ecb5a3f51e0}{button}} (const cv::\+\+String \&the\+Label)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a6d413f556d32d8f67f2823bb6d5a7c7e}{button}} (cv::\+\+Mat \&the\+Idle, cv::\+\+Mat \&the\+Over, cv::\+\+Mat \&the\+Down)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a355db64e5cf9638205ee0a01ce174973}{image}} (cv::\+\+Mat \&the\+Image)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a55ff29363158fd6760fe57b08d8d50dd}{checkbox}} (const cv::\+\+String \&the\+Label, bool \texorpdfstring{$\ast$}{*}the\+State, unsigned int the\+Color=0x\+CECECE)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_aa13678e0839846fe166f92d316c52a49}{printf}} (double the\+Font\+Scale, unsigned int the\+Color, const char \texorpdfstring{$\ast$}{*}the\+Fmt,...)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a9017ae59471c448150111ee238a71c89}{printf}} (const char \texorpdfstring{$\ast$}{*}the\+Fmt,...)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_ab2261c21421de06c263e1d367926e2e5}{counter}} (int \texorpdfstring{$\ast$}{*}the\+Value, int the\+Step=1, const char \texorpdfstring{$\ast$}{*}the\+Format="{}\%d"{})
+\item 
+double \doxymbox{\hyperlink{namespacecvui_abd9747156cfb15d42e00b754bc8775ab}{counter}} (double \texorpdfstring{$\ast$}{*}the\+Value, double the\+Step=0.\+5, const char \texorpdfstring{$\ast$}{*}the\+Format="{}\%.\+2f"{})
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_af1afe480c72dfb1bbe212ba57ecf05cd}{trackbar}} (int the\+Width, T \texorpdfstring{$\ast$}{*}the\+Value, T the\+Min, T the\+Max, int the\+Segments=1, const char \texorpdfstring{$\ast$}{*}the\+Label\+Format="{}\%.\+1Lf"{}, unsigned int the\+Options=0, T the\+Discrete\+Step=1)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a157500f7b7880a3180d16edc01c0e051}{window}} (int the\+Width, int the\+Height, const cv::\+\+String \&the\+Title)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_aa64b77661ff8adf80757cf4e9e239b14}{rect}} (int the\+Width, int the\+Height, unsigned int the\+Border\+Color, unsigned int the\+Filling\+Color=0xff000000)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_ad86d266052957f5bd60cec23287db2cd}{sparkline}} (std::\+vector$<$ double $>$ \&the\+Values, int the\+Width, int the\+Height, unsigned int the\+Color=0x00\+FF00)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{update}} (const cv::\+\+String \&the\+Window\+Name="{}"{})
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a28cc8b7973806fc4f0fc5ec8825f58d4}{handle\+Mouse}} (int the\+Event, int theX, int theY, int the\+Flags, void \texorpdfstring{$\ast$}{*}the\+Data)
+\item 
+{\footnotesize template$<$typename num\+\_\+type$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_ae8b5eea702025b3255529e748d9e47b0}{trackbar}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, num\+\_\+type \texorpdfstring{$\ast$}{*}the\+Value, num\+\_\+type the\+Min, num\+\_\+type the\+Max, int the\+Segments, const char \texorpdfstring{$\ast$}{*}the\+Label\+Format, unsigned int the\+Options, num\+\_\+type the\+Discrete\+Step)
+\item 
+{\footnotesize template$<$typename num\+\_\+type$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_a58fee4bc1c4fb019a6183c5d1cce55dc}{trackbar}} (int the\+Width, num\+\_\+type \texorpdfstring{$\ast$}{*}the\+Value, num\+\_\+type the\+Min, num\+\_\+type the\+Max, int the\+Segments, const char \texorpdfstring{$\ast$}{*}the\+Label\+Format, unsigned int the\+Options, num\+\_\+type the\+Discrete\+Step)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a6d4f142f182e325f17928d61aab8ffeb}{ROW}} = 0
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_aa2e0f3058cd45ae206df52c153ae4a50}{COLUMN}} = 1
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0}{DOWN}} = 2
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a4af6b3d0288d2655aaf99fccaa633855}{CLICK}} = 3
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a1b2af00cf23554512a200ed5e9b6acfa}{OVER}} = 4
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_ac325b7de5095e58f8d459d7eb3c0bdce}{OUT}} = 5
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_af90309bb2a99598ad259b7771de2f922}{UP}} = 6
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_aa3183bf7cc9be4e6e272b69ac0826b13}{IS\+\_\+\+DOWN}} = 7
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a6484b0b9d05e9a140b8e04d44a5aee7b}{LEFT\+\_\+\+BUTTON}} = 0
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a930a46e085bb0bcf6389373627758691}{MIDDLE\+\_\+\+BUTTON}} = 1
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a0df030cf077da94f75de969850225f78}{RIGHT\+\_\+\+BUTTON}} = 2
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_a2577612f092f34b9839c967714904ad2}{TRACKBAR\+\_\+\+HIDE\+\_\+\+SEGMENT\+\_\+\+LABELS}} = 1
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_a18717bc2beedeea0a8721cd80df7913d}{TRACKBAR\+\_\+\+HIDE\+\_\+\+STEP\+\_\+\+SCALE}} = 2
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_a19baa1dbeca0a10dd81fbf165db088c3}{TRACKBAR\+\_\+\+DISCRETE}} = 4
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_a38b7708f1daf64e2e36433c736bffcac}{TRACKBAR\+\_\+\+HIDE\+\_\+\+MIN\+\_\+\+MAX\+\_\+\+LABELS}} = 8
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_ae0d82d3296fd5f8d7dbbf92291e5cfab}{TRACKBAR\+\_\+\+HIDE\+\_\+\+VALUE\+\_\+\+LABEL}} = 16
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_a117214d098e5f92bc6ea95ec14e5a5ff}{TRACKBAR\+\_\+\+HIDE\+\_\+\+LABELS}} = 32
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacecvui_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}\index{cvui@{cvui}!beginColumn@{beginColumn}}
+\index{beginColumn@{beginColumn}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{beginColumn()}{beginColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801} 
+void cvui::\+begin\+Column (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{ = {\ttfamily -\/1}, }\item[{int}]{the\+Height}{ = {\ttfamily -\/1}, }\item[{int}]{the\+Padding}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+Start a new column.
+
+One of the most annoying tasks when building UI is to calculate where each component should be placed on the screen. cvui has a set of methods that abstract the process of positioning components, so you don\textquotesingle{}t have to think about assigning a X and Y coordinate. Instead you just add components and cvui will place them as you go.
+
+You use {\ttfamily \doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()}} to start a group of elements. After {\ttfamily \doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()}} has been called, all subsequent component calls don\textquotesingle{}t have to specify the frame where the component should be rendered nor its position. The position of the component will be automatically calculated by cvui based on the components within the group. All components are placed below each other, from the top of the screen towards the bottom.
+
+E.\+g.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{beginColumn}}(frame,\ x,\ y,\ width,\ height);}
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text}}(\textcolor{stringliteral}{"{}test"{}});}
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{button}}(\textcolor{stringliteral}{"{}btn"{}});}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{endColumn}}();}
+
+\end{DoxyCode}
+
+
+Rows and columns can be nested, so you can create columns/\+rows within columns/\+rows as much as you want. It\textquotesingle{}s important to notice that any component within {\ttfamily \doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()}} and {\ttfamily \doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()}} {\itshape do not} specify the position where the component is rendered, which is also true for {\ttfamily \doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()}}. As a consequence, {\bfseries{be sure you are calling {\ttfamily begin\+Column(width, height)} when the call is nested instead of {\ttfamily begin\+Column(x, y, width, height)}}}, otherwise cvui will throw an error.
+
+E.\+g.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{beginColumn}}(frame,\ x,\ y,\ width,\ height);}
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text}}(\textcolor{stringliteral}{"{}test"{}});}
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{button}}(\textcolor{stringliteral}{"{}btn"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{beginRow}}();\ \ \ \ \ \ \textcolor{comment}{//\ no\ frame\ nor\ x,y\ parameters\ here!}}
+\DoxyCodeLine{\ \ \doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text}}(\textcolor{stringliteral}{"{}column1"{}});}
+\DoxyCodeLine{\ \ \doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text}}(\textcolor{stringliteral}{"{}column2"{}});}
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{endRow}}();}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{endColumn}}();}
+
+\end{DoxyCode}
+
+
+Don\textquotesingle{}t forget to call {\ttfamily \doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()}} to finish the column, otherwise cvui will throw an error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the components within this block should be rendered. \\
+\hline
+{\em theX} & position X where the row should be placed. \\
+\hline
+{\em theY} & position Y where the row should be placed. \\
+\hline
+{\em the\+Width} & width of the column. If a negative value is specified, the width of the column will be automatically calculated based on the content of the block. \\
+\hline
+{\em the\+Height} & height of the column. If a negative value is specified, the height of the column will be automatically calculated based on the content of the block. \\
+\hline
+{\em the\+Padding} & space, in pixels, among the components of the block.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_acebca53fe176215cb35722d3fa47dd38}\index{cvui@{cvui}!beginColumn@{beginColumn}}
+\index{beginColumn@{beginColumn}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{beginColumn()}{beginColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_acebca53fe176215cb35722d3fa47dd38} 
+void cvui::\+begin\+Column (\begin{DoxyParamCaption}\item[{int}]{the\+Width}{ = {\ttfamily -\/1}, }\item[{int}]{the\+Height}{ = {\ttfamily -\/1}, }\item[{int}]{the\+Padding}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+Start a column. This function behaves in the same way as {\ttfamily begin\+Column(frame, x, y, width, height)}, however it is suposed to be used within {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} blocks since they require components not to inform frame nor x,y coordinates.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Width} & width of the column. If a negative value is specified, the width of the column will be automatically calculated based on the content of the block. \\
+\hline
+{\em the\+Height} & height of the column. If a negative value is specified, the height of the column will be automatically calculated based on the content of the block. \\
+\hline
+{\em the\+Padding} & space, in pixels, among the components of the block.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}\index{cvui@{cvui}!beginRow@{beginRow}}
+\index{beginRow@{beginRow}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{beginRow()}{beginRow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_aaab319849ff974b6cc67df45ab64ea15} 
+void cvui::\+begin\+Row (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{ = {\ttfamily -\/1}, }\item[{int}]{the\+Height}{ = {\ttfamily -\/1}, }\item[{int}]{the\+Padding}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+Start a new row.
+
+One of the most annoying tasks when building UI is to calculate where each component should be placed on the screen. cvui has a set of methods that abstract the process of positioning components, so you don\textquotesingle{}t have to think about assigning a X and Y coordinate. Instead you just add components and cvui will place them as you go.
+
+You use {\ttfamily \doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()}} to start a group of elements. After {\ttfamily \doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()}} has been called, all subsequent component calls don\textquotesingle{}t have to specify the frame where the component should be rendered nor its position. The position of the component will be automatically calculated by cvui based on the components within the group. All components are placed side by side, from left to right.
+
+E.\+g.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{beginRow}}(frame,\ x,\ y,\ width,\ height);}
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text}}(\textcolor{stringliteral}{"{}test"{}});}
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{button}}(\textcolor{stringliteral}{"{}btn"{}});}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{endRow}}();}
+
+\end{DoxyCode}
+
+
+Rows and columns can be nested, so you can create columns/\+rows within columns/\+rows as much as you want. It\textquotesingle{}s important to notice that any component within {\ttfamily \doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()}} and {\ttfamily \doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()}} {\itshape do not} specify the position where the component is rendered, which is also true for {\ttfamily \doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()}}. As a consequence, {\bfseries{be sure you are calling {\ttfamily begin\+Row(width, height)} when the call is nested instead of {\ttfamily begin\+Row(x, y, width, height)}}}, otherwise cvui will throw an error.
+
+E.\+g.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{beginRow}}(frame,\ x,\ y,\ width,\ height);}
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text}}(\textcolor{stringliteral}{"{}test"{}});\ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{button}}(\textcolor{stringliteral}{"{}btn"{}});\ }
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{beginColumn}}();\ \ \ \ \ \ \textcolor{comment}{//\ no\ frame\ nor\ x,y\ parameters\ here!}}
+\DoxyCodeLine{\ \ \doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text}}(\textcolor{stringliteral}{"{}column1"{}});}
+\DoxyCodeLine{\ \ \doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text}}(\textcolor{stringliteral}{"{}column2"{}});}
+\DoxyCodeLine{\ \doxymbox{\hyperlink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{endColumn}}();}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{endRow}}();}
+
+\end{DoxyCode}
+
+
+Don\textquotesingle{}t forget to call {\ttfamily \doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()}} to finish the row, otherwise cvui will throw an error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the components within this block should be rendered. \\
+\hline
+{\em theX} & position X where the row should be placed. \\
+\hline
+{\em theY} & position Y where the row should be placed. \\
+\hline
+{\em the\+Width} & width of the row. If a negative value is specified, the width of the row will be automatically calculated based on the content of the block. \\
+\hline
+{\em the\+Height} & height of the row. If a negative value is specified, the height of the row will be automatically calculated based on the content of the block. \\
+\hline
+{\em the\+Padding} & space, in pixels, among the components of the block.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_acf0182c98f3a3c7db8856267b0af93f5}\index{cvui@{cvui}!beginRow@{beginRow}}
+\index{beginRow@{beginRow}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{beginRow()}{beginRow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_acf0182c98f3a3c7db8856267b0af93f5} 
+void cvui::\+begin\+Row (\begin{DoxyParamCaption}\item[{int}]{the\+Width}{ = {\ttfamily -\/1}, }\item[{int}]{the\+Height}{ = {\ttfamily -\/1}, }\item[{int}]{the\+Padding}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+Start a row. This function behaves in the same way as {\ttfamily begin\+Row(frame, x, y, width, height)}, however it is suposed to be used within {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} blocks since they require components not to inform frame nor x,y coordinates.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Width} & width of the row. If a negative value is specified, the width of the row will be automatically calculated based on the content of the block. \\
+\hline
+{\em the\+Height} & height of the row. If a negative value is specified, the height of the row will be automatically calculated based on the content of the block. \\
+\hline
+{\em the\+Padding} & space, in pixels, among the components of the block.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a264240108760a6403f800ecb5a3f51e0}\index{cvui@{cvui}!button@{button}}
+\index{button@{button}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{button()}{button()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \label{namespacecvui_a264240108760a6403f800ecb5a3f51e0} 
+bool cvui::\+button (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Label}{}\end{DoxyParamCaption})}
+
+Display a button within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()} and {\ttfamily end\texorpdfstring{$\ast$}{*}()} block. The size of the button will be automatically adjusted to properly house the label content.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Label} & text displayed inside the button. You can set shortcuts by pre-\/pending them with "{}\&"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} everytime the user clicks the button.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a6d413f556d32d8f67f2823bb6d5a7c7e}\index{cvui@{cvui}!button@{button}}
+\index{button@{button}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{button()}{button()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \label{namespacecvui_a6d413f556d32d8f67f2823bb6d5a7c7e} 
+bool cvui::\+button (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Idle}{, }\item[{cv::\+\+Mat \&}]{the\+Over}{, }\item[{cv::\+\+Mat \&}]{the\+Down}{}\end{DoxyParamCaption})}
+
+Display a button whose graphics are images (cv::\+\+Mat).
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+The button accepts three images to describe its states, which are idle (no mouse interaction), over (mouse is over the button) and down (mouse clicked the button). The button size will be defined by the width and height of the images.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Idle} & image that will be rendered when the button is not interacting with the mouse cursor. \\
+\hline
+{\em the\+Over} & image that will be rendered when the mouse cursor is over the button. \\
+\hline
+{\em the\+Down} & image that will be rendered when the mouse cursor clicked the button (or is clicking). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} everytime the user clicks the button.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{button()} 
+
+\doxylink{namespacecvui_a91bfea9b3bc194d0a2b5f9727815327d}{image()} 
+
+\doxylink{namespacecvui_a9f5d2a363c4064aee1bd6ef2c3f3bca3}{iarea()} 
+
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}\index{cvui@{cvui}!button@{button}}
+\index{button@{button}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{button()}{button()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \label{namespacecvui_a44be4a4aae93496f66d96433ec8989fe} 
+bool cvui::\+button (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{const cv::\+\+String \&}]{the\+Label}{}\end{DoxyParamCaption})}
+
+Display a button. The size of the button will be automatically adjusted to properly house the label content.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Label} & text displayed inside the button. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} everytime the user clicks the button. 
+\end{DoxyReturn}
+\Hypertarget{namespacecvui_afb2c9f81d966d68a24523294ac0b6f39}\index{cvui@{cvui}!button@{button}}
+\index{button@{button}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{button()}{button()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \label{namespacecvui_afb2c9f81d966d68a24523294ac0b6f39} 
+bool cvui::\+button (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{cv::\+\+Mat \&}]{the\+Idle}{, }\item[{cv::\+\+Mat \&}]{the\+Over}{, }\item[{cv::\+\+Mat \&}]{the\+Down}{}\end{DoxyParamCaption})}
+
+Display a button whose graphics are images (cv::\+\+Mat). The button accepts three images to describe its states, which are idle (no mouse interaction), over (mouse is over the button) and down (mouse clicked the button). The button size will be defined by the width and height of the images.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Idle} & an image that will be rendered when the button is not interacting with the mouse cursor. \\
+\hline
+{\em the\+Over} & an image that will be rendered when the mouse cursor is over the button. \\
+\hline
+{\em the\+Down} & an image that will be rendered when the mouse cursor clicked the button (or is clicking). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} everytime the user clicks the button.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{button()} 
+
+\doxylink{namespacecvui_a91bfea9b3bc194d0a2b5f9727815327d}{image()} 
+
+\doxylink{namespacecvui_a9f5d2a363c4064aee1bd6ef2c3f3bca3}{iarea()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a1a2f388eeace02d04f3755f350e201ad}\index{cvui@{cvui}!button@{button}}
+\index{button@{button}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{button()}{button()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \label{namespacecvui_a1a2f388eeace02d04f3755f350e201ad} 
+bool cvui::\+button (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{const cv::\+\+String \&}]{the\+Label}{}\end{DoxyParamCaption})}
+
+Display a button. The button size will be defined by the width and height parameters, no matter the content of the label.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Width} & width of the button. \\
+\hline
+{\em the\+Height} & height of the button. \\
+\hline
+{\em the\+Label} & text displayed inside the button. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} everytime the user clicks the button. 
+\end{DoxyReturn}
+\Hypertarget{namespacecvui_a4ff25fec2437f48c9df08625a83390ec}\index{cvui@{cvui}!button@{button}}
+\index{button@{button}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{button()}{button()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \label{namespacecvui_a4ff25fec2437f48c9df08625a83390ec} 
+bool cvui::\+button (\begin{DoxyParamCaption}\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{const cv::\+\+String \&}]{the\+Label}{}\end{DoxyParamCaption})}
+
+Display a button within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()} and {\ttfamily end\texorpdfstring{$\ast$}{*}()} block. The button size will be defined by the width and height parameters, no matter the content of the label.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Width} & width of the button. \\
+\hline
+{\em the\+Height} & height of the button. \\
+\hline
+{\em the\+Label} & text displayed inside the button. You can set shortcuts by pre-\/pending them with "{}\&"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} everytime the user clicks the button.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a55ff29363158fd6760fe57b08d8d50dd}\index{cvui@{cvui}!checkbox@{checkbox}}
+\index{checkbox@{checkbox}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{checkbox()}{checkbox()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_a55ff29363158fd6760fe57b08d8d50dd} 
+bool cvui::\+checkbox (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Label}{, }\item[{bool \texorpdfstring{$\ast$}{*}}]{the\+State}{, }\item[{unsigned int}]{the\+Color}{ = {\ttfamily 0xCECECE}}\end{DoxyParamCaption})}
+
+Display a checkbox within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()} and {\ttfamily end\texorpdfstring{$\ast$}{*}()} block. You can use the state parameter to monitor if the checkbox is checked or not.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Label} & text displayed besides the clickable checkbox square. \\
+\hline
+{\em the\+State} & describes the current state of the checkbox:\+ {\ttfamily true} means the checkbox is checked. \\
+\hline
+{\em the\+Color} & color of the label in the format {\ttfamily 0x\+RRGGBB}, e.\+g. {\ttfamily 0xff0000} for red. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean value that indicates the current state of the checkbox, {\ttfamily true} if it is checked.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a78b14a86060cac4b5778de99c8671a32}\index{cvui@{cvui}!checkbox@{checkbox}}
+\index{checkbox@{checkbox}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{checkbox()}{checkbox()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_a78b14a86060cac4b5778de99c8671a32} 
+bool cvui::\+checkbox (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{const cv::\+\+String \&}]{the\+Label}{, }\item[{bool \texorpdfstring{$\ast$}{*}}]{the\+State}{, }\item[{unsigned int}]{the\+Color}{ = {\ttfamily 0xCECECE}}\end{DoxyParamCaption})}
+
+Display a checkbox. You can use the state parameter to monitor if the checkbox is checked or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Label} & text displayed besides the clickable checkbox square. \\
+\hline
+{\em the\+State} & describes the current state of the checkbox:\+ {\ttfamily true} means the checkbox is checked. \\
+\hline
+{\em the\+Color} & color of the label in the format {\ttfamily 0x\+RRGGBB}, e.\+g. {\ttfamily 0xff0000} for red. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean value that indicates the current state of the checkbox, {\ttfamily true} if it is checked. 
+\end{DoxyReturn}
+\Hypertarget{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}\index{cvui@{cvui}!context@{context}}
+\index{context@{context}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{context()}{context()}}
+{\footnotesize\ttfamily \label{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d} 
+void cvui::\+context (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Window\+Name}{}\end{DoxyParamCaption})}
+
+Inform cvui that all subsequent component calls belong to a window in particular. When using cvui with multiple Open\+CV windows, you must call cvui component calls between {\ttfamily cvui::\+contex(\+NAME)} and {\ttfamily cvui::\+update(\+NAME)}, where {\ttfamily NAME} is the name of the window. That way, cvui knows which window you are using ({\ttfamily NAME} in this case), so it can track mouse events, for instance.
+
+E.\+g.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Code\ for\ window\ "{}window1"{}.}}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{cvui::context}}(\textcolor{stringliteral}{"{}window1"{}});}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{cvui::text}}(frame,\ ...);}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{cvui::button}}(frame,\ ...);}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::update}}(\textcolor{stringliteral}{"{}window1"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ somewhere\ else,\ code\ for\ "{}window2"{}}}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{cvui::context}}(\textcolor{stringliteral}{"{}window2"{}});}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{cvui::printf}}(frame,\ ...);}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{cvui::printf}}(frame,\ ...);}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::update}}(\textcolor{stringliteral}{"{}window2"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Show\ everything\ in\ a\ window}}
+\DoxyCodeLine{cv::imshow(frame);}
+
+\end{DoxyCode}
+
+
+Pay attention to the pair {\ttfamily cvui::\+context(\+NAME)} and {\ttfamily cvui::\+update(\+NAME)}, which encloses the component calls for that window. You need such pair for each window of your application.
+
+After calling {\ttfamily \doxylink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::\+update()}}, you can show the result in a window using {\ttfamily cv::\+imshow()}. If you want to save some typing, you can use {\ttfamily \doxylink{namespacecvui_a9f97a42ad632c5caa55a2b6f9828a81c}{cvui::\+imshow()}}, which calls {\ttfamily \doxylink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::\+update()}} for you and then shows the frame in a window.
+
+E.\+g.:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Code\ for\ window\ "{}window1"{}.}}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{cvui::context}}(\textcolor{stringliteral}{"{}window1"{}});}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{cvui::text}}(frame,\ ...);}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{cvui::button}}(frame,\ ...);}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a9f97a42ad632c5caa55a2b6f9828a81c}{cvui::imshow}}(\textcolor{stringliteral}{"{}window1"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ somewhere\ else,\ code\ for\ "{}window2"{}}}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{cvui::context}}(\textcolor{stringliteral}{"{}window2"{}});}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{cvui::printf}}(frame,\ ...);}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{cvui::printf}}(frame,\ ...);}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a9f97a42ad632c5caa55a2b6f9828a81c}{cvui::imshow}}(\textcolor{stringliteral}{"{}window2"{}});}
+
+\end{DoxyCode}
+
+
+In that case, you don\textquotesingle{}t have to bother calling {\ttfamily \doxylink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::\+update()}} yourself, since {\ttfamily \doxylink{namespacecvui_a9f97a42ad632c5caa55a2b6f9828a81c}{cvui::\+imshow()}} will do it for you.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Window\+Name} & name of the window that will receive components from all subsequent cvui calls.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_ae723a98a9d41258961d970df271ed520}{init()} 
+
+\doxylink{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29}{watch()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a631bb12de6b93e76e6899d572849d953}\index{cvui@{cvui}!counter@{counter}}
+\index{counter@{counter}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{counter()}{counter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_a631bb12de6b93e76e6899d572849d953} 
+double cvui::\+counter (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{double}]{the\+Step}{ = {\ttfamily 0.5}, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Format}{ = {\ttfamily "{}\%.2f"{}}}\end{DoxyParamCaption})}
+
+Display a counter for float values that the user can increase/\+descrease by clicking the up and down arrows.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Value} & the current value of the counter. \\
+\hline
+{\em the\+Step} & the amount that should be increased/\+decreased when the user interacts with the counter buttons \\
+\hline
+{\em the\+Format} & how the value of the counter should be presented, as it was printed by {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}}. E.\+g. {\ttfamily "{}f"{}} means the value will be displayed as a regular float, {\ttfamily "{}\%.2f"{}} float with two digits after the point, etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a float that corresponds to the current value of the counter. 
+\end{DoxyReturn}
+\Hypertarget{namespacecvui_ad8e0668674779283ebddc328b65b9820}\index{cvui@{cvui}!counter@{counter}}
+\index{counter@{counter}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{counter()}{counter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_ad8e0668674779283ebddc328b65b9820} 
+int cvui::\+counter (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{int}]{the\+Step}{ = {\ttfamily 1}, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Format}{ = {\ttfamily "{}\%d"{}}}\end{DoxyParamCaption})}
+
+Display a counter for integer values that the user can increase/\+descrease by clicking the up and down arrows.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Value} & the current value of the counter. \\
+\hline
+{\em the\+Step} & the amount that should be increased/\+decreased when the user interacts with the counter buttons \\
+\hline
+{\em the\+Format} & how the value of the counter should be presented, as it was printed by {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}}. E.\+g. {\ttfamily "{}d"{}} means the value will be displayed as an integer, {\ttfamily "{}\%0d"{}} integer with one leading zero, etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer that corresponds to the current value of the counter. 
+\end{DoxyReturn}
+\Hypertarget{namespacecvui_abd9747156cfb15d42e00b754bc8775ab}\index{cvui@{cvui}!counter@{counter}}
+\index{counter@{counter}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{counter()}{counter()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_abd9747156cfb15d42e00b754bc8775ab} 
+double cvui::\+counter (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{double}]{the\+Step}{ = {\ttfamily 0.5}, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Format}{ = {\ttfamily "{}\%.2f"{}}}\end{DoxyParamCaption})}
+
+Display a counter for float values that the user can increase/\+descrease by clicking the up and down arrows.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Value} & the current value of the counter. \\
+\hline
+{\em the\+Step} & the amount that should be increased/\+decreased when the user interacts with the counter buttons. \\
+\hline
+{\em the\+Format} & how the value of the counter should be presented, as it was printed by {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}}. E.\+g. {\ttfamily "{}d"{}} means the value will be displayed as an integer, {\ttfamily "{}\%0d"{}} integer with one leading zero, etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an float that corresponds to the current value of the counter.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()} 
+
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_ab2261c21421de06c263e1d367926e2e5}\index{cvui@{cvui}!counter@{counter}}
+\index{counter@{counter}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{counter()}{counter()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_ab2261c21421de06c263e1d367926e2e5} 
+int cvui::\+counter (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{int}]{the\+Step}{ = {\ttfamily 1}, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Format}{ = {\ttfamily "{}\%d"{}}}\end{DoxyParamCaption})}
+
+Display a counter for integer values that the user can increase/\+descrease by clicking the up and down arrows.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Value} & the current value of the counter. \\
+\hline
+{\em the\+Step} & the amount that should be increased/\+decreased when the user interacts with the counter buttons. \\
+\hline
+{\em the\+Format} & how the value of the counter should be presented, as it was printed by {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}}. E.\+g. {\ttfamily "{}d"{}} means the value will be displayed as an integer, {\ttfamily "{}\%0d"{}} integer with one leading zero, etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer that corresponds to the current value of the counter.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()} 
+
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}\index{cvui@{cvui}!endColumn@{endColumn}}
+\index{endColumn@{endColumn}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{endColumn()}{endColumn()}}
+{\footnotesize\ttfamily \label{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382} 
+void cvui::\+end\+Column (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+End a column. You must call this function only if you have previously called its counter part, i.\+e. {\ttfamily \doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()}}.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a2e64d25523acde477058cc7f76a6c446}\index{cvui@{cvui}!endRow@{endRow}}
+\index{endRow@{endRow}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{endRow()}{endRow()}}
+{\footnotesize\ttfamily \label{namespacecvui_a2e64d25523acde477058cc7f76a6c446} 
+void cvui::\+end\+Row (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ends a row. You must call this function only if you have previously called its counter part, the {\ttfamily \doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()}} function.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a28cc8b7973806fc4f0fc5ec8825f58d4}\index{cvui@{cvui}!handleMouse@{handleMouse}}
+\index{handleMouse@{handleMouse}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{handleMouse()}{handleMouse()}}
+{\footnotesize\ttfamily \label{namespacecvui_a28cc8b7973806fc4f0fc5ec8825f58d4} 
+void cvui::\+handle\+Mouse (\begin{DoxyParamCaption}\item[{int}]{the\+Event}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Flags}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{the\+Data}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_a9f5d2a363c4064aee1bd6ef2c3f3bca3}\index{cvui@{cvui}!iarea@{iarea}}
+\index{iarea@{iarea}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{iarea()}{iarea()}}
+{\footnotesize\ttfamily \label{namespacecvui_a9f5d2a363c4064aee1bd6ef2c3f3bca3} 
+int cvui::\+iarea (\begin{DoxyParamCaption}\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{}\end{DoxyParamCaption})}
+
+Create an interaction area that reports activity with the mouse cursor. The tracked interactions are returned by the function and they are:\+
+
+{\ttfamily \doxylink{namespacecvui_ac325b7de5095e58f8d459d7eb3c0bdce}{OUT}} when the cursor is not over the iarea. {\ttfamily \doxylink{namespacecvui_a1b2af00cf23554512a200ed5e9b6acfa}{OVER}} when the cursor is over the iarea. {\ttfamily \doxylink{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0}{DOWN}} when the cursor is pressed over the iarea, but not released yet. {\ttfamily \doxylink{namespacecvui_a4af6b3d0288d2655aaf99fccaa633855}{CLICK}} when the cursor clicked (pressed and released) within the iarea.
+
+This function creates no visual output on the screen. It is intended to be used as an auxiliary tool to create interactions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em theX} & position X where the interactive area should be placed. \\
+\hline
+{\em theY} & position Y where the interactive area should be placed. \\
+\hline
+{\em the\+Width} & width of the interactive area. \\
+\hline
+{\em the\+Height} & height of the interactive area. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer value representing the current state of interaction with the mouse cursor. It can be {\ttfamily \doxylink{namespacecvui_ac325b7de5095e58f8d459d7eb3c0bdce}{OUT}} (cursor is not over the area), {\ttfamily \doxylink{namespacecvui_a1b2af00cf23554512a200ed5e9b6acfa}{OVER}} (cursor is over the area), {\ttfamily \doxylink{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0}{DOWN}} (cursor is pressed over the area, but not released yet) and {\ttfamily \doxylink{namespacecvui_a4af6b3d0288d2655aaf99fccaa633855}{CLICK}} (cursor clicked, i.\+e. pressed and released, within the area).
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{button()} 
+
+\doxylink{namespacecvui_a91bfea9b3bc194d0a2b5f9727815327d}{image()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a355db64e5cf9638205ee0a01ce174973}\index{cvui@{cvui}!image@{image}}
+\index{image@{image}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{image()}{image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_a355db64e5cf9638205ee0a01ce174973} 
+void cvui::\+image (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Image}{}\end{DoxyParamCaption})}
+
+Display an image (cv::\+\+Mat) within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()} and {\ttfamily end\texorpdfstring{$\ast$}{*}()} block
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Image} & image to be rendered in the specified destination.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{button()} 
+
+\doxylink{namespacecvui_a9f5d2a363c4064aee1bd6ef2c3f3bca3}{iarea()} 
+
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a91bfea9b3bc194d0a2b5f9727815327d}\index{cvui@{cvui}!image@{image}}
+\index{image@{image}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{image()}{image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_a91bfea9b3bc194d0a2b5f9727815327d} 
+void cvui::\+image (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{cv::\+\+Mat \&}]{the\+Image}{}\end{DoxyParamCaption})}
+
+Display an image (cv::\+\+Mat).
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the provded image should be rendered. \\
+\hline
+{\em theX} & position X where the image should be placed. \\
+\hline
+{\em theY} & position Y where the image should be placed. \\
+\hline
+{\em the\+Image} & image to be rendered in the specified destination.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{button()} 
+
+\doxylink{namespacecvui_a9f5d2a363c4064aee1bd6ef2c3f3bca3}{iarea()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a9f97a42ad632c5caa55a2b6f9828a81c}\index{cvui@{cvui}!imshow@{imshow}}
+\index{imshow@{imshow}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{imshow()}{imshow()}}
+{\footnotesize\ttfamily \label{namespacecvui_a9f97a42ad632c5caa55a2b6f9828a81c} 
+void cvui::\+imshow (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Window\+Name}{, }\item[{cv::\+\+Input\+Array}]{the\+Frame}{}\end{DoxyParamCaption})}
+
+Display an image in the specified window and update the internal structures of cvui. This function can be used as a replacement for {\ttfamily cv::\+imshow()}. If you want to use {\ttfamily cv::\+imshow() instead of }\doxylink{namespacecvui_a9f97a42ad632c5caa55a2b6f9828a81c}{cvui::\+imshow()}{\ttfamily , you must ensure you call }\doxylink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::\+update()}{\ttfamily  \texorpdfstring{$\ast$}{*}after\texorpdfstring{$\ast$}{*} all component calls and \texorpdfstring{$\ast$}{*}before\texorpdfstring{$\ast$}{*} }cv::\+imshow()\`{}, so cvui can update its internal structures.
+
+In general, it is easier to call {\ttfamily \doxylink{namespacecvui_a9f97a42ad632c5caa55a2b6f9828a81c}{cvui::\+imshow()}} alone instead of calling {\ttfamily \doxylink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::\+update()}\textquotesingle{} immediately followed by }cv::\+imshow()\`{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Window\+Name} & name of the window that will be shown. \\
+\hline
+{\em the\+Frame} & image, i.\+e. {\ttfamily cv::\+\+Mat}, to be shown in the window.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{update()} 
+
+\doxylink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{context()} 
+
+\doxylink{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29}{watch()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_ae723a98a9d41258961d970df271ed520}\index{cvui@{cvui}!init@{init}}
+\index{init@{init}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_ae723a98a9d41258961d970df271ed520} 
+void cvui::\+init (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Window\+Name}{, }\item[{int}]{the\+Delay\+Wait\+Key}{ = {\ttfamily -\/1}, }\item[{bool}]{the\+Create\+Named\+Window}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+Initializes cvui. You must provide the name of the window where components will be added. It is also possible to tell cvui to handle Open\+CV\textquotesingle{}s event queue automatically (by informing a value greater than zero in the {\ttfamily the\+Delay\+Wait\+Key} parameter of the function). In that case, cvui will automatically call {\ttfamily cv::\+wait\+Key()} within {\ttfamily \doxylink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::\+update()}}, so you don\textquotesingle{}t have to worry about it. The value passed to {\ttfamily the\+Delay\+Wait\+Key} will be used as the delay for {\ttfamily cv::\+wait\+Key()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Window\+Name} & name of the window where the components will be added. \\
+\hline
+{\em the\+Delay\+Wait\+Key} & delay value passed to {\ttfamily cv::\+wait\+Key()}. If a negative value is informed (default is {\ttfamily -\/1}), cvui will not automatically call {\ttfamily cv::\+wait\+Key()} within {\ttfamily \doxylink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::\+update()}}, which will disable keyboard shortcuts for all components. If you want to enable keyboard shortcut for components (e.\+g. using \& in a button label), you must specify a positive value for this param. \\
+\hline
+{\em the\+Create\+Named\+Window} & if an Open\+CV window named {\ttfamily the\+Window\+Name} should be created during the initialization. Windows are created using {\ttfamily cv::\+named\+Window()}. If this parameter is {\ttfamily false}, ensure you call {\ttfamily cv::\+named\+Window(\+WINDOW\+\_\+\+NAME)} {\itshape before} initializing cvui, otherwise it will not be able to track UI interactions.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29}{watch()} 
+
+\doxylink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{context()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a2a86136f1ed97ddc06ca06d0dce5c36a}\index{cvui@{cvui}!init@{init}}
+\index{init@{init}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_a2a86136f1ed97ddc06ca06d0dce5c36a} 
+void cvui::\+init (\begin{DoxyParamCaption}\item[{const cv::\+\+String}]{the\+Window\+Names}{\+[$\,$]\+, }\item[{size\+\_\+t}]{the\+How\+Many\+Windows}{, }\item[{int}]{the\+Delay\+Wait\+Key}{ = {\ttfamily -\/1}, }\item[{bool}]{the\+Create\+Named\+Windows}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+Initialize cvui using a list of names of windows where components will be added. It is also possible to tell cvui to handle Open\+CV\textquotesingle{}s event queue automatically (by informing a value greater than zero in the {\ttfamily the\+Delay\+Wait\+Key} parameter of the function). In that case, cvui will automatically call {\ttfamily cv::\+wait\+Key()} within {\ttfamily \doxylink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::\+update()}}, so you don\textquotesingle{}t have to worry about it. The value passed to {\ttfamily the\+Delay\+Wait\+Key} will be used as the delay for {\ttfamily cv::\+wait\+Key()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Window\+Names} & array containing the name of the windows where components will be added. Those windows will be automatically if {\ttfamily the\+Create\+Named\+Windows} is {\ttfamily true}. \\
+\hline
+{\em the\+How\+Many\+Windows} & how many window names exist in the {\ttfamily the\+Window\+Names} array. \\
+\hline
+{\em the\+Delay\+Wait\+Key} & delay value passed to {\ttfamily cv::\+wait\+Key()}. If a negative value is informed (default is {\ttfamily -\/1}), cvui will not automatically call {\ttfamily cv::\+wait\+Key()} within {\ttfamily \doxylink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::\+update()}}, which will disable keyboard shortcuts for all components. If you want to enable keyboard shortcut for components (e.\+g. using \& in a button label), you must specify a positive value for this param. \\
+\hline
+{\em the\+Create\+Named\+Windows} & if Open\+CV windows named according to {\ttfamily the\+Window\+Names} should be created during the initialization. Windows are created using {\ttfamily cv::\+named\+Window()}. If this parameter is {\ttfamily false}, ensure you call {\ttfamily cv::\+named\+Window(\+WINDOW\+\_\+\+NAME)} for all windows {\itshape before} initializing cvui, otherwise it will not be able to track UI interactions.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29}{watch()} 
+
+\doxylink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{context()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_ac5bab07fb83f288977f2ba0af384a849}\index{cvui@{cvui}!lastKeyPressed@{lastKeyPressed}}
+\index{lastKeyPressed@{lastKeyPressed}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{lastKeyPressed()}{lastKeyPressed()}}
+{\footnotesize\ttfamily \label{namespacecvui_ac5bab07fb83f288977f2ba0af384a849} 
+int cvui::\+last\+Key\+Pressed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Return the last key that was pressed. This function will only work if a value greater than zero was passed to {\ttfamily \doxylink{namespacecvui_ae723a98a9d41258961d970df271ed520}{cvui::\+init()}} as the delay waitkey parameter.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_ae723a98a9d41258961d970df271ed520}{init()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_ab48db1f6bbed2e2b61a035f6f10e1386}\index{cvui@{cvui}!mouse@{mouse}}
+\index{mouse@{mouse}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{mouse()}{mouse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \label{namespacecvui_ab48db1f6bbed2e2b61a035f6f10e1386} 
+bool cvui::\+mouse (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Window\+Name}{, }\item[{int}]{the\+Button}{, }\item[{int}]{the\+Query}{}\end{DoxyParamCaption})}
+
+Query the mouse for events in a particular button in a particular window. This function behave exactly like {\ttfamily \doxylink{namespacecvui_a961c9491eb40211febd8db0a5bfa16d8}{cvui::\+mouse(int the\+Button, int the\+Query)}}, with the difference that queries are targeted at a particular mouse button in a particular window instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Window\+Name} & name of the window that will be queried. \\
+\hline
+{\em the\+Button} & integer describing the mouse button to be queried. Possible values are {\ttfamily \doxylink{namespacecvui_a6484b0b9d05e9a140b8e04d44a5aee7b}{cvui::\+\+LEFT\+\_\+\+BUTTON}}, {\ttfamily \doxylink{namespacecvui_a930a46e085bb0bcf6389373627758691}{cvui::\+\+MIDDLE\+\_\+\+BUTTON}} and {\ttfamily \doxylink{namespacecvui_a6484b0b9d05e9a140b8e04d44a5aee7b}{cvui::\+\+LEFT\+\_\+\+BUTTON}}. \\
+\hline
+{\em the\+Query} & integer describing the intended mouse query. Available queries are {\ttfamily \doxylink{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0}{cvui::\+\+DOWN}}, {\ttfamily \doxylink{namespacecvui_af90309bb2a99598ad259b7771de2f922}{cvui::\+\+UP}}, {\ttfamily \doxylink{namespacecvui_a4af6b3d0288d2655aaf99fccaa633855}{cvui::\+\+CLICK}}, and {\ttfamily \doxylink{namespacecvui_aa3183bf7cc9be4e6e272b69ac0826b13}{cvui::\+\+IS\+\_\+\+DOWN}}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespacecvui_a5b29b96b528f5ec94dd0929379a0fdb2}\index{cvui@{cvui}!mouse@{mouse}}
+\index{mouse@{mouse}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{mouse()}{mouse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \label{namespacecvui_a5b29b96b528f5ec94dd0929379a0fdb2} 
+bool cvui::\+mouse (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Window\+Name}{, }\item[{int}]{the\+Query}{}\end{DoxyParamCaption})}
+
+Query the mouse for events in a particular window. This function behave exactly like {\ttfamily \doxylink{namespacecvui_a2a19278582c22e0f0ff1adb899ab8c92}{cvui::\+mouse(int the\+Query)}} with the difference that queries are targeted at a particular window.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Window\+Name} & name of the window that will be queried. \\
+\hline
+{\em the\+Query} & integer describing the intended mouse query. Available queries are {\ttfamily \doxylink{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0}{cvui::\+\+DOWN}}, {\ttfamily \doxylink{namespacecvui_af90309bb2a99598ad259b7771de2f922}{cvui::\+\+UP}}, {\ttfamily \doxylink{namespacecvui_a4af6b3d0288d2655aaf99fccaa633855}{cvui::\+\+CLICK}}, and {\ttfamily \doxylink{namespacecvui_aa3183bf7cc9be4e6e272b69ac0826b13}{cvui::\+\+IS\+\_\+\+DOWN}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_aec4f649283160d14cdccfc9a823ece6d}{mouse(const cv::\+\+String\&)} 
+
+\doxylink{namespacecvui_ab48db1f6bbed2e2b61a035f6f10e1386}{mouse(const cv::\+\+String\&, int, int)} 
+
+\doxylink{namespacecvui_a961c9491eb40211febd8db0a5bfa16d8}{mouse(int, int)} 
+
+\doxylink{namespacecvui_a2a19278582c22e0f0ff1adb899ab8c92}{mouse(int)} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_aec4f649283160d14cdccfc9a823ece6d}\index{cvui@{cvui}!mouse@{mouse}}
+\index{mouse@{mouse}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{mouse()}{mouse()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \label{namespacecvui_aec4f649283160d14cdccfc9a823ece6d} 
+cv::\+\+Point cvui::\+mouse (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Window\+Name}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+Return the last position of the mouse.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Window\+Name} & name of the window whose mouse cursor will be used. If nothing is informed (default), the function will return the position of the mouse cursor for the default window (the one informed in {\ttfamily \doxylink{namespacecvui_ae723a98a9d41258961d970df271ed520}{cvui::\+init()}}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a point containing the position of the mouse cursor in the speficied window. 
+\end{DoxyReturn}
+\Hypertarget{namespacecvui_a961c9491eb40211febd8db0a5bfa16d8}\index{cvui@{cvui}!mouse@{mouse}}
+\index{mouse@{mouse}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{mouse()}{mouse()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \label{namespacecvui_a961c9491eb40211febd8db0a5bfa16d8} 
+bool cvui::\+mouse (\begin{DoxyParamCaption}\item[{int}]{the\+Button}{, }\item[{int}]{the\+Query}{}\end{DoxyParamCaption})}
+
+Query the mouse for events in a particular button. This function behave exactly like {\ttfamily \doxylink{namespacecvui_a2a19278582c22e0f0ff1adb899ab8c92}{cvui::\+mouse(int the\+Query)}}, with the difference that queries are targeted at a particular mouse button instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Button} & integer describing the mouse button to be queried. Possible values are {\ttfamily \doxylink{namespacecvui_a6484b0b9d05e9a140b8e04d44a5aee7b}{cvui::\+\+LEFT\+\_\+\+BUTTON}}, {\ttfamily \doxylink{namespacecvui_a930a46e085bb0bcf6389373627758691}{cvui::\+\+MIDDLE\+\_\+\+BUTTON}} and {\ttfamily \doxylink{namespacecvui_a6484b0b9d05e9a140b8e04d44a5aee7b}{cvui::\+\+LEFT\+\_\+\+BUTTON}}. \\
+\hline
+{\em the\+Query} & integer describing the intended mouse query. Available queries are {\ttfamily \doxylink{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0}{cvui::\+\+DOWN}}, {\ttfamily \doxylink{namespacecvui_af90309bb2a99598ad259b7771de2f922}{cvui::\+\+UP}}, {\ttfamily \doxylink{namespacecvui_a4af6b3d0288d2655aaf99fccaa633855}{cvui::\+\+CLICK}}, and {\ttfamily \doxylink{namespacecvui_aa3183bf7cc9be4e6e272b69ac0826b13}{cvui::\+\+IS\+\_\+\+DOWN}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_aec4f649283160d14cdccfc9a823ece6d}{mouse(const cv::\+\+String\&)} 
+
+\doxylink{namespacecvui_ab48db1f6bbed2e2b61a035f6f10e1386}{mouse(const cv::\+\+String\&, int, int)} 
+
+\doxylink{namespacecvui_a2a19278582c22e0f0ff1adb899ab8c92}{mouse(int)} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a2a19278582c22e0f0ff1adb899ab8c92}\index{cvui@{cvui}!mouse@{mouse}}
+\index{mouse@{mouse}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{mouse()}{mouse()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \label{namespacecvui_a2a19278582c22e0f0ff1adb899ab8c92} 
+bool cvui::\+mouse (\begin{DoxyParamCaption}\item[{int}]{the\+Query}{}\end{DoxyParamCaption})}
+
+Query the mouse for events, e.\+g. "{}is any button down now?"{}. Available queries are:\+
+
+{\ttfamily \doxylink{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0}{cvui::\+\+DOWN}}:\+ any mouse button was pressed. {\ttfamily \doxylink{namespacecvui_aec4f649283160d14cdccfc9a823ece6d}{cvui::\+mouse()}} returns {\ttfamily true} for a single frame only. {\ttfamily \doxylink{namespacecvui_af90309bb2a99598ad259b7771de2f922}{cvui::\+\+UP}}:\+ any mouse button was released. {\ttfamily \doxylink{namespacecvui_aec4f649283160d14cdccfc9a823ece6d}{cvui::\+mouse()}} returns {\ttfamily true} for a single frame only. {\ttfamily \doxylink{namespacecvui_a4af6b3d0288d2655aaf99fccaa633855}{cvui::\+\+CLICK}}:\+ any mouse button was clicked (went down then up, no matter the amount of frames in between). {\ttfamily \doxylink{namespacecvui_aec4f649283160d14cdccfc9a823ece6d}{cvui::\+mouse()}} returns {\ttfamily true} for a single frame only. {\ttfamily \doxylink{namespacecvui_aa3183bf7cc9be4e6e272b69ac0826b13}{cvui::\+\+IS\+\_\+\+DOWN}}:\+ any mouse button is currently pressed. {\ttfamily \doxylink{namespacecvui_aec4f649283160d14cdccfc9a823ece6d}{cvui::\+mouse()}} returns {\ttfamily true} for as long as the button is down/\+pressed.
+
+It is easier to think of this function as the answer to a questions. For instance, asking if any mouse button went down:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{namespacecvui_aec4f649283160d14cdccfc9a823ece6d}{cvui::mouse}}(\doxymbox{\hyperlink{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0}{cvui::DOWN}}))\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Any\ mouse\ button\ just\ went\ down.}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The window whose mouse will be queried depends on the context. If {\ttfamily cvui::\+mouse(query)} is being called after {\ttfamily \doxylink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{cvui::\+context()}}, the window informed in the context will be queried. If no context is available, the default window (informed in {\ttfamily \doxylink{namespacecvui_ae723a98a9d41258961d970df271ed520}{cvui::\+init()}}) will be used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Query} & integer describing the intended mouse query. Available queries are {\ttfamily \doxylink{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0}{cvui::\+\+DOWN}}, {\ttfamily \doxylink{namespacecvui_af90309bb2a99598ad259b7771de2f922}{cvui::\+\+UP}}, {\ttfamily \doxylink{namespacecvui_a4af6b3d0288d2655aaf99fccaa633855}{cvui::\+\+CLICK}}, and {\ttfamily \doxylink{namespacecvui_aa3183bf7cc9be4e6e272b69ac0826b13}{cvui::\+\+IS\+\_\+\+DOWN}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_aec4f649283160d14cdccfc9a823ece6d}{mouse(const cv::\+\+String\&)} 
+
+\doxylink{namespacecvui_a5b29b96b528f5ec94dd0929379a0fdb2}{mouse(const cv::\+\+String\&, int)} 
+
+\doxylink{namespacecvui_ab48db1f6bbed2e2b61a035f6f10e1386}{mouse(const cv::\+\+String\&, int, int)} 
+
+\doxylink{namespacecvui_a961c9491eb40211febd8db0a5bfa16d8}{mouse(int, int)} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a9017ae59471c448150111ee238a71c89}\index{cvui@{cvui}!printf@{printf}}
+\index{printf@{printf}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{printf()}{printf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_a9017ae59471c448150111ee238a71c89} 
+void cvui::\+printf (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Fmt}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+Display a piece of text that can be formated using {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}} style.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+For instance if you want to display text mixed with numbers, you can use:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf}}(frame,\ 10,\ 15,\ 0.4,\ 0xff0000,\ \textcolor{stringliteral}{"{}Text:\ \%d\ and\ \%f"{}},\ 7,\ 3.1415);}
+
+\end{DoxyCode}
+
+
+The size and color of the text will be based on cvui\textquotesingle{}s default values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Fmt} & formating string as it would be supplied for {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}}, e.\+g. {\ttfamily "{}Text:\+ d and f"{}, 7, 3.\+1415}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text()} 
+
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a9fc9f1c2feed48be868b3905b3dbe084}\index{cvui@{cvui}!printf@{printf}}
+\index{printf@{printf}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{printf()}{printf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_a9fc9f1c2feed48be868b3905b3dbe084} 
+void cvui::\+printf (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Fmt}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+Display a piece of text that can be formated using {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}} style. For instance if you want to display text mixed with numbers, you can use:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf}}(frame,\ 10,\ 15,\ 0.4,\ 0xff0000,\ \textcolor{stringliteral}{"{}Text:\ \%d\ and\ \%f"{}},\ 7,\ 3.1415);}
+
+\end{DoxyCode}
+
+
+The size and color of the text will be based on cvui\textquotesingle{}s default values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Fmt} & formating string as it would be supplied for {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}}, e.\+g. {\ttfamily "{}Text:\+ d and f"{}, 7, 3.\+1415}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}\index{cvui@{cvui}!printf@{printf}}
+\index{printf@{printf}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{printf()}{printf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6} 
+void cvui::\+printf (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{double}]{the\+Font\+Scale}{, }\item[{unsigned int}]{the\+Color}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Fmt}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+Display a piece of text that can be formated using {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}} style. For instance if you want to display text mixed with numbers, you can use:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf}}(frame,\ 10,\ 15,\ 0.4,\ 0xff0000,\ \textcolor{stringliteral}{"{}Text:\ \%d\ and\ \%f"{}},\ 7,\ 3.1415);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Font\+Scale} & size of the text. \\
+\hline
+{\em the\+Color} & color of the text in the format {\ttfamily 0x\+RRGGBB}, e.\+g. {\ttfamily 0xff0000} for red. \\
+\hline
+{\em the\+Fmt} & formating string as it would be supplied for {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}}, e.\+g. {\ttfamily "{}Text:\+ d and f"{}, 7, 3.\+1415}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_aa13678e0839846fe166f92d316c52a49}\index{cvui@{cvui}!printf@{printf}}
+\index{printf@{printf}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{printf()}{printf()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_aa13678e0839846fe166f92d316c52a49} 
+void cvui::\+printf (\begin{DoxyParamCaption}\item[{double}]{the\+Font\+Scale}{, }\item[{unsigned int}]{the\+Color}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Fmt}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+Display a piece of text within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()} and {\ttfamily end\texorpdfstring{$\ast$}{*}()} block.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+The text can be formated using {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}} style. For instance if you want to display text mixed with numbers, you can use:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf}}(0.4,\ 0xff0000,\ \textcolor{stringliteral}{"{}Text:\ \%d\ and\ \%f"{}},\ 7,\ 3.1415);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Font\+Scale} & size of the text. \\
+\hline
+{\em the\+Color} & color of the text in the format {\ttfamily 0x\+RRGGBB}, e.\+g. {\ttfamily 0xff0000} for red. \\
+\hline
+{\em the\+Fmt} & formating string as it would be supplied for {\ttfamily stdio\textquotesingle{}s \doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()}}, e.\+g. {\ttfamily "{}Text:\+ d and f"{}, 7, 3.\+1415}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{text()} 
+
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a759e80d962fa4649f749ccfa03f89509}\index{cvui@{cvui}!rect@{rect}}
+\index{rect@{rect}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{rect()}{rect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_a759e80d962fa4649f749ccfa03f89509} 
+void cvui::\+rect (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{unsigned int}]{the\+Border\+Color}{, }\item[{unsigned int}]{the\+Filling\+Color}{ = {\ttfamily 0xff000000}}\end{DoxyParamCaption})}
+
+Display a filled rectangle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Width} & width of the rectangle. \\
+\hline
+{\em the\+Height} & height of the rectangle. \\
+\hline
+{\em the\+Border\+Color} & color of rectangle\textquotesingle{}s border in the format {\ttfamily 0x\+RRGGBB}, e.\+g. {\ttfamily 0xff0000} for red. \\
+\hline
+{\em the\+Filling\+Color} & color of rectangle\textquotesingle{}s filling in the format {\ttfamily 0x\+AARRGGBB}, e.\+g. {\ttfamily 0x00ff0000} for red, {\ttfamily 0xff000000} for transparent filling.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a91bfea9b3bc194d0a2b5f9727815327d}{image()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_aa64b77661ff8adf80757cf4e9e239b14}\index{cvui@{cvui}!rect@{rect}}
+\index{rect@{rect}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{rect()}{rect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_aa64b77661ff8adf80757cf4e9e239b14} 
+void cvui::\+rect (\begin{DoxyParamCaption}\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{unsigned int}]{the\+Border\+Color}{, }\item[{unsigned int}]{the\+Filling\+Color}{ = {\ttfamily 0xff000000}}\end{DoxyParamCaption})}
+
+Display a rectangle within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()} and {\ttfamily end\texorpdfstring{$\ast$}{*}()} block.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Width} & width of the rectangle. \\
+\hline
+{\em the\+Height} & height of the rectangle. \\
+\hline
+{\em the\+Border\+Color} & color of rectangle\textquotesingle{}s border in the format {\ttfamily 0x\+RRGGBB}, e.\+g. {\ttfamily 0xff0000} for red. \\
+\hline
+{\em the\+Filling\+Color} & color of rectangle\textquotesingle{}s filling in the format {\ttfamily 0x\+AARRGGBB}, e.\+g. {\ttfamily 0x00ff0000} for red, {\ttfamily 0xff000000} for transparent filling.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a6195ca6d72a3694ca68a75f1f3ec4431}{window()} 
+
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a6d5b286e112bab4de72fe2730500861b}\index{cvui@{cvui}!space@{space}}
+\index{space@{space}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{space()}{space()}}
+{\footnotesize\ttfamily \label{namespacecvui_a6d5b286e112bab4de72fe2730500861b} 
+void cvui::\+space (\begin{DoxyParamCaption}\item[{int}]{the\+Value}{ = {\ttfamily 5}}\end{DoxyParamCaption})}
+
+Add an arbitrary amount of space between components within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()} and {\ttfamily end\texorpdfstring{$\ast$}{*}()} block. The function is aware of context, so if it is used within a {\ttfamily \doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()}} and {\ttfamily \doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()}} block, the space will be vertical. If it is used within a {\ttfamily \doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()}} and {\ttfamily \doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()}} block, space will be horizontal.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Value} & the amount of space to be added.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_afa18f5ee84da019b801a52f8b475efe6}\index{cvui@{cvui}!sparkline@{sparkline}}
+\index{sparkline@{sparkline}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{sparkline()}{sparkline()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_afa18f5ee84da019b801a52f8b475efe6} 
+void cvui::\+sparkline (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{std::\+vector$<$ double $>$ \&}]{the\+Values}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{unsigned int}]{the\+Color}{ = {\ttfamily 0x00FF00}}\end{DoxyParamCaption})}
+
+Display the values of a vector as a sparkline.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em the\+Values} & a vector containing the values to be used in the sparkline. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Width} & width of the sparkline. \\
+\hline
+{\em the\+Height} & height of the sparkline. \\
+\hline
+{\em the\+Color} & color of sparkline in the format {\ttfamily 0x\+RRGGBB}, e.\+g. {\ttfamily 0xff0000} for red.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a72f3fdade2cece81f0ac2a25b9d75a80}{trackbar()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_ad86d266052957f5bd60cec23287db2cd}\index{cvui@{cvui}!sparkline@{sparkline}}
+\index{sparkline@{sparkline}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{sparkline()}{sparkline()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_ad86d266052957f5bd60cec23287db2cd} 
+void cvui::\+sparkline (\begin{DoxyParamCaption}\item[{std::\+vector$<$ double $>$ \&}]{the\+Values}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{unsigned int}]{the\+Color}{ = {\ttfamily 0x00FF00}}\end{DoxyParamCaption})}
+
+Display the values of a vector as a sparkline within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()} and {\ttfamily end\texorpdfstring{$\ast$}{*}()} block.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Values} & vector with the values that will be rendered as a sparkline. \\
+\hline
+{\em the\+Width} & width of the sparkline. \\
+\hline
+{\em the\+Height} & height of the sparkline. \\
+\hline
+{\em the\+Color} & color of sparkline in the format {\ttfamily 0x\+RRGGBB}, e.\+g. {\ttfamily 0xff0000} for red.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_ad743c5572a5ceaaf7eca4fff842c32ae}\index{cvui@{cvui}!text@{text}}
+\index{text@{text}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{text()}{text()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_ad743c5572a5ceaaf7eca4fff842c32ae} 
+void cvui::\+text (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Text}{, }\item[{double}]{the\+Font\+Scale}{ = {\ttfamily 0.4}, }\item[{unsigned int}]{the\+Color}{ = {\ttfamily 0xCECECE}}\end{DoxyParamCaption})}
+
+Display a piece of text within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()} and {\ttfamily end\texorpdfstring{$\ast$}{*}()} block.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Text} & text content. \\
+\hline
+{\em the\+Font\+Scale} & size of the text. \\
+\hline
+{\em the\+Color} & color of the text in the format {\ttfamily 0x\+RRGGBB}, e.\+g. {\ttfamily 0xff0000} for red.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()} 
+
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}\index{cvui@{cvui}!text@{text}}
+\index{text@{text}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{text()}{text()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d} 
+void cvui::\+text (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{const cv::\+\+String \&}]{the\+Text}{, }\item[{double}]{the\+Font\+Scale}{ = {\ttfamily 0.4}, }\item[{unsigned int}]{the\+Color}{ = {\ttfamily 0xCECECE}}\end{DoxyParamCaption})}
+
+Display a piece of text.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Text} & the text content. \\
+\hline
+{\em the\+Font\+Scale} & size of the text. \\
+\hline
+{\em the\+Color} & color of the text in the format {\ttfamily 0x\+RRGGBB}, e.\+g. {\ttfamily 0xff0000} for red.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{printf()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_ae8b5eea702025b3255529e748d9e47b0}\index{cvui@{cvui}!trackbar@{trackbar}}
+\index{trackbar@{trackbar}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{trackbar()}{trackbar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_ae8b5eea702025b3255529e748d9e47b0} 
+template$<$typename num\+\_\+type$>$ \\
+bool cvui::\+trackbar (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{num\+\_\+type \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{num\+\_\+type}]{the\+Min}{, }\item[{num\+\_\+type}]{the\+Max}{, }\item[{int}]{the\+Segments}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Label\+Format}{, }\item[{unsigned int}]{the\+Options}{, }\item[{num\+\_\+type}]{the\+Discrete\+Step}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_a72f3fdade2cece81f0ac2a25b9d75a80}\index{cvui@{cvui}!trackbar@{trackbar}}
+\index{trackbar@{trackbar}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{trackbar()}{trackbar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_a72f3fdade2cece81f0ac2a25b9d75a80} 
+template$<$typename T$>$ \\
+bool cvui::\+trackbar (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{T \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{T}]{the\+Min}{, }\item[{T}]{the\+Max}{, }\item[{int}]{the\+Segments}{ = {\ttfamily 1}, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Label\+Format}{ = {\ttfamily "{}\%.1Lf"{}}, }\item[{unsigned int}]{the\+Options}{ = {\ttfamily 0}, }\item[{T}]{the\+Discrete\+Step}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+Display a trackbar for numeric values that the user can increase/\+decrease by clicking and/\+or dragging the marker right or left. This component uses templates so it is imperative that you make it very explicit the type of {\ttfamily the\+Value}, {\ttfamily the\+Min}, {\ttfamily the\+Max} and {\ttfamily the\+Step}, otherwise you might end up with weird compilation errors.
+
+Example:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ using\ double}}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a72f3fdade2cece81f0ac2a25b9d75a80}{trackbar}}(where,\ x,\ y,\ width,\ \&doubleValue,\ 0.0,\ 50.0);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ using\ float}}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a72f3fdade2cece81f0ac2a25b9d75a80}{trackbar}}(where,\ x,\ y,\ width,\ \&floatValue,\ 0.0f,\ 50.0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ using\ char}}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a72f3fdade2cece81f0ac2a25b9d75a80}{trackbar}}(where,\ x,\ y,\ width,\ \&charValue,\ (\textcolor{keywordtype}{char})1,\ (\textcolor{keywordtype}{char})10);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Width} & the width of the trackbar. \\
+\hline
+{\em the\+Value} & the current value of the trackbar. It will be modified when the user interacts with the trackbar. Any numeric type can be used, e.\+g. float, double, long double, int, char, uchar. \\
+\hline
+{\em the\+Min} & minimum value allowed for the trackbar. \\
+\hline
+{\em the\+Max} & maximum value allowed for the trackbar. \\
+\hline
+{\em the\+Segments} & number of segments the trackbar will have (default is 1). Segments can be seen as groups of numbers in the scale of the trackbar. For example, 1 segment means a single groups of values (no extra labels along the scale), 2 segments mean the trackbar values will be divided in two groups and a label will be placed at the middle of the scale. \\
+\hline
+{\em the\+Label\+Format} & formating string that will be used to render the labels, e.\+g. {\ttfamily \%.2Lf} (Lf {\itshape not lf). No matter the type of the {\ttfamily the\+Value} param, internally trackbar stores it as a {\ttfamily long double}, so the formating string will \texorpdfstring{$\ast$}{*}always} receive a {\ttfamily long double} value to format. If you are using a trackbar with integers values, for instance, you can supress decimals using a formating string such as {\ttfamily \%.0Lf} to format your labels. \\
+\hline
+{\em the\+Options} & options to customize the behavior/\+appearance of the trackbar, expressed as a bitset. Available options are defined as {\ttfamily TRACKBAR\+\_\+} constants and they can be combined using the bitwise {\ttfamily \texorpdfstring{$\vert$}{|}} operand. Available options are:\+ {\ttfamily \doxylink{namespacecvui_a2577612f092f34b9839c967714904ad2}{TRACKBAR\+\_\+\+HIDE\+\_\+\+SEGMENT\+\_\+\+LABELS}} (do not render segment labels, but do render min/\+max labels), {\ttfamily \doxylink{namespacecvui_a18717bc2beedeea0a8721cd80df7913d}{TRACKBAR\+\_\+\+HIDE\+\_\+\+STEP\+\_\+\+SCALE}} (do not render the small lines indicating values in the scale), {\ttfamily \doxylink{namespacecvui_a19baa1dbeca0a10dd81fbf165db088c3}{TRACKBAR\+\_\+\+DISCRETE}} (changes of the trackbar value are multiples of the\+Discrete\+Step param), {\ttfamily \doxylink{namespacecvui_a38b7708f1daf64e2e36433c736bffcac}{TRACKBAR\+\_\+\+HIDE\+\_\+\+MIN\+\_\+\+MAX\+\_\+\+LABELS}} (do not render min/\+max labels), {\ttfamily \doxylink{namespacecvui_ae0d82d3296fd5f8d7dbbf92291e5cfab}{TRACKBAR\+\_\+\+HIDE\+\_\+\+VALUE\+\_\+\+LABEL}} (do not render the current value of the trackbar below the moving marker), {\ttfamily \doxylink{namespacecvui_a117214d098e5f92bc6ea95ec14e5a5ff}{TRACKBAR\+\_\+\+HIDE\+\_\+\+LABELS}} (do not render labels at all). \\
+\hline
+{\em the\+Discrete\+Step} & amount that the trackbar marker will increase/\+decrease when the marker is dragged right/\+left (if option TRACKBAR\+\_\+\+DISCRETE is ON) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} when the value of the trackbar changed.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_ad8e0668674779283ebddc328b65b9820}{counter()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a58fee4bc1c4fb019a6183c5d1cce55dc}\index{cvui@{cvui}!trackbar@{trackbar}}
+\index{trackbar@{trackbar}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{trackbar()}{trackbar()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_a58fee4bc1c4fb019a6183c5d1cce55dc} 
+template$<$typename num\+\_\+type$>$ \\
+bool cvui::\+trackbar (\begin{DoxyParamCaption}\item[{int}]{the\+Width}{, }\item[{num\+\_\+type \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{num\+\_\+type}]{the\+Min}{, }\item[{num\+\_\+type}]{the\+Max}{, }\item[{int}]{the\+Segments}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Label\+Format}{, }\item[{unsigned int}]{the\+Options}{, }\item[{num\+\_\+type}]{the\+Discrete\+Step}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_af1afe480c72dfb1bbe212ba57ecf05cd}\index{cvui@{cvui}!trackbar@{trackbar}}
+\index{trackbar@{trackbar}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{trackbar()}{trackbar()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{namespacecvui_af1afe480c72dfb1bbe212ba57ecf05cd} 
+template$<$typename T$>$ \\
+bool cvui::\+trackbar (\begin{DoxyParamCaption}\item[{int}]{the\+Width}{, }\item[{T \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{T}]{the\+Min}{, }\item[{T}]{the\+Max}{, }\item[{int}]{the\+Segments}{ = {\ttfamily 1}, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Label\+Format}{ = {\ttfamily "{}\%.1Lf"{}}, }\item[{unsigned int}]{the\+Options}{ = {\ttfamily 0}, }\item[{T}]{the\+Discrete\+Step}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+Display a trackbar for numeric values that the user can increase/\+decrease by clicking and/\+or dragging the marker right or left.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+This component uses templates so it is imperative that you make it very explicit the type of {\ttfamily the\+Value}, {\ttfamily the\+Min}, {\ttfamily the\+Max} and {\ttfamily the\+Step}, otherwise you might end up with weird compilation errors.
+
+Example:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ using\ double}}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a72f3fdade2cece81f0ac2a25b9d75a80}{trackbar}}(width,\ \&doubleValue,\ 0.0,\ 50.0);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ using\ float}}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a72f3fdade2cece81f0ac2a25b9d75a80}{trackbar}}(width,\ \&floatValue,\ 0.0f,\ 50.0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ using\ char}}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacecvui_a72f3fdade2cece81f0ac2a25b9d75a80}{trackbar}}(width,\ \&charValue,\ (\textcolor{keywordtype}{char})1,\ (\textcolor{keywordtype}{char})10);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Width} & the width of the trackbar. \\
+\hline
+{\em the\+Value} & the current value of the trackbar. It will be modified when the user interacts with the trackbar. Any numeric type can be used, e.\+g. float, double, long double, int, char, uchar. \\
+\hline
+{\em the\+Min} & minimum value allowed for the trackbar. \\
+\hline
+{\em the\+Max} & maximum value allowed for the trackbar. \\
+\hline
+{\em the\+Segments} & number of segments the trackbar will have (default is 1). Segments can be seen as groups of numbers in the scale of the trackbar. For example, 1 segment means a single groups of values (no extra labels along the scale), 2 segments mean the trackbar values will be divided in two groups and a label will be placed at the middle of the scale. \\
+\hline
+{\em the\+Label\+Format} & formating string that will be used to render the labels, e.\+g. {\ttfamily \%.2Lf}. No matter the type of the {\ttfamily the\+Value} param, internally trackbar stores it as a {\ttfamily long double}, so the formating string will {\itshape always} receive a {\ttfamily long double} value to format. If you are using a trackbar with integers values, for instance, you can supress decimals using a formating string as {\ttfamily \%.0Lf} to format your labels. \\
+\hline
+{\em the\+Options} & options to customize the behavior/\+appearance of the trackbar, expressed as a bitset. Available options are defined as {\ttfamily TRACKBAR\+\_\+} constants and they can be combined using the bitwise {\ttfamily \texorpdfstring{$\vert$}{|}} operand. Available options are:\+ {\ttfamily \doxylink{namespacecvui_a2577612f092f34b9839c967714904ad2}{TRACKBAR\+\_\+\+HIDE\+\_\+\+SEGMENT\+\_\+\+LABELS}} (do not render segment labels, but do render min/\+max labels), {\ttfamily \doxylink{namespacecvui_a18717bc2beedeea0a8721cd80df7913d}{TRACKBAR\+\_\+\+HIDE\+\_\+\+STEP\+\_\+\+SCALE}} (do not render the small lines indicating values in the scale), {\ttfamily \doxylink{namespacecvui_a19baa1dbeca0a10dd81fbf165db088c3}{TRACKBAR\+\_\+\+DISCRETE}} (changes of the trackbar value are multiples of informed step param), {\ttfamily \doxylink{namespacecvui_a38b7708f1daf64e2e36433c736bffcac}{TRACKBAR\+\_\+\+HIDE\+\_\+\+MIN\+\_\+\+MAX\+\_\+\+LABELS}} (do not render min/\+max labels), {\ttfamily \doxylink{namespacecvui_ae0d82d3296fd5f8d7dbbf92291e5cfab}{TRACKBAR\+\_\+\+HIDE\+\_\+\+VALUE\+\_\+\+LABEL}} (do not render the current value of the trackbar below the moving marker), {\ttfamily \doxylink{namespacecvui_a117214d098e5f92bc6ea95ec14e5a5ff}{TRACKBAR\+\_\+\+HIDE\+\_\+\+LABELS}} (do not render labels at all). \\
+\hline
+{\em the\+Discrete\+Step} & the amount that the trackbar marker will increase/\+decrease when the marker is dragged right/\+left (if option TRACKBAR\+\_\+\+DISCRETE is ON) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} when the value of the trackbar changed.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_ad8e0668674779283ebddc328b65b9820}{counter()} 
+
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_ab83985e325abaf168bd878e7c6903992}\index{cvui@{cvui}!update@{update}}
+\index{update@{update}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{namespacecvui_ab83985e325abaf168bd878e7c6903992} 
+void cvui::\+update (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Window\+Name}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+Update the library internal things. You need to call this function {\bfseries{AFTER}} you are done adding/\+manipulating UI elements in order for them to react to mouse interactions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Window\+Name} & name of the window whose components are being updated. If no window name is provided, cvui uses the default window.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_ae723a98a9d41258961d970df271ed520}{init()} 
+
+\doxylink{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29}{watch()} 
+
+\doxylink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{context()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29}\index{cvui@{cvui}!watch@{watch}}
+\index{watch@{watch}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{watch()}{watch()}}
+{\footnotesize\ttfamily \label{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29} 
+void cvui::\+watch (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Window\+Name}{, }\item[{bool}]{the\+Create\+Named\+Window}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+Track UI interactions of a particular window. This function must be invoked for any window that will receive cvui components. cvui automatically calls {\ttfamily \doxylink{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29}{cvui::\+watch()}} for any window informed in {\ttfamily \doxylink{namespacecvui_ae723a98a9d41258961d970df271ed520}{cvui::\+init()}}, so generally you don\textquotesingle{}t have to watch them yourself. If you initialized cvui and told it {\itshape not} to create windows automatically, you need to call {\ttfamily \doxylink{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29}{cvui::\+watch()}} on those windows yourself. {\ttfamily \doxylink{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29}{cvui::\+watch()}} can automatically create a window before watching it, if it does not exist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Window\+Name} & name of the window whose UI interactions will be tracked. \\
+\hline
+{\em the\+Create\+Named\+Window} & if an Open\+CV window named {\ttfamily the\+Window\+Name} should be created before it is watched. Windows are created using {\ttfamily cv::\+named\+Window()}. If this parameter is {\ttfamily false}, ensure you have called {\ttfamily cv::\+named\+Window(\+WINDOW\+\_\+\+NAME)} to create the window, otherwise cvui will not be able to track its UI interactions.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_ae723a98a9d41258961d970df271ed520}{init()} 
+
+\doxylink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{context()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a6195ca6d72a3694ca68a75f1f3ec4431}\index{cvui@{cvui}!window@{window}}
+\index{window@{window}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{window()}{window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_a6195ca6d72a3694ca68a75f1f3ec4431} 
+void cvui::\+window (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{const cv::\+\+String \&}]{the\+Title}{}\end{DoxyParamCaption})}
+
+Display a window (a block with a title and a body).
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Where} & image/\+frame where the component should be rendered. \\
+\hline
+{\em theX} & position X where the component should be placed. \\
+\hline
+{\em theY} & position Y where the component should be placed. \\
+\hline
+{\em the\+Width} & width of the window. \\
+\hline
+{\em the\+Height} & height of the window. \\
+\hline
+{\em the\+Title} & text displayed as the title of the window.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a759e80d962fa4649f749ccfa03f89509}{rect()} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacecvui_a157500f7b7880a3180d16edc01c0e051}\index{cvui@{cvui}!window@{window}}
+\index{window@{window}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{window()}{window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_a157500f7b7880a3180d16edc01c0e051} 
+void cvui::\+window (\begin{DoxyParamCaption}\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{const cv::\+\+String \&}]{the\+Title}{}\end{DoxyParamCaption})}
+
+Display a window (a block with a title and a body) within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()} and {\ttfamily end\texorpdfstring{$\ast$}{*}()} block.
+
+IMPORTANT:\+ this function can only be used within a {\ttfamily begin\texorpdfstring{$\ast$}{*}()/\+end\texorpdfstring{$\ast$}{*}()} block, otherwise it does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Width} & width of the window. \\
+\hline
+{\em the\+Height} & height of the window. \\
+\hline
+{\em the\+Title} & text displayed as the title of the window.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespacecvui_a759e80d962fa4649f749ccfa03f89509}{rect()} 
+
+\doxylink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{begin\+Column()} 
+
+\doxylink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{begin\+Row()} 
+
+\doxylink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{end\+Row()} 
+
+\doxylink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{end\+Column()} 
+\end{DoxySeeAlso}
+
+
+\label{doc-var-members}
+\Hypertarget{namespacecvui_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacecvui_a4af6b3d0288d2655aaf99fccaa633855}\index{cvui@{cvui}!CLICK@{CLICK}}
+\index{CLICK@{CLICK}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{CLICK}{CLICK}}
+{\footnotesize\ttfamily \label{namespacecvui_a4af6b3d0288d2655aaf99fccaa633855} 
+const int cvui::\+\+CLICK = 3}
+
+\Hypertarget{namespacecvui_aa2e0f3058cd45ae206df52c153ae4a50}\index{cvui@{cvui}!COLUMN@{COLUMN}}
+\index{COLUMN@{COLUMN}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{COLUMN}{COLUMN}}
+{\footnotesize\ttfamily \label{namespacecvui_aa2e0f3058cd45ae206df52c153ae4a50} 
+const int cvui::\+\+COLUMN = 1}
+
+\Hypertarget{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0}\index{cvui@{cvui}!DOWN@{DOWN}}
+\index{DOWN@{DOWN}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{DOWN}{DOWN}}
+{\footnotesize\ttfamily \label{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0} 
+const int cvui::\+\+DOWN = 2}
+
+\Hypertarget{namespacecvui_aa3183bf7cc9be4e6e272b69ac0826b13}\index{cvui@{cvui}!IS\_DOWN@{IS\_DOWN}}
+\index{IS\_DOWN@{IS\_DOWN}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{IS\_DOWN}{IS\_DOWN}}
+{\footnotesize\ttfamily \label{namespacecvui_aa3183bf7cc9be4e6e272b69ac0826b13} 
+const int cvui::\+\+IS\+\_\+\+DOWN = 7}
+
+\Hypertarget{namespacecvui_a6484b0b9d05e9a140b8e04d44a5aee7b}\index{cvui@{cvui}!LEFT\_BUTTON@{LEFT\_BUTTON}}
+\index{LEFT\_BUTTON@{LEFT\_BUTTON}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{LEFT\_BUTTON}{LEFT\_BUTTON}}
+{\footnotesize\ttfamily \label{namespacecvui_a6484b0b9d05e9a140b8e04d44a5aee7b} 
+const int cvui::\+\+LEFT\+\_\+\+BUTTON = 0}
+
+\Hypertarget{namespacecvui_a930a46e085bb0bcf6389373627758691}\index{cvui@{cvui}!MIDDLE\_BUTTON@{MIDDLE\_BUTTON}}
+\index{MIDDLE\_BUTTON@{MIDDLE\_BUTTON}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{MIDDLE\_BUTTON}{MIDDLE\_BUTTON}}
+{\footnotesize\ttfamily \label{namespacecvui_a930a46e085bb0bcf6389373627758691} 
+const int cvui::\+\+MIDDLE\+\_\+\+BUTTON = 1}
+
+\Hypertarget{namespacecvui_ac325b7de5095e58f8d459d7eb3c0bdce}\index{cvui@{cvui}!OUT@{OUT}}
+\index{OUT@{OUT}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{OUT}{OUT}}
+{\footnotesize\ttfamily \label{namespacecvui_ac325b7de5095e58f8d459d7eb3c0bdce} 
+const int cvui::\+\+OUT = 5}
+
+\Hypertarget{namespacecvui_a1b2af00cf23554512a200ed5e9b6acfa}\index{cvui@{cvui}!OVER@{OVER}}
+\index{OVER@{OVER}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{OVER}{OVER}}
+{\footnotesize\ttfamily \label{namespacecvui_a1b2af00cf23554512a200ed5e9b6acfa} 
+const int cvui::\+\+OVER = 4}
+
+\Hypertarget{namespacecvui_a0df030cf077da94f75de969850225f78}\index{cvui@{cvui}!RIGHT\_BUTTON@{RIGHT\_BUTTON}}
+\index{RIGHT\_BUTTON@{RIGHT\_BUTTON}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{RIGHT\_BUTTON}{RIGHT\_BUTTON}}
+{\footnotesize\ttfamily \label{namespacecvui_a0df030cf077da94f75de969850225f78} 
+const int cvui::\+\+RIGHT\+\_\+\+BUTTON = 2}
+
+\Hypertarget{namespacecvui_a6d4f142f182e325f17928d61aab8ffeb}\index{cvui@{cvui}!ROW@{ROW}}
+\index{ROW@{ROW}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{ROW}{ROW}}
+{\footnotesize\ttfamily \label{namespacecvui_a6d4f142f182e325f17928d61aab8ffeb} 
+const int cvui::\+\+ROW = 0}
+
+\Hypertarget{namespacecvui_a19baa1dbeca0a10dd81fbf165db088c3}\index{cvui@{cvui}!TRACKBAR\_DISCRETE@{TRACKBAR\_DISCRETE}}
+\index{TRACKBAR\_DISCRETE@{TRACKBAR\_DISCRETE}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{TRACKBAR\_DISCRETE}{TRACKBAR\_DISCRETE}}
+{\footnotesize\ttfamily \label{namespacecvui_a19baa1dbeca0a10dd81fbf165db088c3} 
+const unsigned int cvui::\+\+TRACKBAR\+\_\+\+DISCRETE = 4}
+
+\Hypertarget{namespacecvui_a117214d098e5f92bc6ea95ec14e5a5ff}\index{cvui@{cvui}!TRACKBAR\_HIDE\_LABELS@{TRACKBAR\_HIDE\_LABELS}}
+\index{TRACKBAR\_HIDE\_LABELS@{TRACKBAR\_HIDE\_LABELS}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{TRACKBAR\_HIDE\_LABELS}{TRACKBAR\_HIDE\_LABELS}}
+{\footnotesize\ttfamily \label{namespacecvui_a117214d098e5f92bc6ea95ec14e5a5ff} 
+const unsigned int cvui::\+\+TRACKBAR\+\_\+\+HIDE\+\_\+\+LABELS = 32}
+
+\Hypertarget{namespacecvui_a38b7708f1daf64e2e36433c736bffcac}\index{cvui@{cvui}!TRACKBAR\_HIDE\_MIN\_MAX\_LABELS@{TRACKBAR\_HIDE\_MIN\_MAX\_LABELS}}
+\index{TRACKBAR\_HIDE\_MIN\_MAX\_LABELS@{TRACKBAR\_HIDE\_MIN\_MAX\_LABELS}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{TRACKBAR\_HIDE\_MIN\_MAX\_LABELS}{TRACKBAR\_HIDE\_MIN\_MAX\_LABELS}}
+{\footnotesize\ttfamily \label{namespacecvui_a38b7708f1daf64e2e36433c736bffcac} 
+const unsigned int cvui::\+\+TRACKBAR\+\_\+\+HIDE\+\_\+\+MIN\+\_\+\+MAX\+\_\+\+LABELS = 8}
+
+\Hypertarget{namespacecvui_a2577612f092f34b9839c967714904ad2}\index{cvui@{cvui}!TRACKBAR\_HIDE\_SEGMENT\_LABELS@{TRACKBAR\_HIDE\_SEGMENT\_LABELS}}
+\index{TRACKBAR\_HIDE\_SEGMENT\_LABELS@{TRACKBAR\_HIDE\_SEGMENT\_LABELS}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{TRACKBAR\_HIDE\_SEGMENT\_LABELS}{TRACKBAR\_HIDE\_SEGMENT\_LABELS}}
+{\footnotesize\ttfamily \label{namespacecvui_a2577612f092f34b9839c967714904ad2} 
+const unsigned int cvui::\+\+TRACKBAR\+\_\+\+HIDE\+\_\+\+SEGMENT\+\_\+\+LABELS = 1}
+
+\Hypertarget{namespacecvui_a18717bc2beedeea0a8721cd80df7913d}\index{cvui@{cvui}!TRACKBAR\_HIDE\_STEP\_SCALE@{TRACKBAR\_HIDE\_STEP\_SCALE}}
+\index{TRACKBAR\_HIDE\_STEP\_SCALE@{TRACKBAR\_HIDE\_STEP\_SCALE}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{TRACKBAR\_HIDE\_STEP\_SCALE}{TRACKBAR\_HIDE\_STEP\_SCALE}}
+{\footnotesize\ttfamily \label{namespacecvui_a18717bc2beedeea0a8721cd80df7913d} 
+const unsigned int cvui::\+\+TRACKBAR\+\_\+\+HIDE\+\_\+\+STEP\+\_\+\+SCALE = 2}
+
+\Hypertarget{namespacecvui_ae0d82d3296fd5f8d7dbbf92291e5cfab}\index{cvui@{cvui}!TRACKBAR\_HIDE\_VALUE\_LABEL@{TRACKBAR\_HIDE\_VALUE\_LABEL}}
+\index{TRACKBAR\_HIDE\_VALUE\_LABEL@{TRACKBAR\_HIDE\_VALUE\_LABEL}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{TRACKBAR\_HIDE\_VALUE\_LABEL}{TRACKBAR\_HIDE\_VALUE\_LABEL}}
+{\footnotesize\ttfamily \label{namespacecvui_ae0d82d3296fd5f8d7dbbf92291e5cfab} 
+const unsigned int cvui::\+\+TRACKBAR\+\_\+\+HIDE\+\_\+\+VALUE\+\_\+\+LABEL = 16}
+
+\Hypertarget{namespacecvui_af90309bb2a99598ad259b7771de2f922}\index{cvui@{cvui}!UP@{UP}}
+\index{UP@{UP}!cvui@{cvui}}
+\doxysubsubsection{\texorpdfstring{UP}{UP}}
+{\footnotesize\ttfamily \label{namespacecvui_af90309bb2a99598ad259b7771de2f922} 
+const int cvui::\+\+UP = 6}
+

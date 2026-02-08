@@ -84,7 +84,5 @@ public:
      * @brief Reads digital input and debounces it
      */
 
-    bool get_button(CControl& comm);
-
-
+    bool get_button(int channel, CControl &comm);
 };

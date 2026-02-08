@@ -1,0 +1,79 @@
+\doxysection{CControl.\+cpp File Reference}
+\hypertarget{_c_control_8cpp}{}\label{_c_control_8cpp}\index{CControl.cpp@{CControl.cpp}}
+{\ttfamily \+\#include "{}stdafx.\+h"{}}\newline
+{\ttfamily \+\#include "{}CControl.\+h"{}}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include "{}Serial.\+h"{}}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_c_control_8cpp_a7ad2248bd76cfed96bda3bafe60ecdf9}{PUSH\+\_\+\+BUTTON\+\_\+2}}~42
+\item 
+\+\#define \doxymbox{\hyperlink{_c_control_8cpp_a6175ebfed37241fef932336b65821a5c}{bufferlen}}~64
+\item 
+\+\#define \doxymbox{\hyperlink{_c_control_8cpp_a6c6834f383c96bce2cb7574c13954ae8}{FULLSCALE}}~4096
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \{ \doxymbox{\hyperlink{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7a0da6c680b2b129d86740b118d1f8307a}{DIGITAL}} = 0
+, \doxymbox{\hyperlink{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7a49060614b990fe7d76fef9cd92990ce6}{ANALOG}} = 1
+, \doxymbox{\hyperlink{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7a50df708a51be43e519b31b8861537c6a}{SERVO}} = 2
+ \}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_c_control_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_c_control_8cpp_a6175ebfed37241fef932336b65821a5c}\index{CControl.cpp@{CControl.cpp}!bufferlen@{bufferlen}}
+\index{bufferlen@{bufferlen}!CControl.cpp@{CControl.cpp}}
+\doxysubsubsection{\texorpdfstring{bufferlen}{bufferlen}}
+{\footnotesize\ttfamily \label{_c_control_8cpp_a6175ebfed37241fef932336b65821a5c} 
+\+\#define bufferlen~64}
+
+\Hypertarget{_c_control_8cpp_a6c6834f383c96bce2cb7574c13954ae8}\index{CControl.cpp@{CControl.cpp}!FULLSCALE@{FULLSCALE}}
+\index{FULLSCALE@{FULLSCALE}!CControl.cpp@{CControl.cpp}}
+\doxysubsubsection{\texorpdfstring{FULLSCALE}{FULLSCALE}}
+{\footnotesize\ttfamily \label{_c_control_8cpp_a6c6834f383c96bce2cb7574c13954ae8} 
+\+\#define FULLSCALE~4096}
+
+\Hypertarget{_c_control_8cpp_a7ad2248bd76cfed96bda3bafe60ecdf9}\index{CControl.cpp@{CControl.cpp}!PUSH\_BUTTON\_2@{PUSH\_BUTTON\_2}}
+\index{PUSH\_BUTTON\_2@{PUSH\_BUTTON\_2}!CControl.cpp@{CControl.cpp}}
+\doxysubsubsection{\texorpdfstring{PUSH\_BUTTON\_2}{PUSH\_BUTTON\_2}}
+{\footnotesize\ttfamily \label{_c_control_8cpp_a7ad2248bd76cfed96bda3bafe60ecdf9} 
+\+\#define PUSH\+\_\+\+BUTTON\+\_\+2~42}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{_c_control_8cpp_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7}\index{CControl.cpp@{CControl.cpp}!Type@{Type}}
+\index{Type@{Type}!CControl.cpp@{CControl.cpp}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily \label{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7} 
+enum \doxymbox{\hyperlink{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL@{DIGITAL}!CControl.cpp@{CControl.cpp}}
+\index{CControl.cpp@{CControl.cpp}!DIGITAL@{DIGITAL}}
+}\Hypertarget{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7a0da6c680b2b129d86740b118d1f8307a}\label{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7a0da6c680b2b129d86740b118d1f8307a} 
+DIGITAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ANALOG@{ANALOG}!CControl.cpp@{CControl.cpp}}
+\index{CControl.cpp@{CControl.cpp}!ANALOG@{ANALOG}}
+}\Hypertarget{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7a49060614b990fe7d76fef9cd92990ce6}\label{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7a49060614b990fe7d76fef9cd92990ce6} 
+ANALOG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SERVO@{SERVO}!CControl.cpp@{CControl.cpp}}
+\index{CControl.cpp@{CControl.cpp}!SERVO@{SERVO}}
+}\Hypertarget{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7a50df708a51be43e519b31b8861537c6a}\label{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7a50df708a51be43e519b31b8861537c6a} 
+SERVO&\\
+\hline
+
+\end{DoxyEnumFields}

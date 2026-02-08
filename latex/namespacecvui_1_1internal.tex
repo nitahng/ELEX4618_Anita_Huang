@@ -1,0 +1,341 @@
+\doxysection{cvui::\+internal Namespace Reference}
+\hypertarget{namespacecvui_1_1internal}{}\label{namespacecvui_1_1internal}\index{cvui::internal@{cvui::internal}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a640a4693a77493600ae328a1b460d250}{is\+Mouse\+Button}} (\doxymbox{\hyperlink{structcvui_1_1cvui__mouse__btn__t}{cvui\+\_\+mouse\+\_\+btn\+\_\+t}} \&the\+Button, int the\+Query)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a1ad5e9d4180be4e6dad8637dc33f0f84}{reset\+Mouse\+Button}} (\doxymbox{\hyperlink{structcvui_1_1cvui__mouse__btn__t}{cvui\+\_\+mouse\+\_\+btn\+\_\+t}} \&the\+Button)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a513170d4b094d59f7826e686058a91d9}{init}} (const cv::\+\+String \&the\+Window\+Name, int the\+Delay\+Wait\+Key)
+\item 
+\doxymbox{\hyperlink{structcvui_1_1cvui__context__t}{cvui\+\_\+context\+\_\+t}} \& \doxymbox{\hyperlink{namespacecvui_1_1internal_aa9d50b0e915521229addfe25c73054dd}{get\+Context}} (const cv::\+\+String \&the\+Window\+Name="{}"{})
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_ae1fc07f13ea4c5c425517a43da99e441}{bitset\+Has}} (unsigned int the\+Bitset, unsigned int the\+Value)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a250202860f858c7ed751bcf4c2306a98}{error}} (int the\+Id, std::\+string the\+Message)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a1f8653283df77f4fc4aa5b38e6e6ddac}{update\+Layout\+Flow}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, cv::\+\+Size the\+Size)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a09cfe0721e9dadd7d1e3d530fe826bb7}{block\+Stack\+Empty}} ()
+\item 
+\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \& \doxymbox{\hyperlink{namespacecvui_1_1internal_a06f306941657d341634a9418167ee6ac}{top\+Block}} ()
+\item 
+\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \& \doxymbox{\hyperlink{namespacecvui_1_1internal_a6addef944a92bdf213aa27bd4764beb4}{push\+Block}} ()
+\item 
+\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \& \doxymbox{\hyperlink{namespacecvui_1_1internal_ad97b5dbb64aae1f46d8f6e7de8f4c455}{pop\+Block}} ()
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a432ef6beccea383a6bdcadb0f7f8afa7}{begin}} (int the\+Type, cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, int the\+Height, int the\+Padding)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a827dff2aa1e833a337b57496ce6a9649}{end}} (int the\+Type)
+\item 
+\doxymbox{\hyperlink{structcvui_1_1cvui__label__t}{cvui\+\_\+label\+\_\+t}} \doxymbox{\hyperlink{namespacecvui_1_1internal_a40b70366d2d130b7203359d27024bf83}{create\+Label}} (const std::\+string \&the\+Label)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_1_1internal_a25f81eef3c22012bcb62c35475ae8044}{iarea}} (int theX, int theY, int the\+Width, int the\+Height)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_ade86c43ba80e9fc04d50669a0bc2ca86}{button}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, int the\+Width, int the\+Height, const cv::\+\+String \&the\+Label, bool the\+Update\+Layout)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a3de5e7c72f3aadee70b044cd9a31ac7c}{button}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, const cv::\+\+String \&the\+Label)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_ae95bd762a14525bf579fafc9dffe87cb}{button}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, cv::\+\+Mat \&the\+Idle, cv::\+\+Mat \&the\+Over, cv::\+\+Mat \&the\+Down, bool the\+Update\+Layout)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a6fc456d44ecc2ab8002ffc98bdb5240a}{image}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, cv::\+\+Mat \&the\+Image)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_aeb2018b3068e8570c0a0188ac8cb677b}{checkbox}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, const cv::\+\+String \&the\+Label, bool \texorpdfstring{$\ast$}{*}the\+State, unsigned int the\+Color)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a83e961a81d516b4a803495dcc4a885f7}{text}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, const cv::\+\+String \&the\+Text, double the\+Font\+Scale, unsigned int the\+Color, bool the\+Update\+Layout)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_1_1internal_a84752acc8db949011d2accf6c0ad0298}{counter}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, int \texorpdfstring{$\ast$}{*}the\+Value, int the\+Step, const char \texorpdfstring{$\ast$}{*}the\+Format)
+\item 
+double \doxymbox{\hyperlink{namespacecvui_1_1internal_a2ce7fc37a5967e1df6c0bc12105e81ff}{counter}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, double \texorpdfstring{$\ast$}{*}the\+Value, double the\+Step, const char \texorpdfstring{$\ast$}{*}the\+Format)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_ae59cd843b2070bb75c0bab582bb4c1eb}{window}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, int the\+Width, int the\+Height, const cv::\+\+String \&the\+Title)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_aed393458c39e3e81283764516c9663fc}{rect}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, int the\+Width, int the\+Height, unsigned int the\+Border\+Color, unsigned int the\+Filling\+Color)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a98d0d538ac1a8551100558e966b71005}{sparkline}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, std::\+vector$<$ double $>$ \&the\+Values, int theX, int theY, int the\+Width, int the\+Height, unsigned int the\+Color)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a73b0437558e721366dceeb686e5dd60f}{trackbar}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, int the\+Width, long double \texorpdfstring{$\ast$}{*}the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a79758ea8b12aaa935eae770cb81f187d}{trackbar\+Force\+Values\+As\+Multiples\+Of\+Small\+Step}} (const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params, long double \texorpdfstring{$\ast$}{*}the\+Value)
+\item 
+long double \doxymbox{\hyperlink{namespacecvui_1_1internal_a83dcf74948e59f33843dec42c0648dec}{trackbar\+XPixel\+To\+Value}} (const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params, cv::\+\+Rect \&the\+Bounding, int the\+PixelX)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_1_1internal_ab5cfd12070f0147698ff50b2ec58d153}{trackbar\+Value\+To\+XPixel}} (const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params, cv::\+\+Rect \&the\+Bounding, long double the\+Value)
+\item 
+double \doxymbox{\hyperlink{namespacecvui_1_1internal_a8ca579b471bd875476cea08bc3c86ca6}{clamp01}} (double value)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_acd702696265f788a9fc33d5026d058a3}{find\+Min\+Max}} (std::\+vector$<$ double $>$ \&the\+Values, double \texorpdfstring{$\ast$}{*}the\+Min, double \texorpdfstring{$\ast$}{*}the\+Max)
+\item 
+cv::\+\+Scalar \doxymbox{\hyperlink{namespacecvui_1_1internal_a629e27b195d5e3c5365aa01115a09dda}{hex\+To\+Scalar}} (unsigned int the\+Color)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a3b053f2efd1a22245840bcc484d426c2}{reset\+Rendering\+Buffer}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Screen)
+\item 
+{\footnotesize template$<$typename T$>$ }\\\doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \doxymbox{\hyperlink{namespacecvui_1_1internal_ac2745a5aaddbd3762b6ec33420ce44cc}{make\+Trackbar\+Params}} (T min, T max, int the\+Decimals=1, int the\+Segments=1, T the\+Step=-\/1., unsigned int the\+Options=0, const char \texorpdfstring{$\ast$}{*}the\+Format="{}\%.\+1Lf"{})
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a61f5cc4ee466e94a9b416f68619848d1}{trackbar}} (T \texorpdfstring{$\ast$}{*}the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params)
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a24b1bdedc155649d8ce48d730d9526ff}{trackbar}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, T \texorpdfstring{$\ast$}{*}the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params)
+\item 
+{\footnotesize template$<$typename num\+\_\+type$>$ }\\\doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \doxymbox{\hyperlink{namespacecvui_1_1internal_a6ff1ea77bb87b9ba84fdaca4483c61f2}{make\+Trackbar\+Params}} (num\+\_\+type the\+Min, num\+\_\+type the\+Max, num\+\_\+type the\+Step, int the\+Segments, const char \texorpdfstring{$\ast$}{*}the\+Label\+Format, unsigned int the\+Options)
+\item 
+{\footnotesize template$<$typename num\+\_\+type$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a210bcf35105a6967d2a02d068d369b99}{trackbar}} (int the\+Width, num\+\_\+type \texorpdfstring{$\ast$}{*}the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params)
+\item 
+{\footnotesize template$<$typename num\+\_\+type$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_1_1internal_ab6b71f2ad23b83304b4200d5e10025ad}{trackbar}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, num\+\_\+type \texorpdfstring{$\ast$}{*}the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacecvui_1_1internal_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecvui_1_1internal_a432ef6beccea383a6bdcadb0f7f8afa7}\index{cvui::internal@{cvui::internal}!begin@{begin}}
+\index{begin@{begin}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a432ef6beccea383a6bdcadb0f7f8afa7} 
+void cvui::\+internal::\+begin (\begin{DoxyParamCaption}\item[{int}]{the\+Type}{, }\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{int}]{the\+Padding}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_ae1fc07f13ea4c5c425517a43da99e441}\index{cvui::internal@{cvui::internal}!bitsetHas@{bitsetHas}}
+\index{bitsetHas@{bitsetHas}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{bitsetHas()}{bitsetHas()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_ae1fc07f13ea4c5c425517a43da99e441} 
+bool cvui::\+internal::\+bitset\+Has (\begin{DoxyParamCaption}\item[{unsigned int}]{the\+Bitset}{, }\item[{unsigned int}]{the\+Value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a09cfe0721e9dadd7d1e3d530fe826bb7}\index{cvui::internal@{cvui::internal}!blockStackEmpty@{blockStackEmpty}}
+\index{blockStackEmpty@{blockStackEmpty}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{blockStackEmpty()}{blockStackEmpty()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a09cfe0721e9dadd7d1e3d530fe826bb7} 
+bool cvui::\+internal::\+block\+Stack\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a3de5e7c72f3aadee70b044cd9a31ac7c}\index{cvui::internal@{cvui::internal}!button@{button}}
+\index{button@{button}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{button()}{button()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a3de5e7c72f3aadee70b044cd9a31ac7c} 
+bool cvui::\+internal::\+button (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{const cv::\+\+String \&}]{the\+Label}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_ae95bd762a14525bf579fafc9dffe87cb}\index{cvui::internal@{cvui::internal}!button@{button}}
+\index{button@{button}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{button()}{button()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_ae95bd762a14525bf579fafc9dffe87cb} 
+bool cvui::\+internal::\+button (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{cv::\+\+Mat \&}]{the\+Idle}{, }\item[{cv::\+\+Mat \&}]{the\+Over}{, }\item[{cv::\+\+Mat \&}]{the\+Down}{, }\item[{bool}]{the\+Update\+Layout}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_ade86c43ba80e9fc04d50669a0bc2ca86}\index{cvui::internal@{cvui::internal}!button@{button}}
+\index{button@{button}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{button()}{button()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_ade86c43ba80e9fc04d50669a0bc2ca86} 
+bool cvui::\+internal::\+button (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{const cv::\+\+String \&}]{the\+Label}{, }\item[{bool}]{the\+Update\+Layout}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_aeb2018b3068e8570c0a0188ac8cb677b}\index{cvui::internal@{cvui::internal}!checkbox@{checkbox}}
+\index{checkbox@{checkbox}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{checkbox()}{checkbox()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_aeb2018b3068e8570c0a0188ac8cb677b} 
+bool cvui::\+internal::\+checkbox (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{const cv::\+\+String \&}]{the\+Label}{, }\item[{bool \texorpdfstring{$\ast$}{*}}]{the\+State}{, }\item[{unsigned int}]{the\+Color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a8ca579b471bd875476cea08bc3c86ca6}\index{cvui::internal@{cvui::internal}!clamp01@{clamp01}}
+\index{clamp01@{clamp01}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{clamp01()}{clamp01()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a8ca579b471bd875476cea08bc3c86ca6} 
+double cvui::\+internal::\+clamp01 (\begin{DoxyParamCaption}\item[{double}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacecvui_1_1internal_a2ce7fc37a5967e1df6c0bc12105e81ff}\index{cvui::internal@{cvui::internal}!counter@{counter}}
+\index{counter@{counter}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{counter()}{counter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a2ce7fc37a5967e1df6c0bc12105e81ff} 
+double cvui::\+internal::\+counter (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{double}]{the\+Step}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Format}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a84752acc8db949011d2accf6c0ad0298}\index{cvui::internal@{cvui::internal}!counter@{counter}}
+\index{counter@{counter}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{counter()}{counter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a84752acc8db949011d2accf6c0ad0298} 
+int cvui::\+internal::\+counter (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{int}]{the\+Step}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Format}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a40b70366d2d130b7203359d27024bf83}\index{cvui::internal@{cvui::internal}!createLabel@{createLabel}}
+\index{createLabel@{createLabel}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{createLabel()}{createLabel()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a40b70366d2d130b7203359d27024bf83} 
+\doxymbox{\hyperlink{structcvui_1_1cvui__label__t}{cvui\+\_\+label\+\_\+t}} cvui::\+internal::\+create\+Label (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{the\+Label}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a827dff2aa1e833a337b57496ce6a9649}\index{cvui::internal@{cvui::internal}!end@{end}}
+\index{end@{end}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a827dff2aa1e833a337b57496ce6a9649} 
+void cvui::\+internal::\+end (\begin{DoxyParamCaption}\item[{int}]{the\+Type}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a250202860f858c7ed751bcf4c2306a98}\index{cvui::internal@{cvui::internal}!error@{error}}
+\index{error@{error}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a250202860f858c7ed751bcf4c2306a98} 
+void cvui::\+internal::\+error (\begin{DoxyParamCaption}\item[{int}]{the\+Id}{, }\item[{std::\+string}]{the\+Message}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_acd702696265f788a9fc33d5026d058a3}\index{cvui::internal@{cvui::internal}!findMinMax@{findMinMax}}
+\index{findMinMax@{findMinMax}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{findMinMax()}{findMinMax()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_acd702696265f788a9fc33d5026d058a3} 
+void cvui::\+internal::\+find\+Min\+Max (\begin{DoxyParamCaption}\item[{std::\+vector$<$ double $>$ \&}]{the\+Values}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{the\+Min}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{the\+Max}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_aa9d50b0e915521229addfe25c73054dd}\index{cvui::internal@{cvui::internal}!getContext@{getContext}}
+\index{getContext@{getContext}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{getContext()}{getContext()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_aa9d50b0e915521229addfe25c73054dd} 
+\doxymbox{\hyperlink{structcvui_1_1cvui__context__t}{cvui\+\_\+context\+\_\+t}} \& cvui::\+internal::\+get\+Context (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Window\+Name}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a629e27b195d5e3c5365aa01115a09dda}\index{cvui::internal@{cvui::internal}!hexToScalar@{hexToScalar}}
+\index{hexToScalar@{hexToScalar}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{hexToScalar()}{hexToScalar()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a629e27b195d5e3c5365aa01115a09dda} 
+cv::\+\+Scalar cvui::\+internal::\+hex\+To\+Scalar (\begin{DoxyParamCaption}\item[{unsigned int}]{the\+Color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a25f81eef3c22012bcb62c35475ae8044}\index{cvui::internal@{cvui::internal}!iarea@{iarea}}
+\index{iarea@{iarea}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{iarea()}{iarea()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a25f81eef3c22012bcb62c35475ae8044} 
+int cvui::\+internal::\+iarea (\begin{DoxyParamCaption}\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a6fc456d44ecc2ab8002ffc98bdb5240a}\index{cvui::internal@{cvui::internal}!image@{image}}
+\index{image@{image}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{image()}{image()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a6fc456d44ecc2ab8002ffc98bdb5240a} 
+void cvui::\+internal::\+image (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{cv::\+\+Mat \&}]{the\+Image}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a513170d4b094d59f7826e686058a91d9}\index{cvui::internal@{cvui::internal}!init@{init}}
+\index{init@{init}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a513170d4b094d59f7826e686058a91d9} 
+void cvui::\+internal::\+init (\begin{DoxyParamCaption}\item[{const cv::\+\+String \&}]{the\+Window\+Name}{, }\item[{int}]{the\+Delay\+Wait\+Key}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a640a4693a77493600ae328a1b460d250}\index{cvui::internal@{cvui::internal}!isMouseButton@{isMouseButton}}
+\index{isMouseButton@{isMouseButton}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{isMouseButton()}{isMouseButton()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a640a4693a77493600ae328a1b460d250} 
+bool cvui::\+internal::\+is\+Mouse\+Button (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__mouse__btn__t}{cvui\+\_\+mouse\+\_\+btn\+\_\+t}} \&}]{the\+Button}{, }\item[{int}]{the\+Query}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a6ff1ea77bb87b9ba84fdaca4483c61f2}\index{cvui::internal@{cvui::internal}!makeTrackbarParams@{makeTrackbarParams}}
+\index{makeTrackbarParams@{makeTrackbarParams}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{makeTrackbarParams()}{makeTrackbarParams()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a6ff1ea77bb87b9ba84fdaca4483c61f2} 
+template$<$typename num\+\_\+type$>$ \\
+\doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} cvui::\+internal::\+make\+Trackbar\+Params (\begin{DoxyParamCaption}\item[{num\+\_\+type}]{the\+Min}{, }\item[{num\+\_\+type}]{the\+Max}{, }\item[{num\+\_\+type}]{the\+Step}{, }\item[{int}]{the\+Segments}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Label\+Format}{, }\item[{unsigned int}]{the\+Options}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_ac2745a5aaddbd3762b6ec33420ce44cc}\index{cvui::internal@{cvui::internal}!makeTrackbarParams@{makeTrackbarParams}}
+\index{makeTrackbarParams@{makeTrackbarParams}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{makeTrackbarParams()}{makeTrackbarParams()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_ac2745a5aaddbd3762b6ec33420ce44cc} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} cvui::\+internal::\+make\+Trackbar\+Params (\begin{DoxyParamCaption}\item[{T}]{min}{, }\item[{T}]{max}{, }\item[{int}]{the\+Decimals}{ = {\ttfamily 1}, }\item[{int}]{the\+Segments}{ = {\ttfamily 1}, }\item[{T}]{the\+Step}{ = {\ttfamily -\/1.}, }\item[{unsigned int}]{the\+Options}{ = {\ttfamily 0}, }\item[{const char \texorpdfstring{$\ast$}{*}}]{the\+Format}{ = {\ttfamily "{}\%.1Lf"{}}}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_ad97b5dbb64aae1f46d8f6e7de8f4c455}\index{cvui::internal@{cvui::internal}!popBlock@{popBlock}}
+\index{popBlock@{popBlock}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{popBlock()}{popBlock()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_ad97b5dbb64aae1f46d8f6e7de8f4c455} 
+\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \& cvui::\+internal::\+pop\+Block (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a6addef944a92bdf213aa27bd4764beb4}\index{cvui::internal@{cvui::internal}!pushBlock@{pushBlock}}
+\index{pushBlock@{pushBlock}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{pushBlock()}{pushBlock()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a6addef944a92bdf213aa27bd4764beb4} 
+\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \& cvui::\+internal::\+push\+Block (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_aed393458c39e3e81283764516c9663fc}\index{cvui::internal@{cvui::internal}!rect@{rect}}
+\index{rect@{rect}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{rect()}{rect()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_aed393458c39e3e81283764516c9663fc} 
+void cvui::\+internal::\+rect (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{unsigned int}]{the\+Border\+Color}{, }\item[{unsigned int}]{the\+Filling\+Color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a1ad5e9d4180be4e6dad8637dc33f0f84}\index{cvui::internal@{cvui::internal}!resetMouseButton@{resetMouseButton}}
+\index{resetMouseButton@{resetMouseButton}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{resetMouseButton()}{resetMouseButton()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a1ad5e9d4180be4e6dad8637dc33f0f84} 
+void cvui::\+internal::\+reset\+Mouse\+Button (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__mouse__btn__t}{cvui\+\_\+mouse\+\_\+btn\+\_\+t}} \&}]{the\+Button}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a3b053f2efd1a22245840bcc484d426c2}\index{cvui::internal@{cvui::internal}!resetRenderingBuffer@{resetRenderingBuffer}}
+\index{resetRenderingBuffer@{resetRenderingBuffer}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{resetRenderingBuffer()}{resetRenderingBuffer()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a3b053f2efd1a22245840bcc484d426c2} 
+void cvui::\+internal::\+reset\+Rendering\+Buffer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Screen}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a98d0d538ac1a8551100558e966b71005}\index{cvui::internal@{cvui::internal}!sparkline@{sparkline}}
+\index{sparkline@{sparkline}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{sparkline()}{sparkline()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a98d0d538ac1a8551100558e966b71005} 
+void cvui::\+internal::\+sparkline (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{std::\+vector$<$ double $>$ \&}]{the\+Values}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{unsigned int}]{the\+Color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a83e961a81d516b4a803495dcc4a885f7}\index{cvui::internal@{cvui::internal}!text@{text}}
+\index{text@{text}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{text()}{text()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a83e961a81d516b4a803495dcc4a885f7} 
+void cvui::\+internal::\+text (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{const cv::\+\+String \&}]{the\+Text}{, }\item[{double}]{the\+Font\+Scale}{, }\item[{unsigned int}]{the\+Color}{, }\item[{bool}]{the\+Update\+Layout}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a06f306941657d341634a9418167ee6ac}\index{cvui::internal@{cvui::internal}!topBlock@{topBlock}}
+\index{topBlock@{topBlock}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{topBlock()}{topBlock()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a06f306941657d341634a9418167ee6ac} 
+\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \& cvui::\+internal::\+top\+Block (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_ab6b71f2ad23b83304b4200d5e10025ad}\index{cvui::internal@{cvui::internal}!trackbar@{trackbar}}
+\index{trackbar@{trackbar}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{trackbar()}{trackbar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_ab6b71f2ad23b83304b4200d5e10025ad} 
+template$<$typename num\+\_\+type$>$ \\
+bool cvui::\+internal::\+trackbar (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{num\+\_\+type \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&}]{the\+Params}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a24b1bdedc155649d8ce48d730d9526ff}\index{cvui::internal@{cvui::internal}!trackbar@{trackbar}}
+\index{trackbar@{trackbar}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{trackbar()}{trackbar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a24b1bdedc155649d8ce48d730d9526ff} 
+template$<$typename T$>$ \\
+bool cvui::\+internal::\+trackbar (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{the\+Where}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{T \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&}]{the\+Params}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a73b0437558e721366dceeb686e5dd60f}\index{cvui::internal@{cvui::internal}!trackbar@{trackbar}}
+\index{trackbar@{trackbar}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{trackbar()}{trackbar()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a73b0437558e721366dceeb686e5dd60f} 
+bool cvui::\+internal::\+trackbar (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{long double \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&}]{the\+Params}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a210bcf35105a6967d2a02d068d369b99}\index{cvui::internal@{cvui::internal}!trackbar@{trackbar}}
+\index{trackbar@{trackbar}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{trackbar()}{trackbar()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a210bcf35105a6967d2a02d068d369b99} 
+template$<$typename num\+\_\+type$>$ \\
+bool cvui::\+internal::\+trackbar (\begin{DoxyParamCaption}\item[{int}]{the\+Width}{, }\item[{num\+\_\+type \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&}]{the\+Params}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a61f5cc4ee466e94a9b416f68619848d1}\index{cvui::internal@{cvui::internal}!trackbar@{trackbar}}
+\index{trackbar@{trackbar}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{trackbar()}{trackbar()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a61f5cc4ee466e94a9b416f68619848d1} 
+template$<$typename T$>$ \\
+bool cvui::\+internal::\+trackbar (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{the\+Value}{, }\item[{const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&}]{the\+Params}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_a79758ea8b12aaa935eae770cb81f187d}\index{cvui::internal@{cvui::internal}!trackbarForceValuesAsMultiplesOfSmallStep@{trackbarForceValuesAsMultiplesOfSmallStep}}
+\index{trackbarForceValuesAsMultiplesOfSmallStep@{trackbarForceValuesAsMultiplesOfSmallStep}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{trackbarForceValuesAsMultiplesOfSmallStep()}{trackbarForceValuesAsMultiplesOfSmallStep()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a79758ea8b12aaa935eae770cb81f187d} 
+void cvui::\+internal::\+trackbar\+Force\+Values\+As\+Multiples\+Of\+Small\+Step (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&}]{the\+Params}{, }\item[{long double \texorpdfstring{$\ast$}{*}}]{the\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacecvui_1_1internal_ab5cfd12070f0147698ff50b2ec58d153}\index{cvui::internal@{cvui::internal}!trackbarValueToXPixel@{trackbarValueToXPixel}}
+\index{trackbarValueToXPixel@{trackbarValueToXPixel}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{trackbarValueToXPixel()}{trackbarValueToXPixel()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_ab5cfd12070f0147698ff50b2ec58d153} 
+int cvui::\+internal::\+trackbar\+Value\+To\+XPixel (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&}]{the\+Params}{, }\item[{cv::\+\+Rect \&}]{the\+Bounding}{, }\item[{long double}]{the\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacecvui_1_1internal_a83dcf74948e59f33843dec42c0648dec}\index{cvui::internal@{cvui::internal}!trackbarXPixelToValue@{trackbarXPixelToValue}}
+\index{trackbarXPixelToValue@{trackbarXPixelToValue}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{trackbarXPixelToValue()}{trackbarXPixelToValue()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a83dcf74948e59f33843dec42c0648dec} 
+long double cvui::\+internal::\+trackbar\+XPixel\+To\+Value (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&}]{the\+Params}{, }\item[{cv::\+\+Rect \&}]{the\+Bounding}{, }\item[{int}]{the\+PixelX}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespacecvui_1_1internal_a1f8653283df77f4fc4aa5b38e6e6ddac}\index{cvui::internal@{cvui::internal}!updateLayoutFlow@{updateLayoutFlow}}
+\index{updateLayoutFlow@{updateLayoutFlow}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{updateLayoutFlow()}{updateLayoutFlow()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_a1f8653283df77f4fc4aa5b38e6e6ddac} 
+void cvui::\+internal::\+update\+Layout\+Flow (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{cv::\+\+Size}]{the\+Size}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespacecvui_1_1internal_ae59cd843b2070bb75c0bab582bb4c1eb}\index{cvui::internal@{cvui::internal}!window@{window}}
+\index{window@{window}!cvui::internal@{cvui::internal}}
+\doxysubsubsection{\texorpdfstring{window()}{window()}}
+{\footnotesize\ttfamily \label{namespacecvui_1_1internal_ae59cd843b2070bb75c0bab582bb4c1eb} 
+void cvui::\+internal::\+window (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&}]{the\+Block}{, }\item[{int}]{theX}{, }\item[{int}]{theY}{, }\item[{int}]{the\+Width}{, }\item[{int}]{the\+Height}{, }\item[{const cv::\+\+String \&}]{the\+Title}{}\end{DoxyParamCaption})}
+

@@ -6,7 +6,7 @@
  *
  * Compatible with Unicode and no opencv correlation (deleted the stdafx.h)
  */
-
+#include "stdafx.h"
 #include <iostream>
 #include <Windows.h> //added
 #include <string> //added
@@ -84,7 +84,7 @@ bool Serial::open(string commPortName, int bitRate)
 
 Serial::~Serial()
 {
-	CloseHandle(commHandle);
+	//CloseHandle(commHandle);
 }
 
 bool Serial::is_open()

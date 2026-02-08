@@ -1,0 +1,32 @@
+\doxysection{Serial.\+h}
+\hypertarget{_serial_8h_source}{}\label{_serial_8h_source}\doxymbox{\hyperlink{_serial_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{stdafx_8h}{stdafx.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{typedef}\ std::basic\_string<TCHAR>\ \doxymbox{\hyperlink{_serial_8h_acf3d66df621481dcd8d1ee710690f8a4}{tstring}};}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_serial_a3667c3137f2df94716b5193f9fb736ab}{Serial}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ HANDLE\ \doxymbox{\hyperlink{class_serial_ad0bdbf4b9041c376b6839e97a87e7b30}{commHandle}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{class_serial_a3667c3137f2df94716b5193f9fb736ab}{Serial}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_serial_a5b32c394c0ff923a4ef1c13cfb20a6ba}{\string~Serial}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_serial_a599d3e220888815b8da436ea45a5c655}{open}}\ (std::string\ commPortName,\ \textcolor{keywordtype}{int}\ bitRate\ =\ 115200);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_serial_a40388a777cb349a1b8bde4c1ed8fbe92}{is\_open}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_serial_aae3d630a4fd81c8b148cb4eebdb91392}{write}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *buffer,\ \textcolor{keywordtype}{int}\ buffLen);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_serial_a8266889eb5bfa7ef8b53595c5482133d}{read}}(\textcolor{keywordtype}{char}\ *buffer,\ \textcolor{keywordtype}{int}\ buffLen);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Flushes\ everything\ from\ the\ serial\ port's\ read\ buffer}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_serial_a63b7abf172cad25bfc998b3b1f98310f}{flush}}();}
+\DoxyCodeLine{00057\ \};}
+
+\end{DoxyCode}

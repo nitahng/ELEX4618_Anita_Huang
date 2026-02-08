@@ -1,7 +1,1 @@
-﻿  Embedded Systems Control.cpp
-C:\Users\annit\Downloads\CPPOPP\ELEX4618_Anita_Huang\Embedded Systems Control\Embedded Systems Control.cpp(61,14): warning C4101: 'quit': unreferenced local variable
-C:\Users\annit\Downloads\CPPOPP\ELEX4618_Anita_Huang\Embedded Systems Control\Embedded Systems Control.cpp(86,25): warning C4101: 'button_test': unreferenced local variable
-C:\Users\annit\Downloads\CPPOPP\ELEX4618_Anita_Huang\Embedded Systems Control\Embedded Systems Control.cpp(156,31): warning C4552: '<': result of expression not used
-C:\Users\annit\Downloads\CPPOPP\ELEX4618_Anita_Huang\Embedded Systems Control\Embedded Systems Control.cpp(162,31): warning C4552: '>': result of expression not used
-C:\Users\annit\Downloads\CPPOPP\ELEX4618_Anita_Huang\Embedded Systems Control\Embedded Systems Control.cpp(181,9): warning C4101: 'digital_out': unreferenced local variable
-  Embedded Systems Control.vcxproj -> C:\Users\annit\Downloads\CPPOPP\elex4618\x64\Debug\Embedded Systems Control.exe
+﻿LINK : fatal error LNK1104: cannot open file '..\opencv\x64\vc17\staticlib\ippicvmt.lib'

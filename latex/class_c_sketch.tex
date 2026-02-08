@@ -1,0 +1,139 @@
+\doxysection{CSketch Class Reference}
+\hypertarget{class_c_sketch}{}\label{class_c_sketch}\index{CSketch@{CSketch}}
+
+
+Etch-\/\+A-\/\+Sketch game implementation.  
+
+
+
+
+{\ttfamily \+\#include $<$CSketch.\+h$>$}
+
+Inheritance diagram for CSketch:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_sketch}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_c_sketch_a440f38e17cbb421e8d51f8ab55aa9008}{CSketch}} (cv::\+\+Size canvassize, int comportnumber)
+\begin{DoxyCompactList}\small\item\em Constructor for a new \doxylink{class_c_sketch}{CSketch} object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_c_sketch_aca8c70005a0bca496ea9574e4da47f65}{\texorpdfstring{$\sim$}{\string~}\+CSketch}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_c_sketch}{CSketch} object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416}{gpio}} (\doxymbox{\hyperlink{class_c_control}{CControl}} \&\doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}})
+\begin{DoxyCompactList}\small\item\em Handle hardware I/\+O with the microcontroller. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_c_sketch_a3b7e2fa57fd26e4b812494268a5bbfbb}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the Etch-\/\+A-\/\+Sketch state. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_c_sketch_a93f276905cba79da1a18df36d193736f}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Render the current frame to the canvas and display it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_c_base4618}{CBase4618}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_c_base4618_abe2aad021452c08dd4a5726b44c5a0b7}{CBase4618}} ()
+\begin{DoxyCompactList}\small\item\em Contructor of a \doxylink{class_c_control}{CControl} object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52}{\texorpdfstring{$\sim$}{\string~}\+CBase4618}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for a \doxylink{class_c_control}{CControl} object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_c_base4618_a535e816d735d10d6048dd39cd893d393}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs gpio, update and draw in a loop until quit key pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_c_base4618}{CBase4618}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_c_control}{CControl}} \doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_c_control}{CControl} Communication Object. \end{DoxyCompactList}\item 
+cv::\+\+Mat \doxymbox{\hyperlink{class_c_base4618_a1b925f757247b33ca2072f777f24582d}{\+\_\+canvas}}
+\begin{DoxyCompactList}\small\item\em Open\+CV Image Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Etch-\/\+A-\/\+Sketch game implementation. 
+
+\doxylink{class_c_sketch}{CSketch} inherits from \doxylink{class_c_base4618}{CBase4618} and provides concrete implementations of the \doxylink{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416}{gpio()}, \doxylink{class_c_sketch_a3b7e2fa57fd26e4b812494268a5bbfbb}{update()}, and \doxylink{class_c_sketch_a93f276905cba79da1a18df36d193736f}{draw()} methods for the Etch-\/\+A-\/\+Sketch application. It reads joystick/\+buttons via the microcontroller and renders drawing output onto an Open\+CV canvas. 
+
+\label{doc-constructors}
+\Hypertarget{class_c_sketch_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_sketch_a440f38e17cbb421e8d51f8ab55aa9008}\index{CSketch@{CSketch}!CSketch@{CSketch}}
+\index{CSketch@{CSketch}!CSketch@{CSketch}}
+\doxysubsubsection{\texorpdfstring{CSketch()}{CSketch()}}
+{\footnotesize\ttfamily \label{class_c_sketch_a440f38e17cbb421e8d51f8ab55aa9008} 
+CSketch::\+\+CSketch (\begin{DoxyParamCaption}\item[{cv::\+\+Size}]{canvassize}{, }\item[{int}]{comportnumber}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for a new \doxylink{class_c_sketch}{CSketch} object. 
+
+Initializes the Etch-\/\+A-\/\+Sketch game instance, including the drawing canvas size and communication configuration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em canvas\+Size} & Size of the drawing canvas (width/\+height). \\
+\hline
+{\em comportnumber} & COM port number used to communicate with the controller. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_sketch_aca8c70005a0bca496ea9574e4da47f65}\index{CSketch@{CSketch}!````~CSketch@{\texorpdfstring{$\sim$}{\string~}CSketch}}
+\index{````~CSketch@{\texorpdfstring{$\sim$}{\string~}CSketch}!CSketch@{CSketch}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CSketch()}{\string~CSketch()}}
+{\footnotesize\ttfamily \label{class_c_sketch_aca8c70005a0bca496ea9574e4da47f65} 
+CSketch::\+\texorpdfstring{$\sim$}{\string~}\+CSketch (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroy the \doxylink{class_c_sketch}{CSketch} object. 
+
+Cleans up any resources owned by the sketch instance. 
+
+\label{doc-func-members}
+\Hypertarget{class_c_sketch_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_sketch_a93f276905cba79da1a18df36d193736f}\index{CSketch@{CSketch}!draw@{draw}}
+\index{draw@{draw}!CSketch@{CSketch}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_c_sketch_a93f276905cba79da1a18df36d193736f} 
+bool CSketch::\+draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Render the current frame to the canvas and display it. 
+
+Draws the UI elements and the Etch-\/\+A-\/\+Sketch output onto the Open\+CV canvas, then displays the resulting image on screen. 
+
+Implements \doxymbox{\hyperlink{class_c_base4618_a8ba8e4c7a0f99f39ffcf0be8b243ebdb}{CBase4618}}.
+
+\Hypertarget{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416}\index{CSketch@{CSketch}!gpio@{gpio}}
+\index{gpio@{gpio}!CSketch@{CSketch}}
+\doxysubsubsection{\texorpdfstring{gpio()}{gpio()}}
+{\footnotesize\ttfamily \label{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416} 
+void CSketch::\+gpio (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_c_control}{CControl}} \&}]{comm}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handle hardware I/\+O with the microcontroller. 
+
+Performs the read/\+write communication needed to retrieve input states (e.\+g., joystick position, pushbuttons) and send output states if required (e.\+g., LED colour). 
+
+Implements \doxymbox{\hyperlink{class_c_base4618_a544ee3e5c897a1ddfec3317eecd9ef97}{CBase4618}}.
+
+\Hypertarget{class_c_sketch_a3b7e2fa57fd26e4b812494268a5bbfbb}\index{CSketch@{CSketch}!update@{update}}
+\index{update@{update}!CSketch@{CSketch}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_c_sketch_a3b7e2fa57fd26e4b812494268a5bbfbb} 
+void CSketch::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update the Etch-\/\+A-\/\+Sketch state. 
+
+Updates the internal game state using the most recent inputs obtained from \doxylink{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416}{gpio()}, such as cursor movement, colour selection, and reset requests. 
+
+Implements \doxymbox{\hyperlink{class_c_base4618_a1e2f3c16eb99b5bfdd5d5254aee39ee6}{CBase4618}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_c_sketch_8h}{CSketch.\+h}}\item 
+\doxymbox{\hyperlink{_c_sketch_8cpp}{CSketch.\+cpp}}\end{DoxyCompactItemize}

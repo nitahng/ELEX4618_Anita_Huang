@@ -1,10 +1,7 @@
 
 
-
-
-
-
 /// Libraries ///
+#include "stdafx.h"
 #include <iostream>
 #include "CControl.h"
 #include "../Serial.h"
@@ -22,8 +19,6 @@ void analog_loop(CControl& comm);
 void digital_loop(CControl& comm);
 
 
-
-
 enum Type {
     DIGITAL = 0,
     ANALOG = 1,
@@ -34,6 +29,8 @@ enum Type {
 #define GREEN_LED 38
 #define PUSH_BUTTON_1 41
 #define PUSH_BUTTON_2 42
+#define BIG_BUTTON_1 32
+#define BIG_BUTTON_2 33
 #define SERVO_0 0
 #define HIGH 1
 #define LOW 0
@@ -46,7 +43,7 @@ enum Type {
 
 
 
-int main()
+void run_lab3()
 {
     CControl comm;
     int comport_number = 3;
@@ -90,7 +87,7 @@ int main()
 
                     while (true) {
 
-                        check = comm.get_button(comm);
+                        check = comm.get_button(BIG_BUTTON_2, comm);
 
                         if (check == HIGH) {
                             ++press;
@@ -184,10 +181,10 @@ void digital_loop(CControl& comm) {
 
     while (true) {
         Sleep(50);
-        comm.get_data(DIGITAL, PUSH_BUTTON_1, digital_in);
+        comm.get_data(DIGITAL, BIG_BUTTON_1, digital_in);
         comm.set_data(DIGITAL, GREEN_LED, digital_in);
 
-        std::cout << "DIGITAL TEST: " << "CH" << PUSH_BUTTON_1 << " = " << digital_in << "\n";
+        std::cout << "DIGITAL TEST: " << "CH" << BIG_BUTTON_1 << " = " << digital_in << "\n";
 
         if (_kbhit()) {
             break;

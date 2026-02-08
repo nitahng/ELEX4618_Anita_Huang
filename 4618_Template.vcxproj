@@ -60,6 +60,7 @@
       <AdditionalIncludeDirectories>..\opencv\include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,6 +81,7 @@
       <AdditionalIncludeDirectories>..\opencv\include</AdditionalIncludeDirectories>
       <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -89,6 +91,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CBase4618.h" />
+    <ClInclude Include="CControl.h" />
+    <ClInclude Include="CSketch.h" />
     <ClInclude Include="cvui.h" />
     <ClInclude Include="Serial.h" />
     <ClInclude Include="server.h" />
@@ -96,6 +101,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="4618_Template.cpp" />
+    <ClCompile Include="CBase4618.cpp" />
+    <ClCompile Include="CControl.cpp" />
+    <ClCompile Include="CSketch.cpp" />
+    <ClCompile Include="Embedded Systems Control\Embedded Systems Control.cpp" />
+    <ClCompile Include="Lab4.cpp" />
     <ClCompile Include="Serial.cpp" />
     <ClCompile Include="server.cpp" />
     <ClCompile Include="stdafx.cpp">

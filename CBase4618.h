@@ -48,7 +48,7 @@ protected:
 
 public:
     /**
-     * @brief Contructor of a CControl object.
+     * @brief Contructor of a CBase object.
      */
     CBase4618();
 
@@ -70,17 +70,16 @@ public:
      * @brief gpio: virtual method (defined in child)
      * @brief Performs the read and write processes to interact with the Microcontroller.
      */
-    virtual void gpio() = 0;
+    virtual void gpio(CControl& comm ,float &percentage_x, float &percentage_y, bool &colour_button_pressed, bool& reset_button_pressed) = 0;
      
 
 
     /**
      * @brief update: virtual method (defined in child)
-   * @brief 
  
     */
-    virtual void update() = 0;
-
+    virtual void update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point& pt1, cv::Point& pt2, int &colour_index) = 0;
+  
 
 
     /**
@@ -89,7 +88,7 @@ public:
      * @brief 
 
     */
-    virtual bool draw() = 0;
+    virtual bool draw(cv::Point& pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed) = 0;
 
 
 };

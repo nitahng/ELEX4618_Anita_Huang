@@ -5,10 +5,12 @@
 #include "Serial.h"
 #include <sstream> 
 #include <math.h>
+#include <Windows.h>
 
 #define PUSH_BUTTON_2 42
 #define bufferlen 64
 #define FULLSCALE 4096
+#define BIG_BUTTON_2 32
 
 enum Type {
 	DIGITAL = 0,
@@ -35,11 +37,12 @@ void CControl::init_com(int comport){
 		std::cout << "COM" + std::to_string(comport) + " Successfully Opened\n";
 	}
 	else {
-		std::cout << "No COM PORT found!\n\n";
+		std::cout << "No COM port found!\n\n";
 	}
 }
 
-bool CControl::get_data(int type, int channel, int& result){
+
+bool CControl::get_data(int type, int channel, int& result) {
 
 	char header;
 	int get_type;
@@ -70,9 +73,14 @@ bool CControl::get_data(int type, int channel, int& result){
 		}
 	}
 
-	if (string_data[string_data.size()-1] != '\n') {
+	if (string_data.empty()) {
 		return false;
 	}
+
+	if (string_data.back() != '\n') {
+		return false;
+	}
+
 
 
 	std::istringstream iss(string_data);
@@ -100,7 +108,7 @@ bool CControl::set_data(int type, int channel, int val){
 
 float CControl::get_analog(int channel, int& result){
 
-	int joy_result;
+	int joy_result = 0;
 	get_data(ANALOG, channel,joy_result);
 
 	float percentage = 100*joy_result/ FULLSCALE;
@@ -110,14 +118,16 @@ float CControl::get_analog(int channel, int& result){
 	return percentage;
 }
 
-bool CControl::get_button(CControl& comm){
+
+
+bool CControl::get_button(int channel, CControl& comm){
 
 	static int last_state = 0;
 	static unsigned long last_press_time = 0;
 	const unsigned long debounce_delay = 1000;
 	int current_state;
 
-	if (comm.get_data(DIGITAL, PUSH_BUTTON_2, current_state)) {
+	if (comm.get_data(DIGITAL, channel, current_state)) {
 		
 		if (current_state == 1 && last_state == 0) {
 			unsigned long current_time = GetTickCount();
@@ -134,6 +144,4 @@ bool CControl::get_button(CControl& comm){
 	}
 
 	return false; 
-
-
 }

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CBase4618.cpp">
+      <Filter>CBASEandCONTROL</Filter>
+    </ClCompile>
+    <ClCompile Include="CControl.cpp">
+      <Filter>CBASEandCONTROL</Filter>
+    </ClCompile>
+    <ClCompile Include="CSketch.cpp">
+      <Filter>Lab4EtchASketch</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab4.cpp">
+      <Filter>Lab4EtchASketch</Filter>
+    </ClCompile>
+    <ClCompile Include="Serial.cpp">
+      <Filter>CBASEandCONTROL</Filter>
+    </ClCompile>
+    <ClCompile Include="server.cpp">
+      <Filter>openCVstuff</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>openCVstuff</Filter>
+    </ClCompile>
+    <ClCompile Include="4618_Template.cpp">
+      <Filter>MAIN</Filter>
+    </ClCompile>
+    <ClCompile Include="Embedded Systems Control\Embedded Systems Control.cpp">
+      <Filter>Lab3Controller</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CBase4618.h">
+      <Filter>CBASEandCONTROL</Filter>
+    </ClInclude>
+    <ClInclude Include="CControl.h">
+      <Filter>CBASEandCONTROL</Filter>
+    </ClInclude>
+    <ClInclude Include="CSketch.h">
+      <Filter>Lab4EtchASketch</Filter>
+    </ClInclude>
+    <ClInclude Include="Serial.h">
+      <Filter>CBASEandCONTROL</Filter>
+    </ClInclude>
+    <ClInclude Include="cvui.h">
+      <Filter>openCVstuff</Filter>
+    </ClInclude>
+    <ClInclude Include="server.h">
+      <Filter>openCVstuff</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>openCVstuff</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CBASEandCONTROL">
+      <UniqueIdentifier>{4198b06c-b373-468a-963b-0522bfe9cf8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lab4EtchASketch">
+      <UniqueIdentifier>{f6a30e2a-b892-450f-a302-d8d81212e13c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="openCVstuff">
+      <UniqueIdentifier>{c23b000e-1e10-4501-bb00-f38517ecd3d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MAIN">
+      <UniqueIdentifier>{e0ead6b8-47ac-4b88-a167-4e77671f1c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lab3Controller">
+      <UniqueIdentifier>{742064ee-787d-43d0-954d-411462399d85}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

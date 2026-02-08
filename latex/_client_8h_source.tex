@@ -1,0 +1,61 @@
+\doxysection{Client.\+h}
+\hypertarget{_client_8h_source}{}\label{_client_8h_source}\doxymbox{\hyperlink{_client_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Prepared\ for\ BCIT\ ELEX4618,\ April\ 2022,\ by\ Craig\ Hennessey}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ WIN4618}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\#define\ PI4618}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifdef\ WIN4618}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Winsock2.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifdef\ PI4618}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ INVALID\_SOCKET\ -\/1}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ SOCKET\_ERROR\ -\/1}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ SOCKET;}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <sys/types.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <sys/socket.h>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <sys/ioctl.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <fcntl.h>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <netinet/in.h>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <arpa/inet.h>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <netdb.h>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_c_client_a51f196439c3218b2dce8f7c6610dad14}{CClient}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#ifdef\ WIN4618}}
+\DoxyCodeLine{00036\ \ \ WSADATA\ \doxymbox{\hyperlink{class_c_client_a149c8897bb03cfa698a739b46fe42e63}{\_wsdat}};}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_c_client_ad22b05d27aabdfafb54743017b4f1d88}{\_port}};}
+\DoxyCodeLine{00040\ \ \ std::string\ \doxymbox{\hyperlink{class_c_client_a0ba087ef0c18ae5562de697b022d4586}{\_addr}};}
+\DoxyCodeLine{00041\ \ \ SOCKET\ \doxymbox{\hyperlink{class_c_client_a56b580182f4e37bc5487e1af0a1cf92c}{\_socket}};}
+\DoxyCodeLine{00042\ \ \ }
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_c_client_a01466b817058cbe4e4ca3621690b1174}{setblocking}}(SOCKET\ fd,\ \textcolor{keywordtype}{bool}\ blocking);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \doxymbox{\hyperlink{class_c_client_a51f196439c3218b2dce8f7c6610dad14}{CClient}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{class_c_client_adfec5dfb8d13c1245020e52aac0812b1}{\string~CClient}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_c_client_aaa46e0b64686feac7ae21e2798285140}{connect\_socket}}(std::string\ addr,\ \textcolor{keywordtype}{int}\ port);}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_c_client_a554d42749ddd9d51fa59686a57d3cd66}{close\_socket}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_c_client_ad64c607c6f0aaabb49b4de7245c0169b}{tx\_str}}(std::string\ str);}
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_c_client_ac1eda49074ca5ff25f0797b983d725df}{rx\_str}}(std::string\ \&str);}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_c_client_ad977e738c6213aa845a44a6e7be8f563}{rx\_im}}(cv::Mat\ \&im);}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+
+\end{DoxyCode}

@@ -20,8 +20,6 @@ class CSketch : public CBase4618 {
 private:
 
 
-
-
 public:
 
 	/**
@@ -50,11 +48,10 @@ public:
 	 * @brief Handle hardware I/O with the microcontroller.
 	 *
 	 * Performs the read/write communication needed to retrieve input states
-	 * (e.g., joystick position, pushbuttons) and send output states if required
-	 * (e.g., LED colour).
+	 * (joystick position, pushbuttons) and send output states if required
 	 */
 
-	void gpio();
+	void gpio(CControl& comm, float &percentage_x, float &percentage_y, bool &colour_button_pressed, bool& reset_button_pressed);
 
 
 	/**
@@ -63,7 +60,7 @@ public:
 	 * Updates the internal game state using the most recent inputs obtained from
 	 * gpio(), such as cursor movement, colour selection, and reset requests.
 	 */
-	void update();
+	void update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point& pt1, cv::Point& pt2, int &colour_index);
 
 
 
@@ -73,7 +70,7 @@ public:
 	 * Draws the UI elements and the Etch-A-Sketch output onto the OpenCV canvas,
 	 * then displays the resulting image on screen.
 	 */
-	bool draw();
+	bool draw(cv::Point& pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed);
 
 
 };

@@ -1,0 +1,147 @@
+\doxysection{CBase4618 Class Reference}
+\hypertarget{class_c_base4618}{}\label{class_c_base4618}\index{CBase4618@{CBase4618}}
+
+
+{\ttfamily \+\#include $<$CBase4618.\+h$>$}
+
+Inheritance diagram for CBase4618:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_base4618}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_c_base4618_abe2aad021452c08dd4a5726b44c5a0b7}{CBase4618}} ()
+\begin{DoxyCompactList}\small\item\em Contructor of a \doxylink{class_c_control}{CControl} object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52}{\texorpdfstring{$\sim$}{\string~}\+CBase4618}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for a \doxylink{class_c_control}{CControl} object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_c_base4618_a535e816d735d10d6048dd39cd893d393}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs gpio, update and draw in a loop until quit key pressed. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_c_base4618_a544ee3e5c897a1ddfec3317eecd9ef97}{gpio}} (\doxymbox{\hyperlink{class_c_control}{CControl}} \&\doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}})=0
+\begin{DoxyCompactList}\small\item\em gpio:\+ virtual method (defined in child) \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_c_base4618_a1e2f3c16eb99b5bfdd5d5254aee39ee6}{update}} ()=0
+\begin{DoxyCompactList}\small\item\em update:\+ virtual method (defined in child) \end{DoxyCompactList}\item 
+virtual bool \doxymbox{\hyperlink{class_c_base4618_a8ba8e4c7a0f99f39ffcf0be8b243ebdb}{draw}} ()=0
+\begin{DoxyCompactList}\small\item\em draw:\+ virtual method (defined in child) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_c_control}{CControl}} \doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_c_control}{CControl} Communication Object. \end{DoxyCompactList}\item 
+cv::\+\+Mat \doxymbox{\hyperlink{class_c_base4618_a1b925f757247b33ca2072f777f24582d}{\+\_\+canvas}}
+\begin{DoxyCompactList}\small\item\em Open\+CV Image Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_c_base4618_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_base4618_abe2aad021452c08dd4a5726b44c5a0b7}\index{CBase4618@{CBase4618}!CBase4618@{CBase4618}}
+\index{CBase4618@{CBase4618}!CBase4618@{CBase4618}}
+\doxysubsubsection{\texorpdfstring{CBase4618()}{CBase4618()}}
+{\footnotesize\ttfamily \label{class_c_base4618_abe2aad021452c08dd4a5726b44c5a0b7} 
+CBase4618::\+\+CBase4618 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Contructor of a \doxylink{class_c_control}{CControl} object. 
+
+\Hypertarget{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52}\index{CBase4618@{CBase4618}!````~CBase4618@{\texorpdfstring{$\sim$}{\string~}CBase4618}}
+\index{````~CBase4618@{\texorpdfstring{$\sim$}{\string~}CBase4618}!CBase4618@{CBase4618}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CBase4618()}{\string~CBase4618()}}
+{\footnotesize\ttfamily \label{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52} 
+CBase4618::\+\texorpdfstring{$\sim$}{\string~}\+CBase4618 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for a \doxylink{class_c_control}{CControl} object. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_c_base4618_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_base4618_a8ba8e4c7a0f99f39ffcf0be8b243ebdb}\index{CBase4618@{CBase4618}!draw@{draw}}
+\index{draw@{draw}!CBase4618@{CBase4618}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_c_base4618_a8ba8e4c7a0f99f39ffcf0be8b243ebdb} 
+virtual bool CBase4618::\+draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+draw:\+ virtual method (defined in child) 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_c_sketch_a93f276905cba79da1a18df36d193736f}{CSketch}}.
+
+\Hypertarget{class_c_base4618_a544ee3e5c897a1ddfec3317eecd9ef97}\index{CBase4618@{CBase4618}!gpio@{gpio}}
+\index{gpio@{gpio}!CBase4618@{CBase4618}}
+\doxysubsubsection{\texorpdfstring{gpio()}{gpio()}}
+{\footnotesize\ttfamily \label{class_c_base4618_a544ee3e5c897a1ddfec3317eecd9ef97} 
+virtual void CBase4618::\+gpio (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_c_control}{CControl}} \&}]{comm}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+gpio:\+ virtual method (defined in child) 
+
+Performs the read and write processes to interact with the Microcontroller. 
+
+Implemented in \doxymbox{\hyperlink{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416}{CSketch}}.
+
+\Hypertarget{class_c_base4618_a535e816d735d10d6048dd39cd893d393}\index{CBase4618@{CBase4618}!run@{run}}
+\index{run@{run}!CBase4618@{CBase4618}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_c_base4618_a535e816d735d10d6048dd39cd893d393} 
+void CBase4618::\+run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Runs gpio, update and draw in a loop until quit key pressed. 
+
+\Hypertarget{class_c_base4618_a1e2f3c16eb99b5bfdd5d5254aee39ee6}\index{CBase4618@{CBase4618}!update@{update}}
+\index{update@{update}!CBase4618@{CBase4618}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_c_base4618_a1e2f3c16eb99b5bfdd5d5254aee39ee6} 
+virtual void CBase4618::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+update:\+ virtual method (defined in child) 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_c_sketch_a3b7e2fa57fd26e4b812494268a5bbfbb}{CSketch}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_c_base4618_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_c_base4618_a1b925f757247b33ca2072f777f24582d}\index{CBase4618@{CBase4618}!\_canvas@{\_canvas}}
+\index{\_canvas@{\_canvas}!CBase4618@{CBase4618}}
+\doxysubsubsection{\texorpdfstring{\_canvas}{\_canvas}}
+{\footnotesize\ttfamily \label{class_c_base4618_a1b925f757247b33ca2072f777f24582d} 
+cv::\+\+Mat CBase4618::\+\+\_\+canvas\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Open\+CV Image Object. 
+
+The image screen for the drawing surface of the Etch-\/\+A-\/\+Sketch All Images and Graphics for the labs are processed within this object. \Hypertarget{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}\index{CBase4618@{CBase4618}!comm@{comm}}
+\index{comm@{comm}!CBase4618@{CBase4618}}
+\doxysubsubsection{\texorpdfstring{comm}{comm}}
+{\footnotesize\ttfamily \label{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502} 
+\doxymbox{\hyperlink{class_c_control}{CControl}} CBase4618::\+comm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{class_c_control}{CControl} Communication Object. 
+
+Handles low-\/level communication with the TM4\+C123G board, including board initialization and Get and Set functions. 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_c_base4618_8h}{CBase4618.\+h}}\item 
+\doxymbox{\hyperlink{_c_base4618_8cpp}{CBase4618.\+cpp}}\end{DoxyCompactItemize}

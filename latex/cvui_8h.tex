@@ -1,0 +1,349 @@
+\doxysection{cvui.\+h File Reference}
+\hypertarget{cvui_8h}{}\label{cvui_8h}\index{cvui.h@{cvui.h}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$map$>$}\newline
+{\ttfamily \+\#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \+\#include $<$opencv2/\+imgproc/\+imgproc.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$opencv2/\+highgui/\+highgui.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$opencv2/\+core/\+core.\+hpp$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui::\+cvui\+\_\+block\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1cvui__label__t}{cvui::\+cvui\+\_\+label\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1cvui__mouse__btn__t}{cvui::\+cvui\+\_\+mouse\+\_\+btn\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1cvui__mouse__t}{cvui::\+cvui\+\_\+mouse\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1cvui__context__t}{cvui::\+cvui\+\_\+context\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{cvui::\+internal::\+\+Trackbar\+Params}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespacecvui}{cvui}}
+\item 
+namespace \doxymbox{\hyperlink{namespacecvui_1_1internal}{cvui::\+internal}}
+\item 
+namespace \doxymbox{\hyperlink{namespacecvui_1_1render}{cvui::\+render}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{cvui_8h_a74091a7029eb42af43256529bdb9c986}{CVUI\+\_\+\+ANTIALISED}}~CV\+\_\+\+AA
+\item 
+\+\#define \doxymbox{\hyperlink{cvui_8h_a9756014621f6248ad79f98c14a3ac58b}{CVUI\+\_\+\+FILLED}}~-\/1
+\item 
+\+\#define \doxymbox{\hyperlink{cvui_8h_a803c6f2523bae626734a87a074e480e9}{vsprintf\+\_\+s}}~vsprintf
+\item 
+\+\#define \doxymbox{\hyperlink{cvui_8h_a6b6019110450b61a0b4acc55d7d336ca}{sprintf\+\_\+s}}~sprintf
+\item 
+\+\#define \doxymbox{\hyperlink{cvui_8h_a3782e1602e60baf303ac21a5ac52ba2f}{\+\_\+\+CVUI\+\_\+\+IMPLEMENTATION\+\_\+\+NOTICE}}~"{}cvui.\+h:\+ compiling implementation because of CVUI\+\_\+\+IMPLEMENTATION. See:\+ https:\+/\+/\+dovyski.\+github.\+io/\+\doxymbox{\hyperlink{namespacecvui}{cvui}}/\+usage/\+"{}
+\item 
+\+\#define \doxymbox{\hyperlink{cvui_8h_a0e3ce6b2ab2c4b1d237b8e0bb96c3ad4}{\+\_\+\+CVUI\+\_\+\+NO\+\_\+\+IMPLEMENTATION\+\_\+\+NOTICE}}~"{}cvui.\+h:\+ implementation skipped. Ensure one of your C++ files included cvui.\+h after a \+\#define CVUI\+\_\+\+IMPLEMENTATION. See:\+ https:\+/\+/\+dovyski.\+github.\+io/\+\doxymbox{\hyperlink{namespacecvui}{cvui}}/\+usage/\+"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{namespacecvui_ae723a98a9d41258961d970df271ed520}{cvui::\+init}} (const cv::\+\+String \&the\+Window\+Name, int the\+Delay\+Wait\+Key=-\/1, bool the\+Create\+Named\+Window=true)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a2a86136f1ed97ddc06ca06d0dce5c36a}{cvui::\+init}} (const cv::\+\+String the\+Window\+Names\+[$\,$]\+, size\+\_\+t the\+How\+Many\+Windows, int the\+Delay\+Wait\+Key=-\/1, bool the\+Create\+Named\+Windows=true)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a07a350cd55a717031c5d52c8fa14fa29}{cvui::\+watch}} (const cv::\+\+String \&the\+Window\+Name, bool the\+Create\+Named\+Window=true)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a4b606bbafaac6bc3ff025d035e3f597d}{cvui::\+context}} (const cv::\+\+String \&the\+Window\+Name)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a9f97a42ad632c5caa55a2b6f9828a81c}{cvui::\+imshow}} (const cv::\+\+String \&the\+Window\+Name, cv::\+\+Input\+Array the\+Frame)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_ac5bab07fb83f288977f2ba0af384a849}{cvui::\+last\+Key\+Pressed}} ()
+\item 
+cv::\+\+Point \doxymbox{\hyperlink{namespacecvui_aec4f649283160d14cdccfc9a823ece6d}{cvui::\+mouse}} (const cv::\+\+String \&the\+Window\+Name="{}"{})
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a2a19278582c22e0f0ff1adb899ab8c92}{cvui::\+mouse}} (int the\+Query)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a5b29b96b528f5ec94dd0929379a0fdb2}{cvui::\+mouse}} (const cv::\+\+String \&the\+Window\+Name, int the\+Query)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a961c9491eb40211febd8db0a5bfa16d8}{cvui::\+mouse}} (int the\+Button, int the\+Query)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_ab48db1f6bbed2e2b61a035f6f10e1386}{cvui::\+mouse}} (const cv::\+\+String \&the\+Window\+Name, int the\+Button, int the\+Query)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a44be4a4aae93496f66d96433ec8989fe}{cvui::\+button}} (cv::\+\+Mat \&the\+Where, int theX, int theY, const cv::\+\+String \&the\+Label)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a1a2f388eeace02d04f3755f350e201ad}{cvui::\+button}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, int the\+Height, const cv::\+\+String \&the\+Label)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_afb2c9f81d966d68a24523294ac0b6f39}{cvui::\+button}} (cv::\+\+Mat \&the\+Where, int theX, int theY, cv::\+\+Mat \&the\+Idle, cv::\+\+Mat \&the\+Over, cv::\+\+Mat \&the\+Down)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a91bfea9b3bc194d0a2b5f9727815327d}{cvui::\+image}} (cv::\+\+Mat \&the\+Where, int theX, int theY, cv::\+\+Mat \&the\+Image)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a78b14a86060cac4b5778de99c8671a32}{cvui::\+checkbox}} (cv::\+\+Mat \&the\+Where, int theX, int theY, const cv::\+\+String \&the\+Label, bool \texorpdfstring{$\ast$}{*}the\+State, unsigned int the\+Color=0x\+CECECE)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a24acfc9fb0d6ad741676f15c919fc99d}{cvui::\+text}} (cv::\+\+Mat \&the\+Where, int theX, int theY, const cv::\+\+String \&the\+Text, double the\+Font\+Scale=0.\+4, unsigned int the\+Color=0x\+CECECE)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a5e7468abe3d9bcbe3171c55d43e227f6}{cvui::\+printf}} (cv::\+\+Mat \&the\+Where, int theX, int theY, double the\+Font\+Scale, unsigned int the\+Color, const char \texorpdfstring{$\ast$}{*}the\+Fmt,...)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a9fc9f1c2feed48be868b3905b3dbe084}{cvui::\+printf}} (cv::\+\+Mat \&the\+Where, int theX, int theY, const char \texorpdfstring{$\ast$}{*}the\+Fmt,...)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_ad8e0668674779283ebddc328b65b9820}{cvui::\+counter}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int \texorpdfstring{$\ast$}{*}the\+Value, int the\+Step=1, const char \texorpdfstring{$\ast$}{*}the\+Format="{}\%d"{})
+\item 
+double \doxymbox{\hyperlink{namespacecvui_a631bb12de6b93e76e6899d572849d953}{cvui::\+counter}} (cv::\+\+Mat \&the\+Where, int theX, int theY, double \texorpdfstring{$\ast$}{*}the\+Value, double the\+Step=0.\+5, const char \texorpdfstring{$\ast$}{*}the\+Format="{}\%.\+2f"{})
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_a72f3fdade2cece81f0ac2a25b9d75a80}{cvui::\+trackbar}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, T \texorpdfstring{$\ast$}{*}the\+Value, T the\+Min, T the\+Max, int the\+Segments=1, const char \texorpdfstring{$\ast$}{*}the\+Label\+Format="{}\%.\+1Lf"{}, unsigned int the\+Options=0, T the\+Discrete\+Step=1)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a6195ca6d72a3694ca68a75f1f3ec4431}{cvui::\+window}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, int the\+Height, const cv::\+\+String \&the\+Title)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a759e80d962fa4649f749ccfa03f89509}{cvui::\+rect}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, int the\+Height, unsigned int the\+Border\+Color, unsigned int the\+Filling\+Color=0xff000000)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_afa18f5ee84da019b801a52f8b475efe6}{cvui::\+sparkline}} (cv::\+\+Mat \&the\+Where, std::\+vector$<$ double $>$ \&the\+Values, int theX, int theY, int the\+Width, int the\+Height, unsigned int the\+Color=0x00\+FF00)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_a9f5d2a363c4064aee1bd6ef2c3f3bca3}{cvui::\+iarea}} (int theX, int theY, int the\+Width, int the\+Height)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_aaab319849ff974b6cc67df45ab64ea15}{cvui::\+begin\+Row}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width=-\/1, int the\+Height=-\/1, int the\+Padding=0)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a2e64d25523acde477058cc7f76a6c446}{cvui::\+end\+Row}} ()
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a8f5f6451ab5af26f703760ca2cea9801}{cvui::\+begin\+Column}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width=-\/1, int the\+Height=-\/1, int the\+Padding=0)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_aa2115cb75dfb6a2c7dbbb27764741382}{cvui::\+end\+Column}} ()
+\item 
+void \doxymbox{\hyperlink{namespacecvui_acf0182c98f3a3c7db8856267b0af93f5}{cvui::\+begin\+Row}} (int the\+Width=-\/1, int the\+Height=-\/1, int the\+Padding=0)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_acebca53fe176215cb35722d3fa47dd38}{cvui::\+begin\+Column}} (int the\+Width=-\/1, int the\+Height=-\/1, int the\+Padding=0)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a6d5b286e112bab4de72fe2730500861b}{cvui::\+space}} (int the\+Value=5)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_ad743c5572a5ceaaf7eca4fff842c32ae}{cvui::\+text}} (const cv::\+\+String \&the\+Text, double the\+Font\+Scale=0.\+4, unsigned int the\+Color=0x\+CECECE)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a4ff25fec2437f48c9df08625a83390ec}{cvui::\+button}} (int the\+Width, int the\+Height, const cv::\+\+String \&the\+Label)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a264240108760a6403f800ecb5a3f51e0}{cvui::\+button}} (const cv::\+\+String \&the\+Label)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a6d413f556d32d8f67f2823bb6d5a7c7e}{cvui::\+button}} (cv::\+\+Mat \&the\+Idle, cv::\+\+Mat \&the\+Over, cv::\+\+Mat \&the\+Down)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a355db64e5cf9638205ee0a01ce174973}{cvui::\+image}} (cv::\+\+Mat \&the\+Image)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_a55ff29363158fd6760fe57b08d8d50dd}{cvui::\+checkbox}} (const cv::\+\+String \&the\+Label, bool \texorpdfstring{$\ast$}{*}the\+State, unsigned int the\+Color=0x\+CECECE)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_aa13678e0839846fe166f92d316c52a49}{cvui::\+printf}} (double the\+Font\+Scale, unsigned int the\+Color, const char \texorpdfstring{$\ast$}{*}the\+Fmt,...)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a9017ae59471c448150111ee238a71c89}{cvui::\+printf}} (const char \texorpdfstring{$\ast$}{*}the\+Fmt,...)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_ab2261c21421de06c263e1d367926e2e5}{cvui::\+counter}} (int \texorpdfstring{$\ast$}{*}the\+Value, int the\+Step=1, const char \texorpdfstring{$\ast$}{*}the\+Format="{}\%d"{})
+\item 
+double \doxymbox{\hyperlink{namespacecvui_abd9747156cfb15d42e00b754bc8775ab}{cvui::\+counter}} (double \texorpdfstring{$\ast$}{*}the\+Value, double the\+Step=0.\+5, const char \texorpdfstring{$\ast$}{*}the\+Format="{}\%.\+2f"{})
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_af1afe480c72dfb1bbe212ba57ecf05cd}{cvui::\+trackbar}} (int the\+Width, T \texorpdfstring{$\ast$}{*}the\+Value, T the\+Min, T the\+Max, int the\+Segments=1, const char \texorpdfstring{$\ast$}{*}the\+Label\+Format="{}\%.\+1Lf"{}, unsigned int the\+Options=0, T the\+Discrete\+Step=1)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a157500f7b7880a3180d16edc01c0e051}{cvui::\+window}} (int the\+Width, int the\+Height, const cv::\+\+String \&the\+Title)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_aa64b77661ff8adf80757cf4e9e239b14}{cvui::\+rect}} (int the\+Width, int the\+Height, unsigned int the\+Border\+Color, unsigned int the\+Filling\+Color=0xff000000)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_ad86d266052957f5bd60cec23287db2cd}{cvui::\+sparkline}} (std::\+vector$<$ double $>$ \&the\+Values, int the\+Width, int the\+Height, unsigned int the\+Color=0x00\+FF00)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_ab83985e325abaf168bd878e7c6903992}{cvui::\+update}} (const cv::\+\+String \&the\+Window\+Name="{}"{})
+\item 
+void \doxymbox{\hyperlink{namespacecvui_a28cc8b7973806fc4f0fc5ec8825f58d4}{cvui::\+handle\+Mouse}} (int the\+Event, int theX, int theY, int the\+Flags, void \texorpdfstring{$\ast$}{*}the\+Data)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a640a4693a77493600ae328a1b460d250}{cvui::\+internal::\+is\+Mouse\+Button}} (\doxymbox{\hyperlink{structcvui_1_1cvui__mouse__btn__t}{cvui\+\_\+mouse\+\_\+btn\+\_\+t}} \&the\+Button, int the\+Query)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a1ad5e9d4180be4e6dad8637dc33f0f84}{cvui::\+internal::\+reset\+Mouse\+Button}} (\doxymbox{\hyperlink{structcvui_1_1cvui__mouse__btn__t}{cvui\+\_\+mouse\+\_\+btn\+\_\+t}} \&the\+Button)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a513170d4b094d59f7826e686058a91d9}{cvui::\+internal::\+init}} (const cv::\+\+String \&the\+Window\+Name, int the\+Delay\+Wait\+Key)
+\item 
+\doxymbox{\hyperlink{structcvui_1_1cvui__context__t}{cvui\+\_\+context\+\_\+t}} \& \doxymbox{\hyperlink{namespacecvui_1_1internal_aa9d50b0e915521229addfe25c73054dd}{cvui::\+internal::\+get\+Context}} (const cv::\+\+String \&the\+Window\+Name="{}"{})
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_ae1fc07f13ea4c5c425517a43da99e441}{cvui::\+internal::\+bitset\+Has}} (unsigned int the\+Bitset, unsigned int the\+Value)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a250202860f858c7ed751bcf4c2306a98}{cvui::\+internal::\+error}} (int the\+Id, std::\+string the\+Message)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a1f8653283df77f4fc4aa5b38e6e6ddac}{cvui::\+internal::\+update\+Layout\+Flow}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, cv::\+\+Size the\+Size)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a09cfe0721e9dadd7d1e3d530fe826bb7}{cvui::\+internal::\+block\+Stack\+Empty}} ()
+\item 
+\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \& \doxymbox{\hyperlink{namespacecvui_1_1internal_a06f306941657d341634a9418167ee6ac}{cvui::\+internal::\+top\+Block}} ()
+\item 
+\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \& \doxymbox{\hyperlink{namespacecvui_1_1internal_a6addef944a92bdf213aa27bd4764beb4}{cvui::\+internal::\+push\+Block}} ()
+\item 
+\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \& \doxymbox{\hyperlink{namespacecvui_1_1internal_ad97b5dbb64aae1f46d8f6e7de8f4c455}{cvui::\+internal::\+pop\+Block}} ()
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a432ef6beccea383a6bdcadb0f7f8afa7}{cvui::\+internal::\+begin}} (int the\+Type, cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, int the\+Height, int the\+Padding)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a827dff2aa1e833a337b57496ce6a9649}{cvui::\+internal::\+end}} (int the\+Type)
+\item 
+\doxymbox{\hyperlink{structcvui_1_1cvui__label__t}{cvui\+\_\+label\+\_\+t}} \doxymbox{\hyperlink{namespacecvui_1_1internal_a40b70366d2d130b7203359d27024bf83}{cvui::\+internal::\+create\+Label}} (const std::\+string \&the\+Label)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_1_1internal_a25f81eef3c22012bcb62c35475ae8044}{cvui::\+internal::\+iarea}} (int theX, int theY, int the\+Width, int the\+Height)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_ade86c43ba80e9fc04d50669a0bc2ca86}{cvui::\+internal::\+button}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, int the\+Width, int the\+Height, const cv::\+\+String \&the\+Label, bool the\+Update\+Layout)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a3de5e7c72f3aadee70b044cd9a31ac7c}{cvui::\+internal::\+button}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, const cv::\+\+String \&the\+Label)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_ae95bd762a14525bf579fafc9dffe87cb}{cvui::\+internal::\+button}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, cv::\+\+Mat \&the\+Idle, cv::\+\+Mat \&the\+Over, cv::\+\+Mat \&the\+Down, bool the\+Update\+Layout)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a6fc456d44ecc2ab8002ffc98bdb5240a}{cvui::\+internal::\+image}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, cv::\+\+Mat \&the\+Image)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_aeb2018b3068e8570c0a0188ac8cb677b}{cvui::\+internal::\+checkbox}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, const cv::\+\+String \&the\+Label, bool \texorpdfstring{$\ast$}{*}the\+State, unsigned int the\+Color)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a83e961a81d516b4a803495dcc4a885f7}{cvui::\+internal::\+text}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, const cv::\+\+String \&the\+Text, double the\+Font\+Scale, unsigned int the\+Color, bool the\+Update\+Layout)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_1_1internal_a84752acc8db949011d2accf6c0ad0298}{cvui::\+internal::\+counter}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, int \texorpdfstring{$\ast$}{*}the\+Value, int the\+Step, const char \texorpdfstring{$\ast$}{*}the\+Format)
+\item 
+double \doxymbox{\hyperlink{namespacecvui_1_1internal_a2ce7fc37a5967e1df6c0bc12105e81ff}{cvui::\+internal::\+counter}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, double \texorpdfstring{$\ast$}{*}the\+Value, double the\+Step, const char \texorpdfstring{$\ast$}{*}the\+Format)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_ae59cd843b2070bb75c0bab582bb4c1eb}{cvui::\+internal::\+window}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, int the\+Width, int the\+Height, const cv::\+\+String \&the\+Title)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_aed393458c39e3e81283764516c9663fc}{cvui::\+internal::\+rect}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, int the\+Width, int the\+Height, unsigned int the\+Border\+Color, unsigned int the\+Filling\+Color)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a98d0d538ac1a8551100558e966b71005}{cvui::\+internal::\+sparkline}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, std::\+vector$<$ double $>$ \&the\+Values, int theX, int theY, int the\+Width, int the\+Height, unsigned int the\+Color)
+\item 
+bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a73b0437558e721366dceeb686e5dd60f}{cvui::\+internal::\+trackbar}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int theX, int theY, int the\+Width, long double \texorpdfstring{$\ast$}{*}the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a79758ea8b12aaa935eae770cb81f187d}{cvui::\+internal::\+trackbar\+Force\+Values\+As\+Multiples\+Of\+Small\+Step}} (const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params, long double \texorpdfstring{$\ast$}{*}the\+Value)
+\item 
+long double \doxymbox{\hyperlink{namespacecvui_1_1internal_a83dcf74948e59f33843dec42c0648dec}{cvui::\+internal::\+trackbar\+XPixel\+To\+Value}} (const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params, cv::\+\+Rect \&the\+Bounding, int the\+PixelX)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_1_1internal_ab5cfd12070f0147698ff50b2ec58d153}{cvui::\+internal::\+trackbar\+Value\+To\+XPixel}} (const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params, cv::\+\+Rect \&the\+Bounding, long double the\+Value)
+\item 
+double \doxymbox{\hyperlink{namespacecvui_1_1internal_a8ca579b471bd875476cea08bc3c86ca6}{cvui::\+internal::\+clamp01}} (double value)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_acd702696265f788a9fc33d5026d058a3}{cvui::\+internal::\+find\+Min\+Max}} (std::\+vector$<$ double $>$ \&the\+Values, double \texorpdfstring{$\ast$}{*}the\+Min, double \texorpdfstring{$\ast$}{*}the\+Max)
+\item 
+cv::\+\+Scalar \doxymbox{\hyperlink{namespacecvui_1_1internal_a629e27b195d5e3c5365aa01115a09dda}{cvui::\+internal::\+hex\+To\+Scalar}} (unsigned int the\+Color)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1internal_a3b053f2efd1a22245840bcc484d426c2}{cvui::\+internal::\+reset\+Rendering\+Buffer}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Screen)
+\item 
+{\footnotesize template$<$typename T$>$ }\\\doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \doxymbox{\hyperlink{namespacecvui_1_1internal_ac2745a5aaddbd3762b6ec33420ce44cc}{cvui::\+internal::\+make\+Trackbar\+Params}} (T min, T max, int the\+Decimals=1, int the\+Segments=1, T the\+Step=-\/1., unsigned int the\+Options=0, const char \texorpdfstring{$\ast$}{*}the\+Format="{}\%.\+1Lf"{})
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a61f5cc4ee466e94a9b416f68619848d1}{cvui::\+internal::\+trackbar}} (T \texorpdfstring{$\ast$}{*}the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params)
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a24b1bdedc155649d8ce48d730d9526ff}{cvui::\+internal::\+trackbar}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, T \texorpdfstring{$\ast$}{*}the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params)
+\item 
+{\footnotesize template$<$typename num\+\_\+type$>$ }\\\doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \doxymbox{\hyperlink{namespacecvui_1_1internal_a6ff1ea77bb87b9ba84fdaca4483c61f2}{cvui::\+internal::\+make\+Trackbar\+Params}} (num\+\_\+type the\+Min, num\+\_\+type the\+Max, num\+\_\+type the\+Step, int the\+Segments, const char \texorpdfstring{$\ast$}{*}the\+Label\+Format, unsigned int the\+Options)
+\item 
+{\footnotesize template$<$typename num\+\_\+type$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_1_1internal_a210bcf35105a6967d2a02d068d369b99}{cvui::\+internal::\+trackbar}} (int the\+Width, num\+\_\+type \texorpdfstring{$\ast$}{*}the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params)
+\item 
+{\footnotesize template$<$typename num\+\_\+type$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_1_1internal_ab6b71f2ad23b83304b4200d5e10025ad}{cvui::\+internal::\+trackbar}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, num\+\_\+type \texorpdfstring{$\ast$}{*}the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{Trackbar\+Params}} \&the\+Params)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_a5124fb43dd78d85460e068c2c4370d37}{cvui::\+render::\+text}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, const cv::\+\+String \&the\+Text, cv::\+\+Point \&the\+Pos, double the\+Font\+Scale, unsigned int the\+Color)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_a393c771486cdc61b99afdf0ae76e2389}{cvui::\+render::\+button}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int the\+State, cv::\+\+Rect \&the\+Shape, const cv::\+\+String \&the\+Label)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_a15e23d7e5dd8a13d742e7b013ae79395}{cvui::\+render::\+button\+Label}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int the\+State, cv::\+\+Rect the\+Rect, const cv::\+\+String \&the\+Label, cv::\+\+Size \&the\+Text\+Size)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_a1d7f44a9058f4d0084dcf8d0da337993}{cvui::\+render::\+image}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, cv::\+\+Rect \&the\+Rect, cv::\+\+Mat \&the\+Image)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_a4b60ff9746eeabf7c37df967c7980e6f}{cvui::\+render::\+counter}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, cv::\+\+Rect \&the\+Shape, const cv::\+\+String \&the\+Value)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_aafc34072369d0177055abbdce48a3ee0}{cvui::\+render::\+trackbar\+Handle}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int the\+State, cv::\+\+Rect \&the\+Shape, double the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{internal::\+\+Trackbar\+Params}} \&the\+Params, cv::\+\+Rect \&the\+Working\+Area)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_a8f01ac12dd86dfb67d11ed6fae36321d}{cvui::\+render::\+trackbar\+Path}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int the\+State, cv::\+\+Rect \&the\+Shape, double the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{internal::\+\+Trackbar\+Params}} \&the\+Params, cv::\+\+Rect \&the\+Working\+Area)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_a68abc683d883e2ae7042eddb39dd2f1d}{cvui::\+render::\+trackbar\+Steps}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int the\+State, cv::\+\+Rect \&the\+Shape, double the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{internal::\+\+Trackbar\+Params}} \&the\+Params, cv::\+\+Rect \&the\+Working\+Area)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_af755a3be487f57b7bc4831f376b692ef}{cvui::\+render::\+trackbar\+Segment\+Label}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, cv::\+\+Rect \&the\+Shape, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{internal::\+\+Trackbar\+Params}} \&the\+Params, long double the\+Value, cv::\+\+Rect \&the\+Working\+Area, bool the\+Show\+Label)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_aedbfc1fe438906b5fbe6daf20ec5cd8c}{cvui::\+render::\+trackbar\+Segments}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int the\+State, cv::\+\+Rect \&the\+Shape, double the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{internal::\+\+Trackbar\+Params}} \&the\+Params, cv::\+\+Rect \&the\+Working\+Area)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_a7f3a347b019fea620cb1beccfe2aa738}{cvui::\+render::\+trackbar}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int the\+State, cv::\+\+Rect \&the\+Shape, double the\+Value, const \doxymbox{\hyperlink{structcvui_1_1internal_1_1_trackbar_params}{internal::\+\+Trackbar\+Params}} \&the\+Params)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_ae2b2d5677587b68f00aa95ce08f9515d}{cvui::\+render::\+checkbox}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int the\+State, cv::\+\+Rect \&the\+Shape)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_a747f83511e1a02713e5da6925de21489}{cvui::\+render::\+checkbox\+Label}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, cv::\+\+Rect \&the\+Rect, const cv::\+\+String \&the\+Label, cv::\+\+Size \&the\+Text\+Size, unsigned int the\+Color)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_a4fc79ef5d9c988f3ef43ac66e64b8ddc}{cvui::\+render::\+checkbox\+Check}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, cv::\+\+Rect \&the\+Shape)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_afa56fc5c7965081df5169e612f76388f}{cvui::\+render::\+window}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, cv::\+\+Rect \&the\+Title\+Bar, cv::\+\+Rect \&the\+Content, const cv::\+\+String \&the\+Title)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_a9b51a50a5269f3f3a673d5c933db0600}{cvui::\+render::\+rect}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, cv::\+\+Rect \&the\+Pos, unsigned int the\+Border\+Color, unsigned int the\+Filling\+Color)
+\item 
+void \doxymbox{\hyperlink{namespacecvui_1_1render_ab4b53b7712ce4501aa56b03b09996468}{cvui::\+render::\+sparkline}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, std::\+vector$<$ double $>$ \&the\+Values, cv::\+\+Rect \&the\+Rect, double the\+Min, double the\+Max, unsigned int the\+Color)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_1_1render_a57d300c1b7d684db582af75c62a9f5f2}{cvui::\+render::\+put\+Text}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, int the\+State, cv::\+\+Scalar a\+Color, const std::\+string \&the\+Text, const cv::\+\+Point \&the\+Position)
+\item 
+int \doxymbox{\hyperlink{namespacecvui_1_1render_a2981c992aa6fbec384678559225fa61e}{cvui::\+render::\+put\+Text\+Centered}} (\doxymbox{\hyperlink{structcvui_1_1cvui__block__t}{cvui\+\_\+block\+\_\+t}} \&the\+Block, const cv::\+\+Point \&position, const std::\+string \&\doxymbox{\hyperlink{namespacecvui_1_1render_a5124fb43dd78d85460e068c2c4370d37}{text}})
+\item 
+{\footnotesize template$<$typename num\+\_\+type$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_ae8b5eea702025b3255529e748d9e47b0}{cvui::\+trackbar}} (cv::\+\+Mat \&the\+Where, int theX, int theY, int the\+Width, num\+\_\+type \texorpdfstring{$\ast$}{*}the\+Value, num\+\_\+type the\+Min, num\+\_\+type the\+Max, int the\+Segments, const char \texorpdfstring{$\ast$}{*}the\+Label\+Format, unsigned int the\+Options, num\+\_\+type the\+Discrete\+Step)
+\item 
+{\footnotesize template$<$typename num\+\_\+type$>$ }\\bool \doxymbox{\hyperlink{namespacecvui_a58fee4bc1c4fb019a6183c5d1cce55dc}{cvui::\+trackbar}} (int the\+Width, num\+\_\+type \texorpdfstring{$\ast$}{*}the\+Value, num\+\_\+type the\+Min, num\+\_\+type the\+Max, int the\+Segments, const char \texorpdfstring{$\ast$}{*}the\+Label\+Format, unsigned int the\+Options, num\+\_\+type the\+Discrete\+Step)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a6d4f142f182e325f17928d61aab8ffeb}{cvui::\+\+ROW}} = 0
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_aa2e0f3058cd45ae206df52c153ae4a50}{cvui::\+\+COLUMN}} = 1
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a8878cbd4c90852b8eda9df196f9ecfb0}{cvui::\+\+DOWN}} = 2
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a4af6b3d0288d2655aaf99fccaa633855}{cvui::\+\+CLICK}} = 3
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a1b2af00cf23554512a200ed5e9b6acfa}{cvui::\+\+OVER}} = 4
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_ac325b7de5095e58f8d459d7eb3c0bdce}{cvui::\+\+OUT}} = 5
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_af90309bb2a99598ad259b7771de2f922}{cvui::\+\+UP}} = 6
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_aa3183bf7cc9be4e6e272b69ac0826b13}{cvui::\+\+IS\+\_\+\+DOWN}} = 7
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a6484b0b9d05e9a140b8e04d44a5aee7b}{cvui::\+\+LEFT\+\_\+\+BUTTON}} = 0
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a930a46e085bb0bcf6389373627758691}{cvui::\+\+MIDDLE\+\_\+\+BUTTON}} = 1
+\item 
+const int \doxymbox{\hyperlink{namespacecvui_a0df030cf077da94f75de969850225f78}{cvui::\+\+RIGHT\+\_\+\+BUTTON}} = 2
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_a2577612f092f34b9839c967714904ad2}{cvui::\+\+TRACKBAR\+\_\+\+HIDE\+\_\+\+SEGMENT\+\_\+\+LABELS}} = 1
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_a18717bc2beedeea0a8721cd80df7913d}{cvui::\+\+TRACKBAR\+\_\+\+HIDE\+\_\+\+STEP\+\_\+\+SCALE}} = 2
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_a19baa1dbeca0a10dd81fbf165db088c3}{cvui::\+\+TRACKBAR\+\_\+\+DISCRETE}} = 4
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_a38b7708f1daf64e2e36433c736bffcac}{cvui::\+\+TRACKBAR\+\_\+\+HIDE\+\_\+\+MIN\+\_\+\+MAX\+\_\+\+LABELS}} = 8
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_ae0d82d3296fd5f8d7dbbf92291e5cfab}{cvui::\+\+TRACKBAR\+\_\+\+HIDE\+\_\+\+VALUE\+\_\+\+LABEL}} = 16
+\item 
+const unsigned int \doxymbox{\hyperlink{namespacecvui_a117214d098e5f92bc6ea95ec14e5a5ff}{cvui::\+\+TRACKBAR\+\_\+\+HIDE\+\_\+\+LABELS}} = 32
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{cvui_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{cvui_8h_a3782e1602e60baf303ac21a5ac52ba2f}\index{cvui.h@{cvui.h}!\_CVUI\_IMPLEMENTATION\_NOTICE@{\_CVUI\_IMPLEMENTATION\_NOTICE}}
+\index{\_CVUI\_IMPLEMENTATION\_NOTICE@{\_CVUI\_IMPLEMENTATION\_NOTICE}!cvui.h@{cvui.h}}
+\doxysubsubsection{\texorpdfstring{\_CVUI\_IMPLEMENTATION\_NOTICE}{\_CVUI\_IMPLEMENTATION\_NOTICE}}
+{\footnotesize\ttfamily \label{cvui_8h_a3782e1602e60baf303ac21a5ac52ba2f} 
+\+\#define \+\_\+\+CVUI\+\_\+\+IMPLEMENTATION\+\_\+\+NOTICE~"{}cvui.\+h:\+ compiling implementation because of CVUI\+\_\+\+IMPLEMENTATION. See:\+ https:\+/\+/\+dovyski.\+github.\+io/\+\doxymbox{\hyperlink{namespacecvui}{cvui}}/\+usage/\+"{}}
+
+\Hypertarget{cvui_8h_a0e3ce6b2ab2c4b1d237b8e0bb96c3ad4}\index{cvui.h@{cvui.h}!\_CVUI\_NO\_IMPLEMENTATION\_NOTICE@{\_CVUI\_NO\_IMPLEMENTATION\_NOTICE}}
+\index{\_CVUI\_NO\_IMPLEMENTATION\_NOTICE@{\_CVUI\_NO\_IMPLEMENTATION\_NOTICE}!cvui.h@{cvui.h}}
+\doxysubsubsection{\texorpdfstring{\_CVUI\_NO\_IMPLEMENTATION\_NOTICE}{\_CVUI\_NO\_IMPLEMENTATION\_NOTICE}}
+{\footnotesize\ttfamily \label{cvui_8h_a0e3ce6b2ab2c4b1d237b8e0bb96c3ad4} 
+\+\#define \+\_\+\+CVUI\+\_\+\+NO\+\_\+\+IMPLEMENTATION\+\_\+\+NOTICE~"{}cvui.\+h:\+ implementation skipped. Ensure one of your C++ files included cvui.\+h after a \+\#define CVUI\+\_\+\+IMPLEMENTATION. See:\+ https:\+/\+/\+dovyski.\+github.\+io/\+\doxymbox{\hyperlink{namespacecvui}{cvui}}/\+usage/\+"{}}
+
+\Hypertarget{cvui_8h_a74091a7029eb42af43256529bdb9c986}\index{cvui.h@{cvui.h}!CVUI\_ANTIALISED@{CVUI\_ANTIALISED}}
+\index{CVUI\_ANTIALISED@{CVUI\_ANTIALISED}!cvui.h@{cvui.h}}
+\doxysubsubsection{\texorpdfstring{CVUI\_ANTIALISED}{CVUI\_ANTIALISED}}
+{\footnotesize\ttfamily \label{cvui_8h_a74091a7029eb42af43256529bdb9c986} 
+\+\#define CVUI\+\_\+\+ANTIALISED~CV\+\_\+\+AA}
+
+\Hypertarget{cvui_8h_a9756014621f6248ad79f98c14a3ac58b}\index{cvui.h@{cvui.h}!CVUI\_FILLED@{CVUI\_FILLED}}
+\index{CVUI\_FILLED@{CVUI\_FILLED}!cvui.h@{cvui.h}}
+\doxysubsubsection{\texorpdfstring{CVUI\_FILLED}{CVUI\_FILLED}}
+{\footnotesize\ttfamily \label{cvui_8h_a9756014621f6248ad79f98c14a3ac58b} 
+\+\#define CVUI\+\_\+\+FILLED~-\/1}
+
+\Hypertarget{cvui_8h_a6b6019110450b61a0b4acc55d7d336ca}\index{cvui.h@{cvui.h}!sprintf\_s@{sprintf\_s}}
+\index{sprintf\_s@{sprintf\_s}!cvui.h@{cvui.h}}
+\doxysubsubsection{\texorpdfstring{sprintf\_s}{sprintf\_s}}
+{\footnotesize\ttfamily \label{cvui_8h_a6b6019110450b61a0b4acc55d7d336ca} 
+\+\#define sprintf\+\_\+s~sprintf}
+
+\Hypertarget{cvui_8h_a803c6f2523bae626734a87a074e480e9}\index{cvui.h@{cvui.h}!vsprintf\_s@{vsprintf\_s}}
+\index{vsprintf\_s@{vsprintf\_s}!cvui.h@{cvui.h}}
+\doxysubsubsection{\texorpdfstring{vsprintf\_s}{vsprintf\_s}}
+{\footnotesize\ttfamily \label{cvui_8h_a803c6f2523bae626734a87a074e480e9} 
+\+\#define vsprintf\+\_\+s~vsprintf}
+

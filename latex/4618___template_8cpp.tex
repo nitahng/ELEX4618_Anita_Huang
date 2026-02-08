@@ -1,0 +1,180 @@
+\doxysection{4618\+\_\+\+Template.\+cpp File Reference}
+\hypertarget{4618___template_8cpp}{}\label{4618___template_8cpp}\index{4618\_Template.cpp@{4618\_Template.cpp}}
+{\ttfamily \+\#include "{}stdafx.\+h"{}}\newline
+{\ttfamily \+\#include "{}cvui.\+h"{}}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+{\ttfamily \+\#include $<$thread$>$}\newline
+{\ttfamily \+\#include "{}Client.\+h"{}}\newline
+{\ttfamily \+\#include "{}Server.\+h"{}}\newline
+{\ttfamily \+\#include "{}Serial.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{4618___template_8cpp_ad7ff97e14d4f4924f444529fc7e8af1a}{CVUI\+\_\+\+DISABLE\+\_\+\+COMPILATION\+\_\+\+NOTICES}}
+\item 
+\+\#define \doxymbox{\hyperlink{4618___template_8cpp_a66bbe3040a26b0d5e0a8f77a6d9f60b3}{CVUI\+\_\+\+IMPLEMENTATION}}
+\item 
+\+\#define \doxymbox{\hyperlink{4618___template_8cpp_a2018f3d0cfcc7c228c42b8bfb2d80a44}{CANVAS\+\_\+\+NAME}}~"{}Display Image"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_a1698f75697ba752703cc46e66d274fe8}{run\+\_\+lab4}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_a8f4d3ebe6069fb5d78b6f2490db4598d}{process\+\_\+msg}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_af380c6558732667daef81d295fc5d566}{generate\+\_\+marks}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_ae8cd4b4bec4ae26f1280c8390e80cd7d}{test\+\_\+com}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_ab8c0c2f7645372b759f950050653cc44}{do\+\_\+image}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_a6d67e270f712a1326be47fcce4853bae}{do\+\_\+video}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_a048c6aae8c93cedbcc921a0e792a92f8}{serverthread}} (\doxymbox{\hyperlink{class_c_server}{CServer}} \texorpdfstring{$\ast$}{*}server)
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_aef6e0ef9aff8184b53cfb3bea3a0eda4}{do\+\_\+clientserver}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_a659d77a28647d863884a91222498eb3d}{lab1}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_a28583ea2ddc7518843d4c609ac6aa936}{lab2}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_a61ab2be36d19be205c2bfa5977d2610a}{lab3}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_a372683f45ef0a34f714453afe8ddec7e}{lab4}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_a9203ce2709f1f3965903d89d863b88d8}{lab5}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_a307bb8d56a3e56ebce966a55fd5be2b2}{lab6}} ()
+\item 
+void \doxymbox{\hyperlink{4618___template_8cpp_ae91d4cbee2dab64187187499dd0eecd4}{print\+\_\+menu}} ()
+\item 
+int \doxymbox{\hyperlink{4618___template_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{4618___template_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{4618___template_8cpp_a2018f3d0cfcc7c228c42b8bfb2d80a44}\index{4618\_Template.cpp@{4618\_Template.cpp}!CANVAS\_NAME@{CANVAS\_NAME}}
+\index{CANVAS\_NAME@{CANVAS\_NAME}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{CANVAS\_NAME}{CANVAS\_NAME}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a2018f3d0cfcc7c228c42b8bfb2d80a44} 
+\+\#define CANVAS\+\_\+\+NAME~"{}Display Image"{}}
+
+\Hypertarget{4618___template_8cpp_ad7ff97e14d4f4924f444529fc7e8af1a}\index{4618\_Template.cpp@{4618\_Template.cpp}!CVUI\_DISABLE\_COMPILATION\_NOTICES@{CVUI\_DISABLE\_COMPILATION\_NOTICES}}
+\index{CVUI\_DISABLE\_COMPILATION\_NOTICES@{CVUI\_DISABLE\_COMPILATION\_NOTICES}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{CVUI\_DISABLE\_COMPILATION\_NOTICES}{CVUI\_DISABLE\_COMPILATION\_NOTICES}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_ad7ff97e14d4f4924f444529fc7e8af1a} 
+\+\#define CVUI\+\_\+\+DISABLE\+\_\+\+COMPILATION\+\_\+\+NOTICES}
+
+\Hypertarget{4618___template_8cpp_a66bbe3040a26b0d5e0a8f77a6d9f60b3}\index{4618\_Template.cpp@{4618\_Template.cpp}!CVUI\_IMPLEMENTATION@{CVUI\_IMPLEMENTATION}}
+\index{CVUI\_IMPLEMENTATION@{CVUI\_IMPLEMENTATION}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{CVUI\_IMPLEMENTATION}{CVUI\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a66bbe3040a26b0d5e0a8f77a6d9f60b3} 
+\+\#define CVUI\+\_\+\+IMPLEMENTATION}
+
+
+
+\label{doc-func-members}
+\Hypertarget{4618___template_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{4618___template_8cpp_aef6e0ef9aff8184b53cfb3bea3a0eda4}\index{4618\_Template.cpp@{4618\_Template.cpp}!do\_clientserver@{do\_clientserver}}
+\index{do\_clientserver@{do\_clientserver}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{do\_clientserver()}{do\_clientserver()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_aef6e0ef9aff8184b53cfb3bea3a0eda4} 
+void do\+\_\+clientserver (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_ab8c0c2f7645372b759f950050653cc44}\index{4618\_Template.cpp@{4618\_Template.cpp}!do\_image@{do\_image}}
+\index{do\_image@{do\_image}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{do\_image()}{do\_image()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_ab8c0c2f7645372b759f950050653cc44} 
+void do\+\_\+image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_a6d67e270f712a1326be47fcce4853bae}\index{4618\_Template.cpp@{4618\_Template.cpp}!do\_video@{do\_video}}
+\index{do\_video@{do\_video}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{do\_video()}{do\_video()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a6d67e270f712a1326be47fcce4853bae} 
+void do\+\_\+video (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_af380c6558732667daef81d295fc5d566}\index{4618\_Template.cpp@{4618\_Template.cpp}!generate\_marks@{generate\_marks}}
+\index{generate\_marks@{generate\_marks}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{generate\_marks()}{generate\_marks()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_af380c6558732667daef81d295fc5d566} 
+void generate\+\_\+marks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_a659d77a28647d863884a91222498eb3d}\index{4618\_Template.cpp@{4618\_Template.cpp}!lab1@{lab1}}
+\index{lab1@{lab1}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{lab1()}{lab1()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a659d77a28647d863884a91222498eb3d} 
+void lab1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_a28583ea2ddc7518843d4c609ac6aa936}\index{4618\_Template.cpp@{4618\_Template.cpp}!lab2@{lab2}}
+\index{lab2@{lab2}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{lab2()}{lab2()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a28583ea2ddc7518843d4c609ac6aa936} 
+void lab2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_a61ab2be36d19be205c2bfa5977d2610a}\index{4618\_Template.cpp@{4618\_Template.cpp}!lab3@{lab3}}
+\index{lab3@{lab3}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{lab3()}{lab3()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a61ab2be36d19be205c2bfa5977d2610a} 
+void lab3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_a372683f45ef0a34f714453afe8ddec7e}\index{4618\_Template.cpp@{4618\_Template.cpp}!lab4@{lab4}}
+\index{lab4@{lab4}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{lab4()}{lab4()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a372683f45ef0a34f714453afe8ddec7e} 
+void lab4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_a9203ce2709f1f3965903d89d863b88d8}\index{4618\_Template.cpp@{4618\_Template.cpp}!lab5@{lab5}}
+\index{lab5@{lab5}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{lab5()}{lab5()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a9203ce2709f1f3965903d89d863b88d8} 
+void lab5 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_a307bb8d56a3e56ebce966a55fd5be2b2}\index{4618\_Template.cpp@{4618\_Template.cpp}!lab6@{lab6}}
+\index{lab6@{lab6}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{lab6()}{lab6()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a307bb8d56a3e56ebce966a55fd5be2b2} 
+void lab6 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{4618\_Template.cpp@{4618\_Template.cpp}!main@{main}}
+\index{main@{main}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_ae91d4cbee2dab64187187499dd0eecd4}\index{4618\_Template.cpp@{4618\_Template.cpp}!print\_menu@{print\_menu}}
+\index{print\_menu@{print\_menu}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_menu()}{print\_menu()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_ae91d4cbee2dab64187187499dd0eecd4} 
+void print\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_a8f4d3ebe6069fb5d78b6f2490db4598d}\index{4618\_Template.cpp@{4618\_Template.cpp}!process\_msg@{process\_msg}}
+\index{process\_msg@{process\_msg}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{process\_msg()}{process\_msg()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a8f4d3ebe6069fb5d78b6f2490db4598d} 
+void process\+\_\+msg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_a1698f75697ba752703cc46e66d274fe8}\index{4618\_Template.cpp@{4618\_Template.cpp}!run\_lab4@{run\_lab4}}
+\index{run\_lab4@{run\_lab4}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{run\_lab4()}{run\_lab4()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a1698f75697ba752703cc46e66d274fe8} 
+void run\+\_\+lab4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_a048c6aae8c93cedbcc921a0e792a92f8}\index{4618\_Template.cpp@{4618\_Template.cpp}!serverthread@{serverthread}}
+\index{serverthread@{serverthread}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{serverthread()}{serverthread()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_a048c6aae8c93cedbcc921a0e792a92f8} 
+void serverthread (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_c_server}{CServer}} \texorpdfstring{$\ast$}{*}}]{server}{}\end{DoxyParamCaption})}
+
+\Hypertarget{4618___template_8cpp_ae8cd4b4bec4ae26f1280c8390e80cd7d}\index{4618\_Template.cpp@{4618\_Template.cpp}!test\_com@{test\_com}}
+\index{test\_com@{test\_com}!4618\_Template.cpp@{4618\_Template.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_com()}{test\_com()}}
+{\footnotesize\ttfamily \label{4618___template_8cpp_ae8cd4b4bec4ae26f1280c8390e80cd7d} 
+void test\+\_\+com (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+

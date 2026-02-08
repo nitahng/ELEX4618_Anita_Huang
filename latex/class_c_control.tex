@@ -1,0 +1,180 @@
+\doxysection{CControl Class Reference}
+\hypertarget{class_c_control}{}\label{class_c_control}\index{CControl@{CControl}}
+
+
+Handles serial communication and I/\+O control.  
+
+
+
+
+{\ttfamily \+\#include $<$CControl.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_c_control_a6498500ff403327b5770a3acebed1d93}{CControl}} ()
+\begin{DoxyCompactList}\small\item\em Contructor of a \doxylink{class_c_control}{CControl} object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_c_control_ab2ae420ef75b010c0c9078e597781105}{\texorpdfstring{$\sim$}{\string~}\+CControl}} ()
+\begin{DoxyCompactList}\small\item\em Destructo the \doxylink{class_c_control}{CControl} object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_c_control_a3d1384d0e1ee2a4a478a798b46457468}{init\+\_\+com}} (int comport)
+\begin{DoxyCompactList}\small\item\em Initializes the serial communication port. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_c_control_a0bad8e51e54cb6f1e2a7b51d3a3940d3}{get\+\_\+data}} (int type, int channel, int \&result)
+\begin{DoxyCompactList}\small\item\em Retrieves data from the device. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_c_control_a13f557815616ef66a8f5dd4b725d8c32}{set\+\_\+data}} (int type, int channel, int val)
+\begin{DoxyCompactList}\small\item\em Sends data to the device. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_c_control_a53e2227bfa3db92bab3e92a33962d1be}{get\+\_\+analog}} (int channel, int \&result)
+\begin{DoxyCompactList}\small\item\em Function to return raw and percentage analog values. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_c_control_a223277f32bbc270b9aa77268795560aa}{get\+\_\+button}} (\doxymbox{\hyperlink{class_c_control}{CControl}} \&comm)
+\begin{DoxyCompactList}\small\item\em Reads digital input and debounces it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_serial}{Serial}} \doxymbox{\hyperlink{class_c_control_aef87fbcfdcd323b1fdcf41be993e006c}{\+\_\+com}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_serial}{Serial} communication object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles serial communication and I/\+O control. 
+
+The \doxylink{class_c_control}{CControl} class abstracts serial communication commands used to get and set digital, analog, and button data. 
+
+\label{doc-constructors}
+\Hypertarget{class_c_control_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_control_a6498500ff403327b5770a3acebed1d93}\index{CControl@{CControl}!CControl@{CControl}}
+\index{CControl@{CControl}!CControl@{CControl}}
+\doxysubsubsection{\texorpdfstring{CControl()}{CControl()}}
+{\footnotesize\ttfamily \label{class_c_control_a6498500ff403327b5770a3acebed1d93} 
+CControl::\+\+CControl (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Contructor of a \doxylink{class_c_control}{CControl} object. 
+
+\Hypertarget{class_c_control_ab2ae420ef75b010c0c9078e597781105}\index{CControl@{CControl}!````~CControl@{\texorpdfstring{$\sim$}{\string~}CControl}}
+\index{````~CControl@{\texorpdfstring{$\sim$}{\string~}CControl}!CControl@{CControl}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CControl()}{\string~CControl()}}
+{\footnotesize\ttfamily \label{class_c_control_ab2ae420ef75b010c0c9078e597781105} 
+CControl::\+\texorpdfstring{$\sim$}{\string~}\+CControl (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructo the \doxylink{class_c_control}{CControl} object. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_c_control_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_control_a53e2227bfa3db92bab3e92a33962d1be}\index{CControl@{CControl}!get\_analog@{get\_analog}}
+\index{get\_analog@{get\_analog}!CControl@{CControl}}
+\doxysubsubsection{\texorpdfstring{get\_analog()}{get\_analog()}}
+{\footnotesize\ttfamily \label{class_c_control_a53e2227bfa3db92bab3e92a33962d1be} 
+float CControl::\+get\+\_\+analog (\begin{DoxyParamCaption}\item[{int}]{channel}{, }\item[{int \&}]{result}{}\end{DoxyParamCaption})}
+
+
+
+Function to return raw and percentage analog values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel number to read from GET function \\
+\hline
+{\em result} & Reference to store the returned value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+percentage of the analog value 
+\end{DoxyReturn}
+\Hypertarget{class_c_control_a223277f32bbc270b9aa77268795560aa}\index{CControl@{CControl}!get\_button@{get\_button}}
+\index{get\_button@{get\_button}!CControl@{CControl}}
+\doxysubsubsection{\texorpdfstring{get\_button()}{get\_button()}}
+{\footnotesize\ttfamily \label{class_c_control_a223277f32bbc270b9aa77268795560aa} 
+bool CControl::\+get\+\_\+button (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_c_control}{CControl}} \&}]{comm}{}\end{DoxyParamCaption})}
+
+
+
+Reads digital input and debounces it. 
+
+\Hypertarget{class_c_control_a0bad8e51e54cb6f1e2a7b51d3a3940d3}\index{CControl@{CControl}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!CControl@{CControl}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily \label{class_c_control_a0bad8e51e54cb6f1e2a7b51d3a3940d3} 
+bool CControl::\+get\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{channel}{, }\item[{int \&}]{result}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves data from the device. 
+
+Sends a get command over serial communication and stores the returned value in the result parameter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & \doxylink{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7}{Type} of data to retrieve (digital, analog, etc.). \\
+\hline
+{\em channel} & Channel number to read from. \\
+\hline
+{\em result} & Reference to store the returned value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the command succeeded, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_c_control_a3d1384d0e1ee2a4a478a798b46457468}\index{CControl@{CControl}!init\_com@{init\_com}}
+\index{init\_com@{init\_com}!CControl@{CControl}}
+\doxysubsubsection{\texorpdfstring{init\_com()}{init\_com()}}
+{\footnotesize\ttfamily \label{class_c_control_a3d1384d0e1ee2a4a478a798b46457468} 
+void CControl::\+init\+\_\+com (\begin{DoxyParamCaption}\item[{int}]{comport}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the serial communication port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comport} & COM port number to open (e.\+g., COM3). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_control_a13f557815616ef66a8f5dd4b725d8c32}\index{CControl@{CControl}!set\_data@{set\_data}}
+\index{set\_data@{set\_data}!CControl@{CControl}}
+\doxysubsubsection{\texorpdfstring{set\_data()}{set\_data()}}
+{\footnotesize\ttfamily \label{class_c_control_a13f557815616ef66a8f5dd4b725d8c32} 
+bool CControl::\+set\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{channel}{, }\item[{int}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Sends data to the device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & \doxylink{_c_control_8cpp_a1d1cfd8ffb84e947f82999c682b666a7}{Type} of data to set (digital, servo, etc.). \\
+\hline
+{\em channel} & Channel number to write to. \\
+\hline
+{\em val} & Value to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the command succeeded, false otherwise. 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_c_control_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_c_control_aef87fbcfdcd323b1fdcf41be993e006c}\index{CControl@{CControl}!\_com@{\_com}}
+\index{\_com@{\_com}!CControl@{CControl}}
+\doxysubsubsection{\texorpdfstring{\_com}{\_com}}
+{\footnotesize\ttfamily \label{class_c_control_aef87fbcfdcd323b1fdcf41be993e006c} 
+\doxymbox{\hyperlink{class_serial}{Serial}} CControl::\+\+\_\+com\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_serial}{Serial} communication object. 
+
+Handles low-\/level communication with the TM4\+C123G board, including sending commands and receiving responses. 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_c_control_8h}{CControl.\+h}}\item 
+\doxymbox{\hyperlink{_c_control_8cpp}{CControl.\+cpp}}\end{DoxyCompactItemize}

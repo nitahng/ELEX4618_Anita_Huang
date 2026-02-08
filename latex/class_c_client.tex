@@ -1,0 +1,132 @@
+\doxysection{CClient Class Reference}
+\hypertarget{class_c_client}{}\label{class_c_client}\index{CClient@{CClient}}
+
+
+{\ttfamily \+\#include $<$Client.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_c_client_a51f196439c3218b2dce8f7c6610dad14}{CClient}} ()
+\item 
+\doxymbox{\hyperlink{class_c_client_adfec5dfb8d13c1245020e52aac0812b1}{\texorpdfstring{$\sim$}{\string~}\+CClient}} ()
+\item 
+void \doxymbox{\hyperlink{class_c_client_aaa46e0b64686feac7ae21e2798285140}{connect\+\_\+socket}} (std::\+string addr, int port)
+\item 
+void \doxymbox{\hyperlink{class_c_client_a554d42749ddd9d51fa59686a57d3cd66}{close\+\_\+socket}} ()
+\item 
+void \doxymbox{\hyperlink{class_c_client_ad64c607c6f0aaabb49b4de7245c0169b}{tx\+\_\+str}} (std::\+string str)
+\item 
+bool \doxymbox{\hyperlink{class_c_client_ac1eda49074ca5ff25f0797b983d725df}{rx\+\_\+str}} (std::\+string \&str)
+\item 
+bool \doxymbox{\hyperlink{class_c_client_ad977e738c6213aa845a44a6e7be8f563}{rx\+\_\+im}} (cv::\+\+Mat \&im)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_c_client_a01466b817058cbe4e4ca3621690b1174}{setblocking}} (SOCKET fd, bool blocking)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+WSADATA \doxymbox{\hyperlink{class_c_client_a149c8897bb03cfa698a739b46fe42e63}{\+\_\+wsdat}}
+\item 
+int \doxymbox{\hyperlink{class_c_client_ad22b05d27aabdfafb54743017b4f1d88}{\+\_\+port}}
+\item 
+std::\+string \doxymbox{\hyperlink{class_c_client_a0ba087ef0c18ae5562de697b022d4586}{\+\_\+addr}}
+\item 
+SOCKET \doxymbox{\hyperlink{class_c_client_a56b580182f4e37bc5487e1af0a1cf92c}{\+\_\+socket}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_c_client_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_client_a51f196439c3218b2dce8f7c6610dad14}\index{CClient@{CClient}!CClient@{CClient}}
+\index{CClient@{CClient}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{CClient()}{CClient()}}
+{\footnotesize\ttfamily \label{class_c_client_a51f196439c3218b2dce8f7c6610dad14} 
+CClient::\+\+CClient (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_client_adfec5dfb8d13c1245020e52aac0812b1}\index{CClient@{CClient}!````~CClient@{\texorpdfstring{$\sim$}{\string~}CClient}}
+\index{````~CClient@{\texorpdfstring{$\sim$}{\string~}CClient}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CClient()}{\string~CClient()}}
+{\footnotesize\ttfamily \label{class_c_client_adfec5dfb8d13c1245020e52aac0812b1} 
+CClient::\+\texorpdfstring{$\sim$}{\string~}\+CClient (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_c_client_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_client_a554d42749ddd9d51fa59686a57d3cd66}\index{CClient@{CClient}!close\_socket@{close\_socket}}
+\index{close\_socket@{close\_socket}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{close\_socket()}{close\_socket()}}
+{\footnotesize\ttfamily \label{class_c_client_a554d42749ddd9d51fa59686a57d3cd66} 
+void CClient::\+close\+\_\+socket (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_client_aaa46e0b64686feac7ae21e2798285140}\index{CClient@{CClient}!connect\_socket@{connect\_socket}}
+\index{connect\_socket@{connect\_socket}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{connect\_socket()}{connect\_socket()}}
+{\footnotesize\ttfamily \label{class_c_client_aaa46e0b64686feac7ae21e2798285140} 
+void CClient::\+connect\+\_\+socket (\begin{DoxyParamCaption}\item[{std::\+string}]{addr}{, }\item[{int}]{port}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_client_ad977e738c6213aa845a44a6e7be8f563}\index{CClient@{CClient}!rx\_im@{rx\_im}}
+\index{rx\_im@{rx\_im}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{rx\_im()}{rx\_im()}}
+{\footnotesize\ttfamily \label{class_c_client_ad977e738c6213aa845a44a6e7be8f563} 
+bool CClient::\+rx\+\_\+im (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{im}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_client_ac1eda49074ca5ff25f0797b983d725df}\index{CClient@{CClient}!rx\_str@{rx\_str}}
+\index{rx\_str@{rx\_str}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{rx\_str()}{rx\_str()}}
+{\footnotesize\ttfamily \label{class_c_client_ac1eda49074ca5ff25f0797b983d725df} 
+bool CClient::\+rx\+\_\+str (\begin{DoxyParamCaption}\item[{std::\+string \&}]{str}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_client_a01466b817058cbe4e4ca3621690b1174}\index{CClient@{CClient}!setblocking@{setblocking}}
+\index{setblocking@{setblocking}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{setblocking()}{setblocking()}}
+{\footnotesize\ttfamily \label{class_c_client_a01466b817058cbe4e4ca3621690b1174} 
+bool CClient::\+setblocking (\begin{DoxyParamCaption}\item[{SOCKET}]{fd}{, }\item[{bool}]{blocking}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_c_client_ad64c607c6f0aaabb49b4de7245c0169b}\index{CClient@{CClient}!tx\_str@{tx\_str}}
+\index{tx\_str@{tx\_str}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{tx\_str()}{tx\_str()}}
+{\footnotesize\ttfamily \label{class_c_client_ad64c607c6f0aaabb49b4de7245c0169b} 
+void CClient::\+tx\+\_\+str (\begin{DoxyParamCaption}\item[{std::\+string}]{str}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_c_client_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_c_client_a0ba087ef0c18ae5562de697b022d4586}\index{CClient@{CClient}!\_addr@{\_addr}}
+\index{\_addr@{\_addr}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{\_addr}{\_addr}}
+{\footnotesize\ttfamily \label{class_c_client_a0ba087ef0c18ae5562de697b022d4586} 
+std::\+string CClient::\+\+\_\+addr\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_c_client_ad22b05d27aabdfafb54743017b4f1d88}\index{CClient@{CClient}!\_port@{\_port}}
+\index{\_port@{\_port}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{\_port}{\_port}}
+{\footnotesize\ttfamily \label{class_c_client_ad22b05d27aabdfafb54743017b4f1d88} 
+int CClient::\+\+\_\+port\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_c_client_a56b580182f4e37bc5487e1af0a1cf92c}\index{CClient@{CClient}!\_socket@{\_socket}}
+\index{\_socket@{\_socket}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{\_socket}{\_socket}}
+{\footnotesize\ttfamily \label{class_c_client_a56b580182f4e37bc5487e1af0a1cf92c} 
+SOCKET CClient::\+\+\_\+socket\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_c_client_a149c8897bb03cfa698a739b46fe42e63}\index{CClient@{CClient}!\_wsdat@{\_wsdat}}
+\index{\_wsdat@{\_wsdat}!CClient@{CClient}}
+\doxysubsubsection{\texorpdfstring{\_wsdat}{\_wsdat}}
+{\footnotesize\ttfamily \label{class_c_client_a149c8897bb03cfa698a739b46fe42e63} 
+WSADATA CClient::\+\+\_\+wsdat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_client_8h}{Client.\+h}}\item 
+\doxymbox{\hyperlink{_client_8cpp}{Client.\+cpp}}\end{DoxyCompactItemize}

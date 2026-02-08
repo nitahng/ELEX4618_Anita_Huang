@@ -1,0 +1,156 @@
+\doxysection{CServer Class Reference}
+\hypertarget{class_c_server}{}\label{class_c_server}\index{CServer@{CServer}}
+
+
+{\ttfamily \+\#include $<$server.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_c_server_aa3277fb7ded9c4d7a60747805d527c29}{CServer}} ()
+\item 
+\doxymbox{\hyperlink{class_c_server_af6da9f8b52bdc049e21cd7c687ef4d4b}{\texorpdfstring{$\sim$}{\string~}\+CServer}} ()
+\item 
+void \doxymbox{\hyperlink{class_c_server_a6ce19d7a0606741610028a065ddddc57}{start}} (int port)
+\item 
+void \doxymbox{\hyperlink{class_c_server_a31f0e23f00b4e506ab38bff799796358}{stop}} ()
+\item 
+void \doxymbox{\hyperlink{class_c_server_a169fd953001f33e59cf0175cea094c5a}{set\+\_\+txim}} (cv::\+\+Mat \&im)
+\item 
+void \doxymbox{\hyperlink{class_c_server_affba2b34f1f175a9850fa2af53d5b56a}{get\+\_\+cmd}} (std::\+vector$<$ std::\+string $>$ \&cmds)
+\item 
+void \doxymbox{\hyperlink{class_c_server_a48f94d62c951cc3f92ecc1507507980f}{send\+\_\+string}} (std::\+string send\+\_\+str)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_c_server_ab9ab8a857c7ac985c528d38cf2201b93}{setblocking}} (int fd, bool blocking)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_c_server_ad0463f08401dc2a905027aac18f77a7d}{\+\_\+server\+\_\+exit}}
+\item 
+cv::\+\+Mat \doxymbox{\hyperlink{class_c_server_ae751145e543be16e7b42a3a66774ae95}{\+\_\+txim}}
+\item 
+std::\+mutex \doxymbox{\hyperlink{class_c_server_a884cb2eaf9cb624d269c36c32ceb5d1c}{\+\_\+image\+\_\+mutex}}
+\item 
+std::\+mutex \doxymbox{\hyperlink{class_c_server_a924a162a591dc548585418bd9172fd73}{\+\_\+rx\+\_\+mutex}}
+\item 
+std::\+mutex \doxymbox{\hyperlink{class_c_server_ac07d5606e9e140540067ce8fbabba976}{\+\_\+tx\+\_\+mutex}}
+\item 
+std::\+vector$<$ std::\+string $>$ \doxymbox{\hyperlink{class_c_server_ab5be7286809fdd06c173619f379522ec}{\+\_\+cmd\+\_\+list}}
+\item 
+std::\+vector$<$ std::\+string $>$ \doxymbox{\hyperlink{class_c_server_a55b2611bd6db2ea77541c6ae183950c3}{\+\_\+send\+\_\+list}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_c_server_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_server_aa3277fb7ded9c4d7a60747805d527c29}\index{CServer@{CServer}!CServer@{CServer}}
+\index{CServer@{CServer}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{CServer()}{CServer()}}
+{\footnotesize\ttfamily \label{class_c_server_aa3277fb7ded9c4d7a60747805d527c29} 
+CServer::\+\+CServer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_server_af6da9f8b52bdc049e21cd7c687ef4d4b}\index{CServer@{CServer}!````~CServer@{\texorpdfstring{$\sim$}{\string~}CServer}}
+\index{````~CServer@{\texorpdfstring{$\sim$}{\string~}CServer}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CServer()}{\string~CServer()}}
+{\footnotesize\ttfamily \label{class_c_server_af6da9f8b52bdc049e21cd7c687ef4d4b} 
+CServer::\+\texorpdfstring{$\sim$}{\string~}\+CServer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_c_server_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_server_affba2b34f1f175a9850fa2af53d5b56a}\index{CServer@{CServer}!get\_cmd@{get\_cmd}}
+\index{get\_cmd@{get\_cmd}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{get\_cmd()}{get\_cmd()}}
+{\footnotesize\ttfamily \label{class_c_server_affba2b34f1f175a9850fa2af53d5b56a} 
+void CServer::\+get\+\_\+cmd (\begin{DoxyParamCaption}\item[{std::\+vector$<$ std::\+string $>$ \&}]{cmds}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_server_a48f94d62c951cc3f92ecc1507507980f}\index{CServer@{CServer}!send\_string@{send\_string}}
+\index{send\_string@{send\_string}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{send\_string()}{send\_string()}}
+{\footnotesize\ttfamily \label{class_c_server_a48f94d62c951cc3f92ecc1507507980f} 
+void CServer::\+send\+\_\+string (\begin{DoxyParamCaption}\item[{std::\+string}]{send\+\_\+str}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_server_a169fd953001f33e59cf0175cea094c5a}\index{CServer@{CServer}!set\_txim@{set\_txim}}
+\index{set\_txim@{set\_txim}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{set\_txim()}{set\_txim()}}
+{\footnotesize\ttfamily \label{class_c_server_a169fd953001f33e59cf0175cea094c5a} 
+void CServer::\+set\+\_\+txim (\begin{DoxyParamCaption}\item[{cv::\+\+Mat \&}]{im}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_server_ab9ab8a857c7ac985c528d38cf2201b93}\index{CServer@{CServer}!setblocking@{setblocking}}
+\index{setblocking@{setblocking}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{setblocking()}{setblocking()}}
+{\footnotesize\ttfamily \label{class_c_server_ab9ab8a857c7ac985c528d38cf2201b93} 
+bool CServer::\+setblocking (\begin{DoxyParamCaption}\item[{int}]{fd}{, }\item[{bool}]{blocking}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_c_server_a6ce19d7a0606741610028a065ddddc57}\index{CServer@{CServer}!start@{start}}
+\index{start@{start}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_c_server_a6ce19d7a0606741610028a065ddddc57} 
+void CServer::\+start (\begin{DoxyParamCaption}\item[{int}]{port}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_server_a31f0e23f00b4e506ab38bff799796358}\index{CServer@{CServer}!stop@{stop}}
+\index{stop@{stop}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \label{class_c_server_a31f0e23f00b4e506ab38bff799796358} 
+void CServer::\+stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_c_server_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_c_server_ab5be7286809fdd06c173619f379522ec}\index{CServer@{CServer}!\_cmd\_list@{\_cmd\_list}}
+\index{\_cmd\_list@{\_cmd\_list}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{\_cmd\_list}{\_cmd\_list}}
+{\footnotesize\ttfamily \label{class_c_server_ab5be7286809fdd06c173619f379522ec} 
+std::\+vector$<$std::\+string$>$ CServer::\+\+\_\+cmd\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_c_server_a884cb2eaf9cb624d269c36c32ceb5d1c}\index{CServer@{CServer}!\_image\_mutex@{\_image\_mutex}}
+\index{\_image\_mutex@{\_image\_mutex}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{\_image\_mutex}{\_image\_mutex}}
+{\footnotesize\ttfamily \label{class_c_server_a884cb2eaf9cb624d269c36c32ceb5d1c} 
+std::\+mutex CServer::\+\+\_\+image\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_c_server_a924a162a591dc548585418bd9172fd73}\index{CServer@{CServer}!\_rx\_mutex@{\_rx\_mutex}}
+\index{\_rx\_mutex@{\_rx\_mutex}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{\_rx\_mutex}{\_rx\_mutex}}
+{\footnotesize\ttfamily \label{class_c_server_a924a162a591dc548585418bd9172fd73} 
+std::\+mutex CServer::\+\+\_\+rx\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_c_server_a55b2611bd6db2ea77541c6ae183950c3}\index{CServer@{CServer}!\_send\_list@{\_send\_list}}
+\index{\_send\_list@{\_send\_list}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{\_send\_list}{\_send\_list}}
+{\footnotesize\ttfamily \label{class_c_server_a55b2611bd6db2ea77541c6ae183950c3} 
+std::\+vector$<$std::\+string$>$ CServer::\+\+\_\+send\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_c_server_ad0463f08401dc2a905027aac18f77a7d}\index{CServer@{CServer}!\_server\_exit@{\_server\_exit}}
+\index{\_server\_exit@{\_server\_exit}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{\_server\_exit}{\_server\_exit}}
+{\footnotesize\ttfamily \label{class_c_server_ad0463f08401dc2a905027aac18f77a7d} 
+bool CServer::\+\+\_\+server\+\_\+exit\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_c_server_ac07d5606e9e140540067ce8fbabba976}\index{CServer@{CServer}!\_tx\_mutex@{\_tx\_mutex}}
+\index{\_tx\_mutex@{\_tx\_mutex}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{\_tx\_mutex}{\_tx\_mutex}}
+{\footnotesize\ttfamily \label{class_c_server_ac07d5606e9e140540067ce8fbabba976} 
+std::\+mutex CServer::\+\+\_\+tx\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_c_server_ae751145e543be16e7b42a3a66774ae95}\index{CServer@{CServer}!\_txim@{\_txim}}
+\index{\_txim@{\_txim}!CServer@{CServer}}
+\doxysubsubsection{\texorpdfstring{\_txim}{\_txim}}
+{\footnotesize\ttfamily \label{class_c_server_ae751145e543be16e7b42a3a66774ae95} 
+cv::\+\+Mat CServer::\+\+\_\+txim\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{server_8h}{server.\+h}}\item 
+\doxymbox{\hyperlink{server_8cpp}{server.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,121 @@
+\doxysection{Serial Class Reference}
+\hypertarget{class_serial}{}\label{class_serial}\index{Serial@{Serial}}
+
+
+{\ttfamily \+\#include $<$Serial.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_serial_a3667c3137f2df94716b5193f9fb736ab}{Serial}} ()
+\item 
+virtual \doxymbox{\hyperlink{class_serial_a5b32c394c0ff923a4ef1c13cfb20a6ba}{\texorpdfstring{$\sim$}{\string~}\+Serial}} ()
+\item 
+bool \doxymbox{\hyperlink{class_serial_a599d3e220888815b8da436ea45a5c655}{open}} (std::\+string comm\+Port\+Name, int bit\+Rate=115200)
+\item 
+bool \doxymbox{\hyperlink{class_serial_a40388a777cb349a1b8bde4c1ed8fbe92}{is\+\_\+open}} ()
+\item 
+int \doxymbox{\hyperlink{class_serial_aae3d630a4fd81c8b148cb4eebdb91392}{write}} (const char \texorpdfstring{$\ast$}{*}buffer, int buff\+Len)
+\item 
+int \doxymbox{\hyperlink{class_serial_a8266889eb5bfa7ef8b53595c5482133d}{read}} (char \texorpdfstring{$\ast$}{*}buffer, int buff\+Len)
+\item 
+void \doxymbox{\hyperlink{class_serial_a63b7abf172cad25bfc998b3b1f98310f}{flush}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+HANDLE \doxymbox{\hyperlink{class_serial_ad0bdbf4b9041c376b6839e97a87e7b30}{comm\+Handle}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_serial_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_serial_a3667c3137f2df94716b5193f9fb736ab}\index{Serial@{Serial}!Serial@{Serial}}
+\index{Serial@{Serial}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{Serial()}{Serial()}}
+{\footnotesize\ttfamily \label{class_serial_a3667c3137f2df94716b5193f9fb736ab} 
+Serial::\+\+Serial (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_serial_a5b32c394c0ff923a4ef1c13cfb20a6ba}\index{Serial@{Serial}!````~Serial@{\texorpdfstring{$\sim$}{\string~}Serial}}
+\index{````~Serial@{\texorpdfstring{$\sim$}{\string~}Serial}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Serial()}{\string~Serial()}}
+{\footnotesize\ttfamily \label{class_serial_a5b32c394c0ff923a4ef1c13cfb20a6ba} 
+Serial::\+\texorpdfstring{$\sim$}{\string~}\+Serial (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_serial_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_serial_a63b7abf172cad25bfc998b3b1f98310f}\index{Serial@{Serial}!flush@{flush}}
+\index{flush@{flush}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily \label{class_serial_a63b7abf172cad25bfc998b3b1f98310f} 
+void Serial::\+flush (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_serial_a40388a777cb349a1b8bde4c1ed8fbe92}\index{Serial@{Serial}!is\_open@{is\_open}}
+\index{is\_open@{is\_open}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{is\_open()}{is\_open()}}
+{\footnotesize\ttfamily \label{class_serial_a40388a777cb349a1b8bde4c1ed8fbe92} 
+bool Serial::\+is\+\_\+open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_serial_a599d3e220888815b8da436ea45a5c655}\index{Serial@{Serial}!open@{open}}
+\index{open@{open}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{class_serial_a599d3e220888815b8da436ea45a5c655} 
+bool Serial::\+open (\begin{DoxyParamCaption}\item[{std::\+string}]{comm\+Port\+Name}{, }\item[{int}]{bit\+Rate}{ = {\ttfamily 115200}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_serial_a8266889eb5bfa7ef8b53595c5482133d}\index{Serial@{Serial}!read@{read}}
+\index{read@{read}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \label{class_serial_a8266889eb5bfa7ef8b53595c5482133d} 
+int Serial::\+read (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{int}]{buff\+Len}{}\end{DoxyParamCaption})}
+
+Reads a string of bytes from the serial port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & pointer to the buffer to be written to \\
+\hline
+{\em buff\+Len} & the size of the buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int the number of bytes read 
+\end{DoxyReturn}
+\Hypertarget{class_serial_aae3d630a4fd81c8b148cb4eebdb91392}\index{Serial@{Serial}!write@{write}}
+\index{write@{write}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily \label{class_serial_aae3d630a4fd81c8b148cb4eebdb91392} 
+int Serial::\+write (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{int}]{buff\+Len}{}\end{DoxyParamCaption})}
+
+Writes a string of bytes to the serial port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & pointer to the buffer containing the bytes \\
+\hline
+{\em buff\+Len} & the number of bytes in the buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int the number of bytes written 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_serial_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_serial_ad0bdbf4b9041c376b6839e97a87e7b30}\index{Serial@{Serial}!commHandle@{commHandle}}
+\index{commHandle@{commHandle}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{commHandle}{commHandle}}
+{\footnotesize\ttfamily \label{class_serial_ad0bdbf4b9041c376b6839e97a87e7b30} 
+HANDLE Serial::\+comm\+Handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_serial_8h}{Serial.\+h}}\item 
+\doxymbox{\hyperlink{_serial_8cpp}{Serial.\+cpp}}\end{DoxyCompactItemize}
