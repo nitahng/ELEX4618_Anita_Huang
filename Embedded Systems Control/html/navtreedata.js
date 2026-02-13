@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "ELEX4618 LAB3 CCONTROL", "index.html", [
+  [ "ELEX4618", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

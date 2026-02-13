@@ -53,7 +53,7 @@ public:
     CBase4618();
 
     /**
-     * @brief Destructor for a CControl object.
+     * @brief Destructor for a CBase object.
      */
     ~CBase4618();
 
@@ -76,6 +76,7 @@ public:
 
     /**
      * @brief update: virtual method (defined in child)
+     * @brief updates the next coordinate of the drawing and sets the RGB LED output 
  
     */
     virtual void update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point& pt1, cv::Point& pt2, int &colour_index) = 0;
@@ -84,8 +85,7 @@ public:
 
     /**
      * @brief draw: virtual method (defined in child)
-
-     * @brief 
+     * @brief Performs the draw and erase function of the game. 
 
     */
     virtual bool draw(cv::Point& pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed) = 0;

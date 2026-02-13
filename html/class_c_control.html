@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lab4 Doxy: CControl Class Reference</title>
+<title>elex4618_doxy: CControl Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lab4 Doxy
+   <div id="projectname">elex4618_doxy
    </div>
   </td>
  </tr>
@@ -111,8 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a13f557815616ef66a8f5dd4b725d8c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends data to the device.  <br /></td></tr>
 <tr class="memitem:a53e2227bfa3db92bab3e92a33962d1be" id="r_a53e2227bfa3db92bab3e92a33962d1be"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a53e2227bfa3db92bab3e92a33962d1be">get_analog</a> (int channel, int &amp;result)</td></tr>
 <tr class="memdesc:a53e2227bfa3db92bab3e92a33962d1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to return raw and percentage analog values.  <br /></td></tr>
-<tr class="memitem:a223277f32bbc270b9aa77268795560aa" id="r_a223277f32bbc270b9aa77268795560aa"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a223277f32bbc270b9aa77268795560aa">get_button</a> (<a class="el" href="class_c_control.html">CControl</a> &amp;comm)</td></tr>
-<tr class="memdesc:a223277f32bbc270b9aa77268795560aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads digital input and debounces it.  <br /></td></tr>
+<tr class="memitem:a0de5e252e54c23f5ccb9f15a2b3af97d" id="r_a0de5e252e54c23f5ccb9f15a2b3af97d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0de5e252e54c23f5ccb9f15a2b3af97d">get_button</a> (int channel, <a class="el" href="class_c_control.html">CControl</a> &amp;comm)</td></tr>
+<tr class="memdesc:a0de5e252e54c23f5ccb9f15a2b3af97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads digital input and debounces it.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -193,8 +193,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a223277f32bbc270b9aa77268795560aa" name="a223277f32bbc270b9aa77268795560aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a223277f32bbc270b9aa77268795560aa">&#9670;&#160;</a></span>get_button()</h2>
+<a id="a0de5e252e54c23f5ccb9f15a2b3af97d" name="a0de5e252e54c23f5ccb9f15a2b3af97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de5e252e54c23f5ccb9f15a2b3af97d">&#9670;&#160;</a></span>get_button()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,8 +202,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool CControl::get_button </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_c_control.html">CControl</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>comm</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_c_control.html">CControl</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>comm</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

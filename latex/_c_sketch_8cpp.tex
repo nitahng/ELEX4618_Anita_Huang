@@ -3,35 +3,179 @@
 {\ttfamily \+\#include "{}stdafx.\+h"{}}\newline
 {\ttfamily \+\#include "{}cvui.\+h"{}}\newline
 {\ttfamily \+\#include "{}CSketch.\+h"{}}\newline
-\doxysubsubsection*{Macros}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\+\#define \doxymbox{\hyperlink{_c_sketch_8cpp_a41f13de7835bc4a65ec1f68fdb03d519}{IMGTYPE}}~CV\+\_\+8\+UC3
+void \doxymbox{\hyperlink{_c_sketch_8cpp_a7b96fc3b511b4de2906e511f19af6eb0}{make\+\_\+bounds}} (cv::\+\+Point \&pt1, cv::\+\+Point \&pt2)
 \item 
-\+\#define \doxymbox{\hyperlink{_c_sketch_8cpp_ad77529dbdf84161b7b5f3874c707b9b9}{JOYSTICK\+\_\+X}}~2
+void \doxymbox{\hyperlink{_c_sketch_8cpp_a86519813e81c3379c2ce9125b1dc1ea3}{move\+\_\+pencil}} (cv::\+\+Point \&pt1, cv::\+\+Point \&pt2, float \&percentage\+\_\+x, float \&percentage\+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
 \item 
-\+\#define \doxymbox{\hyperlink{_c_sketch_8cpp_a6fac688dbc7bf507e91570ced2d90119}{JOYSTICK\+\_\+Y}}~26
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_abcf24bfe6f8a86829b1f3bc814adffd8}{IMGTYPE}} = CV\+\_\+8\+UC3
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_a03266f629d6c4a7a152f7673c58be661}{JOYSTICK\+\_\+X}} = 2
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_ad78dee9ca7cf4b053adc00993b9c2fdc}{JOYSTICK\+\_\+Y}} = 26
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_ad3d50f0f8ee43a941f2def58cd219ddd}{ACCL\+\_\+Y}} = 23
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_a321af2105b918075e6566fab2713f7fc}{ACCL\+\_\+Z}} = 24
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_a6411721e9432bdd55551711f0af09ae9}{PUSH\+\_\+\+BUTTON\+\_\+2}} = 42
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_a62c54c6c4523a58cd4741b6093e3e83f}{DIGITAL}} = 0
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_a27648a1cd05da367e5ed615c59fc06ac}{BIG\+\_\+\+BUTTON\+\_\+1}} = 32
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_aa394182c945a78b6112189176a6d2a21}{BIG\+\_\+\+BUTTON\+\_\+2}} = 33
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_af995b7988a8f7ffe0245d2ddbf2d8138}{PIXEL\+\_\+\+BOUNDS\+\_\+\+BR}} = 992
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_ad84169b9e105c8ddf5ce6c8c8df7ef4c}{PIXEL\+\_\+\+BOUNDS\+\_\+\+UL}} = 5
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_a2a1c27fbaafd5310fbae206111fe998c}{SLOW\+\_\+\+BOUNDS\+\_\+X}} = 55
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_a4c27b1f025918d4a3c321471e0fea6b5}{FAST\+\_\+\+BOUNDS\+\_\+X}} = 80
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_a9d584a836ce3adac5fa8046f01faee82}{SLOW\+\_\+\+BOUNDS\+\_\+Y}} = 45
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_abdd832519ff6cca9668eeaef22884fb2}{FAST\+\_\+\+BOUNDS\+\_\+Y}} = 20
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_ae4cee39196424c87eb64aac6fa6e08f4}{RGB\+\_\+\+RED}} = 39
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_aa07caedb618cc5c39de372f47fc4e02b}{RGB\+\_\+\+GRN}} = 38
+\item 
+const int \doxymbox{\hyperlink{_c_sketch_8cpp_a828bda29625a95563b457e2b5bc5822f}{RGB\+\_\+\+BLU}} = 37
 \end{DoxyCompactItemize}
 
 
-\label{doc-define-members}
-\Hypertarget{_c_sketch_8cpp_doc-define-members}
-\doxysubsection{Macro Definition Documentation}
-\Hypertarget{_c_sketch_8cpp_a41f13de7835bc4a65ec1f68fdb03d519}\index{CSketch.cpp@{CSketch.cpp}!IMGTYPE@{IMGTYPE}}
+\label{doc-func-members}
+\Hypertarget{_c_sketch_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_c_sketch_8cpp_a7b96fc3b511b4de2906e511f19af6eb0}\index{CSketch.cpp@{CSketch.cpp}!make\_bounds@{make\_bounds}}
+\index{make\_bounds@{make\_bounds}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{make\_bounds()}{make\_bounds()}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_a7b96fc3b511b4de2906e511f19af6eb0} 
+void make\+\_\+bounds (\begin{DoxyParamCaption}\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_c_sketch_8cpp_a86519813e81c3379c2ce9125b1dc1ea3}\index{CSketch.cpp@{CSketch.cpp}!move\_pencil@{move\_pencil}}
+\index{move\_pencil@{move\_pencil}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{move\_pencil()}{move\_pencil()}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_a86519813e81c3379c2ce9125b1dc1ea3} 
+void move\+\_\+pencil (\begin{DoxyParamCaption}\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{, }\item[{float \&}]{percentage\+\_\+x}{, }\item[{float \&}]{percentage\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{_c_sketch_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_c_sketch_8cpp_ad3d50f0f8ee43a941f2def58cd219ddd}\index{CSketch.cpp@{CSketch.cpp}!ACCL\_Y@{ACCL\_Y}}
+\index{ACCL\_Y@{ACCL\_Y}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{ACCL\_Y}{ACCL\_Y}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_ad3d50f0f8ee43a941f2def58cd219ddd} 
+const int ACCL\+\_\+Y = 23}
+
+\Hypertarget{_c_sketch_8cpp_a321af2105b918075e6566fab2713f7fc}\index{CSketch.cpp@{CSketch.cpp}!ACCL\_Z@{ACCL\_Z}}
+\index{ACCL\_Z@{ACCL\_Z}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{ACCL\_Z}{ACCL\_Z}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_a321af2105b918075e6566fab2713f7fc} 
+const int ACCL\+\_\+Z = 24}
+
+\Hypertarget{_c_sketch_8cpp_a27648a1cd05da367e5ed615c59fc06ac}\index{CSketch.cpp@{CSketch.cpp}!BIG\_BUTTON\_1@{BIG\_BUTTON\_1}}
+\index{BIG\_BUTTON\_1@{BIG\_BUTTON\_1}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{BIG\_BUTTON\_1}{BIG\_BUTTON\_1}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_a27648a1cd05da367e5ed615c59fc06ac} 
+const int BIG\+\_\+\+BUTTON\+\_\+1 = 32}
+
+\Hypertarget{_c_sketch_8cpp_aa394182c945a78b6112189176a6d2a21}\index{CSketch.cpp@{CSketch.cpp}!BIG\_BUTTON\_2@{BIG\_BUTTON\_2}}
+\index{BIG\_BUTTON\_2@{BIG\_BUTTON\_2}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{BIG\_BUTTON\_2}{BIG\_BUTTON\_2}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_aa394182c945a78b6112189176a6d2a21} 
+const int BIG\+\_\+\+BUTTON\+\_\+2 = 33}
+
+\Hypertarget{_c_sketch_8cpp_a62c54c6c4523a58cd4741b6093e3e83f}\index{CSketch.cpp@{CSketch.cpp}!DIGITAL@{DIGITAL}}
+\index{DIGITAL@{DIGITAL}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{DIGITAL}{DIGITAL}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_a62c54c6c4523a58cd4741b6093e3e83f} 
+const int DIGITAL = 0}
+
+\Hypertarget{_c_sketch_8cpp_a4c27b1f025918d4a3c321471e0fea6b5}\index{CSketch.cpp@{CSketch.cpp}!FAST\_BOUNDS\_X@{FAST\_BOUNDS\_X}}
+\index{FAST\_BOUNDS\_X@{FAST\_BOUNDS\_X}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{FAST\_BOUNDS\_X}{FAST\_BOUNDS\_X}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_a4c27b1f025918d4a3c321471e0fea6b5} 
+const int FAST\+\_\+\+BOUNDS\+\_\+X = 80}
+
+\Hypertarget{_c_sketch_8cpp_abdd832519ff6cca9668eeaef22884fb2}\index{CSketch.cpp@{CSketch.cpp}!FAST\_BOUNDS\_Y@{FAST\_BOUNDS\_Y}}
+\index{FAST\_BOUNDS\_Y@{FAST\_BOUNDS\_Y}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{FAST\_BOUNDS\_Y}{FAST\_BOUNDS\_Y}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_abdd832519ff6cca9668eeaef22884fb2} 
+const int FAST\+\_\+\+BOUNDS\+\_\+Y = 20}
+
+\Hypertarget{_c_sketch_8cpp_abcf24bfe6f8a86829b1f3bc814adffd8}\index{CSketch.cpp@{CSketch.cpp}!IMGTYPE@{IMGTYPE}}
 \index{IMGTYPE@{IMGTYPE}!CSketch.cpp@{CSketch.cpp}}
 \doxysubsubsection{\texorpdfstring{IMGTYPE}{IMGTYPE}}
-{\footnotesize\ttfamily \label{_c_sketch_8cpp_a41f13de7835bc4a65ec1f68fdb03d519} 
-\+\#define IMGTYPE~CV\+\_\+8\+UC3}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_abcf24bfe6f8a86829b1f3bc814adffd8} 
+const int IMGTYPE = CV\+\_\+8\+UC3}
 
-\Hypertarget{_c_sketch_8cpp_ad77529dbdf84161b7b5f3874c707b9b9}\index{CSketch.cpp@{CSketch.cpp}!JOYSTICK\_X@{JOYSTICK\_X}}
+\Hypertarget{_c_sketch_8cpp_a03266f629d6c4a7a152f7673c58be661}\index{CSketch.cpp@{CSketch.cpp}!JOYSTICK\_X@{JOYSTICK\_X}}
 \index{JOYSTICK\_X@{JOYSTICK\_X}!CSketch.cpp@{CSketch.cpp}}
 \doxysubsubsection{\texorpdfstring{JOYSTICK\_X}{JOYSTICK\_X}}
-{\footnotesize\ttfamily \label{_c_sketch_8cpp_ad77529dbdf84161b7b5f3874c707b9b9} 
-\+\#define JOYSTICK\+\_\+X~2}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_a03266f629d6c4a7a152f7673c58be661} 
+const int JOYSTICK\+\_\+X = 2}
 
-\Hypertarget{_c_sketch_8cpp_a6fac688dbc7bf507e91570ced2d90119}\index{CSketch.cpp@{CSketch.cpp}!JOYSTICK\_Y@{JOYSTICK\_Y}}
+\Hypertarget{_c_sketch_8cpp_ad78dee9ca7cf4b053adc00993b9c2fdc}\index{CSketch.cpp@{CSketch.cpp}!JOYSTICK\_Y@{JOYSTICK\_Y}}
 \index{JOYSTICK\_Y@{JOYSTICK\_Y}!CSketch.cpp@{CSketch.cpp}}
 \doxysubsubsection{\texorpdfstring{JOYSTICK\_Y}{JOYSTICK\_Y}}
-{\footnotesize\ttfamily \label{_c_sketch_8cpp_a6fac688dbc7bf507e91570ced2d90119} 
-\+\#define JOYSTICK\+\_\+Y~26}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_ad78dee9ca7cf4b053adc00993b9c2fdc} 
+const int JOYSTICK\+\_\+Y = 26}
+
+\Hypertarget{_c_sketch_8cpp_af995b7988a8f7ffe0245d2ddbf2d8138}\index{CSketch.cpp@{CSketch.cpp}!PIXEL\_BOUNDS\_BR@{PIXEL\_BOUNDS\_BR}}
+\index{PIXEL\_BOUNDS\_BR@{PIXEL\_BOUNDS\_BR}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{PIXEL\_BOUNDS\_BR}{PIXEL\_BOUNDS\_BR}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_af995b7988a8f7ffe0245d2ddbf2d8138} 
+const int PIXEL\+\_\+\+BOUNDS\+\_\+\+BR = 992}
+
+\Hypertarget{_c_sketch_8cpp_ad84169b9e105c8ddf5ce6c8c8df7ef4c}\index{CSketch.cpp@{CSketch.cpp}!PIXEL\_BOUNDS\_UL@{PIXEL\_BOUNDS\_UL}}
+\index{PIXEL\_BOUNDS\_UL@{PIXEL\_BOUNDS\_UL}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{PIXEL\_BOUNDS\_UL}{PIXEL\_BOUNDS\_UL}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_ad84169b9e105c8ddf5ce6c8c8df7ef4c} 
+const int PIXEL\+\_\+\+BOUNDS\+\_\+\+UL = 5}
+
+\Hypertarget{_c_sketch_8cpp_a6411721e9432bdd55551711f0af09ae9}\index{CSketch.cpp@{CSketch.cpp}!PUSH\_BUTTON\_2@{PUSH\_BUTTON\_2}}
+\index{PUSH\_BUTTON\_2@{PUSH\_BUTTON\_2}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{PUSH\_BUTTON\_2}{PUSH\_BUTTON\_2}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_a6411721e9432bdd55551711f0af09ae9} 
+const int PUSH\+\_\+\+BUTTON\+\_\+2 = 42}
+
+\Hypertarget{_c_sketch_8cpp_a828bda29625a95563b457e2b5bc5822f}\index{CSketch.cpp@{CSketch.cpp}!RGB\_BLU@{RGB\_BLU}}
+\index{RGB\_BLU@{RGB\_BLU}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{RGB\_BLU}{RGB\_BLU}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_a828bda29625a95563b457e2b5bc5822f} 
+const int RGB\+\_\+\+BLU = 37}
+
+\Hypertarget{_c_sketch_8cpp_aa07caedb618cc5c39de372f47fc4e02b}\index{CSketch.cpp@{CSketch.cpp}!RGB\_GRN@{RGB\_GRN}}
+\index{RGB\_GRN@{RGB\_GRN}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{RGB\_GRN}{RGB\_GRN}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_aa07caedb618cc5c39de372f47fc4e02b} 
+const int RGB\+\_\+\+GRN = 38}
+
+\Hypertarget{_c_sketch_8cpp_ae4cee39196424c87eb64aac6fa6e08f4}\index{CSketch.cpp@{CSketch.cpp}!RGB\_RED@{RGB\_RED}}
+\index{RGB\_RED@{RGB\_RED}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{RGB\_RED}{RGB\_RED}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_ae4cee39196424c87eb64aac6fa6e08f4} 
+const int RGB\+\_\+\+RED = 39}
+
+\Hypertarget{_c_sketch_8cpp_a2a1c27fbaafd5310fbae206111fe998c}\index{CSketch.cpp@{CSketch.cpp}!SLOW\_BOUNDS\_X@{SLOW\_BOUNDS\_X}}
+\index{SLOW\_BOUNDS\_X@{SLOW\_BOUNDS\_X}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{SLOW\_BOUNDS\_X}{SLOW\_BOUNDS\_X}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_a2a1c27fbaafd5310fbae206111fe998c} 
+const int SLOW\+\_\+\+BOUNDS\+\_\+X = 55}
+
+\Hypertarget{_c_sketch_8cpp_a9d584a836ce3adac5fa8046f01faee82}\index{CSketch.cpp@{CSketch.cpp}!SLOW\_BOUNDS\_Y@{SLOW\_BOUNDS\_Y}}
+\index{SLOW\_BOUNDS\_Y@{SLOW\_BOUNDS\_Y}!CSketch.cpp@{CSketch.cpp}}
+\doxysubsubsection{\texorpdfstring{SLOW\_BOUNDS\_Y}{SLOW\_BOUNDS\_Y}}
+{\footnotesize\ttfamily \label{_c_sketch_8cpp_a9d584a836ce3adac5fa8046f01faee82} 
+const int SLOW\+\_\+\+BOUNDS\+\_\+Y = 45}
 

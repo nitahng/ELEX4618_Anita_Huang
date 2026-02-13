@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7eccontrol_0',['~CControl',['../class_c_control.html#ab2ae420ef75b010c0c9078e597781105',1,'CControl']]]
+  ['type_0',['Type',['../_c_control_8cpp.html#a1d1cfd8ffb84e947f82999c682b666a7',1,'Type:&#160;CControl.cpp'],['../_embedded_01_systems_01_control_8cpp.html#a1d1cfd8ffb84e947f82999c682b666a7',1,'Type:&#160;Embedded Systems Control.cpp']]]
 ];

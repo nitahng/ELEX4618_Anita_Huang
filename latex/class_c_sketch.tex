@@ -22,19 +22,19 @@ Inheritance diagram for CSketch:\+\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em Constructor for a new \doxylink{class_c_sketch}{CSketch} object. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_c_sketch_aca8c70005a0bca496ea9574e4da47f65}{\texorpdfstring{$\sim$}{\string~}\+CSketch}} ()
 \begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_c_sketch}{CSketch} object. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416}{gpio}} (\doxymbox{\hyperlink{class_c_control}{CControl}} \&\doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}})
+void \doxymbox{\hyperlink{class_c_sketch_af1d882d2274d33bd3279c62a87dcc24a}{gpio}} (\doxymbox{\hyperlink{class_c_control}{CControl}} \&\doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}}, float \&percentage\+\_\+x, float \&percentage\+\_\+y, bool \&colour\+\_\+button\+\_\+pressed, bool \&reset\+\_\+button\+\_\+pressed)
 \begin{DoxyCompactList}\small\item\em Handle hardware I/\+O with the microcontroller. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{class_c_sketch_a3b7e2fa57fd26e4b812494268a5bbfbb}{update}} ()
+void \doxymbox{\hyperlink{class_c_sketch_a1ab4eb888473f001e81564f41df5106d}{update}} (float \&percentage\+\_\+x, float \&percentage\+\_\+y, bool \&colour\+\_\+button\+\_\+pressed, cv::\+\+Point \&pt1, cv::\+\+Point \&pt2, int \&colour\+\_\+index)
 \begin{DoxyCompactList}\small\item\em Update the Etch-\/\+A-\/\+Sketch state. \end{DoxyCompactList}\item 
-bool \doxymbox{\hyperlink{class_c_sketch_a93f276905cba79da1a18df36d193736f}{draw}} ()
+bool \doxymbox{\hyperlink{class_c_sketch_a1dc121fe3ed903e4201e026d419bbacf}{draw}} (cv::\+\+Point \&pt1, cv::\+\+Point \&pt2, int \&colour\+\_\+index, bool \&reset\+\_\+button\+\_\+pressed)
 \begin{DoxyCompactList}\small\item\em Render the current frame to the canvas and display it. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_c_base4618}{CBase4618}}}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_c_base4618_abe2aad021452c08dd4a5726b44c5a0b7}{CBase4618}} ()
-\begin{DoxyCompactList}\small\item\em Contructor of a \doxylink{class_c_control}{CControl} object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Contructor of a CBase object. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52}{\texorpdfstring{$\sim$}{\string~}\+CBase4618}} ()
-\begin{DoxyCompactList}\small\item\em Destructor for a \doxylink{class_c_control}{CControl} object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destructor for a CBase object. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_c_base4618_a535e816d735d10d6048dd39cd893d393}{run}} ()
 \begin{DoxyCompactList}\small\item\em Runs gpio, update and draw in a loop until quit key pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
@@ -50,7 +50,7 @@ cv::\+\+Mat \doxymbox{\hyperlink{class_c_base4618_a1b925f757247b33ca2072f777f245
 \doxysubsection{Detailed Description}
 Etch-\/\+A-\/\+Sketch game implementation. 
 
-\doxylink{class_c_sketch}{CSketch} inherits from \doxylink{class_c_base4618}{CBase4618} and provides concrete implementations of the \doxylink{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416}{gpio()}, \doxylink{class_c_sketch_a3b7e2fa57fd26e4b812494268a5bbfbb}{update()}, and \doxylink{class_c_sketch_a93f276905cba79da1a18df36d193736f}{draw()} methods for the Etch-\/\+A-\/\+Sketch application. It reads joystick/\+buttons via the microcontroller and renders drawing output onto an Open\+CV canvas. 
+\doxylink{class_c_sketch}{CSketch} inherits from \doxylink{class_c_base4618}{CBase4618} and provides concrete implementations of the \doxylink{class_c_sketch_af1d882d2274d33bd3279c62a87dcc24a}{gpio()}, \doxylink{class_c_sketch_a1ab4eb888473f001e81564f41df5106d}{update()}, and \doxylink{class_c_sketch_a1dc121fe3ed903e4201e026d419bbacf}{draw()} methods for the Etch-\/\+A-\/\+Sketch application. It reads joystick/\+buttons via the microcontroller and renders drawing output onto an Open\+CV canvas. 
 
 \label{doc-constructors}
 \Hypertarget{class_c_sketch_doc-constructors}
@@ -89,11 +89,11 @@ Cleans up any resources owned by the sketch instance.
 \label{doc-func-members}
 \Hypertarget{class_c_sketch_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_c_sketch_a93f276905cba79da1a18df36d193736f}\index{CSketch@{CSketch}!draw@{draw}}
+\Hypertarget{class_c_sketch_a1dc121fe3ed903e4201e026d419bbacf}\index{CSketch@{CSketch}!draw@{draw}}
 \index{draw@{draw}!CSketch@{CSketch}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily \label{class_c_sketch_a93f276905cba79da1a18df36d193736f} 
-bool CSketch::\+draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_c_sketch_a1dc121fe3ed903e4201e026d419bbacf} 
+bool CSketch::\+draw (\begin{DoxyParamCaption}\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{, }\item[{int \&}]{colour\+\_\+index}{, }\item[{bool \&}]{reset\+\_\+button\+\_\+pressed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -101,35 +101,35 @@ Render the current frame to the canvas and display it.
 
 Draws the UI elements and the Etch-\/\+A-\/\+Sketch output onto the Open\+CV canvas, then displays the resulting image on screen. 
 
-Implements \doxymbox{\hyperlink{class_c_base4618_a8ba8e4c7a0f99f39ffcf0be8b243ebdb}{CBase4618}}.
+Implements \doxymbox{\hyperlink{class_c_base4618_a831d9dab801136aad6a83ae4dae3c90e}{CBase4618}}.
 
-\Hypertarget{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416}\index{CSketch@{CSketch}!gpio@{gpio}}
+\Hypertarget{class_c_sketch_af1d882d2274d33bd3279c62a87dcc24a}\index{CSketch@{CSketch}!gpio@{gpio}}
 \index{gpio@{gpio}!CSketch@{CSketch}}
 \doxysubsubsection{\texorpdfstring{gpio()}{gpio()}}
-{\footnotesize\ttfamily \label{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416} 
-void CSketch::\+gpio (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_c_control}{CControl}} \&}]{comm}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_c_sketch_af1d882d2274d33bd3279c62a87dcc24a} 
+void CSketch::\+gpio (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_c_control}{CControl}} \&}]{comm}{, }\item[{float \&}]{percentage\+\_\+x}{, }\item[{float \&}]{percentage\+\_\+y}{, }\item[{bool \&}]{colour\+\_\+button\+\_\+pressed}{, }\item[{bool \&}]{reset\+\_\+button\+\_\+pressed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
 Handle hardware I/\+O with the microcontroller. 
 
-Performs the read/\+write communication needed to retrieve input states (e.\+g., joystick position, pushbuttons) and send output states if required (e.\+g., LED colour). 
+Performs the read/\+write communication needed to retrieve input states (joystick position, pushbuttons) and send output states if required 
 
-Implements \doxymbox{\hyperlink{class_c_base4618_a544ee3e5c897a1ddfec3317eecd9ef97}{CBase4618}}.
+Implements \doxymbox{\hyperlink{class_c_base4618_a9c32f9f1cb6f8b8352ef3dabfed1b09a}{CBase4618}}.
 
-\Hypertarget{class_c_sketch_a3b7e2fa57fd26e4b812494268a5bbfbb}\index{CSketch@{CSketch}!update@{update}}
+\Hypertarget{class_c_sketch_a1ab4eb888473f001e81564f41df5106d}\index{CSketch@{CSketch}!update@{update}}
 \index{update@{update}!CSketch@{CSketch}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily \label{class_c_sketch_a3b7e2fa57fd26e4b812494268a5bbfbb} 
-void CSketch::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_c_sketch_a1ab4eb888473f001e81564f41df5106d} 
+void CSketch::\+update (\begin{DoxyParamCaption}\item[{float \&}]{percentage\+\_\+x}{, }\item[{float \&}]{percentage\+\_\+y}{, }\item[{bool \&}]{colour\+\_\+button\+\_\+pressed}{, }\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{, }\item[{int \&}]{colour\+\_\+index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
 Update the Etch-\/\+A-\/\+Sketch state. 
 
-Updates the internal game state using the most recent inputs obtained from \doxylink{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416}{gpio()}, such as cursor movement, colour selection, and reset requests. 
+Updates the internal game state using the most recent inputs obtained from \doxylink{class_c_sketch_af1d882d2274d33bd3279c62a87dcc24a}{gpio()}, such as cursor movement, colour selection, and reset requests. 
 
-Implements \doxymbox{\hyperlink{class_c_base4618_a1e2f3c16eb99b5bfdd5d5254aee39ee6}{CBase4618}}.
+Implements \doxymbox{\hyperlink{class_c_base4618_a3619e2cea693382612f7dcd49cd543dd}{CBase4618}}.
 
 
 

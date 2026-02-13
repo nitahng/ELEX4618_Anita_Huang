@@ -14,16 +14,16 @@ Inheritance diagram for CBase4618:\+\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_c_base4618_abe2aad021452c08dd4a5726b44c5a0b7}{CBase4618}} ()
-\begin{DoxyCompactList}\small\item\em Contructor of a \doxylink{class_c_control}{CControl} object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Contructor of a CBase object. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52}{\texorpdfstring{$\sim$}{\string~}\+CBase4618}} ()
-\begin{DoxyCompactList}\small\item\em Destructor for a \doxylink{class_c_control}{CControl} object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destructor for a CBase object. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_c_base4618_a535e816d735d10d6048dd39cd893d393}{run}} ()
 \begin{DoxyCompactList}\small\item\em Runs gpio, update and draw in a loop until quit key pressed. \end{DoxyCompactList}\item 
-virtual void \doxymbox{\hyperlink{class_c_base4618_a544ee3e5c897a1ddfec3317eecd9ef97}{gpio}} (\doxymbox{\hyperlink{class_c_control}{CControl}} \&\doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}})=0
+virtual void \doxymbox{\hyperlink{class_c_base4618_a9c32f9f1cb6f8b8352ef3dabfed1b09a}{gpio}} (\doxymbox{\hyperlink{class_c_control}{CControl}} \&\doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}}, float \&percentage\+\_\+x, float \&percentage\+\_\+y, bool \&colour\+\_\+button\+\_\+pressed, bool \&reset\+\_\+button\+\_\+pressed)=0
 \begin{DoxyCompactList}\small\item\em gpio:\+ virtual method (defined in child) \end{DoxyCompactList}\item 
-virtual void \doxymbox{\hyperlink{class_c_base4618_a1e2f3c16eb99b5bfdd5d5254aee39ee6}{update}} ()=0
+virtual void \doxymbox{\hyperlink{class_c_base4618_a3619e2cea693382612f7dcd49cd543dd}{update}} (float \&percentage\+\_\+x, float \&percentage\+\_\+y, bool \&colour\+\_\+button\+\_\+pressed, cv::\+\+Point \&pt1, cv::\+\+Point \&pt2, int \&colour\+\_\+index)=0
 \begin{DoxyCompactList}\small\item\em update:\+ virtual method (defined in child) \end{DoxyCompactList}\item 
-virtual bool \doxymbox{\hyperlink{class_c_base4618_a8ba8e4c7a0f99f39ffcf0be8b243ebdb}{draw}} ()=0
+virtual bool \doxymbox{\hyperlink{class_c_base4618_a831d9dab801136aad6a83ae4dae3c90e}{draw}} (cv::\+\+Point \&pt1, cv::\+\+Point \&pt2, int \&colour\+\_\+index, bool \&reset\+\_\+button\+\_\+pressed)=0
 \begin{DoxyCompactList}\small\item\em draw:\+ virtual method (defined in child) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -45,7 +45,7 @@ CBase4618::\+\+CBase4618 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Contructor of a \doxylink{class_c_control}{CControl} object. 
+Contructor of a CBase object. 
 
 \Hypertarget{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52}\index{CBase4618@{CBase4618}!````~CBase4618@{\texorpdfstring{$\sim$}{\string~}CBase4618}}
 \index{````~CBase4618@{\texorpdfstring{$\sim$}{\string~}CBase4618}!CBase4618@{CBase4618}}
@@ -55,32 +55,32 @@ CBase4618::\+\texorpdfstring{$\sim$}{\string~}\+CBase4618 (\begin{DoxyParamCapti
 
 
 
-Destructor for a \doxylink{class_c_control}{CControl} object. 
+Destructor for a CBase object. 
 
 
 
 \label{doc-func-members}
 \Hypertarget{class_c_base4618_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_c_base4618_a8ba8e4c7a0f99f39ffcf0be8b243ebdb}\index{CBase4618@{CBase4618}!draw@{draw}}
+\Hypertarget{class_c_base4618_a831d9dab801136aad6a83ae4dae3c90e}\index{CBase4618@{CBase4618}!draw@{draw}}
 \index{draw@{draw}!CBase4618@{CBase4618}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily \label{class_c_base4618_a8ba8e4c7a0f99f39ffcf0be8b243ebdb} 
-virtual bool CBase4618::\+draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{class_c_base4618_a831d9dab801136aad6a83ae4dae3c90e} 
+virtual bool CBase4618::\+draw (\begin{DoxyParamCaption}\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{, }\item[{int \&}]{colour\+\_\+index}{, }\item[{bool \&}]{reset\+\_\+button\+\_\+pressed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
 draw:\+ virtual method (defined in child) 
 
+Performs the draw and erase function of the game. 
 
+Implemented in \doxymbox{\hyperlink{class_c_sketch_a1dc121fe3ed903e4201e026d419bbacf}{CSketch}}.
 
-Implemented in \doxymbox{\hyperlink{class_c_sketch_a93f276905cba79da1a18df36d193736f}{CSketch}}.
-
-\Hypertarget{class_c_base4618_a544ee3e5c897a1ddfec3317eecd9ef97}\index{CBase4618@{CBase4618}!gpio@{gpio}}
+\Hypertarget{class_c_base4618_a9c32f9f1cb6f8b8352ef3dabfed1b09a}\index{CBase4618@{CBase4618}!gpio@{gpio}}
 \index{gpio@{gpio}!CBase4618@{CBase4618}}
 \doxysubsubsection{\texorpdfstring{gpio()}{gpio()}}
-{\footnotesize\ttfamily \label{class_c_base4618_a544ee3e5c897a1ddfec3317eecd9ef97} 
-virtual void CBase4618::\+gpio (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_c_control}{CControl}} \&}]{comm}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{class_c_base4618_a9c32f9f1cb6f8b8352ef3dabfed1b09a} 
+virtual void CBase4618::\+gpio (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_c_control}{CControl}} \&}]{comm}{, }\item[{float \&}]{percentage\+\_\+x}{, }\item[{float \&}]{percentage\+\_\+y}{, }\item[{bool \&}]{colour\+\_\+button\+\_\+pressed}{, }\item[{bool \&}]{reset\+\_\+button\+\_\+pressed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -88,7 +88,7 @@ gpio:\+ virtual method (defined in child)
 
 Performs the read and write processes to interact with the Microcontroller. 
 
-Implemented in \doxymbox{\hyperlink{class_c_sketch_ad7b6934677df1efc7ee4355e124d6416}{CSketch}}.
+Implemented in \doxymbox{\hyperlink{class_c_sketch_af1d882d2274d33bd3279c62a87dcc24a}{CSketch}}.
 
 \Hypertarget{class_c_base4618_a535e816d735d10d6048dd39cd893d393}\index{CBase4618@{CBase4618}!run@{run}}
 \index{run@{run}!CBase4618@{CBase4618}}
@@ -100,19 +100,19 @@ void CBase4618::\+run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Runs gpio, update and draw in a loop until quit key pressed. 
 
-\Hypertarget{class_c_base4618_a1e2f3c16eb99b5bfdd5d5254aee39ee6}\index{CBase4618@{CBase4618}!update@{update}}
+\Hypertarget{class_c_base4618_a3619e2cea693382612f7dcd49cd543dd}\index{CBase4618@{CBase4618}!update@{update}}
 \index{update@{update}!CBase4618@{CBase4618}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily \label{class_c_base4618_a1e2f3c16eb99b5bfdd5d5254aee39ee6} 
-virtual void CBase4618::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{class_c_base4618_a3619e2cea693382612f7dcd49cd543dd} 
+virtual void CBase4618::\+update (\begin{DoxyParamCaption}\item[{float \&}]{percentage\+\_\+x}{, }\item[{float \&}]{percentage\+\_\+y}{, }\item[{bool \&}]{colour\+\_\+button\+\_\+pressed}{, }\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{, }\item[{int \&}]{colour\+\_\+index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
 update:\+ virtual method (defined in child) 
 
+updates the next coordinate of the drawing and sets the RGB LED output 
 
-
-Implemented in \doxymbox{\hyperlink{class_c_sketch_a3b7e2fa57fd26e4b812494268a5bbfbb}{CSketch}}.
+Implemented in \doxymbox{\hyperlink{class_c_sketch_a1ab4eb888473f001e81564f41df5106d}{CSketch}}.
 
 
 

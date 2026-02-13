@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['joystick_5fx_0',['JOYSTICK_X',['../_c_sketch_8cpp.html#ad77529dbdf84161b7b5f3874c707b9b9',1,'CSketch.cpp']]],
-  ['joystick_5fy_1',['JOYSTICK_Y',['../_c_sketch_8cpp.html#a6fac688dbc7bf507e91570ced2d90119',1,'CSketch.cpp']]]
+  ['recv_5fbuff_5fsize_0',['RECV_BUFF_SIZE',['../server_8cpp.html#a37a444a8817e1a688b2d3833f281a313',1,'server.cpp']]]
 ];

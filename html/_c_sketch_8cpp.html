@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lab4 Doxy: CSketch.cpp File Reference</title>
+<title>elex4618_doxy: CSketch.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Lab4 Doxy
+   <div id="projectname">elex4618_doxy
    </div>
   </td>
  </tr>
@@ -95,49 +95,332 @@ $(function(){initNavTree('_c_sketch_8cpp.html','',''); });
 <code>#include &quot;<a class="el" href="cvui_8h_source.html">cvui.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_c_sketch_8h_source.html">CSketch.h</a>&quot;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a41f13de7835bc4a65ec1f68fdb03d519" id="r_a41f13de7835bc4a65ec1f68fdb03d519"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a41f13de7835bc4a65ec1f68fdb03d519">IMGTYPE</a>&#160;&#160;&#160;CV_8UC3</td></tr>
-<tr class="memitem:ad77529dbdf84161b7b5f3874c707b9b9" id="r_ad77529dbdf84161b7b5f3874c707b9b9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad77529dbdf84161b7b5f3874c707b9b9">JOYSTICK_X</a>&#160;&#160;&#160;2</td></tr>
-<tr class="memitem:a6fac688dbc7bf507e91570ced2d90119" id="r_a6fac688dbc7bf507e91570ced2d90119"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6fac688dbc7bf507e91570ced2d90119">JOYSTICK_Y</a>&#160;&#160;&#160;26</td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a7b96fc3b511b4de2906e511f19af6eb0" id="r_a7b96fc3b511b4de2906e511f19af6eb0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7b96fc3b511b4de2906e511f19af6eb0">make_bounds</a> (cv::Point &amp;pt1, cv::Point &amp;pt2)</td></tr>
+<tr class="memitem:a86519813e81c3379c2ce9125b1dc1ea3" id="r_a86519813e81c3379c2ce9125b1dc1ea3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a86519813e81c3379c2ce9125b1dc1ea3">move_pencil</a> (cv::Point &amp;pt1, cv::Point &amp;pt2, float &amp;percentage_x, float &amp;percentage_y)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:abcf24bfe6f8a86829b1f3bc814adffd8" id="r_abcf24bfe6f8a86829b1f3bc814adffd8"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#abcf24bfe6f8a86829b1f3bc814adffd8">IMGTYPE</a> = CV_8UC3</td></tr>
+<tr class="memitem:a03266f629d6c4a7a152f7673c58be661" id="r_a03266f629d6c4a7a152f7673c58be661"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a03266f629d6c4a7a152f7673c58be661">JOYSTICK_X</a> = 2</td></tr>
+<tr class="memitem:ad78dee9ca7cf4b053adc00993b9c2fdc" id="r_ad78dee9ca7cf4b053adc00993b9c2fdc"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#ad78dee9ca7cf4b053adc00993b9c2fdc">JOYSTICK_Y</a> = 26</td></tr>
+<tr class="memitem:ad3d50f0f8ee43a941f2def58cd219ddd" id="r_ad3d50f0f8ee43a941f2def58cd219ddd"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#ad3d50f0f8ee43a941f2def58cd219ddd">ACCL_Y</a> = 23</td></tr>
+<tr class="memitem:a321af2105b918075e6566fab2713f7fc" id="r_a321af2105b918075e6566fab2713f7fc"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a321af2105b918075e6566fab2713f7fc">ACCL_Z</a> = 24</td></tr>
+<tr class="memitem:a6411721e9432bdd55551711f0af09ae9" id="r_a6411721e9432bdd55551711f0af09ae9"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a6411721e9432bdd55551711f0af09ae9">PUSH_BUTTON_2</a> = 42</td></tr>
+<tr class="memitem:a62c54c6c4523a58cd4741b6093e3e83f" id="r_a62c54c6c4523a58cd4741b6093e3e83f"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a62c54c6c4523a58cd4741b6093e3e83f">DIGITAL</a> = 0</td></tr>
+<tr class="memitem:a27648a1cd05da367e5ed615c59fc06ac" id="r_a27648a1cd05da367e5ed615c59fc06ac"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a27648a1cd05da367e5ed615c59fc06ac">BIG_BUTTON_1</a> = 32</td></tr>
+<tr class="memitem:aa394182c945a78b6112189176a6d2a21" id="r_aa394182c945a78b6112189176a6d2a21"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#aa394182c945a78b6112189176a6d2a21">BIG_BUTTON_2</a> = 33</td></tr>
+<tr class="memitem:af995b7988a8f7ffe0245d2ddbf2d8138" id="r_af995b7988a8f7ffe0245d2ddbf2d8138"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#af995b7988a8f7ffe0245d2ddbf2d8138">PIXEL_BOUNDS_BR</a> = 992</td></tr>
+<tr class="memitem:ad84169b9e105c8ddf5ce6c8c8df7ef4c" id="r_ad84169b9e105c8ddf5ce6c8c8df7ef4c"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#ad84169b9e105c8ddf5ce6c8c8df7ef4c">PIXEL_BOUNDS_UL</a> = 5</td></tr>
+<tr class="memitem:a2a1c27fbaafd5310fbae206111fe998c" id="r_a2a1c27fbaafd5310fbae206111fe998c"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a2a1c27fbaafd5310fbae206111fe998c">SLOW_BOUNDS_X</a> = 55</td></tr>
+<tr class="memitem:a4c27b1f025918d4a3c321471e0fea6b5" id="r_a4c27b1f025918d4a3c321471e0fea6b5"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a4c27b1f025918d4a3c321471e0fea6b5">FAST_BOUNDS_X</a> = 80</td></tr>
+<tr class="memitem:a9d584a836ce3adac5fa8046f01faee82" id="r_a9d584a836ce3adac5fa8046f01faee82"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a9d584a836ce3adac5fa8046f01faee82">SLOW_BOUNDS_Y</a> = 45</td></tr>
+<tr class="memitem:abdd832519ff6cca9668eeaef22884fb2" id="r_abdd832519ff6cca9668eeaef22884fb2"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#abdd832519ff6cca9668eeaef22884fb2">FAST_BOUNDS_Y</a> = 20</td></tr>
+<tr class="memitem:ae4cee39196424c87eb64aac6fa6e08f4" id="r_ae4cee39196424c87eb64aac6fa6e08f4"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#ae4cee39196424c87eb64aac6fa6e08f4">RGB_RED</a> = 39</td></tr>
+<tr class="memitem:aa07caedb618cc5c39de372f47fc4e02b" id="r_aa07caedb618cc5c39de372f47fc4e02b"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#aa07caedb618cc5c39de372f47fc4e02b">RGB_GRN</a> = 38</td></tr>
+<tr class="memitem:a828bda29625a95563b457e2b5bc5822f" id="r_a828bda29625a95563b457e2b5bc5822f"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a828bda29625a95563b457e2b5bc5822f">RGB_BLU</a> = 37</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="a41f13de7835bc4a65ec1f68fdb03d519" name="a41f13de7835bc4a65ec1f68fdb03d519"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41f13de7835bc4a65ec1f68fdb03d519">&#9670;&#160;</a></span>IMGTYPE</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a7b96fc3b511b4de2906e511f19af6eb0" name="a7b96fc3b511b4de2906e511f19af6eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b96fc3b511b4de2906e511f19af6eb0">&#9670;&#160;</a></span>make_bounds()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define IMGTYPE&#160;&#160;&#160;CV_8UC3</td>
+          <td class="memname">void make_bounds </td>
+          <td>(</td>
+          <td class="paramtype">cv::Point &amp;</td>          <td class="paramname"><span class="paramname"><em>pt1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Point &amp;</td>          <td class="paramname"><span class="paramname"><em>pt2</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad77529dbdf84161b7b5f3874c707b9b9" name="ad77529dbdf84161b7b5f3874c707b9b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad77529dbdf84161b7b5f3874c707b9b9">&#9670;&#160;</a></span>JOYSTICK_X</h2>
+<a id="a86519813e81c3379c2ce9125b1dc1ea3" name="a86519813e81c3379c2ce9125b1dc1ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86519813e81c3379c2ce9125b1dc1ea3">&#9670;&#160;</a></span>move_pencil()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define JOYSTICK_X&#160;&#160;&#160;2</td>
+          <td class="memname">void move_pencil </td>
+          <td>(</td>
+          <td class="paramtype">cv::Point &amp;</td>          <td class="paramname"><span class="paramname"><em>pt1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Point &amp;</td>          <td class="paramname"><span class="paramname"><em>pt2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>percentage_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>percentage_y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a6fac688dbc7bf507e91570ced2d90119" name="a6fac688dbc7bf507e91570ced2d90119"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fac688dbc7bf507e91570ced2d90119">&#9670;&#160;</a></span>JOYSTICK_Y</h2>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="ad3d50f0f8ee43a941f2def58cd219ddd" name="ad3d50f0f8ee43a941f2def58cd219ddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d50f0f8ee43a941f2def58cd219ddd">&#9670;&#160;</a></span>ACCL_Y</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define JOYSTICK_Y&#160;&#160;&#160;26</td>
+          <td class="memname">const int ACCL_Y = 23</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a321af2105b918075e6566fab2713f7fc" name="a321af2105b918075e6566fab2713f7fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a321af2105b918075e6566fab2713f7fc">&#9670;&#160;</a></span>ACCL_Z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ACCL_Z = 24</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27648a1cd05da367e5ed615c59fc06ac" name="a27648a1cd05da367e5ed615c59fc06ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27648a1cd05da367e5ed615c59fc06ac">&#9670;&#160;</a></span>BIG_BUTTON_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BIG_BUTTON_1 = 32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa394182c945a78b6112189176a6d2a21" name="aa394182c945a78b6112189176a6d2a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa394182c945a78b6112189176a6d2a21">&#9670;&#160;</a></span>BIG_BUTTON_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BIG_BUTTON_2 = 33</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62c54c6c4523a58cd4741b6093e3e83f" name="a62c54c6c4523a58cd4741b6093e3e83f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62c54c6c4523a58cd4741b6093e3e83f">&#9670;&#160;</a></span>DIGITAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int DIGITAL = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c27b1f025918d4a3c321471e0fea6b5" name="a4c27b1f025918d4a3c321471e0fea6b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c27b1f025918d4a3c321471e0fea6b5">&#9670;&#160;</a></span>FAST_BOUNDS_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int FAST_BOUNDS_X = 80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abdd832519ff6cca9668eeaef22884fb2" name="abdd832519ff6cca9668eeaef22884fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd832519ff6cca9668eeaef22884fb2">&#9670;&#160;</a></span>FAST_BOUNDS_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int FAST_BOUNDS_Y = 20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcf24bfe6f8a86829b1f3bc814adffd8" name="abcf24bfe6f8a86829b1f3bc814adffd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcf24bfe6f8a86829b1f3bc814adffd8">&#9670;&#160;</a></span>IMGTYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int IMGTYPE = CV_8UC3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03266f629d6c4a7a152f7673c58be661" name="a03266f629d6c4a7a152f7673c58be661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03266f629d6c4a7a152f7673c58be661">&#9670;&#160;</a></span>JOYSTICK_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int JOYSTICK_X = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad78dee9ca7cf4b053adc00993b9c2fdc" name="ad78dee9ca7cf4b053adc00993b9c2fdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78dee9ca7cf4b053adc00993b9c2fdc">&#9670;&#160;</a></span>JOYSTICK_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int JOYSTICK_Y = 26</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af995b7988a8f7ffe0245d2ddbf2d8138" name="af995b7988a8f7ffe0245d2ddbf2d8138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af995b7988a8f7ffe0245d2ddbf2d8138">&#9670;&#160;</a></span>PIXEL_BOUNDS_BR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PIXEL_BOUNDS_BR = 992</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad84169b9e105c8ddf5ce6c8c8df7ef4c" name="ad84169b9e105c8ddf5ce6c8c8df7ef4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad84169b9e105c8ddf5ce6c8c8df7ef4c">&#9670;&#160;</a></span>PIXEL_BOUNDS_UL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PIXEL_BOUNDS_UL = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6411721e9432bdd55551711f0af09ae9" name="a6411721e9432bdd55551711f0af09ae9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6411721e9432bdd55551711f0af09ae9">&#9670;&#160;</a></span>PUSH_BUTTON_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PUSH_BUTTON_2 = 42</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a828bda29625a95563b457e2b5bc5822f" name="a828bda29625a95563b457e2b5bc5822f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a828bda29625a95563b457e2b5bc5822f">&#9670;&#160;</a></span>RGB_BLU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int RGB_BLU = 37</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa07caedb618cc5c39de372f47fc4e02b" name="aa07caedb618cc5c39de372f47fc4e02b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07caedb618cc5c39de372f47fc4e02b">&#9670;&#160;</a></span>RGB_GRN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int RGB_GRN = 38</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4cee39196424c87eb64aac6fa6e08f4" name="ae4cee39196424c87eb64aac6fa6e08f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4cee39196424c87eb64aac6fa6e08f4">&#9670;&#160;</a></span>RGB_RED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int RGB_RED = 39</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a1c27fbaafd5310fbae206111fe998c" name="a2a1c27fbaafd5310fbae206111fe998c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a1c27fbaafd5310fbae206111fe998c">&#9670;&#160;</a></span>SLOW_BOUNDS_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int SLOW_BOUNDS_X = 55</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d584a836ce3adac5fa8046f01faee82" name="a9d584a836ce3adac5fa8046f01faee82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d584a836ce3adac5fa8046f01faee82">&#9670;&#160;</a></span>SLOW_BOUNDS_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int SLOW_BOUNDS_Y = 45</td>
         </tr>
       </table>
 </div><div class="memdoc">

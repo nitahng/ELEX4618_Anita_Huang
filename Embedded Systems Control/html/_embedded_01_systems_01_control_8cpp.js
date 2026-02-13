@@ -1,5 +1,7 @@
 var _embedded_01_systems_01_control_8cpp =
 [
+    [ "BIG_BUTTON_1", "_embedded_01_systems_01_control_8cpp.html#adb01f8d6ec97a34202acfab7368b09ee", null ],
+    [ "BIG_BUTTON_2", "_embedded_01_systems_01_control_8cpp.html#a447a131fdcd58f28411450700e2afe3c", null ],
     [ "FULLSCALE", "_embedded_01_systems_01_control_8cpp.html#a6c6834f383c96bce2cb7574c13954ae8", null ],
     [ "GREEN_LED", "_embedded_01_systems_01_control_8cpp.html#a01649d652fa50957c6ef3c32b1238038", null ],
     [ "HIGH", "_embedded_01_systems_01_control_8cpp.html#a5bb885982ff66a2e0a0a45a8ee9c35e2", null ],
@@ -18,7 +20,7 @@ var _embedded_01_systems_01_control_8cpp =
     ] ],
     [ "analog_loop", "_embedded_01_systems_01_control_8cpp.html#a2b5780a16e0fcc08a70ad8823d3f0d57", null ],
     [ "digital_loop", "_embedded_01_systems_01_control_8cpp.html#a3526fb38ddef3950dbadf81c6580a367", null ],
-    [ "main", "_embedded_01_systems_01_control_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ],
     [ "menu", "_embedded_01_systems_01_control_8cpp.html#a2a0e843767aeea4f433a28b9c54f573a", null ],
+    [ "run_lab3", "_embedded_01_systems_01_control_8cpp.html#a9fd1e40f740a0739fdaa791e372ec8c1", null ],
     [ "servo_loop", "_embedded_01_systems_01_control_8cpp.html#abacb45c68b9987d5dd3bebf5c65ea44d", null ]
 ];

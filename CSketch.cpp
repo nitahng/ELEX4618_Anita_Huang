@@ -69,8 +69,8 @@ void CSketch::gpio(CControl& comm, float &percentage_x, float &percentage_y, boo
 	reset_button_pressed = button2_input;
 
 	//Live Input Read
-	//std::cout << "ANALOG TEST: " << "X_CH" << JOYSTICK_X << " = " << raw_x << " (" << percentage_x << "%" << ") "
-	//	"    Y_CH" << JOYSTICK_Y << " = " << raw_y << " (" << percentage_y << "%" << ") " << " Button Press:" << colour_button_pressed<< "\n";
+	std::cout << "ANALOG TEST: " << "X_CH" << JOYSTICK_X << " = " << raw_x << " (" << percentage_x << "%" << ") "
+		"    Y_CH" << JOYSTICK_Y << " = " << raw_y << " (" << percentage_y << "%" << ") " << " Button Press:" << colour_button_pressed<< "\n";
 
 }
 
@@ -85,11 +85,11 @@ void CSketch::update(float& percentage_x, float& percentage_y, bool& colour_butt
 		make_bounds(pt1, pt2);
 		move_pencil(pt1, pt2, percentage_x, percentage_y);
 
-		int shake_y, shake_z;
-		float shake_y_pctg = comm.get_analog(ACCL_Y, shake_y);
-		float shake_z_pctg = comm.get_analog(ACCL_Z, shake_z);
-		std::cout << "\n\nANALOG TEST: " << "Y_CH" << ACCL_Y << " = " << shake_y << " (" << shake_y_pctg << "%" << ") "
-			"    Z_CH" << ACCL_Z << " = " << shake_z << " (" << shake_z_pctg << "%" << ") " << "\n";
+		//int shake_y, shake_z;
+		//float shake_y_pctg = comm.get_analog(ACCL_Y, shake_y);
+		//float shake_z_pctg = comm.get_analog(ACCL_Z, shake_z);
+		//std::cout << "\n\nANALOG TEST: " << "Y_CH" << ACCL_Y << " = " << shake_y << " (" << shake_y_pctg << "%" << ") "
+			//"    Z_CH" << ACCL_Z << " = " << shake_z << " (" << shake_z_pctg << "%" << ") " << "\n";
 
 		
 		if (colour_button_pressed) {

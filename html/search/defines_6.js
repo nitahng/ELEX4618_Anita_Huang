@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['push_5fbutton_5f2_0',['PUSH_BUTTON_2',['../_c_control_8cpp.html#a7ad2248bd76cfed96bda3bafe60ecdf9',1,'CControl.cpp']]]
+  ['sprintf_5fs_0',['sprintf_s',['../cvui_8h.html#a6b6019110450b61a0b4acc55d7d336ca',1,'cvui.h']]]
 ];

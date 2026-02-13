@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Lab4 Doxy", "index.html", [
+  [ "elex4618_doxy", "index.html", [
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -61,7 +61,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "4618___client_8cpp.html",
-"namespacecvui_1_1internal.html#ade86c43ba80e9fc04d50669a0bc2ca86"
+"namespacecvui_1_1internal.html#a629e27b195d5e3c5365aa01115a09dda"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

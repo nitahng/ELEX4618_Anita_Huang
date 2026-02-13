@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['recv_5fbuff_5fsize_0',['RECV_BUFF_SIZE',['../server_8cpp.html#a37a444a8817e1a688b2d3833f281a313',1,'server.cpp']]]
+  ['vsprintf_5fs_0',['vsprintf_s',['../cvui_8h.html#a803c6f2523bae626734a87a074e480e9',1,'cvui.h']]]
 ];

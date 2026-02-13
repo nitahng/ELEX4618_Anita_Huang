@@ -17,13 +17,14 @@ var searchData=
   ['set_5ftxim_14',['set_txim',['../class_c_server.html#a169fd953001f33e59cf0175cea094c5a',1,'CServer']]],
   ['setblocking_15',['setblocking',['../class_c_client.html#a01466b817058cbe4e4ca3621690b1174',1,'CClient::setblocking()'],['../class_c_server.html#ab9ab8a857c7ac985c528d38cf2201b93',1,'CServer::setblocking()']]],
   ['shortcut_16',['shortcut',['../structcvui_1_1cvui__label__t.html#a445ab321969960aab6ed0a630ba180d9',1,'cvui::cvui_label_t']]],
-  ['space_17',['space',['../namespacecvui.html#a6d5b286e112bab4de72fe2730500861b',1,'cvui']]],
-  ['sparkline_18',['sparkline',['../namespacecvui.html#afa18f5ee84da019b801a52f8b475efe6',1,'cvui::sparkline(cv::Mat &amp;theWhere, std::vector&lt; double &gt; &amp;theValues, int theX, int theY, int theWidth, int theHeight, unsigned int theColor=0x00FF00)'],['../namespacecvui.html#ad86d266052957f5bd60cec23287db2cd',1,'cvui::sparkline(std::vector&lt; double &gt; &amp;theValues, int theWidth, int theHeight, unsigned int theColor=0x00FF00)'],['../namespacecvui_1_1internal.html#a98d0d538ac1a8551100558e966b71005',1,'cvui::internal::sparkline()'],['../namespacecvui_1_1render.html#ab4b53b7712ce4501aa56b03b09996468',1,'cvui::render::sparkline()']]],
-  ['sprintf_5fs_19',['sprintf_s',['../cvui_8h.html#a6b6019110450b61a0b4acc55d7d336ca',1,'cvui.h']]],
-  ['squareside_20',['SquareSide',['../_lab4_8cpp.html#a14e0791894333a1f98127394048c8161',1,'Lab4.cpp']]],
-  ['start_21',['start',['../class_c_server.html#a6ce19d7a0606741610028a065ddddc57',1,'CServer']]],
-  ['stdafx_2ecpp_22',['stdafx.cpp',['../stdafx_8cpp.html',1,'']]],
-  ['stdafx_2eh_23',['stdafx.h',['../stdafx_8h.html',1,'']]],
-  ['step_24',['step',['../structcvui_1_1internal_1_1_trackbar_params.html#a10633ec609a0ec688b683f3eb90cae67',1,'cvui::internal::TrackbarParams']]],
-  ['stop_25',['stop',['../class_c_server.html#a31f0e23f00b4e506ab38bff799796358',1,'CServer']]]
+  ['slow_5fbounds_5fx_17',['SLOW_BOUNDS_X',['../_c_sketch_8cpp.html#a2a1c27fbaafd5310fbae206111fe998c',1,'CSketch.cpp']]],
+  ['slow_5fbounds_5fy_18',['SLOW_BOUNDS_Y',['../_c_sketch_8cpp.html#a9d584a836ce3adac5fa8046f01faee82',1,'CSketch.cpp']]],
+  ['space_19',['space',['../namespacecvui.html#a6d5b286e112bab4de72fe2730500861b',1,'cvui']]],
+  ['sparkline_20',['sparkline',['../namespacecvui.html#afa18f5ee84da019b801a52f8b475efe6',1,'cvui::sparkline(cv::Mat &amp;theWhere, std::vector&lt; double &gt; &amp;theValues, int theX, int theY, int theWidth, int theHeight, unsigned int theColor=0x00FF00)'],['../namespacecvui.html#ad86d266052957f5bd60cec23287db2cd',1,'cvui::sparkline(std::vector&lt; double &gt; &amp;theValues, int theWidth, int theHeight, unsigned int theColor=0x00FF00)'],['../namespacecvui_1_1internal.html#a98d0d538ac1a8551100558e966b71005',1,'cvui::internal::sparkline()'],['../namespacecvui_1_1render.html#ab4b53b7712ce4501aa56b03b09996468',1,'cvui::render::sparkline()']]],
+  ['sprintf_5fs_21',['sprintf_s',['../cvui_8h.html#a6b6019110450b61a0b4acc55d7d336ca',1,'cvui.h']]],
+  ['start_22',['start',['../class_c_server.html#a6ce19d7a0606741610028a065ddddc57',1,'CServer']]],
+  ['stdafx_2ecpp_23',['stdafx.cpp',['../stdafx_8cpp.html',1,'']]],
+  ['stdafx_2eh_24',['stdafx.h',['../stdafx_8h.html',1,'']]],
+  ['step_25',['step',['../structcvui_1_1internal_1_1_trackbar_params.html#a10633ec609a0ec688b683f3eb90cae67',1,'cvui::internal::TrackbarParams']]],
+  ['stop_26',['stop',['../class_c_server.html#a31f0e23f00b4e506ab38bff799796358',1,'CServer']]]
 ];

@@ -1,5 +1,6 @@
 var _c_control_8cpp =
 [
+    [ "BIG_BUTTON_2", "_c_control_8cpp.html#a447a131fdcd58f28411450700e2afe3c", null ],
     [ "bufferlen", "_c_control_8cpp.html#a6175ebfed37241fef932336b65821a5c", null ],
     [ "FULLSCALE", "_c_control_8cpp.html#a6c6834f383c96bce2cb7574c13954ae8", null ],
     [ "PUSH_BUTTON_2", "_c_control_8cpp.html#a7ad2248bd76cfed96bda3bafe60ecdf9", null ],

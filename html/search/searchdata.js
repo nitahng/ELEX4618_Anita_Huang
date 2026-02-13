@@ -9,7 +9,7 @@ var indexSectionsWithContent =
   6: "t",
   7: "t",
   8: "ads",
-  9: "_bcfijprsvw"
+  9: "_bcfprsvw"
 };
 
 var indexSectionNames =

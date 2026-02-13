@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ELEX4618 LAB3 CCONTROL: CControl.h Source File</title>
+<title>ELEX4618: Embedded Systems Control/CControl.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ELEX4618 LAB3 CCONTROL<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">ELEX4618<span id="projectnumber">&#160;1.0</span>
    </div>
    <div id="projectbrief">Doxygen documentation for the CControl class used in ELEX 4618.</div>
   </td>
@@ -118,16 +118,16 @@ $(function(){initNavTree('_c_control_8h_source.html','',''); });
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_control.html#a61133ac7527fc0b6c9d3a5e6a4f4a638">get_button</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_control.html#a0de5e252e54c23f5ccb9f15a2b3af97d">get_button</a>(<span class="keywordtype">int</span> channel,<a class="code hl_function" href="class_c_control.html#a6498500ff403327b5770a3acebed1d93">CControl</a>&amp; comm);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
 </div>
 <div class="ttc" id="aclass_c_control_html_a0bad8e51e54cb6f1e2a7b51d3a3940d3"><div class="ttname"><a href="class_c_control.html#a0bad8e51e54cb6f1e2a7b51d3a3940d3">CControl::get_data</a></div><div class="ttdeci">bool get_data(int type, int channel, int &amp;result)</div><div class="ttdoc">Retrieves data from the device.</div><div class="ttdef"><b>Definition</b> CControl.cpp:42</div></div>
+<div class="ttc" id="aclass_c_control_html_a0de5e252e54c23f5ccb9f15a2b3af97d"><div class="ttname"><a href="class_c_control.html#a0de5e252e54c23f5ccb9f15a2b3af97d">CControl::get_button</a></div><div class="ttdeci">bool get_button(int channel, CControl &amp;comm)</div><div class="ttdoc">Reads digital input and debounces it.</div><div class="ttdef"><b>Definition</b> CControl.cpp:113</div></div>
 <div class="ttc" id="aclass_c_control_html_a13f557815616ef66a8f5dd4b725d8c32"><div class="ttname"><a href="class_c_control.html#a13f557815616ef66a8f5dd4b725d8c32">CControl::set_data</a></div><div class="ttdeci">bool set_data(int type, int channel, int val)</div><div class="ttdoc">Sends data to the device.</div><div class="ttdef"><b>Definition</b> CControl.cpp:88</div></div>
 <div class="ttc" id="aclass_c_control_html_a3d1384d0e1ee2a4a478a798b46457468"><div class="ttname"><a href="class_c_control.html#a3d1384d0e1ee2a4a478a798b46457468">CControl::init_com</a></div><div class="ttdeci">void init_com(int comport)</div><div class="ttdoc">Initializes the serial communication port.</div><div class="ttdef"><b>Definition</b> CControl.cpp:27</div></div>
 <div class="ttc" id="aclass_c_control_html_a53e2227bfa3db92bab3e92a33962d1be"><div class="ttname"><a href="class_c_control.html#a53e2227bfa3db92bab3e92a33962d1be">CControl::get_analog</a></div><div class="ttdeci">float get_analog(int channel, int &amp;result)</div><div class="ttdoc">Function to return raw and percentage analog values.</div><div class="ttdef"><b>Definition</b> CControl.cpp:101</div></div>
-<div class="ttc" id="aclass_c_control_html_a61133ac7527fc0b6c9d3a5e6a4f4a638"><div class="ttname"><a href="class_c_control.html#a61133ac7527fc0b6c9d3a5e6a4f4a638">CControl::get_button</a></div><div class="ttdeci">void get_button()</div><div class="ttdoc">Reads digital input and debounces it.</div><div class="ttdef"><b>Definition</b> CControl.cpp:113</div></div>
 <div class="ttc" id="aclass_c_control_html_a6498500ff403327b5770a3acebed1d93"><div class="ttname"><a href="class_c_control.html#a6498500ff403327b5770a3acebed1d93">CControl::CControl</a></div><div class="ttdeci">CControl()</div><div class="ttdoc">Contructor of a CControl object.</div><div class="ttdef"><b>Definition</b> CControl.cpp:19</div></div>
 <div class="ttc" id="aclass_c_control_html_ab2ae420ef75b010c0c9078e597781105"><div class="ttname"><a href="class_c_control.html#ab2ae420ef75b010c0c9078e597781105">CControl::~CControl</a></div><div class="ttdeci">~CControl()</div><div class="ttdoc">Destructo the CControl object.</div><div class="ttdef"><b>Definition</b> CControl.cpp:23</div></div>
 <div class="ttc" id="aclass_c_control_html_aef87fbcfdcd323b1fdcf41be993e006c"><div class="ttname"><a href="class_c_control.html#aef87fbcfdcd323b1fdcf41be993e006c">CControl::_com</a></div><div class="ttdeci">Serial _com</div><div class="ttdoc">Serial communication object.</div><div class="ttdef"><b>Definition</b> CControl.h:29</div></div>
@@ -137,7 +137,7 @@ $(function(){initNavTree('_c_control_8h_source.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="_c_control_8h.html">CControl.h</a></li>
+    <li class="navelem"><a href="dir_b18323d68a509c304484a1aa7c8811ee.html">Embedded Systems Control</a></li><li class="navelem"><a href="_c_control_8h.html">CControl.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

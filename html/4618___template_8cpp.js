@@ -16,6 +16,7 @@ var 4618___template_8cpp =
     [ "main", "4618___template_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97", null ],
     [ "print_menu", "4618___template_8cpp.html#ae91d4cbee2dab64187187499dd0eecd4", null ],
     [ "process_msg", "4618___template_8cpp.html#a8f4d3ebe6069fb5d78b6f2490db4598d", null ],
+    [ "run_lab3", "4618___template_8cpp.html#a9fd1e40f740a0739fdaa791e372ec8c1", null ],
     [ "run_lab4", "4618___template_8cpp.html#a1698f75697ba752703cc46e66d274fe8", null ],
     [ "serverthread", "4618___template_8cpp.html#a048c6aae8c93cedbcc921a0e792a92f8", null ],
     [ "test_com", "4618___template_8cpp.html#ae8cd4b4bec4ae26f1280c8390e80cd7d", null ]
