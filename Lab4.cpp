@@ -7,9 +7,10 @@
 
 #define COM 3
 #define Canvas_Size 1000
+#define LAB4 4
 
-void run_lab4() {
+void run_lab4(){
 	CSketch sketch(cv::Size(Canvas_Size, Canvas_Size), COM);
-	sketch.run();
+	sketch.run(LAB4);
 
 }

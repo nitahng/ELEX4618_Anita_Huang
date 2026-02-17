@@ -43,9 +43,6 @@ protected:
     cv::Mat _canvas;
 
 
-
-
-
 public:
     /**
      * @brief Contructor of a CBase object.
@@ -61,8 +58,9 @@ public:
 
     /**
      * @brief Runs gpio, update and draw in a loop until quit key pressed.
+     * @param lab The lab specificifer to organize which variables to use
      */
-    void run();
+    void run(int lab);
 
 
 
@@ -70,16 +68,16 @@ public:
      * @brief gpio: virtual method (defined in child)
      * @brief Performs the read and write processes to interact with the Microcontroller.
      */
-    virtual void gpio(CControl& comm ,float &percentage_x, float &percentage_y, bool &colour_button_pressed, bool& reset_button_pressed) = 0;
+    virtual void gpio(CControl& comm ,float &percentage_x, float &percentage_y, bool &BIGBUTTON1_pressed, bool& BIGBUTTON2_pressed) = 0;
      
 
 
     /**
      * @brief update: virtual method (defined in child)
-     * @brief updates the next coordinate of the drawing and sets the RGB LED output 
+     * @brief updates the variables of the essential game functions 
  
     */
-    virtual void update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point& pt1, cv::Point& pt2, int &colour_index) = 0;
+    virtual void update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point& pt1, cv::Point& pt2, int &index, float& findex) = 0;
   
 
 

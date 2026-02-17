@@ -28,6 +28,12 @@
     <ClCompile Include="Embedded Systems Control\Embedded Systems Control.cpp">
       <Filter>Lab3Controller</Filter>
     </ClCompile>
+    <ClCompile Include="CPong.cpp">
+      <Filter>Lab5Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5.cpp">
+      <Filter>Lab5Pong</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CBase4618.h">
@@ -51,6 +57,9 @@
     <ClInclude Include="stdafx.h">
       <Filter>openCVstuff</Filter>
     </ClInclude>
+    <ClInclude Include="CPong.h">
+      <Filter>Lab5Pong</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CBASEandCONTROL">
@@ -67,6 +76,9 @@
     </Filter>
     <Filter Include="Lab3Controller">
       <UniqueIdentifier>{742064ee-787d-43d0-954d-411462399d85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lab5Pong">
+      <UniqueIdentifier>{54464f21-fe70-45c2-ac06-03dcbf48abc0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

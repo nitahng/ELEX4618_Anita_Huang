@@ -46,6 +46,10 @@ CSketch::CSketch(cv::Size canvassize, int comportnumber) {
 	comm.init_com(comportnumber);
 	cvui::init("Etch-A-Sketch");
 	_canvas = cv::Mat::zeros(canvassize, IMGTYPE);
+	pt1 = cv::Point(500, 500);
+	pt2 = cv::Point(501, 501);
+
+
 
 }
 
@@ -75,7 +79,7 @@ void CSketch::gpio(CControl& comm, float &percentage_x, float &percentage_y, boo
 }
 
 
-void CSketch::update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point &pt1, cv::Point& pt2, int &colour_index) {
+void CSketch::update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point &pt1, cv::Point& pt2, int &colour_index, float& findex) {
 		
 
 		std::vector <int> colour_channel = { RGB_RED , RGB_GRN, RGB_BLU };

@@ -17,7 +17,12 @@
  */
 class CSketch : public CBase4618 {
 
-private:
+
+
+protected:
+
+	cv::Point pt1;
+	cv::Point pt2;
 
 
 public:
@@ -51,7 +56,7 @@ public:
 	 * (joystick position, pushbuttons) and send output states if required
 	 */
 
-	void gpio(CControl& comm, float &percentage_x, float &percentage_y, bool &colour_button_pressed, bool& reset_button_pressed);
+	void gpio(CControl& comm, float &percentage_x, float &percentage_y, bool &BIGBUTTON1_button_pressed, bool &BIGBUTTON2_button_pressed);
 
 
 	/**
@@ -60,7 +65,7 @@ public:
 	 * Updates the internal game state using the most recent inputs obtained from
 	 * gpio(), such as cursor movement, colour selection, and reset requests.
 	 */
-	void update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point& pt1, cv::Point& pt2, int &colour_index);
+	void update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point& pt1, cv::Point& pt2, int &index, float &findex);
 
 
 

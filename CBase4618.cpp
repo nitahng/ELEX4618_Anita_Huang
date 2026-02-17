@@ -9,10 +9,13 @@
 #include <cmath>
 
 
+const int L_paddlemargin = 950;
+
+
 //Constructor
 CBase4618 ::CBase4618() {
 
-	CControl comm;
+	comm;
 
 }
 
@@ -22,30 +25,35 @@ CBase4618::~CBase4618() {
 }
 
 //Run Loop
-void CBase4618::run() {
+void CBase4618::run(int lab) {
+
+	int key;
 
 	cv::Point pt1;
 	cv::Point pt2;
-	pt1 = cv::Point(500, 500);
-	pt2 = cv::Point(501, 501);
-
-
-	int key;
 	float percentage_x = 0;
 	float percentage_y = 0;
-	bool reset_button_pressed = false;
-	bool colour_button_pressed = false;
+	int  index = 0; //an index that simply passes from update to draw if a condition is met
+	float  findex = 0; //an index that simply passes from update to draw if a condition is met
+	bool BIGBUTTON2_button_pressed = false;
+	bool BIGBUTTON1_button_pressed = false;
 
-	int colour_index = 0;
-
+	if (lab == 4) {
+		pt1 = cv::Point(500, 500);
+		pt2 = cv::Point(501, 501);
+	}
+	else if (lab == 5) {
+		pt1 = cv::Point(L_paddlemargin, 500);
+		pt2 = cv::Point(L_paddlemargin, 600);
+	}
 
 	while (true) {
 
-		gpio(comm, percentage_x, percentage_y, colour_button_pressed, reset_button_pressed);
+		gpio(comm, percentage_x, percentage_y, BIGBUTTON1_button_pressed, BIGBUTTON2_button_pressed);
 
-		update(percentage_x, percentage_y, colour_button_pressed, pt1, pt2, colour_index);
+		update(percentage_x, percentage_y, BIGBUTTON1_button_pressed, pt1, pt2, index, findex);
 
-		bool exit_pressed = draw(pt1, pt2, colour_index, reset_button_pressed); //must do imshow
+		bool exit_pressed = draw(pt1, pt2, index, BIGBUTTON2_button_pressed); //must do imshow
 
 		int key = cv::waitKey(1);
 
