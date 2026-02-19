@@ -2,57 +2,46 @@
 \hypertarget{_c_base4618_8h_source}{}\label{_c_base4618_8h_source}\doxymbox{\hyperlink{_c_base4618_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{stdafx_8h}{stdafx.h}}"{}}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_c_control_8h}{CControl.h}}"{}}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{cvui_8h}{cvui.h}}"{}}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
 \DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_c_base4618_abe2aad021452c08dd4a5726b44c5a0b7}{CBase4618}}}
-\DoxyCodeLine{00016\ \{}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{stdafx_8h}{stdafx.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_c_control_8h}{CControl.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{cvui_8h}{cvui.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
 \DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{class_c_control}{CControl}}\ \doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00043\ \ \ \ \ cv::Mat\ \doxymbox{\hyperlink{class_c_base4618_a1b925f757247b33ca2072f777f24582d}{\_canvas}};}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_c_base4618_abe2aad021452c08dd4a5726b44c5a0b7}{CBase4618}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00039\ \ \ \ \ \doxymbox{\hyperlink{class_c_control}{CControl}}\ \doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ cv::Mat\ \doxymbox{\hyperlink{class_c_base4618_a1b925f757247b33ca2072f777f24582d}{\_canvas}};}
 \DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00053\ \ \ \ \ \doxymbox{\hyperlink{class_c_base4618_abe2aad021452c08dd4a5726b44c5a0b7}{CBase4618}}();}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00058\ \ \ \ \ \doxymbox{\hyperlink{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52}{\string~CBase4618}}();}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_c_base4618_a535e816d735d10d6048dd39cd893d393}{run}}();}
-\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \doxymbox{\hyperlink{class_c_base4618_abe2aad021452c08dd4a5726b44c5a0b7}{CBase4618}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52}{\string~CBase4618}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_c_base4618_a160c6252026f840f4a1ec8ed36dc45be}{run}}(\textcolor{keywordtype}{int}\ lab);}
 \DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_c_base4618_a9c32f9f1cb6f8b8352ef3dabfed1b09a}{gpio}}(\doxymbox{\hyperlink{class_c_control}{CControl}}\&\ \doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}}\ ,\textcolor{keywordtype}{float}\ \&percentage\_x,\ \textcolor{keywordtype}{float}\ \&percentage\_y,\ \textcolor{keywordtype}{bool}\ \&colour\_button\_pressed,\ \textcolor{keywordtype}{bool}\&\ reset\_button\_pressed)\ =\ 0;}
-\DoxyCodeLine{00074\ \ \ \ \ \ }
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ }
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_c_base4618_a3619e2cea693382612f7dcd49cd543dd}{update}}(\textcolor{keywordtype}{float}\&\ percentage\_x,\ \textcolor{keywordtype}{float}\&\ percentage\_y,\ \textcolor{keywordtype}{bool}\&\ colour\_button\_pressed,\ cv::Point\&\ pt1,\ cv::Point\&\ pt2,\ \textcolor{keywordtype}{int}\ \&colour\_index)\ =\ 0;}
-\DoxyCodeLine{00083\ \ \ }
-\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_c_base4618_a53bfb17850ec7c01bdc537f0ffd948f2}{gpio}}(\doxymbox{\hyperlink{class_c_control}{CControl}}\&\ \doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}},}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\&\ percentage\_x,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\&\ percentage\_y,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\&\ BIGBUTTON1\_pressed,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\&\ BIGBUTTON2\_pressed)\ =\ 0;}
 \DoxyCodeLine{00085\ }
-\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_c_base4618_a831d9dab801136aad6a83ae4dae3c90e}{draw}}(cv::Point\&\ pt1,\ cv::Point\&\ pt2,\ \textcolor{keywordtype}{int}\&\ colour\_index,\ \textcolor{keywordtype}{bool}\&\ reset\_button\_pressed)\ =\ 0;}
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00093\ }
-\DoxyCodeLine{00094\ \};}
-\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_c_base4618_a2478f1589e4720960186881a51dc0000}{update}}(\textcolor{keywordtype}{float}\&\ percentage\_x,}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\&\ percentage\_y,}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\&\ colour\_button\_pressed,}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ cv::Point\&\ pt1,}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ cv::Point\&\ pt2,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\&\ index,}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\&\ findex)\ =\ 0;}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_c_base4618_a0c869d4920815af73a70ab91660c6dc0}{draw}}(cv::Point\&\ pt1,}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ cv::Point\&\ pt2,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\&\ colour\_index,}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\&\ reset\_button\_pressed,}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\&\ findex)\ =\ 0;}
+\DoxyCodeLine{00131\ \};}
 
 \end{DoxyCode}

@@ -91,6 +91,9 @@ $(function(){initNavTree('_c_sketch_8h.html','',''); });
   <div class="headertitle"><div class="title">CSketch.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Etch-A-Sketch child class for ELEX 4618.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="stdafx_8h_source.html">stdafx.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_c_base4618_8h_source.html">CBase4618.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_c_control_8h_source.html">CControl.h</a>&quot;</code><br />
@@ -102,7 +105,19 @@ Classes</h2></td></tr>
 <tr class="memitem:CSketch" id="r_CSketch"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_c_sketch.html">CSketch</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Etch-A-Sketch game implementation.  <a href="class_c_sketch.html#details">More...</a><br /></td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Etch-A-Sketch child class for ELEX 4618. </p>
+<p>Implements the lab/game-specific behavior by inheriting from <a class="el" href="class_c_base4618.html" title="CBase4618">CBase4618</a> and providing concrete implementations of:</p><ul>
+<li><a class="el" href="class_c_sketch.html#aba47f4d9cae9979becd1eab78f1225ef" title="CSketch::gpio">CSketch::gpio</a> (read joystick/buttons from the controller)</li>
+<li><a class="el" href="class_c_sketch.html#a14ea01ce11000de3b0a992b6cf1a3886" title="CSketch::update">CSketch::update</a> (update cursor/state; choose colour; interpret sensors)</li>
+<li><a class="el" href="class_c_sketch.html#ada6c93c04b584b4fb8593145db8cc5a2" title="CSketch::draw">CSketch::draw</a> (render the canvas + UI)</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd><span class="tt">percentage_x</span> and <span class="tt">percentage_y</span> are joystick <b>analog inputs</b> expressed as percentages. </dd>
+<dd>
+<span class="tt">index</span> is used as the <b>colour index</b> (selected drawing colour). </dd>
+<dd>
+<span class="tt">findex</span> is used for an <b>accelerometer-derived reading</b> (float) that is forwarded from update to draw. </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

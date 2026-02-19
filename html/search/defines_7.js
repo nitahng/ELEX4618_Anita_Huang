@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vsprintf_5fs_0',['vsprintf_s',['../cvui_8h.html#a803c6f2523bae626734a87a074e480e9',1,'cvui.h']]]
+  ['sprintf_5fs_0',['sprintf_s',['../cvui_8h.html#a6b6019110450b61a0b4acc55d7d336ca',1,'cvui.h']]]
 ];

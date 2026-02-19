@@ -102,41 +102,45 @@ Inheritance diagram for CSketch:</div>
  <div class="center">
   <img src="class_c_sketch.png" usemap="#CSketch_map" alt=""/>
   <map id="CSketch_map" name="CSketch_map">
-<area href="class_c_base4618.html" alt="CBase4618" shape="rect" coords="0,0,77,24"/>
+<area href="class_c_base4618.html" title="Abstract base class that defines the lab framework." alt="CBase4618" shape="rect" coords="0,0,77,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a440f38e17cbb421e8d51f8ab55aa9008" id="r_a440f38e17cbb421e8d51f8ab55aa9008"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a440f38e17cbb421e8d51f8ab55aa9008">CSketch</a> (cv::Size canvassize, int comportnumber)</td></tr>
-<tr class="memdesc:a440f38e17cbb421e8d51f8ab55aa9008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a new <a class="el" href="class_c_sketch.html" title="Etch-A-Sketch game implementation.">CSketch</a> object.  <br /></td></tr>
+<tr class="memdesc:a440f38e17cbb421e8d51f8ab55aa9008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_c_sketch.html" title="Etch-A-Sketch game implementation.">CSketch</a> object.  <br /></td></tr>
 <tr class="memitem:aca8c70005a0bca496ea9574e4da47f65" id="r_aca8c70005a0bca496ea9574e4da47f65"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aca8c70005a0bca496ea9574e4da47f65">~CSketch</a> ()</td></tr>
 <tr class="memdesc:aca8c70005a0bca496ea9574e4da47f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_c_sketch.html" title="Etch-A-Sketch game implementation.">CSketch</a> object.  <br /></td></tr>
-<tr class="memitem:af1d882d2274d33bd3279c62a87dcc24a" id="r_af1d882d2274d33bd3279c62a87dcc24a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af1d882d2274d33bd3279c62a87dcc24a">gpio</a> (<a class="el" href="class_c_control.html">CControl</a> &amp;<a class="el" href="class_c_base4618.html#ad96356974eaa37a8bcb152c1db1e7502">comm</a>, float &amp;percentage_x, float &amp;percentage_y, bool &amp;colour_button_pressed, bool &amp;reset_button_pressed)</td></tr>
-<tr class="memdesc:af1d882d2274d33bd3279c62a87dcc24a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle hardware I/O with the microcontroller.  <br /></td></tr>
-<tr class="memitem:a1ab4eb888473f001e81564f41df5106d" id="r_a1ab4eb888473f001e81564f41df5106d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1ab4eb888473f001e81564f41df5106d">update</a> (float &amp;percentage_x, float &amp;percentage_y, bool &amp;colour_button_pressed, cv::Point &amp;pt1, cv::Point &amp;pt2, int &amp;colour_index)</td></tr>
-<tr class="memdesc:a1ab4eb888473f001e81564f41df5106d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the Etch-A-Sketch state.  <br /></td></tr>
-<tr class="memitem:a1dc121fe3ed903e4201e026d419bbacf" id="r_a1dc121fe3ed903e4201e026d419bbacf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1dc121fe3ed903e4201e026d419bbacf">draw</a> (cv::Point &amp;pt1, cv::Point &amp;pt2, int &amp;colour_index, bool &amp;reset_button_pressed)</td></tr>
-<tr class="memdesc:a1dc121fe3ed903e4201e026d419bbacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the current frame to the canvas and display it.  <br /></td></tr>
+<tr class="memitem:aba47f4d9cae9979becd1eab78f1225ef" id="r_aba47f4d9cae9979becd1eab78f1225ef"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aba47f4d9cae9979becd1eab78f1225ef">gpio</a> (<a class="el" href="class_c_control.html">CControl</a> &amp;<a class="el" href="class_c_base4618.html#ad96356974eaa37a8bcb152c1db1e7502">comm</a>, float &amp;percentage_x, float &amp;percentage_y, bool &amp;BIGBUTTON1_button_pressed, bool &amp;BIGBUTTON2_button_pressed) override</td></tr>
+<tr class="memdesc:aba47f4d9cae9979becd1eab78f1225ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform hardware I/O (joystick + buttons) for the sketch.  <br /></td></tr>
+<tr class="memitem:a14ea01ce11000de3b0a992b6cf1a3886" id="r_a14ea01ce11000de3b0a992b6cf1a3886"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a14ea01ce11000de3b0a992b6cf1a3886">update</a> (float &amp;percentage_x, float &amp;percentage_y, bool &amp;colour_button_pressed, cv::Point &amp;<a class="el" href="#a090346e346076e5b94a9ed37318d441e">pt1</a>, cv::Point &amp;<a class="el" href="#a749128a195f33fff322391bb72ac5643">pt2</a>, int &amp;index, float &amp;findex) override</td></tr>
+<tr class="memdesc:a14ea01ce11000de3b0a992b6cf1a3886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update sketch state based on the latest inputs.  <br /></td></tr>
+<tr class="memitem:ada6c93c04b584b4fb8593145db8cc5a2" id="r_ada6c93c04b584b4fb8593145db8cc5a2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ada6c93c04b584b4fb8593145db8cc5a2">draw</a> (cv::Point &amp;<a class="el" href="#a090346e346076e5b94a9ed37318d441e">pt1</a>, cv::Point &amp;<a class="el" href="#a749128a195f33fff322391bb72ac5643">pt2</a>, int &amp;colour_index, bool &amp;reset_button_pressed, float &amp;findex) override</td></tr>
+<tr class="memdesc:ada6c93c04b584b4fb8593145db8cc5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the current frame and UI.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_c_base4618"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_c_base4618')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_c_base4618.html">CBase4618</a></td></tr>
 <tr class="memitem:abe2aad021452c08dd4a5726b44c5a0b7 inherit pub_methods_class_c_base4618" id="r_abe2aad021452c08dd4a5726b44c5a0b7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_c_base4618.html#abe2aad021452c08dd4a5726b44c5a0b7">CBase4618</a> ()</td></tr>
-<tr class="memdesc:abe2aad021452c08dd4a5726b44c5a0b7 inherit pub_methods_class_c_base4618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contructor of a CBase object.  <br /></td></tr>
-<tr class="memitem:a22c0de299cef06c4ef49ace3a5b0be52 inherit pub_methods_class_c_base4618" id="r_a22c0de299cef06c4ef49ace3a5b0be52"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_c_base4618.html#a22c0de299cef06c4ef49ace3a5b0be52">~CBase4618</a> ()</td></tr>
-<tr class="memdesc:a22c0de299cef06c4ef49ace3a5b0be52 inherit pub_methods_class_c_base4618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for a CBase object.  <br /></td></tr>
-<tr class="memitem:a535e816d735d10d6048dd39cd893d393 inherit pub_methods_class_c_base4618" id="r_a535e816d735d10d6048dd39cd893d393"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_c_base4618.html#a535e816d735d10d6048dd39cd893d393">run</a> ()</td></tr>
-<tr class="memdesc:a535e816d735d10d6048dd39cd893d393 inherit pub_methods_class_c_base4618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs gpio, update and draw in a loop until quit key pressed.  <br /></td></tr>
+<tr class="memdesc:abe2aad021452c08dd4a5726b44c5a0b7 inherit pub_methods_class_c_base4618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_c_base4618.html" title="Abstract base class that defines the lab framework.">CBase4618</a> object.  <br /></td></tr>
+<tr class="memitem:a22c0de299cef06c4ef49ace3a5b0be52 inherit pub_methods_class_c_base4618" id="r_a22c0de299cef06c4ef49ace3a5b0be52"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_c_base4618.html#a22c0de299cef06c4ef49ace3a5b0be52">~CBase4618</a> ()</td></tr>
+<tr class="memdesc:a22c0de299cef06c4ef49ace3a5b0be52 inherit pub_methods_class_c_base4618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_c_base4618.html" title="Abstract base class that defines the lab framework.">CBase4618</a> object.  <br /></td></tr>
+<tr class="memitem:a160c6252026f840f4a1ec8ed36dc45be inherit pub_methods_class_c_base4618" id="r_a160c6252026f840f4a1ec8ed36dc45be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_c_base4618.html#a160c6252026f840f4a1ec8ed36dc45be">run</a> (int lab)</td></tr>
+<tr class="memdesc:a160c6252026f840f4a1ec8ed36dc45be inherit pub_methods_class_c_base4618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop runner that repeatedly calls <a class="el" href="class_c_base4618.html#a53bfb17850ec7c01bdc537f0ffd948f2" title="Read/write hardware I/O for the controller (implemented in child class).">gpio()</a>, <a class="el" href="class_c_base4618.html#a2478f1589e4720960186881a51dc0000" title="Update the lab/game state (implemented in child class).">update()</a>, and <a class="el" href="class_c_base4618.html#a0c869d4920815af73a70ab91660c6dc0" title="Render the scene and perform draw/erase behavior (implemented in child class).">draw()</a>.  <br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a090346e346076e5b94a9ed37318d441e" id="r_a090346e346076e5b94a9ed37318d441e"><td class="memItemLeft">cv::Point&#160;</td><td class="memItemRight"><a class="el" href="#a090346e346076e5b94a9ed37318d441e">pt1</a></td></tr>
+<tr class="memdesc:a090346e346076e5b94a9ed37318d441e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous/anchor point for drawing.  <br /></td></tr>
+<tr class="memitem:a749128a195f33fff322391bb72ac5643" id="r_a749128a195f33fff322391bb72ac5643"><td class="memItemLeft">cv::Point&#160;</td><td class="memItemRight"><a class="el" href="#a749128a195f33fff322391bb72ac5643">pt2</a></td></tr>
+<tr class="memdesc:a749128a195f33fff322391bb72ac5643"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current cursor point for drawing.  <br /></td></tr>
 <tr class="inherit_header pro_attribs_class_c_base4618"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_c_base4618')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="class_c_base4618.html">CBase4618</a></td></tr>
 <tr class="memitem:ad96356974eaa37a8bcb152c1db1e7502 inherit pro_attribs_class_c_base4618" id="r_ad96356974eaa37a8bcb152c1db1e7502"><td class="memItemLeft"><a class="el" href="class_c_control.html">CControl</a>&#160;</td><td class="memItemRight"><a class="el" href="class_c_base4618.html#ad96356974eaa37a8bcb152c1db1e7502">comm</a></td></tr>
-<tr class="memdesc:ad96356974eaa37a8bcb152c1db1e7502 inherit pro_attribs_class_c_base4618"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_control.html" title="Handles serial communication and I/O control.">CControl</a> Communication Object.  <br /></td></tr>
+<tr class="memdesc:ad96356974eaa37a8bcb152c1db1e7502 inherit pro_attribs_class_c_base4618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Communication object for the TM4C123G board.  <br /></td></tr>
 <tr class="memitem:a1b925f757247b33ca2072f777f24582d inherit pro_attribs_class_c_base4618" id="r_a1b925f757247b33ca2072f777f24582d"><td class="memItemLeft">cv::Mat&#160;</td><td class="memItemRight"><a class="el" href="class_c_base4618.html#a1b925f757247b33ca2072f777f24582d">_canvas</a></td></tr>
-<tr class="memdesc:a1b925f757247b33ca2072f777f24582d inherit pro_attribs_class_c_base4618"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenCV Image Object.  <br /></td></tr>
+<tr class="memdesc:a1b925f757247b33ca2072f777f24582d inherit pro_attribs_class_c_base4618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing surface for the lab UI.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Etch-A-Sketch game implementation. </p>
-<p><a class="el" href="class_c_sketch.html" title="Etch-A-Sketch game implementation.">CSketch</a> inherits from <a class="el" href="class_c_base4618.html">CBase4618</a> and provides concrete implementations of the <a class="el" href="#af1d882d2274d33bd3279c62a87dcc24a" title="Handle hardware I/O with the microcontroller.">gpio()</a>, <a class="el" href="#a1ab4eb888473f001e81564f41df5106d" title="Update the Etch-A-Sketch state.">update()</a>, and <a class="el" href="#a1dc121fe3ed903e4201e026d419bbacf" title="Render the current frame to the canvas and display it.">draw()</a> methods for the Etch-A-Sketch application. It reads joystick/buttons via the microcontroller and renders drawing output onto an OpenCV canvas. </p>
+<p><a class="el" href="class_c_sketch.html" title="Etch-A-Sketch game implementation.">CSketch</a> inherits from <a class="el" href="class_c_base4618.html" title="CBase4618">CBase4618</a> and defines the Etch-A-Sketch behavior. It reads joystick/button inputs (and sensor data where applicable) via the TM4C123G, updates cursor state, and draws to an OpenCV canvas. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a440f38e17cbb421e8d51f8ab55aa9008" name="a440f38e17cbb421e8d51f8ab55aa9008"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a440f38e17cbb421e8d51f8ab55aa9008">&#9670;&#160;</a></span>CSketch()</h2>
@@ -157,12 +161,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor for a new <a class="el" href="class_c_sketch.html" title="Etch-A-Sketch game implementation.">CSketch</a> object. </p>
-<p>Initializes the Etch-A-Sketch game instance, including the drawing canvas size and communication configuration.</p>
+<p>Construct a new <a class="el" href="class_c_sketch.html" title="Etch-A-Sketch game implementation.">CSketch</a> object. </p>
+<p>Sets up the Etch-A-Sketch instance including canvas sizing and communication settings required to talk to the controller.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">canvasSize</td><td>Size of the drawing canvas (width/height). </td></tr>
-    <tr><td class="paramname">comportnumber</td><td>COM port number used to communicate with the controller. </td></tr>
+    <tr><td class="paramname">canvassize</td><td>Size of the drawing canvas (width, height). </td></tr>
+    <tr><td class="paramname">comportnumber</td><td>COM port number for controller communication. </td></tr>
   </table>
   </dd>
 </dl>
@@ -185,13 +189,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destroy the <a class="el" href="class_c_sketch.html" title="Etch-A-Sketch game implementation.">CSketch</a> object. </p>
-<p>Cleans up any resources owned by the sketch instance. </p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a1dc121fe3ed903e4201e026d419bbacf" name="a1dc121fe3ed903e4201e026d419bbacf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dc121fe3ed903e4201e026d419bbacf">&#9670;&#160;</a></span>draw()</h2>
+<a id="ada6c93c04b584b4fb8593145db8cc5a2" name="ada6c93c04b584b4fb8593145db8cc5a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6c93c04b584b4fb8593145db8cc5a2">&#9670;&#160;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,25 +220,47 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>reset_button_pressed</em></span>&#160;)</td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>reset_button_pressed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>findex</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Render the current frame to the canvas and display it. </p>
-<p>Draws the UI elements and the Etch-A-Sketch output onto the OpenCV canvas, then displays the resulting image on screen. </p>
+<p>Draw the current frame and UI. </p>
+<p>Renders the Etch-A-Sketch drawing to the canvas, applies the currently selected colour via <span class="tt">colour_index</span>, and may use the accelerometer reading (<span class="tt">findex</span>) for extra behavior (e.g., shake-to-erase, tilt effects, etc.).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname"><a class="el" href="#a090346e346076e5b94a9ed37318d441e" title="Previous/anchor point for drawing.">pt1</a></td><td>Previous/anchor point for drawing. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname"><a class="el" href="#a749128a195f33fff322391bb72ac5643" title="Current cursor point for drawing.">pt2</a></td><td>Current point for drawing. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colour_index</td><td>Selected colour index used for drawing. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reset_button_pressed</td><td>True if reset/clear button is pressed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">findex</td><td>Accelerometer reading forwarded from <a class="el" href="#a14ea01ce11000de3b0a992b6cf1a3886" title="Update sketch state based on the latest inputs.">update()</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>Continue running / keep drawing frames. </td></tr>
+    <tr><td class="paramname">false</td><td>Exit request (stop the main loop). </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implements <a class="el" href="class_c_base4618.html#a831d9dab801136aad6a83ae4dae3c90e">CBase4618</a>.</p>
+<p>Implements <a class="el" href="class_c_base4618.html#a0c869d4920815af73a70ab91660c6dc0">CBase4618</a>.</p>
 
 </div>
 </div>
-<a id="af1d882d2274d33bd3279c62a87dcc24a" name="af1d882d2274d33bd3279c62a87dcc24a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1d882d2274d33bd3279c62a87dcc24a">&#9670;&#160;</a></span>gpio()</h2>
+<a id="aba47f4d9cae9979becd1eab78f1225ef" name="aba47f4d9cae9979becd1eab78f1225ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba47f4d9cae9979becd1eab78f1225ef">&#9670;&#160;</a></span>gpio()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,30 +286,40 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>colour_button_pressed</em></span>, </td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>BIGBUTTON1_button_pressed</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>reset_button_pressed</em></span>&#160;)</td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>BIGBUTTON2_button_pressed</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Handle hardware I/O with the microcontroller. </p>
-<p>Performs the read/write communication needed to retrieve input states (joystick position, pushbuttons) and send output states if required </p>
+<p>Perform hardware I/O (joystick + buttons) for the sketch. </p>
+<p>Reads the joystick analog values (as percentages) and button states from the microcontroller via <a class="el" href="class_c_control.html" title="CControl">CControl</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname"><a class="el" href="class_c_base4618.html#ad96356974eaa37a8bcb152c1db1e7502" title="Communication object for the TM4C123G board.">comm</a></td><td>Communication interface to the TM4C123G board. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">percentage_x</td><td>Joystick X position as a percentage. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">percentage_y</td><td>Joystick Y position as a percentage. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">BIGBUTTON1_button_pressed</td><td>True if BIGBUTTON1 is pressed. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">BIGBUTTON2_button_pressed</td><td>True if BIGBUTTON2 is pressed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implements <a class="el" href="class_c_base4618.html#a9c32f9f1cb6f8b8352ef3dabfed1b09a">CBase4618</a>.</p>
+<p>Implements <a class="el" href="class_c_base4618.html#a53bfb17850ec7c01bdc537f0ffd948f2">CBase4618</a>.</p>
 
 </div>
 </div>
-<a id="a1ab4eb888473f001e81564f41df5106d" name="a1ab4eb888473f001e81564f41df5106d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ab4eb888473f001e81564f41df5106d">&#9670;&#160;</a></span>update()</h2>
+<a id="a14ea01ce11000de3b0a992b6cf1a3886" name="a14ea01ce11000de3b0a992b6cf1a3886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ea01ce11000de3b0a992b6cf1a3886">&#9670;&#160;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,20 +355,91 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>colour_index</em></span>&#160;)</td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>findex</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Update the Etch-A-Sketch state. </p>
-<p>Updates the internal game state using the most recent inputs obtained from <a class="el" href="#af1d882d2274d33bd3279c62a87dcc24a" title="Handle hardware I/O with the microcontroller.">gpio()</a>, such as cursor movement, colour selection, and reset requests. </p>
+<p>Update sketch state based on the latest inputs. </p>
+<p>Uses joystick percentages to update cursor motion, updates the line endpoints (<a class="el" href="#a090346e346076e5b94a9ed37318d441e" title="pt1">pt1</a>, <a class="el" href="#a749128a195f33fff322391bb72ac5643" title="pt2">pt2</a>), and manages colour selection / reset logic.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">percentage_x</td><td>Joystick X position as a percentage. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">percentage_y</td><td>Joystick Y position as a percentage. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colour_button_pressed</td><td>True if the colour-change button is pressed. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname"><a class="el" href="#a090346e346076e5b94a9ed37318d441e" title="Previous/anchor point for drawing.">pt1</a></td><td>Previous/anchor point for drawing. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname"><a class="el" href="#a749128a195f33fff322391bb72ac5643" title="Current cursor point for drawing.">pt2</a></td><td>Current point for drawing. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">index</td><td>Colour index (selected colour). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">findex</td><td>Accelerometer reading (float) forwarded to <a class="el" href="#ada6c93c04b584b4fb8593145db8cc5a2" title="Draw the current frame and UI.">draw()</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd><span class="tt">index</span> is specifically used as the colour selector for drawing. </dd>
+<dd>
+<span class="tt">findex</span> is specifically used to carry an accelerometer-derived value from <a class="el" href="#a14ea01ce11000de3b0a992b6cf1a3886" title="update">update</a> into <a class="el" href="#ada6c93c04b584b4fb8593145db8cc5a2" title="draw">draw</a>. </dd></dl>
 
-<p>Implements <a class="el" href="class_c_base4618.html#a3619e2cea693382612f7dcd49cd543dd">CBase4618</a>.</p>
+<p>Implements <a class="el" href="class_c_base4618.html#a2478f1589e4720960186881a51dc0000">CBase4618</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a090346e346076e5b94a9ed37318d441e" name="a090346e346076e5b94a9ed37318d441e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a090346e346076e5b94a9ed37318d441e">&#9670;&#160;</a></span>pt1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Point CSketch::pt1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Previous/anchor point for drawing. </p>
+<p>Typically represents the last cursor location used to draw a line segment to <a class="el" href="#a749128a195f33fff322391bb72ac5643" title="pt2">pt2</a>. </p>
+
+</div>
+</div>
+<a id="a749128a195f33fff322391bb72ac5643" name="a749128a195f33fff322391bb72ac5643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a749128a195f33fff322391bb72ac5643">&#9670;&#160;</a></span>pt2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Point CSketch::pt2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Current cursor point for drawing. </p>
+<p>Typically represents the updated cursor location computed during <a class="el" href="#a14ea01ce11000de3b0a992b6cf1a3886" title="update">update</a>. </p>
 
 </div>
 </div>

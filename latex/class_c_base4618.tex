@@ -2,6 +2,11 @@
 \hypertarget{class_c_base4618}{}\label{class_c_base4618}\index{CBase4618@{CBase4618}}
 
 
+Abstract base class that defines the lab framework.  
+
+
+
+
 {\ttfamily \+\#include $<$CBase4618.\+h$>$}
 
 Inheritance diagram for CBase4618:\+\begin{figure}[H]
@@ -14,25 +19,35 @@ Inheritance diagram for CBase4618:\+\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_c_base4618_abe2aad021452c08dd4a5726b44c5a0b7}{CBase4618}} ()
-\begin{DoxyCompactList}\small\item\em Contructor of a CBase object. \end{DoxyCompactList}\item 
-\doxymbox{\hyperlink{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52}{\texorpdfstring{$\sim$}{\string~}\+CBase4618}} ()
-\begin{DoxyCompactList}\small\item\em Destructor for a CBase object. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{class_c_base4618_a535e816d735d10d6048dd39cd893d393}{run}} ()
-\begin{DoxyCompactList}\small\item\em Runs gpio, update and draw in a loop until quit key pressed. \end{DoxyCompactList}\item 
-virtual void \doxymbox{\hyperlink{class_c_base4618_a9c32f9f1cb6f8b8352ef3dabfed1b09a}{gpio}} (\doxymbox{\hyperlink{class_c_control}{CControl}} \&\doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}}, float \&percentage\+\_\+x, float \&percentage\+\_\+y, bool \&colour\+\_\+button\+\_\+pressed, bool \&reset\+\_\+button\+\_\+pressed)=0
-\begin{DoxyCompactList}\small\item\em gpio:\+ virtual method (defined in child) \end{DoxyCompactList}\item 
-virtual void \doxymbox{\hyperlink{class_c_base4618_a3619e2cea693382612f7dcd49cd543dd}{update}} (float \&percentage\+\_\+x, float \&percentage\+\_\+y, bool \&colour\+\_\+button\+\_\+pressed, cv::\+\+Point \&pt1, cv::\+\+Point \&pt2, int \&colour\+\_\+index)=0
-\begin{DoxyCompactList}\small\item\em update:\+ virtual method (defined in child) \end{DoxyCompactList}\item 
-virtual bool \doxymbox{\hyperlink{class_c_base4618_a831d9dab801136aad6a83ae4dae3c90e}{draw}} (cv::\+\+Point \&pt1, cv::\+\+Point \&pt2, int \&colour\+\_\+index, bool \&reset\+\_\+button\+\_\+pressed)=0
-\begin{DoxyCompactList}\small\item\em draw:\+ virtual method (defined in child) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_c_base4618}{CBase4618} object. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52}{\texorpdfstring{$\sim$}{\string~}\+CBase4618}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_c_base4618}{CBase4618} object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_c_base4618_a160c6252026f840f4a1ec8ed36dc45be}{run}} (int lab)
+\begin{DoxyCompactList}\small\item\em Main loop runner that repeatedly calls \doxylink{class_c_base4618_a53bfb17850ec7c01bdc537f0ffd948f2}{gpio()}, \doxylink{class_c_base4618_a2478f1589e4720960186881a51dc0000}{update()}, and \doxylink{class_c_base4618_a0c869d4920815af73a70ab91660c6dc0}{draw()}. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_c_base4618_a53bfb17850ec7c01bdc537f0ffd948f2}{gpio}} (\doxymbox{\hyperlink{class_c_control}{CControl}} \&\doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}}, float \&percentage\+\_\+x, float \&percentage\+\_\+y, bool \&BIGBUTTON1\+\_\+pressed, bool \&BIGBUTTON2\+\_\+pressed)=0
+\begin{DoxyCompactList}\small\item\em Read/\+write hardware I/\+O for the controller (implemented in child class). \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_c_base4618_a2478f1589e4720960186881a51dc0000}{update}} (float \&percentage\+\_\+x, float \&percentage\+\_\+y, bool \&colour\+\_\+button\+\_\+pressed, cv::\+\+Point \&pt1, cv::\+\+Point \&pt2, int \&index, float \&findex)=0
+\begin{DoxyCompactList}\small\item\em Update the lab/\+game state (implemented in child class). \end{DoxyCompactList}\item 
+virtual bool \doxymbox{\hyperlink{class_c_base4618_a0c869d4920815af73a70ab91660c6dc0}{draw}} (cv::\+\+Point \&pt1, cv::\+\+Point \&pt2, int \&colour\+\_\+index, bool \&reset\+\_\+button\+\_\+pressed, float \&findex)=0
+\begin{DoxyCompactList}\small\item\em Render the scene and perform draw/\+erase behavior (implemented in child class). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_c_control}{CControl}} \doxymbox{\hyperlink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}}
-\begin{DoxyCompactList}\small\item\em \doxylink{class_c_control}{CControl} Communication Object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Communication object for the TM4\+C123G board. \end{DoxyCompactList}\item 
 cv::\+\+Mat \doxymbox{\hyperlink{class_c_base4618_a1b925f757247b33ca2072f777f24582d}{\+\_\+canvas}}
-\begin{DoxyCompactList}\small\item\em Open\+CV Image Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Drawing surface for the lab UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Abstract base class that defines the lab framework. 
+
+Child classes must implement:\+
+\begin{DoxyItemize}
+\item \doxylink{class_c_base4618_a53bfb17850ec7c01bdc537f0ffd948f2}{gpio} (read/\+write controller I/\+O)
+\item \doxylink{class_c_base4618_a2478f1589e4720960186881a51dc0000}{update} (compute next state)
+\item \doxylink{class_c_base4618_a0c869d4920815af73a70ab91660c6dc0}{draw} (render based on current state) 
+\end{DoxyItemize}
 
 \label{doc-constructors}
 \Hypertarget{class_c_base4618_doc-constructors}
@@ -45,74 +60,140 @@ CBase4618::\+\+CBase4618 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Contructor of a CBase object. 
+Construct a new \doxylink{class_c_base4618}{CBase4618} object. 
 
 \Hypertarget{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52}\index{CBase4618@{CBase4618}!````~CBase4618@{\texorpdfstring{$\sim$}{\string~}CBase4618}}
 \index{````~CBase4618@{\texorpdfstring{$\sim$}{\string~}CBase4618}!CBase4618@{CBase4618}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CBase4618()}{\string~CBase4618()}}
 {\footnotesize\ttfamily \label{class_c_base4618_a22c0de299cef06c4ef49ace3a5b0be52} 
-CBase4618::\+\texorpdfstring{$\sim$}{\string~}\+CBase4618 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+CBase4618::\+\texorpdfstring{$\sim$}{\string~}\+CBase4618 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Destructor for a CBase object. 
+Destroy the \doxylink{class_c_base4618}{CBase4618} object. 
 
 
 
 \label{doc-func-members}
 \Hypertarget{class_c_base4618_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_c_base4618_a831d9dab801136aad6a83ae4dae3c90e}\index{CBase4618@{CBase4618}!draw@{draw}}
+\Hypertarget{class_c_base4618_a0c869d4920815af73a70ab91660c6dc0}\index{CBase4618@{CBase4618}!draw@{draw}}
 \index{draw@{draw}!CBase4618@{CBase4618}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily \label{class_c_base4618_a831d9dab801136aad6a83ae4dae3c90e} 
-virtual bool CBase4618::\+draw (\begin{DoxyParamCaption}\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{, }\item[{int \&}]{colour\+\_\+index}{, }\item[{bool \&}]{reset\+\_\+button\+\_\+pressed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{class_c_base4618_a0c869d4920815af73a70ab91660c6dc0} 
+virtual bool CBase4618::\+draw (\begin{DoxyParamCaption}\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{, }\item[{int \&}]{colour\+\_\+index}{, }\item[{bool \&}]{reset\+\_\+button\+\_\+pressed}{, }\item[{float \&}]{findex}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-draw:\+ virtual method (defined in child) 
+Render the scene and perform draw/\+erase behavior (implemented in child class). 
 
-Performs the draw and erase function of the game. 
+Uses state prepared in \doxylink{class_c_base4618_a2478f1589e4720960186881a51dc0000}{update} (e.\+g., points, indices, and flags) to render graphics onto the canvas.
 
-Implemented in \doxymbox{\hyperlink{class_c_sketch_a1dc121fe3ed903e4201e026d419bbacf}{CSketch}}.
 
-\Hypertarget{class_c_base4618_a9c32f9f1cb6f8b8352ef3dabfed1b09a}\index{CBase4618@{CBase4618}!gpio@{gpio}}
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em pt1} & First point used for drawing (previous/\+anchor point). \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em pt2} & Second point used for drawing (current point). \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em colour\+\_\+index} & Selected colour index used by \doxylink{class_c_base4618_a0c869d4920815af73a70ab91660c6dc0}{draw()}. \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em reset\+\_\+button\+\_\+pressed} & True if reset/\+clear button is pressed. \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em findex} & General-\/purpose float value forwarded from \doxylink{class_c_base4618_a2478f1589e4720960186881a51dc0000}{update()}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Continue running. \\
+\hline
+{\em false} & Request exit from the main loop (quit condition). \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \doxymbox{\hyperlink{class_c_pong_ab5ee8634231fa88b0d9e7d4008ab1dea}{CPong}}, and \doxymbox{\hyperlink{class_c_sketch_ada6c93c04b584b4fb8593145db8cc5a2}{CSketch}}.
+
+\Hypertarget{class_c_base4618_a53bfb17850ec7c01bdc537f0ffd948f2}\index{CBase4618@{CBase4618}!gpio@{gpio}}
 \index{gpio@{gpio}!CBase4618@{CBase4618}}
 \doxysubsubsection{\texorpdfstring{gpio()}{gpio()}}
-{\footnotesize\ttfamily \label{class_c_base4618_a9c32f9f1cb6f8b8352ef3dabfed1b09a} 
-virtual void CBase4618::\+gpio (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_c_control}{CControl}} \&}]{comm}{, }\item[{float \&}]{percentage\+\_\+x}{, }\item[{float \&}]{percentage\+\_\+y}{, }\item[{bool \&}]{colour\+\_\+button\+\_\+pressed}{, }\item[{bool \&}]{reset\+\_\+button\+\_\+pressed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{class_c_base4618_a53bfb17850ec7c01bdc537f0ffd948f2} 
+virtual void CBase4618::\+gpio (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_c_control}{CControl}} \&}]{comm}{, }\item[{float \&}]{percentage\+\_\+x}{, }\item[{float \&}]{percentage\+\_\+y}{, }\item[{bool \&}]{BIGBUTTON1\+\_\+pressed}{, }\item[{bool \&}]{BIGBUTTON2\+\_\+pressed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-gpio:\+ virtual method (defined in child) 
+Read/\+write hardware I/\+O for the controller (implemented in child class). 
 
-Performs the read and write processes to interact with the Microcontroller. 
+Reads analog inputs (as percentages) and button states from the controller /\+ microcontroller interface.
 
-Implemented in \doxymbox{\hyperlink{class_c_sketch_af1d882d2274d33bd3279c62a87dcc24a}{CSketch}}.
 
-\Hypertarget{class_c_base4618_a535e816d735d10d6048dd39cd893d393}\index{CBase4618@{CBase4618}!run@{run}}
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \doxylink{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}{comm}} & Communication interface to the TM4\+C123G board. \\
+\hline
+\doxymbox{\texttt{out}}  & {\em percentage\+\_\+x} & Joystick X position as a percentage (analog input). \\
+\hline
+\doxymbox{\texttt{out}}  & {\em percentage\+\_\+y} & Joystick Y position as a percentage (analog input). \\
+\hline
+\doxymbox{\texttt{out}}  & {\em BIGBUTTON1\+\_\+pressed} & True if BIGBUTTON1 is pressed. \\
+\hline
+\doxymbox{\texttt{out}}  & {\em BIGBUTTON2\+\_\+pressed} & True if BIGBUTTON2 is pressed. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \doxymbox{\hyperlink{class_c_pong_a0feec5254f0e713fa9a9cccc29f7fac0}{CPong}}, and \doxymbox{\hyperlink{class_c_sketch_aba47f4d9cae9979becd1eab78f1225ef}{CSketch}}.
+
+\Hypertarget{class_c_base4618_a160c6252026f840f4a1ec8ed36dc45be}\index{CBase4618@{CBase4618}!run@{run}}
 \index{run@{run}!CBase4618@{CBase4618}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily \label{class_c_base4618_a535e816d735d10d6048dd39cd893d393} 
-void CBase4618::\+run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_c_base4618_a160c6252026f840f4a1ec8ed36dc45be} 
+void CBase4618::\+run (\begin{DoxyParamCaption}\item[{int}]{lab}{}\end{DoxyParamCaption})}
 
 
 
-Runs gpio, update and draw in a loop until quit key pressed. 
+Main loop runner that repeatedly calls \doxylink{class_c_base4618_a53bfb17850ec7c01bdc537f0ffd948f2}{gpio()}, \doxylink{class_c_base4618_a2478f1589e4720960186881a51dc0000}{update()}, and \doxylink{class_c_base4618_a0c869d4920815af73a70ab91660c6dc0}{draw()}. 
 
-\Hypertarget{class_c_base4618_a3619e2cea693382612f7dcd49cd543dd}\index{CBase4618@{CBase4618}!update@{update}}
+Runs until a quit condition is met (e.\+g., quit key pressed).
+
+
+\begin{DoxyParams}{Parameters}
+{\em lab} & Lab identifier used to select/\+organize lab-\/specific behavior. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_base4618_a2478f1589e4720960186881a51dc0000}\index{CBase4618@{CBase4618}!update@{update}}
 \index{update@{update}!CBase4618@{CBase4618}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily \label{class_c_base4618_a3619e2cea693382612f7dcd49cd543dd} 
-virtual void CBase4618::\+update (\begin{DoxyParamCaption}\item[{float \&}]{percentage\+\_\+x}{, }\item[{float \&}]{percentage\+\_\+y}{, }\item[{bool \&}]{colour\+\_\+button\+\_\+pressed}{, }\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{, }\item[{int \&}]{colour\+\_\+index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \label{class_c_base4618_a2478f1589e4720960186881a51dc0000} 
+virtual void CBase4618::\+update (\begin{DoxyParamCaption}\item[{float \&}]{percentage\+\_\+x}{, }\item[{float \&}]{percentage\+\_\+y}{, }\item[{bool \&}]{colour\+\_\+button\+\_\+pressed}{, }\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{, }\item[{int \&}]{index}{, }\item[{float \&}]{findex}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-update:\+ virtual method (defined in child) 
+Update the lab/\+game state (implemented in child class). 
 
-updates the next coordinate of the drawing and sets the RGB LED output 
+Consumes the latest inputs (e.\+g., joystick percentages) and updates internal state variables used for drawing and interaction.
 
-Implemented in \doxymbox{\hyperlink{class_c_sketch_a1ab4eb888473f001e81564f41df5106d}{CSketch}}.
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em percentage\+\_\+x} & Joystick X as a percentage (analog input). \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em percentage\+\_\+y} & Joystick Y as a percentage (analog input). \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em colour\+\_\+button\+\_\+pressed} & True if the colour/\+change button is pressed. \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em pt1} & First point used for drawing (previous/\+anchor point). \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em pt2} & Second point used for drawing (current point). \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em index} & General-\/purpose integer value to pass from \doxylink{class_c_base4618_a2478f1589e4720960186881a51dc0000}{update()} to \doxylink{class_c_base4618_a0c869d4920815af73a70ab91660c6dc0}{draw()}. \\
+\hline
+\doxymbox{\texttt{in,out}}  & {\em findex} & General-\/purpose float value to pass from \doxylink{class_c_base4618_a2478f1589e4720960186881a51dc0000}{update()} to \doxylink{class_c_base4618_a0c869d4920815af73a70ab91660c6dc0}{draw()}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+{\ttfamily index} and {\ttfamily findex} are not limited to analog inputs—use them for any state you want to carry into \doxylink{class_c_base4618_a0c869d4920815af73a70ab91660c6dc0}{draw}. 
+\end{DoxyNote}
+
+
+Implemented in \doxymbox{\hyperlink{class_c_pong_a370310cb31cf1590d9c8be0461055a0d}{CPong}}, and \doxymbox{\hyperlink{class_c_sketch_a14ea01ce11000de3b0a992b6cf1a3886}{CSketch}}.
 
 
 
@@ -127,9 +208,9 @@ cv::\+\+Mat CBase4618::\+\+\_\+canvas\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Open\+CV Image Object. 
+Drawing surface for the lab UI. 
 
-The image screen for the drawing surface of the Etch-\/\+A-\/\+Sketch All Images and Graphics for the labs are processed within this object. \Hypertarget{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}\index{CBase4618@{CBase4618}!comm@{comm}}
+Open\+CV image buffer used as the main canvas for all graphics and processing. \Hypertarget{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502}\index{CBase4618@{CBase4618}!comm@{comm}}
 \index{comm@{comm}!CBase4618@{CBase4618}}
 \doxysubsubsection{\texorpdfstring{comm}{comm}}
 {\footnotesize\ttfamily \label{class_c_base4618_ad96356974eaa37a8bcb152c1db1e7502} 
@@ -137,9 +218,9 @@ The image screen for the drawing surface of the Etch-\/\+A-\/\+Sketch All Images
 
 
 
-\doxylink{class_c_control}{CControl} Communication Object. 
+Communication object for the TM4\+C123G board. 
 
-Handles low-\/level communication with the TM4\+C123G board, including board initialization and Get and Set functions. 
+Handles low-\/level communication with the microcontroller, including board initialization and GPIO Get/\+\+Set style functions. 
 
 The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
 \item 

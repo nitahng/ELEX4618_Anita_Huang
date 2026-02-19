@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "CBase4618", "class_c_base4618.html", [
+      [ "CPong", "class_c_pong.html", null ],
       [ "CSketch", "class_c_sketch.html", null ]
     ] ],
     [ "CClient", "class_c_client.html", null ],

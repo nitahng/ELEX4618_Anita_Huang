@@ -2,7 +2,7 @@
 \hypertarget{_c_base4618_8h}{}\label{_c_base4618_8h}\index{CBase4618.h@{CBase4618.h}}
 
 
-Class definition for \doxylink{class_c_base4618}{CBase4618}.  
+Base class shared by all ELEX 4618 labs.  
 
 
 {\ttfamily \+\#include "{}stdafx.\+h"{}}\newline
@@ -13,10 +13,16 @@ Class definition for \doxylink{class_c_base4618}{CBase4618}.
 \begin{DoxyCompactItemize}
 \item 
 class \doxymbox{\hyperlink{class_c_base4618}{CBase4618}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Abstract base class that defines the lab framework. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Class definition for \doxylink{class_c_base4618}{CBase4618}. 
+Base class shared by all ELEX 4618 labs. 
 
-This class will hold common code used in all of the following labs for this course. An essential encapsulation of the functionalities to use the controller. 
+Provides the common “game loop” interface and shared resources for labs that use the TM4\+C123G controller + Open\+CV/\+cvui rendering. Child classes implement hardware I/\+O, state updates, and drawing behavior.
+
+\begin{DoxyNote}{Note}
+The joystick percentages ({\ttfamily percentage\+\_\+x}, {\ttfamily percentage\+\_\+y}) represent {\bfseries{analog inputs}} normalized to a percentage range. 
+
+{\ttfamily index} and {\ttfamily findex} are {\bfseries{general-\/purpose state values}} (integer/\+float) used to pass any data from update to draw. 
+\end{DoxyNote}

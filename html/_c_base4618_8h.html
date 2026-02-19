@@ -92,7 +92,7 @@ $(function(){initNavTree('_c_base4618_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Class definition for <a class="el" href="class_c_base4618.html">CBase4618</a>.  
+<p>Base class shared by all ELEX 4618 labs.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="stdafx_8h_source.html">stdafx.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_c_control_8h_source.html">CControl.h</a>&quot;</code><br />
@@ -104,10 +104,14 @@ $(function(){initNavTree('_c_base4618_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:CBase4618" id="r_CBase4618"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_c_base4618.html">CBase4618</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class that defines the lab framework.  <a href="class_c_base4618.html#details">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class definition for <a class="el" href="class_c_base4618.html">CBase4618</a>. </p>
-<p>This class will hold common code used in all of the following labs for this course. An essential encapsulation of the functionalities to use the controller. </p>
+<div class="textblock"><p>Base class shared by all ELEX 4618 labs. </p>
+<p>Provides the common “game loop” interface and shared resources for labs that use the TM4C123G controller + OpenCV/cvui rendering. Child classes implement hardware I/O, state updates, and drawing behavior.</p>
+<dl class="section note"><dt>Note</dt><dd>The joystick percentages (<span class="tt">percentage_x</span>, <span class="tt">percentage_y</span>) represent <b>analog inputs</b> normalized to a percentage range. </dd>
+<dd>
+<span class="tt">index</span> and <span class="tt">findex</span> are <b>general-purpose state values</b> (integer/float) used to pass any data from update to draw. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

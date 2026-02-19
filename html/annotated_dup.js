@@ -13,6 +13,7 @@ var annotated_dup =
     [ "CBase4618", "class_c_base4618.html", "class_c_base4618" ],
     [ "CClient", "class_c_client.html", "class_c_client" ],
     [ "CControl", "class_c_control.html", "class_c_control" ],
+    [ "CPong", "class_c_pong.html", "class_c_pong" ],
     [ "CServer", "class_c_server.html", "class_c_server" ],
     [ "CSketch", "class_c_sketch.html", "class_c_sketch" ],
     [ "Serial", "class_serial.html", "class_serial" ]

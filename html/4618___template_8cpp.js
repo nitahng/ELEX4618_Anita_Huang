@@ -18,6 +18,7 @@ var 4618___template_8cpp =
     [ "process_msg", "4618___template_8cpp.html#a8f4d3ebe6069fb5d78b6f2490db4598d", null ],
     [ "run_lab3", "4618___template_8cpp.html#a9fd1e40f740a0739fdaa791e372ec8c1", null ],
     [ "run_lab4", "4618___template_8cpp.html#a1698f75697ba752703cc46e66d274fe8", null ],
+    [ "run_lab5", "4618___template_8cpp.html#a0c9074a619df3d77a0331f39125171d0", null ],
     [ "serverthread", "4618___template_8cpp.html#a048c6aae8c93cedbcc921a0e792a92f8", null ],
     [ "test_com", "4618___template_8cpp.html#ae8cd4b4bec4ae26f1280c8390e80cd7d", null ]
 ];

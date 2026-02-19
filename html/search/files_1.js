@@ -6,7 +6,9 @@ var searchData=
   ['ccontrol_2eh_3',['CControl.h',['../_c_control_8h.html',1,'']]],
   ['client_2ecpp_4',['Client.cpp',['../_client_8cpp.html',1,'']]],
   ['client_2eh_5',['Client.h',['../_client_8h.html',1,'']]],
-  ['csketch_2ecpp_6',['CSketch.cpp',['../_c_sketch_8cpp.html',1,'']]],
-  ['csketch_2eh_7',['CSketch.h',['../_c_sketch_8h.html',1,'']]],
-  ['cvui_2eh_8',['cvui.h',['../cvui_8h.html',1,'']]]
+  ['cpong_2ecpp_6',['CPong.cpp',['../_c_pong_8cpp.html',1,'']]],
+  ['cpong_2eh_7',['CPong.h',['../_c_pong_8h.html',1,'']]],
+  ['csketch_2ecpp_8',['CSketch.cpp',['../_c_sketch_8cpp.html',1,'']]],
+  ['csketch_2eh_9',['CSketch.h',['../_c_sketch_8h.html',1,'']]],
+  ['cvui_2eh_10',['cvui.h',['../cvui_8h.html',1,'']]]
 ];

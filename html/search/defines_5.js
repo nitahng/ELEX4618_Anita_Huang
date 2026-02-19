@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['recv_5fbuff_5fsize_0',['RECV_BUFF_SIZE',['../server_8cpp.html#a37a444a8817e1a688b2d3833f281a313',1,'server.cpp']]]
+  ['push_5fbutton_5f2_0',['PUSH_BUTTON_2',['../_c_control_8cpp.html#a7ad2248bd76cfed96bda3bafe60ecdf9',1,'CControl.cpp']]]
 ];

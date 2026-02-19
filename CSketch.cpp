@@ -49,8 +49,6 @@ CSketch::CSketch(cv::Size canvassize, int comportnumber) {
 	pt1 = cv::Point(500, 500);
 	pt2 = cv::Point(501, 501);
 
-
-
 }
 
 
@@ -73,13 +71,13 @@ void CSketch::gpio(CControl& comm, float &percentage_x, float &percentage_y, boo
 	reset_button_pressed = button2_input;
 
 	//Live Input Read
-	std::cout << "ANALOG TEST: " << "X_CH" << JOYSTICK_X << " = " << raw_x << " (" << percentage_x << "%" << ") "
-		"    Y_CH" << JOYSTICK_Y << " = " << raw_y << " (" << percentage_y << "%" << ") " << " Button Press:" << colour_button_pressed<< "\n";
+	//std::cout << "ANALOG TEST: " << "X_CH" << JOYSTICK_X << " = " << raw_x << " (" << percentage_x << "%" << ") "
+	//	"    Y_CH" << JOYSTICK_Y << " = " << raw_y << " (" << percentage_y << "%" << ") " << " Button Press:" << colour_button_pressed<< "\n";
 
 }
 
 
-void CSketch::update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point &pt1, cv::Point& pt2, int &colour_index, float& findex) {
+void CSketch::update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point &pt1, cv::Point& pt2, int &colour_index, float& findex,cv::Point& n1, cv::Point &n2) {
 		
 
 		std::vector <int> colour_channel = { RGB_RED , RGB_GRN, RGB_BLU };
@@ -89,12 +87,14 @@ void CSketch::update(float& percentage_x, float& percentage_y, bool& colour_butt
 		make_bounds(pt1, pt2);
 		move_pencil(pt1, pt2, percentage_x, percentage_y);
 
-		//int shake_y, shake_z;
-		//float shake_y_pctg = comm.get_analog(ACCL_Y, shake_y);
-		//float shake_z_pctg = comm.get_analog(ACCL_Z, shake_z);
-		//std::cout << "\n\nANALOG TEST: " << "Y_CH" << ACCL_Y << " = " << shake_y << " (" << shake_y_pctg << "%" << ") "
-			//"    Z_CH" << ACCL_Z << " = " << shake_z << " (" << shake_z_pctg << "%" << ") " << "\n";
+		int shake_y, shake_z;
+		float shake_y_pctg = comm.get_analog(ACCL_Y, shake_y);
+		float shake_z_pctg = comm.get_analog(ACCL_Z, shake_z);
 
+		//std::cout << "\n\nANALOG TEST: " << "Y_CH" << ACCL_Y << " = " << shake_y << " (" << shake_y_pctg << "%" << ") "
+	//		"    Z_CH" << ACCL_Z << " = " << shake_z << " (" << shake_z_pctg << "%" << ") " << "\n";
+
+		findex = shake_z_pctg;
 		
 		if (colour_button_pressed) {
 
@@ -109,7 +109,7 @@ void CSketch::update(float& percentage_x, float& percentage_y, bool& colour_butt
 }
 
 
-bool CSketch::draw(cv::Point &pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed) {
+bool CSketch::draw(cv::Point &pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed, float& findex, cv::Point &n1, int &spd) {
 
 	//Colour Selection
 	std::vector <cv::Scalar> colours = {
@@ -131,13 +131,15 @@ bool CSketch::draw(cv::Point &pt1, cv::Point& pt2, int& colour_index, bool& rese
 
 	cv::putText(_canvas, colour_text.at(colour_index), colour_text_position, cv::FONT_HERSHEY_SIMPLEX, 1, colours.at(colour_index), 2, cv::LINE_AA);
 
-	if (cvui::button(_canvas, 20, 70, "Reset") || reset_button_pressed == true) {
-		cv::Size canvassize = cv::Size(1000, 1000);
-		_canvas = cv::Mat::zeros(canvassize, IMGTYPE);
-	}
+
 	if (cvui::button(_canvas, 100, 70, "Exit")) {
 		return 0;
 	}
+	if (cvui::button(_canvas, 20, 70, "Reset") || reset_button_pressed == true || findex < 35) {
+		cv::Size canvassize = cv::Size(1000, 1000);
+		_canvas = cv::Mat::zeros(canvassize, IMGTYPE);
+	}
+
 
 
 	//Draw Game

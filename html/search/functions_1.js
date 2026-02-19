@@ -11,7 +11,8 @@ var searchData=
   ['connect_5fsocket_8',['connect_socket',['../class_c_client.html#aaa46e0b64686feac7ae21e2798285140',1,'CClient']]],
   ['context_9',['context',['../namespacecvui.html#a4b606bbafaac6bc3ff025d035e3f597d',1,'cvui']]],
   ['counter_10',['counter',['../namespacecvui.html#ad8e0668674779283ebddc328b65b9820',1,'cvui::counter(cv::Mat &amp;theWhere, int theX, int theY, int *theValue, int theStep=1, const char *theFormat=&quot;%d&quot;)'],['../namespacecvui.html#a631bb12de6b93e76e6899d572849d953',1,'cvui::counter(cv::Mat &amp;theWhere, int theX, int theY, double *theValue, double theStep=0.5, const char *theFormat=&quot;%.2f&quot;)'],['../namespacecvui.html#ab2261c21421de06c263e1d367926e2e5',1,'cvui::counter(int *theValue, int theStep=1, const char *theFormat=&quot;%d&quot;)'],['../namespacecvui.html#abd9747156cfb15d42e00b754bc8775ab',1,'cvui::counter(double *theValue, double theStep=0.5, const char *theFormat=&quot;%.2f&quot;)'],['../namespacecvui_1_1internal.html#a84752acc8db949011d2accf6c0ad0298',1,'cvui::internal::counter(cvui_block_t &amp;theBlock, int theX, int theY, int *theValue, int theStep, const char *theFormat)'],['../namespacecvui_1_1internal.html#a2ce7fc37a5967e1df6c0bc12105e81ff',1,'cvui::internal::counter(cvui_block_t &amp;theBlock, int theX, int theY, double *theValue, double theStep, const char *theFormat)'],['../namespacecvui_1_1render.html#a4b60ff9746eeabf7c37df967c7980e6f',1,'cvui::render::counter()']]],
-  ['createlabel_11',['createLabel',['../namespacecvui_1_1internal.html#a40b70366d2d130b7203359d27024bf83',1,'cvui::internal']]],
-  ['cserver_12',['CServer',['../class_c_server.html#aa3277fb7ded9c4d7a60747805d527c29',1,'CServer']]],
-  ['csketch_13',['CSketch',['../class_c_sketch.html#a440f38e17cbb421e8d51f8ab55aa9008',1,'CSketch']]]
+  ['cpong_11',['CPong',['../class_c_pong.html#ad2968b430ff8c4dba83512b5b7b0efe1',1,'CPong']]],
+  ['createlabel_12',['createLabel',['../namespacecvui_1_1internal.html#a40b70366d2d130b7203359d27024bf83',1,'cvui::internal']]],
+  ['cserver_13',['CServer',['../class_c_server.html#aa3277fb7ded9c4d7a60747805d527c29',1,'CServer']]],
+  ['csketch_14',['CSketch',['../class_c_sketch.html#a440f38e17cbb421e8d51f8ab55aa9008',1,'CSketch']]]
 ];

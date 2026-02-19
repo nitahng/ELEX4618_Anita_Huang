@@ -5,7 +5,7 @@
 #include "CSketch.h"
 #include "CBase4618.h"
 
-#define COM 3
+#define COM 4
 #define Canvas_Size 1000
 #define LAB4 4
 

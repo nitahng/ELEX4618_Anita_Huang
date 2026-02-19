@@ -1,5 +1,10 @@
 \doxysection{CSketch.\+h File Reference}
 \hypertarget{_c_sketch_8h}{}\label{_c_sketch_8h}\index{CSketch.h@{CSketch.h}}
+
+
+Etch-\/\+A-\/\+Sketch child class for ELEX 4618.  
+
+
 {\ttfamily \+\#include "{}stdafx.\+h"{}}\newline
 {\ttfamily \+\#include "{}CBase4618.\+h"{}}\newline
 {\ttfamily \+\#include "{}CControl.\+h"{}}\newline
@@ -8,3 +13,22 @@
 \item 
 class \doxymbox{\hyperlink{class_c_sketch}{CSketch}}
 \begin{DoxyCompactList}\small\item\em Etch-\/\+A-\/\+Sketch game implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Etch-\/\+A-\/\+Sketch child class for ELEX 4618. 
+
+Implements the lab/\+game-\/specific behavior by inheriting from \doxylink{class_c_base4618}{CBase4618} and providing concrete implementations of:\+
+\begin{DoxyItemize}
+\item \doxylink{class_c_sketch_aba47f4d9cae9979becd1eab78f1225ef}{CSketch::\+gpio} (read joystick/\+buttons from the controller)
+\item \doxylink{class_c_sketch_a14ea01ce11000de3b0a992b6cf1a3886}{CSketch::\+update} (update cursor/\+state; choose colour; interpret sensors)
+\item \doxylink{class_c_sketch_ada6c93c04b584b4fb8593145db8cc5a2}{CSketch::\+draw} (render the canvas + UI)
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+{\ttfamily percentage\+\_\+x} and {\ttfamily percentage\+\_\+y} are joystick {\bfseries{analog inputs}} expressed as percentages. 
+
+{\ttfamily index} is used as the {\bfseries{colour index}} (selected drawing colour). 
+
+{\ttfamily findex} is used for an {\bfseries{accelerometer-\/derived reading}} (float) that is forwarded from update to draw. 
+\end{DoxyNote}

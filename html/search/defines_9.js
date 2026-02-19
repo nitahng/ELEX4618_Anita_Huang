@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vsprintf_5fs_0',['vsprintf_s',['../cvui_8h.html#a803c6f2523bae626734a87a074e480e9',1,'cvui.h']]]
+  ['win4618_0',['WIN4618',['../_client_8h.html#adf248df97f7f345267f74aadcaf24d6c',1,'WIN4618:&#160;Client.h'],['../server_8h.html#adf248df97f7f345267f74aadcaf24d6c',1,'WIN4618:&#160;server.h']]]
 ];

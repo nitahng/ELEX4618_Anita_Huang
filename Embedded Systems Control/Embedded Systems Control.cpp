@@ -46,7 +46,7 @@ enum Type {
 void run_lab3()
 {
     CControl comm;
-    int comport_number = 3;
+    int comport_number = 4;
     comm.init_com(comport_number);
 
 

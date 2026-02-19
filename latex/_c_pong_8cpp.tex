@@ -1,0 +1,184 @@
+\doxysection{CPong.\+cpp File Reference}
+\hypertarget{_c_pong_8cpp}{}\label{_c_pong_8cpp}\index{CPong.cpp@{CPong.cpp}}
+{\ttfamily \+\#include "{}stdafx.\+h"{}}\newline
+{\ttfamily \+\#include "{}CPong.\+h"{}}\newline
+{\ttfamily \+\#include "{}cvui.\+h"{}}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$thread$>$}\newline
+{\ttfamily \+\#include "{}math.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{_c_pong_8cpp_ab0df82f0879a9c1f68946b948173b106}{make\+\_\+bounds\+\_\+pong}} (cv::\+\+Point \&pt1, cv::\+\+Point \&pt2)
+\item 
+void \doxymbox{\hyperlink{_c_pong_8cpp_af4587178fad5fef6e86fc57dafac85b9}{move\+\_\+paddle}} (cv::\+\+Point \&pt1, cv::\+\+Point \&pt2, float \&percentage\+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_abcf24bfe6f8a86829b1f3bc814adffd8}{IMGTYPE}} = CV\+\_\+8\+UC3
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_a03266f629d6c4a7a152f7673c58be661}{JOYSTICK\+\_\+X}} = 2
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_ad78dee9ca7cf4b053adc00993b9c2fdc}{JOYSTICK\+\_\+Y}} = 26
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_ad3d50f0f8ee43a941f2def58cd219ddd}{ACCL\+\_\+Y}} = 23
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_a321af2105b918075e6566fab2713f7fc}{ACCL\+\_\+Z}} = 24
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_a6411721e9432bdd55551711f0af09ae9}{PUSH\+\_\+\+BUTTON\+\_\+2}} = 42
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_a62c54c6c4523a58cd4741b6093e3e83f}{DIGITAL}} = 0
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_a27648a1cd05da367e5ed615c59fc06ac}{BIG\+\_\+\+BUTTON\+\_\+1}} = 32
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_aa394182c945a78b6112189176a6d2a21}{BIG\+\_\+\+BUTTON\+\_\+2}} = 33
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_ada024024fd9989b0c3902382c96f458f}{PIXEL\+\_\+\+BOUNDS\+\_\+B}} = 792
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_aafb48a20df588fe3344aa6c7219e86ee}{PIXEL\+\_\+\+BOUNDS\+\_\+U}} = 5
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_a2a1c27fbaafd5310fbae206111fe998c}{SLOW\+\_\+\+BOUNDS\+\_\+X}} = 55
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_a4c27b1f025918d4a3c321471e0fea6b5}{FAST\+\_\+\+BOUNDS\+\_\+X}} = 80
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_a9d584a836ce3adac5fa8046f01faee82}{SLOW\+\_\+\+BOUNDS\+\_\+Y}} = 45
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_abdd832519ff6cca9668eeaef22884fb2}{FAST\+\_\+\+BOUNDS\+\_\+Y}} = 20
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_ae4cee39196424c87eb64aac6fa6e08f4}{RGB\+\_\+\+RED}} = 39
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_aa07caedb618cc5c39de372f47fc4e02b}{RGB\+\_\+\+GRN}} = 38
+\item 
+const int \doxymbox{\hyperlink{_c_pong_8cpp_a828bda29625a95563b457e2b5bc5822f}{RGB\+\_\+\+BLU}} = 37
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_c_pong_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_c_pong_8cpp_ab0df82f0879a9c1f68946b948173b106}\index{CPong.cpp@{CPong.cpp}!make\_bounds\_pong@{make\_bounds\_pong}}
+\index{make\_bounds\_pong@{make\_bounds\_pong}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{make\_bounds\_pong()}{make\_bounds\_pong()}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_ab0df82f0879a9c1f68946b948173b106} 
+void make\+\_\+bounds\+\_\+pong (\begin{DoxyParamCaption}\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_c_pong_8cpp_af4587178fad5fef6e86fc57dafac85b9}\index{CPong.cpp@{CPong.cpp}!move\_paddle@{move\_paddle}}
+\index{move\_paddle@{move\_paddle}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{move\_paddle()}{move\_paddle()}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_af4587178fad5fef6e86fc57dafac85b9} 
+void move\+\_\+paddle (\begin{DoxyParamCaption}\item[{cv::\+\+Point \&}]{pt1}{, }\item[{cv::\+\+Point \&}]{pt2}{, }\item[{float \&}]{percentage\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{_c_pong_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_c_pong_8cpp_ad3d50f0f8ee43a941f2def58cd219ddd}\index{CPong.cpp@{CPong.cpp}!ACCL\_Y@{ACCL\_Y}}
+\index{ACCL\_Y@{ACCL\_Y}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{ACCL\_Y}{ACCL\_Y}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_ad3d50f0f8ee43a941f2def58cd219ddd} 
+const int ACCL\+\_\+Y = 23}
+
+\Hypertarget{_c_pong_8cpp_a321af2105b918075e6566fab2713f7fc}\index{CPong.cpp@{CPong.cpp}!ACCL\_Z@{ACCL\_Z}}
+\index{ACCL\_Z@{ACCL\_Z}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{ACCL\_Z}{ACCL\_Z}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_a321af2105b918075e6566fab2713f7fc} 
+const int ACCL\+\_\+Z = 24}
+
+\Hypertarget{_c_pong_8cpp_a27648a1cd05da367e5ed615c59fc06ac}\index{CPong.cpp@{CPong.cpp}!BIG\_BUTTON\_1@{BIG\_BUTTON\_1}}
+\index{BIG\_BUTTON\_1@{BIG\_BUTTON\_1}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{BIG\_BUTTON\_1}{BIG\_BUTTON\_1}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_a27648a1cd05da367e5ed615c59fc06ac} 
+const int BIG\+\_\+\+BUTTON\+\_\+1 = 32}
+
+\Hypertarget{_c_pong_8cpp_aa394182c945a78b6112189176a6d2a21}\index{CPong.cpp@{CPong.cpp}!BIG\_BUTTON\_2@{BIG\_BUTTON\_2}}
+\index{BIG\_BUTTON\_2@{BIG\_BUTTON\_2}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{BIG\_BUTTON\_2}{BIG\_BUTTON\_2}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_aa394182c945a78b6112189176a6d2a21} 
+const int BIG\+\_\+\+BUTTON\+\_\+2 = 33}
+
+\Hypertarget{_c_pong_8cpp_a62c54c6c4523a58cd4741b6093e3e83f}\index{CPong.cpp@{CPong.cpp}!DIGITAL@{DIGITAL}}
+\index{DIGITAL@{DIGITAL}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{DIGITAL}{DIGITAL}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_a62c54c6c4523a58cd4741b6093e3e83f} 
+const int DIGITAL = 0}
+
+\Hypertarget{_c_pong_8cpp_a4c27b1f025918d4a3c321471e0fea6b5}\index{CPong.cpp@{CPong.cpp}!FAST\_BOUNDS\_X@{FAST\_BOUNDS\_X}}
+\index{FAST\_BOUNDS\_X@{FAST\_BOUNDS\_X}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{FAST\_BOUNDS\_X}{FAST\_BOUNDS\_X}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_a4c27b1f025918d4a3c321471e0fea6b5} 
+const int FAST\+\_\+\+BOUNDS\+\_\+X = 80}
+
+\Hypertarget{_c_pong_8cpp_abdd832519ff6cca9668eeaef22884fb2}\index{CPong.cpp@{CPong.cpp}!FAST\_BOUNDS\_Y@{FAST\_BOUNDS\_Y}}
+\index{FAST\_BOUNDS\_Y@{FAST\_BOUNDS\_Y}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{FAST\_BOUNDS\_Y}{FAST\_BOUNDS\_Y}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_abdd832519ff6cca9668eeaef22884fb2} 
+const int FAST\+\_\+\+BOUNDS\+\_\+Y = 20}
+
+\Hypertarget{_c_pong_8cpp_abcf24bfe6f8a86829b1f3bc814adffd8}\index{CPong.cpp@{CPong.cpp}!IMGTYPE@{IMGTYPE}}
+\index{IMGTYPE@{IMGTYPE}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{IMGTYPE}{IMGTYPE}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_abcf24bfe6f8a86829b1f3bc814adffd8} 
+const int IMGTYPE = CV\+\_\+8\+UC3}
+
+\Hypertarget{_c_pong_8cpp_a03266f629d6c4a7a152f7673c58be661}\index{CPong.cpp@{CPong.cpp}!JOYSTICK\_X@{JOYSTICK\_X}}
+\index{JOYSTICK\_X@{JOYSTICK\_X}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{JOYSTICK\_X}{JOYSTICK\_X}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_a03266f629d6c4a7a152f7673c58be661} 
+const int JOYSTICK\+\_\+X = 2}
+
+\Hypertarget{_c_pong_8cpp_ad78dee9ca7cf4b053adc00993b9c2fdc}\index{CPong.cpp@{CPong.cpp}!JOYSTICK\_Y@{JOYSTICK\_Y}}
+\index{JOYSTICK\_Y@{JOYSTICK\_Y}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{JOYSTICK\_Y}{JOYSTICK\_Y}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_ad78dee9ca7cf4b053adc00993b9c2fdc} 
+const int JOYSTICK\+\_\+Y = 26}
+
+\Hypertarget{_c_pong_8cpp_ada024024fd9989b0c3902382c96f458f}\index{CPong.cpp@{CPong.cpp}!PIXEL\_BOUNDS\_B@{PIXEL\_BOUNDS\_B}}
+\index{PIXEL\_BOUNDS\_B@{PIXEL\_BOUNDS\_B}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{PIXEL\_BOUNDS\_B}{PIXEL\_BOUNDS\_B}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_ada024024fd9989b0c3902382c96f458f} 
+const int PIXEL\+\_\+\+BOUNDS\+\_\+B = 792}
+
+\Hypertarget{_c_pong_8cpp_aafb48a20df588fe3344aa6c7219e86ee}\index{CPong.cpp@{CPong.cpp}!PIXEL\_BOUNDS\_U@{PIXEL\_BOUNDS\_U}}
+\index{PIXEL\_BOUNDS\_U@{PIXEL\_BOUNDS\_U}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{PIXEL\_BOUNDS\_U}{PIXEL\_BOUNDS\_U}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_aafb48a20df588fe3344aa6c7219e86ee} 
+const int PIXEL\+\_\+\+BOUNDS\+\_\+U = 5}
+
+\Hypertarget{_c_pong_8cpp_a6411721e9432bdd55551711f0af09ae9}\index{CPong.cpp@{CPong.cpp}!PUSH\_BUTTON\_2@{PUSH\_BUTTON\_2}}
+\index{PUSH\_BUTTON\_2@{PUSH\_BUTTON\_2}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{PUSH\_BUTTON\_2}{PUSH\_BUTTON\_2}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_a6411721e9432bdd55551711f0af09ae9} 
+const int PUSH\+\_\+\+BUTTON\+\_\+2 = 42}
+
+\Hypertarget{_c_pong_8cpp_a828bda29625a95563b457e2b5bc5822f}\index{CPong.cpp@{CPong.cpp}!RGB\_BLU@{RGB\_BLU}}
+\index{RGB\_BLU@{RGB\_BLU}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{RGB\_BLU}{RGB\_BLU}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_a828bda29625a95563b457e2b5bc5822f} 
+const int RGB\+\_\+\+BLU = 37}
+
+\Hypertarget{_c_pong_8cpp_aa07caedb618cc5c39de372f47fc4e02b}\index{CPong.cpp@{CPong.cpp}!RGB\_GRN@{RGB\_GRN}}
+\index{RGB\_GRN@{RGB\_GRN}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{RGB\_GRN}{RGB\_GRN}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_aa07caedb618cc5c39de372f47fc4e02b} 
+const int RGB\+\_\+\+GRN = 38}
+
+\Hypertarget{_c_pong_8cpp_ae4cee39196424c87eb64aac6fa6e08f4}\index{CPong.cpp@{CPong.cpp}!RGB\_RED@{RGB\_RED}}
+\index{RGB\_RED@{RGB\_RED}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{RGB\_RED}{RGB\_RED}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_ae4cee39196424c87eb64aac6fa6e08f4} 
+const int RGB\+\_\+\+RED = 39}
+
+\Hypertarget{_c_pong_8cpp_a2a1c27fbaafd5310fbae206111fe998c}\index{CPong.cpp@{CPong.cpp}!SLOW\_BOUNDS\_X@{SLOW\_BOUNDS\_X}}
+\index{SLOW\_BOUNDS\_X@{SLOW\_BOUNDS\_X}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{SLOW\_BOUNDS\_X}{SLOW\_BOUNDS\_X}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_a2a1c27fbaafd5310fbae206111fe998c} 
+const int SLOW\+\_\+\+BOUNDS\+\_\+X = 55}
+
+\Hypertarget{_c_pong_8cpp_a9d584a836ce3adac5fa8046f01faee82}\index{CPong.cpp@{CPong.cpp}!SLOW\_BOUNDS\_Y@{SLOW\_BOUNDS\_Y}}
+\index{SLOW\_BOUNDS\_Y@{SLOW\_BOUNDS\_Y}!CPong.cpp@{CPong.cpp}}
+\doxysubsubsection{\texorpdfstring{SLOW\_BOUNDS\_Y}{SLOW\_BOUNDS\_Y}}
+{\footnotesize\ttfamily \label{_c_pong_8cpp_a9d584a836ce3adac5fa8046f01faee82} 
+const int SLOW\+\_\+\+BOUNDS\+\_\+Y = 45}
+

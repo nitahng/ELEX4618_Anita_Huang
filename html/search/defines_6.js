@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sprintf_5fs_0',['sprintf_s',['../cvui_8h.html#a6b6019110450b61a0b4acc55d7d336ca',1,'cvui.h']]]
+  ['recv_5fbuff_5fsize_0',['RECV_BUFF_SIZE',['../server_8cpp.html#a37a444a8817e1a688b2d3833f281a313',1,'server.cpp']]]
 ];
