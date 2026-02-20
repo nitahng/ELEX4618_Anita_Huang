@@ -43,18 +43,25 @@ const int ui_right = 180;
 const int R_paddlemargin = 950;
 const int L_paddlemargin = 50;
 
+const int buffer = 10;
 
 
-void make_bounds_paddle(cv::Point& paddletop, cv::Point& paddlebottom);
 void move_paddle(cv::Point& pt1, cv::Point& pt2, float& percentage_y);
 void move_ball(cv::Point& pos_ball, cv::Point& vel_ball, double &dt);
-bool make_ui_window(int& ball_radius, bool& reset_button_pressed, float& fps, int& spd);
+
+
 
 CPong::CPong(cv::Size canvassize, int comportnumber) {
 
 	comm.init_com(comportnumber);
 	cvui::init("Pong");
 	_canvas = cv::Mat::zeros(canvassize, IMGTYPE);
+	spd = 100;
+	ball_radius = 5;
+	paddlebot_top = cv::Point(L_paddlemargin, 350);
+	paddlebot_bottom = cv::Point(L_paddlemargin, 450);
+	botgoal = 0;
+	playergoal = 0;
 
 }
 
@@ -90,31 +97,25 @@ void CPong::update(float& percentage_x, float& percentage_y, bool& colour_button
 	auto end_time = std::chrono::steady_clock::now() + std::chrono::milliseconds(19);
 	
 
-	// This segment gets its time recorded
+	// This segment gets its time recorded //
 	
-
-	make_bounds_paddle(paddletop, paddlebottom); //bounds for the paddle
+	make_bounds_paddle(paddletop, paddlebottom, paddlebot_top, paddlebot_bottom); //bounds for the paddle
 	move_paddle(paddletop, paddlebottom, percentage_y);
-	
-    
-	//Dummy Paddle Margin thing
-	if (ball_radius + pos_ball.x >= R_paddlemargin){
-
-		vel_ball.x = vel_ball.x * -1;
-
-	}
-	if (-ball_radius + pos_ball.x <= L_paddlemargin) {
-
-		vel_ball.x = vel_ball.x * -1;
-
-	}
-
-
-
-
+	ballsetvelocity(pos_ball, vel_ball, paddletop, paddlebottom);
+	ballbounds(pos_ball, vel_ball);
 	move_ball(pos_ball, vel_ball, dt);
 
-
+	
+	if (pos_ball.x >= 995) {
+		botgoal++;
+		pos_ball = cv::Point(500, 400);
+		vel_ball = cv::Point(std::abs(vel_ball.x), 0); 
+	}
+	if (pos_ball.x <= 5) {
+		playergoal++;
+		pos_ball = cv::Point(500, 400);
+		vel_ball = cv::Point(std::abs(vel_ball.x), 0);
+	}
 
 	//
 	
@@ -127,7 +128,7 @@ void CPong::update(float& percentage_x, float& percentage_y, bool& colour_button
 }
 
 
-bool CPong::draw(cv::Point& paddletop, cv::Point& paddlebottom, int& ball_radius, bool& reset_button_pressed, float& fps, cv::Point& pos_ball, int &spd) {
+bool CPong::draw(cv::Point& paddletop, cv::Point& paddlebottom, int& ball_radius, bool& reset_button_pressed, float& fps, cv::Point& pos_ball) {
 
 
 	cv::Scalar White = cv::Scalar(255, 255, 255);
@@ -138,13 +139,26 @@ bool CPong::draw(cv::Point& paddletop, cv::Point& paddlebottom, int& ball_radius
 	_canvas = cv::Mat::zeros(canvassize, IMGTYPE);
 
 	//Make UI Mini Window 
-	if (make_ui_window(ball_radius, reset_button_pressed, fps, spd) == 0) { return false; }
+	if (make_ui_window(ball_radius, reset_button_pressed, fps) == 0) { return false; }
 
-	//Draw Game
+	//Draw Paddles
 	cv::line(_canvas, paddletop, paddlebottom, White, 4, cv::LINE_AA);
+	cv::line(_canvas, paddlebot_top, paddlebot_bottom, White, 4, cv::LINE_AA);
 
 	//The Ball
 	cv::circle(_canvas, pos_ball, ball_radius, White, CVUI_FILLED);
+
+
+	cv::Point wintext = (400, 10);
+
+	if (playergoal == 5) {
+		cv::putText(_canvas, "You Win!", wintext, cv::FONT_HERSHEY_SIMPLEX, 1, White, 2, cv::LINE_AA);
+
+	}
+	if (botgoal == 5) {
+		cv::putText(_canvas, "You Lose!", wintext, cv::FONT_HERSHEY_SIMPLEX, 1, White, 2, cv::LINE_AA);
+
+	}
 
 
 	//Update and Show
@@ -162,22 +176,31 @@ bool CPong::draw(cv::Point& paddletop, cv::Point& paddlebottom, int& ball_radius
 //      //        !The Helper Functions!      //         //
 
 
-void make_bounds_paddle(cv::Point& pt1, cv::Point& pt2) {
+void CPong::make_bounds_paddle(cv::Point& paddletop, cv::Point& paddlebottom, cv::Point& paddlebot_top, cv::Point& paddlebot_bottom) {
 
-	//std::cout << "  pt1:" << pt1.y;
-	//std::cout << "  pt2:" << pt2.y << "\n";
-
-	if (PIXEL_BOUNDS_U > pt1.y) {
-		pt1.y = PIXEL_BOUNDS_U;
-		pt2.y = PIXEL_BOUNDS_U + 100;
+	//your bounds
+	if (PIXEL_BOUNDS_U > paddletop.y) {
+		paddletop.y = PIXEL_BOUNDS_U;
+		paddlebottom.y = PIXEL_BOUNDS_U + 100;
 
 	}
-	else if (PIXEL_BOUNDS_B < pt2.y) {
-		pt2.y = PIXEL_BOUNDS_B;
-		pt1.y = PIXEL_BOUNDS_B - 100;
+	else if (PIXEL_BOUNDS_B < paddlebottom.y) {
+		paddlebottom.y = PIXEL_BOUNDS_B;
+		paddletop.y = PIXEL_BOUNDS_B - 100;
 	}
+	//bot bounds
+	if (PIXEL_BOUNDS_U > paddlebot_top.y) {
+		paddlebot_top.y = PIXEL_BOUNDS_U;
+		paddlebot_bottom.y = PIXEL_BOUNDS_U + 100;
 
+	}
+	else if (PIXEL_BOUNDS_B < paddlebot_bottom.y) {
+		paddlebot_bottom.y = PIXEL_BOUNDS_B;
+		paddlebot_top.y = PIXEL_BOUNDS_B - 100;
+	}
 }
+
+
 
 
 void move_paddle(cv::Point& pt1, cv::Point& pt2, float& percentage_y) {
@@ -208,14 +231,13 @@ void move_ball(cv::Point& pos_ball, cv::Point& vel_ball, double &dt) {
 
 
 
-
-bool CPong:: make_ui_window(int& ball_radius, bool& reset_button_pressed, float& fps, int& spd) {
+bool CPong:: make_ui_window(int& ball_radius, bool& reset_button_pressed, float& fps) {
 
 	//Draw CVUI for Buttons and Text
 	cvui::window(_canvas, 90, 10, 210, 210, "Anita's Pong Game!");
 	cvui::text(_canvas, 90, 40, cv::format("FPS: %.1f", fps));
-	cvui::text(_canvas, ui_left, 60, "Player:  ");
-	cvui::text(_canvas, ui_right, 60, "Computer:  ");
+	cvui::text(_canvas, ui_left, 60, cv::format("PLAYER: %i", playergoal));
+	cvui::text(_canvas, ui_right, 60, cv::format("COMPUTER: %i", botgoal));
 
 	//Track Bars
 	cvui::text(_canvas, 150, 90, "Ball Radius");
@@ -234,6 +256,95 @@ bool CPong:: make_ui_window(int& ball_radius, bool& reset_button_pressed, float&
 	}
 
 	return true;
+
+
+}
+
+void CPong:: ballsetvelocity(cv::Point& pos_ball, cv::Point& vel_ball, cv::Point& paddletop, cv::Point& paddlebottom) {
+
+	//Make changes for speed modualtion bar (verlocity overall scaled higher)
+	double speed_factor = spd / (sqrt((vel_ball.x * vel_ball.x) + (vel_ball.y * vel_ball.y))); 
+	vel_ball.x = vel_ball.x * speed_factor; 
+	vel_ball.y = vel_ball.y * speed_factor;
+	//
+
+	if (ball_radius + pos_ball.x + buffer >= R_paddlemargin &&
+		pos_ball.y  + ball_radius >= paddletop.y &&
+		pos_ball.y  - ball_radius <= paddlebottom.y
+		) {
+
+		double p_y, p_x;
+		double paddle_center_pos = (paddletop.y + paddlebottom.y) / 2;
+		double difference_center = paddle_center_pos - pos_ball.y;
+
+
+		p_y = difference_center * 0.7 * 0.02;
+		p_x = 1 - p_y;
+
+		if (difference_center == 0) {
+
+			vel_ball.x = std::abs(vel_ball.x) * -1;
+
+		}
+		else if (difference_center > 0) { //higher portion
+
+			vel_ball.x = -spd * p_x;
+			vel_ball.y = -spd * p_y;
+
+		}
+		else if (difference_center < 0) { //lower portion 
+
+			vel_ball.x = -spd * p_x;
+			vel_ball.y = -spd * p_y;
+
+		}
+
+
+
+	}
+}
+
+void CPong::ballbounds(cv::Point& pos_ball, cv::Point& vel_ball) {
+
+	//Ball bounds
+	float ball_top = ball_radius + buffer;
+	float ball_bottom = 800 - buffer - ball_radius;
+
+	float boundright = ball_radius;
+	float boundleft = -ball_radius + 1000;
+
+	if (pos_ball.y <= ball_top) {
+
+		pos_ball.y = ball_top;
+
+		vel_ball.y = std::abs(vel_ball.y);
+
+
+	}
+
+	if (pos_ball.y >= ball_bottom) {
+
+		pos_ball.y = ball_bottom;
+
+		vel_ball.y = -1 * std::abs(vel_ball.y);
+
+	}
+
+	if (pos_ball.x <= boundright) {
+
+		pos_ball.x = boundright;
+
+		vel_ball.x = std::abs(vel_ball.x);
+
+	}
+
+	if (pos_ball.x >= boundleft) {
+
+		pos_ball.x = boundleft;
+
+		vel_ball.x = -1*std::abs(vel_ball.x);
+
+	}
 
 
 }

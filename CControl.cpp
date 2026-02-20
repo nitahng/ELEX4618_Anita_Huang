@@ -18,13 +18,19 @@ enum Type {
 	SERVO = 2
 };
 
+
+
 CControl :: CControl(){
 
 }
 
+
+
 CControl::~CControl() {
 
 }
+
+
 
 void CControl::init_com(int comport){ 
 
@@ -40,6 +46,8 @@ void CControl::init_com(int comport){
 		std::cout << "No COM port found!\n\n";
 	}
 }
+
+
 
 
 bool CControl::get_data(int type, int channel, int& result) {
@@ -93,6 +101,8 @@ bool CControl::get_data(int type, int channel, int& result) {
 }
 
 
+
+
 bool CControl::set_data(int type, int channel, int val){
 
 	std::string set_data_string = 
@@ -103,6 +113,7 @@ bool CControl::set_data(int type, int channel, int val){
 	return true; 
 
 }
+
 
 
 

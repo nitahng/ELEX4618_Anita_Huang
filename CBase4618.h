@@ -114,6 +114,6 @@ public:
      * @retval true Continue running.
      * @retval false Request exit from the main loop (quit condition).
      */
-    virtual bool draw(cv::Point& pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed, float& findex, cv::Point& pos_ball, int &spd) = 0;
+    virtual bool draw(cv::Point& pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed, float& findex, cv::Point& pos_ball) = 0;
 
 };

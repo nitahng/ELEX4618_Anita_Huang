@@ -109,7 +109,7 @@ void CSketch::update(float& percentage_x, float& percentage_y, bool& colour_butt
 }
 
 
-bool CSketch::draw(cv::Point &pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed, float& findex, cv::Point &n1, int &spd) {
+bool CSketch::draw(cv::Point &pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed, float& findex, cv::Point &n1) {
 
 	//Colour Selection
 	std::vector <cv::Scalar> colours = {

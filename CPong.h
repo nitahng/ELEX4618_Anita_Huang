@@ -6,8 +6,12 @@ class CPong :public CBase4618
 
 protected:
 
-
-
+	int spd;
+	int ball_radius;
+	int botgoal;
+	int playergoal;
+	cv::Point paddlebot_top;
+	cv::Point paddlebot_bottom;
 
 public:
 
@@ -48,7 +52,7 @@ public:
 	 * Updates the internal game state using the most recent inputs obtained from
 	 * gpio(), such as cursor movement, and joystick input
 	 */
-	void update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point& pt1, cv::Point& pt2, int& index, float& findex, cv::Point& pos_ball, cv::Point& vel_ball);
+	void update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point& pt1, cv::Point& pt2, int& index,float& findex, cv::Point& pos_ball, cv::Point& vel_ball);
 
 
 
@@ -58,12 +62,19 @@ public:
 	 * Draws the UI elements and the Etch-A-Sketch output onto the OpenCV canvas,
 	 * then displays the resulting image on screen.
 	 */
-	bool draw(cv::Point& pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed, float& findex, cv::Point& pos_ball, int &spd);
+	bool draw(cv::Point& pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed, float& findex, cv::Point& pos_ball);
 
 
 
 
-	bool make_ui_window(int& ball_radius, bool& reset_button_pressed, float& fps, int& spd);
+	bool make_ui_window(int& ball_radius, bool& reset_button_pressed, float& fps);
+
+	void ballsetvelocity(cv::Point& pos_ball, cv::Point& vel_ball, cv::Point& paddletop, cv::Point& paddlebottom);
+
+	void ballbounds(cv::Point& pos_ball, cv::Point& vel_ball);
+
+	void make_bounds_paddle(cv::Point& pt1, cv::Point& pt2, cv::Point& paddlebot_top, cv::Point& paddlebot_bottom);
+
 
 };
 

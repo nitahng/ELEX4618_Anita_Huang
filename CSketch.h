@@ -116,6 +116,6 @@ public:
      * @retval true Continue running / keep drawing frames.
      * @retval false Exit request (stop the main loop).
      */
-    bool draw(cv::Point& pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed, float& findex, cv::Point& pos_ball, int &spd);
+    bool draw(cv::Point& pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed, float& findex, cv::Point& pos_ball);
 
 };
