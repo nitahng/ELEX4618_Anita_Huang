@@ -33,14 +33,6 @@
 
 
 
-void make_bounds(cv::Point& pt1, cv::Point& pt2);
-void move_pencil(cv::Point& pt1, cv::Point& pt2, float& percentage_x, float& percentage_y);
-
-
-
-
-
-
 CSketch::CSketch(cv::Size canvassize, int comportnumber) {
 
 	comm.init_com(comportnumber);
@@ -48,6 +40,13 @@ CSketch::CSketch(cv::Size canvassize, int comportnumber) {
 	_canvas = cv::Mat::zeros(canvassize, IMGTYPE);
 	pt1 = cv::Point(500, 500);
 	pt2 = cv::Point(501, 501);
+	colour_button_pressed = false;
+	reset_button_pressed = false;
+	colour_index = 0;
+	percentage_x = 0;
+	percentage_y = 0;
+	shaker = 0;
+
 
 }
 
@@ -57,7 +56,7 @@ CSketch::~CSketch() {
 }
 
 
-void CSketch::gpio(CControl& comm, float &percentage_x, float &percentage_y, bool &colour_button_pressed, bool& reset_button_pressed) {
+void CSketch::gpio() {
 
 	//Reading Joystick Inputs
 	int raw_x, raw_y;
@@ -70,31 +69,24 @@ void CSketch::gpio(CControl& comm, float &percentage_x, float &percentage_y, boo
 	bool button2_input = comm.get_button(BIG_BUTTON_2, comm);
 	reset_button_pressed = button2_input;
 
-	//Live Input Read
-	//std::cout << "ANALOG TEST: " << "X_CH" << JOYSTICK_X << " = " << raw_x << " (" << percentage_x << "%" << ") "
-	//	"    Y_CH" << JOYSTICK_Y << " = " << raw_y << " (" << percentage_y << "%" << ") " << " Button Press:" << colour_button_pressed<< "\n";
-
 }
 
 
-void CSketch::update(float& percentage_x, float& percentage_y, bool& colour_button_pressed, cv::Point &pt1, cv::Point& pt2, int &colour_index, float& findex,cv::Point& n1, cv::Point &n2) {
+void CSketch::update() {
 		
 
 		std::vector <int> colour_channel = { RGB_RED , RGB_GRN, RGB_BLU };
 		pt2.x = pt1.x;
 		pt2.y = pt1.y;
 
-		make_bounds(pt1, pt2);
-		move_pencil(pt1, pt2, percentage_x, percentage_y);
+		make_bounds();
+		move_pencil();
 
 		int shake_y, shake_z;
 		float shake_y_pctg = comm.get_analog(ACCL_Y, shake_y);
 		float shake_z_pctg = comm.get_analog(ACCL_Z, shake_z);
 
-		//std::cout << "\n\nANALOG TEST: " << "Y_CH" << ACCL_Y << " = " << shake_y << " (" << shake_y_pctg << "%" << ") "
-	//		"    Z_CH" << ACCL_Z << " = " << shake_z << " (" << shake_z_pctg << "%" << ") " << "\n";
-
-		findex = shake_z_pctg;
+		shaker = shake_z_pctg;
 		
 		if (colour_button_pressed) {
 
@@ -109,7 +101,7 @@ void CSketch::update(float& percentage_x, float& percentage_y, bool& colour_butt
 }
 
 
-bool CSketch::draw(cv::Point &pt1, cv::Point& pt2, int& colour_index, bool& reset_button_pressed, float& findex, cv::Point &n1) {
+bool CSketch::draw() {
 
 	//Colour Selection
 	std::vector <cv::Scalar> colours = {
@@ -135,12 +127,10 @@ bool CSketch::draw(cv::Point &pt1, cv::Point& pt2, int& colour_index, bool& rese
 	if (cvui::button(_canvas, 100, 70, "Exit")) {
 		return 0;
 	}
-	if (cvui::button(_canvas, 20, 70, "Reset") || reset_button_pressed == true || findex < 35) {
+	if (cvui::button(_canvas, 20, 70, "Reset") || reset_button_pressed == true || shaker < 35) {
 		cv::Size canvassize = cv::Size(1000, 1000);
 		_canvas = cv::Mat::zeros(canvassize, IMGTYPE);
 	}
-
-
 
 	//Draw Game
 	cv::line(_canvas, pt1, pt2,colours.at(colour_index), 8, cv::LINE_AA);
@@ -163,7 +153,7 @@ bool CSketch::draw(cv::Point &pt1, cv::Point& pt2, int& colour_index, bool& rese
 //      //        !The Helper Functions!      //         //
 
 
-void make_bounds(cv::Point& pt1, cv::Point& pt2) {
+void CSketch:: make_bounds() {
 
 	if (PIXEL_BOUNDS_UL > pt1.x) {
 		pt1.x = PIXEL_BOUNDS_UL;
@@ -180,7 +170,7 @@ void make_bounds(cv::Point& pt1, cv::Point& pt2) {
 
 }
 
-void move_pencil(cv::Point& pt1, cv::Point& pt2, float& percentage_x, float& percentage_y) {
+void CSketch::move_pencil() {
 
 
 	if (SLOW_BOUNDS_X < percentage_x && FAST_BOUNDS_X > percentage_x) { //move right 
